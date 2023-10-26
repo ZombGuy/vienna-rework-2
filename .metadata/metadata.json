@@ -1,0 +1,12 @@
+{
+  "name" : "Vienna Rework 2",
+  "id" : "TBD",
+  "version" : "0.0.1",
+  "supported_game_version" : "1.5.*",
+  "short_description" : "An update to the multiplayer mod collection Vienna Rework",
+  "tags" : ["Balance", "Economy And Buildings", "Expansion"],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
