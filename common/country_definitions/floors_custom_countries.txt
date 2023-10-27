@@ -1,0 +1,44 @@
+﻿ICA = {
+	color = { 148 198 170}
+	country_type = colonial
+
+	tier = empire
+
+	cultures = { vietnamese lao khmer }
+
+	capital = STATE_TONKIN
+}
+
+SEA = {
+	color = { 57  37  188 }
+	country_type = colonial
+
+	tier = hegemony
+
+	cultures = { malay bornean sumatran balinese vietnamese khmer batak dayak filipino moro javan moluccan thai mon khmu lao shan burmese kachin karen}
+	#South East Asia Heritage cultures
+
+	capital = STATE_BANGKOK
+}
+
+FSP = {
+	color = { 51 93 161 }
+	country_type = colonial
+
+	tier = hegemony
+
+	cultures = { french spanish catalan}
+
+	capital = STATE_ILE_DE_FRANCE
+}
+
+FBR = {
+	color = { 73 209 193 }
+	country_type = colonial
+
+	tier = hegemony
+
+	cultures = { french british }
+
+	capital = STATE_ILE_DE_FRANCE
+}
