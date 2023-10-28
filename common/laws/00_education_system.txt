@@ -9,6 +9,10 @@
 		law_compulsory_primary_school
 	}
 	
+	modifier = {
+		state_birth_rate_mult = 0.1
+	}
+
 	pop_support = {
 		value = 0
 	}
