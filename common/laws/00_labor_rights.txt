@@ -9,7 +9,9 @@ law_no_workers_rights = {
 	
 	progressiveness = 0
 	
-	modifier = {	
+	modifier = {
+		building_minimum_wage_mult = -0.1
+		building_subsistence_output_add = 1
 	}
 	
 	possible_political_movements = {

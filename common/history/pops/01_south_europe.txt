@@ -428,7 +428,7 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 832996
+				size = 932996
 			}
 			create_pop = {
 				culture = greek
