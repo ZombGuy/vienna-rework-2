@@ -511,26 +511,6 @@
 		}
 	}
 	s:STATE_ORISSA = {
-		region_state:ORI = {
-			create_pop = {
-				culture = oriya
-				size = 436212
-			}
-			create_pop = {
-				culture = bengali
-				size = 12000
-			}
-			create_pop = {
-				culture = oriya
-				religion = animist
-				size = 176396
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = oriya
-				size = 20200
-			}
-		}
 		region_state:BIC = {
 			create_pop = {
 				culture = oriya
@@ -578,22 +558,6 @@
 		}
 	}
 	s:STATE_MYSORE = {
-		region_state:MYS = {
-			create_pop = {
-				culture = kannada
-				religion = hindu
-				size = 2332290
-			}
-			create_pop = {
-				culture = kannada
-				size = 133290
-			}
-			create_pop = {
-				pop_type = slaves
-				culture = kannada
-				size = 20000
-			}
-		}
 		region_state:BIC = {
 			create_pop = {
 				culture = kannada
