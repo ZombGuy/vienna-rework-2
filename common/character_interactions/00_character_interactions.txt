@@ -165,7 +165,7 @@ grant_leadership_to_agitator = {
 		}
 	}
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { months = very_short_modifier_time }
 
 	ai_chance = {
 		value = -50
@@ -557,7 +557,7 @@ exile_character = {
 		}
 	}
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { months = very_short_modifier_time }
 	show_confirmation_box = yes
 
 	ai_chance = {
@@ -728,7 +728,7 @@ invite_exile = {
 		}
 	}
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { months = super_short_modifier_time }
 
 	ai_chance = {
 		value = -85
@@ -998,7 +998,7 @@ return_to_home_country = {
 		}
 	}
 
-	cooldown = { months = short_modifier_time }
+	cooldown = { months = super_short_modifier_time }
 	show_confirmation_box = yes
 
 	ai_chance = {
@@ -1112,7 +1112,7 @@ foster_national_agitation = {
 		}
 	}
 
-	cooldown = { months = short_modifier_time }
+	cooldown = { months = very_short_modifier_time }
 
 	ai_chance = {
 		value = 100
