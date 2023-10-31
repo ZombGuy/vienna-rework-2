@@ -1,0 +1,2 @@
+﻿super_short_modifier_time = 7 #6 months
+very_short_modifier_time = 13 #1 year
