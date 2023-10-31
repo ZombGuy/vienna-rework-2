@@ -1,0 +1,210 @@
+pm_canal_pwr_none = {
+	texture = "gfx/interface/icons/production_method_icons/canals.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 100
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+		}
+
+		level_scaled = {
+		}
+	}
+}
+pm_canal_pwr_coal = {
+	texture = "gfx/interface/icons/production_method_icons/canal_coal.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 250
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 50
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_tools_add = 75
+			goods_input_coal_add = 150
+			goods_input_wood_add = 100
+			goods_output_services_add = 350
+			goods_output_transportation_add = 300
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_machinists_add = 2000
+			building_employment_capitalists_add = 250
+		}
+	}
+}
+pm_canal_pwr_oil = {
+	texture = "gfx/interface/icons/production_method_icons/canal_oil.dds"
+
+	unlocking_technologies = {
+		combustion_engine
+	}
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 250
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_infrastructure_add = 50
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_tools_add = 85
+			goods_input_oil_add = 120
+			goods_input_wood_add = 50
+			goods_output_services_add = 500
+			goods_output_transportation_add = 400
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_machinists_add = 2500
+			building_employment_capitalists_add = 250
+		}
+	}
+}
+pm_canal_pwr_electricity = {
+	texture = "gfx/interface/icons/production_method_icons/canal_electricity.dds"
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 250
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_infrastructure_add = 50
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 80
+			goods_input_electricity_add = 250
+			goods_output_services_add = 600
+			goods_output_transportation_add = 500
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_machinists_add = 2000
+			building_employment_capitalists_add = 275
+		}
+	}
+}
+
+
+
+pm_canal_tax_none = {
+	texture = "gfx/interface/icons/production_method_icons/coin_icon_01.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 75
+		}
+	}
+}
+pm_canal_tax_low = {
+	texture = "gfx/interface/icons/production_method_icons/coin_icon_03.dds"
+
+	unlocking_production_methods = {
+		pm_canal_pwr_coal
+		pm_canal_pwr_oil
+		pm_canal_pwr_electricity
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = -50
+			country_tax_income_add = 15000
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 700
+		}
+	}
+}
+pm_canal_tax_med = {
+	texture = "gfx/interface/icons/production_method_icons/coin_icon_05.dds"
+
+	unlocking_production_methods = {
+		pm_canal_pwr_coal
+		pm_canal_pwr_oil
+		pm_canal_pwr_electricity
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = -75
+			country_tax_income_add = 35000
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 1400
+		}
+	}
+}
+pm_canal_tax_high = {
+	texture = "gfx/interface/icons/production_method_icons/coin_icon_07.dds"
+
+	unlocking_production_methods = {
+		pm_canal_pwr_coal
+		pm_canal_pwr_oil
+		pm_canal_pwr_electricity
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = -100
+			country_tax_income_add = 50000
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 2300
+		}
+	}
+} 
+pm_canal_tax_very_high = {
+	texture = "gfx/interface/icons/production_method_icons/coin_icon_13.dds"
+
+	unlocking_production_methods = {
+		pm_canal_pwr_coal
+		pm_canal_pwr_oil
+		pm_canal_pwr_electricity
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = -200
+			country_tax_income_add = 65000
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 3000
+		}
+	}
+} 
