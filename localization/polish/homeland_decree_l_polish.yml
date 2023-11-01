@@ -1,0 +1,81 @@
+﻿l_polish:
+decree_homeland_removal: "Nasza Ojczyzna"
+decree_homeland_removal_desc: "Zintegruj prowincję jako naszą Ojczyznę Narodową"
+
+decree_reclaim_land: "Karczowanie"
+decree_reclaim_land_desc: "Zwiększ obszar uprawny, usuwając połacie lasów i dzikich terenów"
+
+decree_childbirth_incentive: "Zachęcaj do zwiększenia liczby urodzeń"
+decree_childbirth_incentive_desc: "Zwiększ współczynnik dzietności, przyjmując politykę pronatalną"
+
+decree_encourage_workforce: "Zachęcaj siłę roboczą"
+decree_encourage_workforce_desc: "Zwiększenie współczynnik aktywności zawodowej poprzez przyjęcie polityki propracowniczej"
+
+reclaim_land.tt: "Posiada teren nadający się do wykarczowania"
+
+homeland_decree.tt: "Jest Ojczyzną Narodową obcej kultury"
+homeland_decree.tt2: "Posiada populację głównej kultury w prowincji"
+homeland_improvement.tt: "Nasze wysiłki na rzecz stworzenia zintegrowanej ojczyzny nabierają tempa"
+homeland_improvement.tt2: "Nasze wysiłki na rzecz ustanowienia zintegrowanej ojczyzny osiągają znaczne postępy"
+
+reclaim_land_events.1.t: "Karczowanie"
+reclaim_land_events.1.d: "Karczowanie [ROOT.GetState.GetName] opłaciło się. Teraz państwo będzie mogło przeznaczyć więcej ziemi pod uprawnę."
+reclaim_land_events.1.d2: "Karczowanie [ROOT.GetState.GetName] doszło do skutku. Państwo będzie teraz mogło uprawiać więcej gruntów rolnych. Koniec z wielkimi dzikimi połaciami."
+reclaim_land_events.1.f: ""Ziemia jest zasadniczo darem natury. Uprawa jej jest więc naszą misją, aby odwzajemnić tę łaskę.""
+reclaim_land_events.1.a: "Poszło całkiem nieźle."
+
+remove_homeland_events.1.t:0 "Nasza Ojczyzna"
+remove_homeland_events.1.d:0 "Więzi łączące naszych obywateli są teraz nie tylko mocno, ale wręcz prawdziwe. Wszyscy obywatele [ROOT.GetState.GetCountry.GetName] są teraz zjednoczeni pod tym samym sztandarem, pod tą samą flagą."
+remove_homeland_events.1.f:1 ""Starożytne legendy z zamierzchłych czasów wkrótce znajdą swój odpowiednik w naszej historii. Nasi bohaterowie narodowi patrzą teraz na nas z uśmiechem na twarzy. Nasz język, nasza kultura, wszystko, co nas łączy, zawdzięczamy synom i córkom naszych wspólnych przodków, w końcu mamy okazję się im odwdzięczyć.""
+remove_homeland_events.1.a:0 "Nasza kultura! Nasza ojczyzna!"
+
+remove_homeland_events.4.d: "Do jednej ze znanych [SCOPE.sBuilding('decree_building').GetName] z [SCOPE.sState('decree_state').GetName] została wysłana komisja z poleceniem, aby jeden z ich najlepszych kompozytorów napisał operę narodową, która oddaje wielkość [ROOT.GetState.GetCountry.GetName]."
+remove_homeland_events.4.f: ""Nawet najsurowsi krytycy nie będą w stanie znaleźć ani jednej skazy w harmonii, skali, rytmie mojej wspaniałej opery, [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_noun')] [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_genitive')]. Opowieść o miłości, śmierci, nieśmiertelnych tematach, które dotyczą [ROOT.GetState.GetCountry.GetAdjectiveNoFormatting] legendy, zostaną na zawsze zapamiętane dzięki tym wspaniałym ariom!""
+remove_homeland_events.4.b: "Mało ciekawa oferta."
+
+remove_homeland_events.5.t: "Kontrola narracji historycznej"
+remove_homeland_events.5.d: "Zwrócono się do instytutu badawczego mieszczącego się w [SCOPE.sBuilding('decree_building').GetName] w [SCOPE.sState('decree_state').GetName], z prośbą o stworzenie tezy podkreślającej historyczny rodowód, wskazujący jakie tak na prawdę rzeczywiste kultura [SCOPE.sCulture('discriminated_culture').GetName] ma prawa do terenów [ROOT.GetState.GetOwner.GetName]."
+remove_homeland_events.5.f: ""Ze względu na swoje pochodzenie i etymologię, ustalono że przodkowie ludzi kultury [SCOPE.sCulture('discriminated_culture').GetName] to pochodna innej kultury, wywodząca się z całkiem innych terenów niż nasze państwo [ROOT.GetState.GetOwner.GetName]. Chcielibyśmy stworzyć rozbudowany zespół badawczy, od antropologów po filogenistów, aby odkryć ten niezwykły fakt fakt.""
+remove_homeland_events.5.a: "Natychmiast przystąpić do pisania tych tez!"
+remove_homeland_events.5.b: "Uniwersytet musi przestrzegać ścisłej integralności instytucjonalnej."
+
+remove_homeland_events.6.t: "Terroryście atakują Akademię"
+remove_homeland_events.6.d: "Radykalni nacjonaliści w [ROOT.GetState.GetName] zaatakowali grupę badaczy badających historię [SCOPE.sCulture('discriminated_culture').GetName]. Domagają się natychmiastowego zakończenia badań opartych na agendzie, pod groźbą bardziej ekstremalnych środków, jeśli nie zostaną podjęte inne działania."
+remove_homeland_events.6.f: ""Kultura [SCOPE.sCulture('discriminated_culture').GetName] jest naszym dziedzictwem i należy wyłącznie do obywateli kultury [SCOPE.sCulture('discriminated_culture').GetName]! I nie należy do nikogo innego! Rząd [ROOT.GetState.GetOwner.GetName] musi natychmiast zaprzestać zniekształcania faktów historycznych!""
+remove_homeland_events.6.a: "Nie będziemy negocjować z terrorystami."
+remove_homeland_events.6.b: "Przede wszystkim, było to nieetyczne."
+
+remove_homeland_events.7.d: "[SCOPE.sCulture('discriminated_culture').GetName] uczniowie czasami używają swojego ojczystego języka w [ROOT.GetCountry.GetAdjectiveNoFormatting] szkołach. Niektórzy wzywają nauczycieli do karania ich za używanie języka ojczystego, zmuszając dzieci do mówienia w języku urzędowym [ROOT.GetState.GetCountry.GetName]."
+
+remove_homeland_events.8.d: "Fabryki w [SCOPE.sState('discrimination_state').GetName] odmawiają zatrudnienia ludzi kultury [SCOPE.sCulture('discriminated_culture_pop').GetName], ze względu na ich status obywateli drugiej kategorii w [ROOT.GetState.GetCountry.GetName]."
+remove_homeland_events.8.a: "Obce zwyczaje nie są dozwolone w miejscu pracy."
+
+remove_homeland_events.9.t: "Więcej Migracji"
+remove_homeland_events.9.d: "Zapotrzebowanie na pracowników z emigracji rośnie w miarę naszych wysiłków na rzecz rozszerzenia terenów naszej ojczyzny w [ROOT.GetState.GetName]. Wręcz przeciwne nastawienie ma rdzenna ludność, która jest teraz zjednoczona w bardzo zaciekłym sprzeciwie wobec jakiejkolwiek formy migracji."
+remove_homeland_events.9.f: ""Ludzie z kultury [SCOPE.sCulture('discriminated_culture').GetName] zasługują na szacunek i poszanowanie. Nie zgadzamy się na zniszczenie naszeego dziedzictwa narodowego przez napływ obcych.""
+remove_homeland_events.9.a: "Sprawy państwa nie dotyczą pedanterii chłopskiej."
+remove_homeland_events.9.b: "Mają rację."
+
+remove_homeland_events.10.t: "Mieszańcy"
+remove_homeland_events.10.d: "Najnowsze współwystępowanie różnych kultur w [ROOT.GetState.GetName] doprowadziło do wzrostu liczby małżeństw międzyrasowych. Dużo biurokratów w [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName], twierdzi jednak, że takich praktyk nie należy tolerować."
+remove_homeland_events.10.f: ""Różnorodność kulturowa [ROOT.GetState.GetOwner.GetName] oraz kultura [SCOPE.sCulture('discriminated_culture').GetName] nie są czymś, co można łatwo pokonać. Boję się, jaki chaos ich mieszana rasa sprowadzi na nasze społeczeństwo.""
+remove_homeland_events.10.a: "Rasa to tylko konstrukt społeczny."
+remove_homeland_events.10.b: "Nałożyć natychmiastowy zakaz."
+
+remove_homeland_events.11.t: "Segregacja Rasowa"
+remove_homeland_events.11.d: "Konflikt kulturowy w [ROOT.GetState.GetName] rośnie wraz z rosnącą liczbą przypadków przemocy. Aby złagodzić powszechne napięcie, intelektualiści z [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] domagają się natychmiastowego zarządzenia wykonawczego w sprawie segregacji rasowej."
+remove_homeland_events.11.f: ""[SCOPE.sCulture('discriminated_culture').GetName] i [ROOT.GetState.GetOwner.GetName] mają odmienne kultury. Nie chodzi o to, że ich kultura jest gorsza, po prostu różnią się od nas. Mądrze byłoby więc zmniejszyć wewnętrzne tarcia poprzez tę segregację w szlachetnym celu.""
+remove_homeland_events.11.a: "W naszym społeczeństwie nie ma miejsca na na podziały kulturowe! Powinniśmy być państwem jednolitym kulturowo."
+remove_homeland_events.11.b: "Postąpimy zgodnie z wytycznymi Akademii."
+
+remove_homeland_events.12.t: "Sporty Wojskowe"
+remove_homeland_events.12.d: "Wydarzenia sportowe organizowane przez wojskowych, stają się codziennością wśród podchorążych w [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] i nowi rekruci [SCOPE.sCulture('discriminated_culture').GetName] pochodzenia aktywnie w uczestniczą."
+remove_homeland_events.12.f: ""Bez względu na to, jak ktoś wygląda lub mówi, tak długo, jak dobrze gra, nie ma znaczenia. To wszystko! No hej! Podaj mi teraz tę piłkę!""
+remove_homeland_events.12.a: "Przygotujmy im odpowiednie miejsce do zabawy."
+remove_homeland_events.12.b: "Przypomnij im o ich żołnierskim obowiązku."
+
+remove_homeland_events.13.t: "Festiwal Multikulturowy"
+remove_homeland_events.13.d: "Fotograf z kultury [SCOPE.sCulture('discriminated_culture').GetName] i rolnicy z [ROOT.GetState.GetCountry.GetName] piją, śmieją się, przytulając się do siebie w środku [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] Festiwal przyciągnął uwagę opinii publicznej."
+remove_homeland_events.13.f: ""Czasami się kłóciliśmy, czasami smuciliśmy, a czasami nawet walczyliśmy. Ale dzisiaj mam nadzieję, że uda nam się odrzucić wszystkie urazy i po prostu śmiać się i cieszyć ucztą. Jeśli pochodzisz z [ROOT.GetState.GetCountry.GetName], jedzmy, pijmy i tańczmy!""
+remove_homeland_events.13.a: "Wspieraj finansowo kolejne wydarzenia tego typu."
+remove_homeland_events.13.b: "Nakaż natychmiastowe rozproszenie tej bandy szumowin."

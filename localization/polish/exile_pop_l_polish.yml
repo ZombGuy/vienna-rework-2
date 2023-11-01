@@ -1,0 +1,18 @@
+﻿l_polish:
+
+decree_exile_pop: "Wypędzenie"
+decree_exile_pop_desc: "Wypędź obywateli nieakceptowalnych kultur."
+
+decree_exile_pop.tt: "Istnienie nieakceptowalnych kultur"
+exile_pop1.tt: "Wypędź 10% obywateli kultury [SCOPE.sCulture('scope_exile_culture').GetName]."
+exile_pop2.tt: "Wypędź 25% obywateli kultury [SCOPE.sCulture('scope_exile_culture').GetName]."
+exile_pop3.tt: "Wypędź 50% obywateli kultury [SCOPE.sCulture('scope_exile_culture').GetName]."
+exile_pop4.tt: "Wypędź 100% obywateli kultury [SCOPE.sCulture('scope_exile_culture').GetName]."
+
+exile_pop_support_modifier: "Wsparcie Migracji"
+
+exile_pop_events.1.t: "Wypędzenie"
+exile_pop_events.1.d: "Zgodnie z polityką emigracyjną przyszedł czas aby [SCOPE.sCulture('scope_exile_culture').GetName] z [ROOT.GetState.GetName] zostali przesiedleni do [SCOPE.sCountry('scope_exile_country').GetName]. Niektórzy obywatele odmawiają opuszczenia swoich domów, a wielu innych jest słabo przygotowanych do podróży."
+exile_pop_events.1.f: ""Moi przyjaciele, okoliczności w których przyszło wam żyć, uniemożliwiają wam rozkwit pośród naszej społeczności. Macie tylko jedno rozwiązanie w swoim zasięgu, a jest nim przesiedlenie się do [SCOPE.sState('scope_exile_state').GetName]. A im szybciej tego dokonacie, tym szybciej rozpoczniecie swoje nowe, pełne dobrobytu życie.""
+exile_pop_events.1.b: "Zagroź im bagnetem."
+exile_pop_events.1.a: "Zaproponuj im trochę pomocy w ich podróży."

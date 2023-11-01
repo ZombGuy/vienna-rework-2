@@ -1,0 +1,29 @@
+﻿l_polish:
+homeland_add_modifier: "Nasza Nowa Ojczyzna"
+
+homeland_artist_modifier: "Sponsorowany Kompozytor"
+homeland_not_artist_modifier: "Odmowa Sponsorowania Kompozytora"
+
+homeland_academia_modifier: "Naruszona intergralność akademicka"
+homeland_university_modifier: "Wspieranie Fałszowania Historii"
+homeland_not_university_modifier: "Odmowa Wspierania Fałszowania Historii"
+
+homeland_costs: "Kapitał Integracji Ojczyzny"
+
+#employment_discrimination:0 "Employment Discrimination" #Already exists in vanilla
+employment_not_discrimination: "Zakazana dyskryminacja pracowników"
+
+homeland_migration: "Zachęcanie do Migracji"
+homeland_migration_not: "Zniechęcanie do Migracji"
+
+mixed_blood: "Dozwolone Małżeństwa Międzyrasowe"
+mixed_blood_not: "Zabronione Małżeństwa Międzyrasowe"
+
+cultural_isolation: "Segregacja Rasowa"
+cultural_isolation_not: "Desegregacja Rasowa"
+
+military_homeland: "Wspieranie Wojskowych Wydarzeń Sportowych"
+military_homeland_not: "Zabranianie Wojskowych Wydarzeń Sportowych"
+
+festival_homeland: "Wspieranie Festiwali Rolniczych"
+festival_homeland_not: "Zabranianie Festiwali Rolniczych"

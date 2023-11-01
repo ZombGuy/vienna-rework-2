@@ -1,0 +1,65 @@
+﻿namespace = reclaim_land_events
+
+reclaim_land_events.100 = {
+	type = state_event
+	placement = root
+
+	title = reclaim_land_events.1.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = reclaim_land_events.1.d2
+				trigger = {
+					has_variable = reclaim_land_var
+					var:reclaim_land_var = 4
+				}
+			}
+			triggered_desc = {
+				desc = reclaim_land_events.1.d
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	flavor = reclaim_land_events.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/africa_prosperous_farm.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	duration = 3
+
+	trigger = {
+		has_decree = decree_reclaim_land
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = reclaim_land_events.1.a
+
+		state_region = {
+			add_arable_land = 20
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = reclaim_land_var }
+			}
+			set_variable = {
+				name = reclaim_land_var
+				value = 0
+			}
+		}
+		change_variable = {
+			name = reclaim_land_var
+			add = 1
+		}
+	}
+}

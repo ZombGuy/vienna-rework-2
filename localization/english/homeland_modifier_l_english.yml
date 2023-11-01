@@ -1,0 +1,29 @@
+﻿l_english:
+ homeland_add_modifier: "Our New Homeland"
+
+ homeland_artist_modifier: "Patronized Composer"
+ homeland_not_artist_modifier: "Refused to Patronize Composer"
+
+ homeland_academia_modifier: "Violated Academic Integrity"
+ homeland_university_modifier: "Supported Historical Falsification"
+ homeland_not_university_modifier: "Refused to Support Historical Falsification"
+
+ homeland_costs: "Homeland Integration Fund"
+
+ #employment_discrimination:0 "Employment Discrimination" #Already exists in vanilla
+ employment_not_discrimination: "Prohibited Employment Discrimination"
+
+ homeland_migration: "Encouraged Migration"
+ homeland_migration_not: "Discouraged Migration"
+
+ mixed_blood: "Interracial Marriage Allowed"
+ mixed_blood_not: "Anti-Miscegenation Laws"
+
+ cultural_isolation: "Cultural Segregation"
+ cultural_isolation_not: "Cultural Desegregation"
+
+ military_homeland: "Supported Military Sports"
+ military_homeland_not: "Prohibited Military Sports"
+
+ festival_homeland: "Supported Farmers Festival"
+ festival_homeland_not: "Prohibited Farmers Festival"

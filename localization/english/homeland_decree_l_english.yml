@@ -1,0 +1,81 @@
+﻿l_english:
+ decree_homeland_removal: "Our Homeland"
+ decree_homeland_removal_desc: "Integrate the state into a part of our national homeland"
+
+ decree_reclaim_land: "Land Clearing"
+ decree_reclaim_land_desc: "Increase arable area by clearing tracts of forest and wildland"
+
+ decree_childbirth_incentive: "Encourage Childbirth"
+ decree_childbirth_incentive_desc: "Increase the fertility rate by adopting pro-natal policies"
+
+ decree_encourage_workforce: "Encourage Workforce"
+ decree_encourage_workforce_desc: "Increase the labour force participation rate by adopting pro-labor policies"
+
+ reclaim_land.tt: "Has available land for clearing"
+
+ homeland_decree.tt: "Is homeland of foreign culture"
+ homeland_decree.tt2: "Has an established population of primary culture in the state"
+ homeland_improvement.tt: "Our efforts to establish the integrated homeland gains progress"
+ homeland_improvement.tt2: "Our efforts to establish the integrated homeland gains major progress"
+
+ reclaim_land_events.1.t: "Land Clearing"
+ reclaim_land_events.1.d: "The clearing of [ROOT.GetState.GetName] has paid off. Now the state will be able to cultivate more farmland."
+ reclaim_land_events.1.d2: "The clearing of [ROOT.GetState.GetName] has come to fruition. The state will now be able to cultivate more farmland. The end of the great clearing."
+ reclaim_land_events.1.f: ""Land is essentially a gift from nature. Cultivating the land is our mission to return that grace.""
+ reclaim_land_events.1.a: "It went well."
+
+ remove_homeland_events.1.t:0 "Our Homeland"
+ remove_homeland_events.1.d:0 "A union among our people is not only possible, but a reality. All the citizens of [ROOT.GetState.GetCountry.GetName] are now united under the same banner, the same flag."
+ remove_homeland_events.1.f:1 ""The ancient legends of the past will soon find their counterpart in our own new legends. Our national heroes now gaze upon us with a smiling face. Our language, our culture, everything that makes us come together, by the sons and daughters of a common ancestry, we shall finally honor it.""
+ remove_homeland_events.1.a:0 "Our nation, our culture!"
+
+ remove_homeland_events.4.d: "A commission has been sent to the prestigious [SCOPE.sBuilding('decree_building').GetName] of [SCOPE.sState('decree_state').GetName] to get one of their finest composers to write a national opera that captures the grandeur of [ROOT.GetState.GetCountry.GetName]."
+ remove_homeland_events.4.f: ""Even the harshest critics won't be able to find a single flaw in the harmony, the scale, the rhythm of my opera magna, [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_noun')] [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_genitive')]. A tale about love, death, immortal topics that pertain [ROOT.GetState.GetCountry.GetAdjectiveNoFormatting] legends will be forever remembered thanks to these magnificent arias!""
+ remove_homeland_events.4.b: "Not a very interesting offer."
+
+ remove_homeland_events.5.t: "Controlling the Historical Narrative"
+ remove_homeland_events.5.d: "A research fund has been requested from the [SCOPE.sBuilding('decree_building').GetName] in [SCOPE.sState('decree_state').GetName], with a thesis highlighting a historical attachment of [SCOPE.sCulture('discriminated_culture').GetName] to [ROOT.GetState.GetOwner.GetName] lineage."
+ remove_homeland_events.5.f: ""By its origin and essence, [SCOPE.sCulture('discriminated_culture').GetName] is a derived supraethnic identity that recently diverged from the tree of [ROOT.GetState.GetOwner.GetName] lineage. We would like to create an extensive research team, from anthropologists to phylogenists, to uncover this axiomatic fact.""
+ remove_homeland_events.5.a: "Start on the thesis immediately!"
+ remove_homeland_events.5.b: "University must uphold strict institutional integrity."
+
+ remove_homeland_events.6.t: "Terrorist Attack on Academia"
+ remove_homeland_events.6.d: "Radical nationalists in [ROOT.GetState.GetName] have attacked a group of researchers investigating the history of [SCOPE.sCulture('discriminated_culture').GetName]. They are demanding an immediate end to agenda driven studies with the threat of more extreme measures if done otherwise."
+ remove_homeland_events.6.f: ""The culture of [SCOPE.sCulture('discriminated_culture').GetName] is ours and belongs solely to the [SCOPE.sCulture('discriminated_culture').GetName] people! It doesn't belong to anyone else! The government of [ROOT.GetState.GetOwner.GetName] must stop distorting historical facts immediately!""
+ remove_homeland_events.6.a: "We do not negotiate with terrorists."
+ remove_homeland_events.6.b: "It was unethical in the first place."
+
+ remove_homeland_events.7.d: "[SCOPE.sCulture('discriminated_culture').GetName] students sometimes use their native language in [ROOT.GetCountry.GetAdjectiveNoFormatting]schools. Some have called for teachers to penalize their use of mother tongue, forcing children to speak the official language of [ROOT.GetState.GetCountry.GetName]."
+
+ remove_homeland_events.8.d: "Factories in [SCOPE.sState('discrimination_state').GetName] are refusing to hire [SCOPE.sCulture('discriminated_culture_pop').GetName] people, owing to their status as second class citizens in [ROOT.GetState.GetCountry.GetName]."
+ remove_homeland_events.8.a: "Foreign customs are not allowed in the workplace."
+
+ remove_homeland_events.9.t: "More Migration"
+ remove_homeland_events.9.d: "The need for migrant workers is increasing as our endeavor to make homeland in [ROOT.GetState.GetName] gains significant momentum. On the contrary, indigenous population are now united in their very fierce opposition to any form of migration."
+ remove_homeland_events.9.f: ""The culture of [SCOPE.sCulture('discriminated_culture').GetName] people deserves respect. We refuse our beautiful homeland to be destroyed by the influx of outsiders.""
+ remove_homeland_events.9.a: "Affairs of the state does not concern with peasant's pedantry."
+ remove_homeland_events.9.b: "They have a point."
+
+ remove_homeland_events.10.t: "Mixed-Blood"
+ remove_homeland_events.10.d: "Recent copresence of different cultures in [ROOT.GetState.GetName] led to increased number of interracial marriage. Number of bureaucrats in [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName], however, argue that such practice must not be tolerated."
+ remove_homeland_events.10.f: ""The cultural heterogeneity of [ROOT.GetState.GetOwner.GetName] and [SCOPE.sCulture('discriminated_culture').GetName] is not something that can be easily overcome. I'm afraid of what kind of chaos their mixed race will bring upon our society.""
+ remove_homeland_events.10.a: "Race is merely a social construct."
+ remove_homeland_events.10.b: "Impose an immediate ban."
+
+ remove_homeland_events.11.t: "Cultural Segregation"
+ remove_homeland_events.11.d: "Cultural conflict in [ROOT.GetState.GetName] is on the rise with the growing incidents of violence. To deescalate the widespread tension, intellectuals from the [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] insist on an immediate executive order of cultural segregation."
+ remove_homeland_events.11.f: ""[SCOPE.sCulture('discriminated_culture').GetName] and [ROOT.GetState.GetOwner.GetName] have different cultures. It's not that their culture is inferior, they're just different from us. So it would be wise to reduce the inner friction through this noble segregation.""
+ remove_homeland_events.11.a: "Segregation has no place in our society."
+ remove_homeland_events.11.b: "Follow the advice from academia."
+
+ remove_homeland_events.12.t: "Military Sports"
+ remove_homeland_events.12.d: "Military sports among cadets are becoming a habitual practice in [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] and new recruits of [SCOPE.sCulture('discriminated_culture').GetName] origin are actively participating."
+ remove_homeland_events.12.f: ""No matter what someone looks like or says, what matters! As long as you play well, that's it! Hey there! Pass me that ball right now!""
+ remove_homeland_events.12.a: "Make a proper playground for them."
+ remove_homeland_events.12.b: "Remind them of their soldierly duty."
+
+ remove_homeland_events.13.t: "Multicultural Festival"
+ remove_homeland_events.13.d: "A photograph of [SCOPE.sCulture('discriminated_culture').GetName] and [ROOT.GetState.GetCountry.GetName] farmers drinking, laughting, hugging each other in the middle of the [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] Festival catched the eyes of public attention."
+ remove_homeland_events.13.f: ""We sometimes quarreled and sometimes raged. We sometimes wept and sometimes grieved. But today, I hope we can let go of all the resentment and just laugh and enjoy the feast. If you're the people of [ROOT.GetState.GetCountry.GetName], let's eat, drink and dance!""
+ remove_homeland_events.13.a: "Provide financial support for more gatherings."
+ remove_homeland_events.13.b: "Order an immediate dispersal of this rabble of yokels."
