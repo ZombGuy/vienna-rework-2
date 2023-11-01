@@ -143,6 +143,7 @@ pm_arc_welded_buildings = {
 pm_balanced_construction = {
 	texture = "gfx/interface/icons/production_method_icons/pm_balanced_construction.dds"
 	is_default = yes
+	ai_weight = 6
 }
 
 pm_decentralized_construction = {
@@ -173,14 +174,15 @@ pm_decentralized_construction = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = -250
-			building_employment_clerks_add = -250
-			building_employment_laborers_add = -2000
+			building_employment_bureaucrats_add = 250
+			building_employment_clerks_add = 250
+			building_employment_laborers_add = 3000
 		}
 		workforce_scaled = {
 			building_goods_input_mult = -0.05
 		}
 	}
+	ai_weight = 1
 }
 
 pm_centralized_construction = {
@@ -218,6 +220,7 @@ pm_centralized_construction = {
 			building_employment_laborers_add = 3000
 		}
 	}
+	ai_weight = 3
 }
 
 pm_construction_automation_disabled = {
