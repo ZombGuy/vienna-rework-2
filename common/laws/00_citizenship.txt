@@ -195,10 +195,10 @@ law_cultural_exclusion = {
 	}
 	
 	modifier = {
-		country_authority_add = 50
+		country_authority_add = 100
 		state_radicals_from_sol_change_accepted_culture_mult = -0.05
 		state_loyalists_from_sol_change_accepted_culture_mult = 0.05
-		state_birth_rate_mult = -0.05	
+		state_birth_rate_mult = -0.03
 	}
 	
 	possible_political_movements = {
@@ -270,7 +270,8 @@ law_multicultural = {
 	}
 	
 	modifier = {
-		state_birth_rate_mult = -0.1	
+		state_birth_rate_mult = -0.06
+		state_migration_pull_add = 10
 	}
 
 	possible_political_movements = {

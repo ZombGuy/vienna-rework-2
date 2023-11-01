@@ -10,8 +10,8 @@ law_no_workers_rights = {
 	progressiveness = 0
 	
 	modifier = {
-		building_minimum_wage_mult = -0.1
-		building_subsistence_output_add = 1
+		state_rich_standard_of_living_add = 3
+		building_minimum_wage_mult = -0.15
 	}
 	
 	possible_political_movements = {
@@ -48,6 +48,12 @@ law_regulatory_bodies = {
 	}
 
 	institution = institution_workplace_safety
+
+	institution_modifier = {
+		building_minimum_wage_mult = 0.075
+		tax_dividends_add = 0.025
+		state_poor_standard_of_living_add = 0.25
+	}
 	
 	possible_political_movements = {
 		law_worker_protections
@@ -107,8 +113,11 @@ law_worker_protections = {
 	}
 	
 	institution = institution_workplace_safety
+
 	institution_modifier = {
 		building_minimum_wage_mult = 0.15
+		tax_dividends_add = 0.05
+		state_poor_standard_of_living_add = 0.5
 	}
 
 	

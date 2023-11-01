@@ -10,7 +10,7 @@
 	}
 	
 	modifier = {
-		state_birth_rate_mult = 0.1
+		state_birth_rate_mult = 0.05
 	}
 
 	pop_support = {
