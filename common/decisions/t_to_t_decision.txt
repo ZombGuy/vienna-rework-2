@@ -1,0 +1,177 @@
+###############################
+# Treasury to Investment Pool #
+#      created by Lord R      #
+###############################
+
+#Activates decisions
+ttip_activate_decision = {
+
+	is_shown = {
+		NOT = {
+			has_variable = ttip_show_transfer_decisions
+		}
+	}
+
+	possible = {
+		is_player = yes
+		NOT = {
+			has_variable = ttip_show_transfer_decisions
+		}
+	}
+	
+	when_taken = {
+		set_variable = ttip_show_transfer_decisions
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+#Deactivates decisions
+ttip_deactivate_decision = {
+
+	is_shown = {
+		has_variable = ttip_show_transfer_decisions
+	}
+
+	possible = {
+		is_player = yes
+	}
+	
+	when_taken = {
+		remove_variable = ttip_show_transfer_decisions
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+#Transfer 50'000 to investment pool
+ttip_transfer_50000_decision = {
+
+	is_shown = {
+		has_variable = ttip_show_transfer_decisions
+	}
+
+	possible = {
+		gold_reserves  > 50000
+	}
+	
+	when_taken = {
+		add_treasury = -50000
+		add_investment_pool = 50000
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+#Transfer 100'000 to investment pool
+ttip_transfer_100000_decision = {
+
+	is_shown = {
+		has_variable = ttip_show_transfer_decisions
+	}
+
+	possible = {
+		gold_reserves  > 100000
+	}
+	
+	when_taken = {
+		add_treasury = -100000
+		add_investment_pool = 100000
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+#Transfer 1'000'000 to investment pool
+ttip_transfer_1000000_decision = {
+
+	is_shown = {
+		has_variable = ttip_show_transfer_decisions
+	}
+
+	possible = {
+		gold_reserves  > 1000000
+	}
+	
+	when_taken = {
+		add_treasury = -1000000
+		add_investment_pool = 1000000
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+#Automate tranfer to investment pool
+ttip_auto_transfer_activate_decision = {
+	is_shown = {
+		has_variable = ttip_show_transfer_decisions
+		NOT = {
+			has_variable = ttip_auto_transfer_var
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+	
+	when_taken = {
+		set_variable = ttip_auto_transfer_var
+		custom_tooltip = ttip_auto_transfer_tt
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+#Remove Automatic tranfer to investment pool
+ttip_auto_transfer_deactivate_decision = {
+	is_shown = {
+		has_variable = ttip_show_transfer_decisions
+		has_variable = ttip_auto_transfer_var
+	}
+
+	possible = {
+		always = yes
+	}
+	
+	when_taken = {
+		remove_variable = ttip_auto_transfer_var
+		custom_tooltip = ttip_stop_auto_transfer_tt
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
+
+#Transfer 1'000'000 from investment pool to the treasury
+ttip_retransfer_1000000_decision = {
+
+	is_shown = {
+		has_variable = ttip_show_transfer_decisions
+	}
+
+	possible = {
+		investment_pool > 1000000
+	}
+	
+	when_taken = {
+		add_investment_pool = -1000000
+		add_treasury = 1000000
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}
