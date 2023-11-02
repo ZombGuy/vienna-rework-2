@@ -738,7 +738,7 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = mashriqi
-				size = 272000
+				size = 372000
 			}
 			create_pop = {
 				culture = mashriqi
@@ -747,7 +747,7 @@
 			}
 			create_pop = {
 				culture = bedouin
-				size = 71996
+				size = 171996
 			}
 			create_pop = {
 				culture = bedouin
