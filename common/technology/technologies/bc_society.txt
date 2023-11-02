@@ -1,0 +1,36 @@
+﻿basic_contraception = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/vitamins.dds"
+	category = society
+	
+	modifier = {
+		country_institution_birth_control_max_investment_add = 1
+	}
+	
+	unlocking_technologies = {
+		medical_degrees
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}
+
+advanced_contraception = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/unused/birth_control.dds"
+	category = society
+	
+	modifier = {
+		country_institution_birth_control_max_investment_add = 3
+	}
+	
+	unlocking_technologies = {
+		basic_contraception
+		pharmaceuticals
+	}
+	
+	ai_weight = {
+		value = 0
+	}
+}

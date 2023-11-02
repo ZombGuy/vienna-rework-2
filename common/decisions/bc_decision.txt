@@ -1,0 +1,19 @@
+﻿bc_decision = {
+	is_shown = {
+		NOT = {
+			has_variable = birth_control_var
+		}
+	}
+	
+	when_taken = {
+		trigger_event = { id = bc_event.1 }
+		set_variable = {
+			name = birth_control_var
+			value = 0
+		}
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
