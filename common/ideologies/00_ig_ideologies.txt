@@ -49,8 +49,17 @@
 		law_mercantilism = approve
 		law_protectionism = neutral
 		law_free_trade = disapprove
-	}	
+	}
+
+	lawgroup_birth_control = {	
+		law_no_birth_control_law = neutral
+		law_church_mandated_procreation = neutral
+		law_child_tax_credits = disapprove
+		law_free_birth_control = disapprove
+		law_one_child = approve
+	}
 }
+
 
 ideology_laissez_faire = {
 	icon = "gfx/interface/icons/ideology_icons/laissez_faire.dds"
@@ -122,6 +131,14 @@ ideology_individualist = {
 		law_migration_controls = disapprove
 		law_closed_borders = strongly_disapprove
 	}
+
+	lawgroup_birth_control = {	
+		law_no_birth_control_law = approve
+		law_child_tax_credits = strongly_disapprove
+		law_free_birth_control = disapprove
+		law_one_child = disapprove
+		law_church_mandated_procreation = strongly_disapprove
+	}
 }
 
 ideology_stratocratic = {
@@ -173,8 +190,17 @@ ideology_pious = {
 		law_no_schools = neutral
 		law_public_schools = disapprove
 		law_private_schools = disapprove		
-	}	
+	}
+
+	lawgroup_birth_control = {	
+		law_no_birth_control_law = neutral
+		law_church_mandated_procreation = strongly_approve
+		law_child_tax_credits = approve
+		law_free_birth_control = disapprove
+		law_one_child = disapprove
+	}
 }
+
 
 ideology_agrarian = {
 	icon = "gfx/interface/icons/ideology_icons/agrarian.dds"
@@ -391,6 +417,14 @@ ideology_liberal = {
 		law_women_in_the_workplace = neutral
 		law_womens_suffrage = neutral
 	}
+
+	lawgroup_birth_control = {	
+		law_no_birth_control_law = neutral
+		law_church_mandated_procreation = neutral
+		law_child_tax_credits = approve
+		law_free_birth_control = approve
+		law_one_child = disapprove
+	}
 }
 
 ideology_anti_clerical = {
@@ -480,6 +514,14 @@ ideology_proletarian = {
 		law_private_schools = neutral
 		law_religious_schools = neutral	
 		law_no_schools = disapprove	
+	}
+
+	lawgroup_birth_control = {	
+		law_no_birth_control_law = neutral
+		law_church_mandated_procreation = neutral
+		law_child_tax_credits = approve
+		law_free_birth_control = strongly_approve
+		law_one_child = disapprove
 	}
 }
 
