@@ -6,6 +6,9 @@
  institution_childbirth_affairs_desc:0 "It is a ministry that encourages women to be fertility."
  modifier_country_institution_childbirth_affairs_max_investment_add:0 "Max $institution_childbirth_affairs$ [concept_institution] Investment"
 
+##########
+# Canals #
+##########
 
  pmg_canal_power:0 "Power Method"
  pmg_canal_taxation:0 "Taxation Amount"
@@ -58,3 +61,35 @@
 #Transfer 1'000'000 to treasury
  ttip_retransfer_1000000_decision: "Transfer £1'000'000 to the [concept_treasury]"
  ttip_retransfer_1000000_decision_desc: "Transfer £1'000'000 from your [concept_investment_pool] to the [concept_treasury]."
+
+##################
+# Transfer Money #
+##################
+ transfer_money:0 "Transfer Cash"
+ transfer_money_action_name:0 "Transfer Cash"
+ transfer_money_action_propose_name:0 "Start transferring cash"
+ transfer_money_desc:0 "#header Transfer Cash#!\n$TOOLTIP_DELIMITER$\nAn Transfering cash to another country."
+ transfer_money_action_notification_name:0 "Cash Transfer"
+ transfer_money_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] have started transferring cash to our country."
+ transfer_money_action_notification_break_name:0 "Cash Transfer Ended"
+ transfer_money_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] ended their ongoing money transferral to our country."
+ 
+ transferring_money:0 "Transferring Cash"
+ 
+ transfer_money.1.t:0 "Cash Transfer"
+ transfer_money.1.d:0 "Choose the amount of cash to be transferred to [SCOPE.sC('target_country').GetName]"
+ transfer_money.1.a:0 "@money!#G 20,000#!"
+ transfer_money.1.b:0 "@money!#G 50,000#!"
+ transfer_money.1.c:0 "@money!#G 100,000#!"
+ transfer_money.1.e:0 "@money!#G 250,000#!"
+ transfer_money.1.g:0 "@money!#G 350,000#!"
+ transfer_money.1.h:0 "@money!#G 500,000#!"
+ transfer_money.1.i:0 "@money!#G 750,000#!"
+ transfer_money.1.j:0 "@money!#G 1,000,000#!"
+ transfer_money.1.k:0 "@money!#G 1,500,000#!"
+ transfer_money.1.l:0 "@money!#G 2,500,000#!"
+ transfer_money.1.m:0 "@money!#G 5,000,000#!"
+ transfer_money.1.n:0 "@money!#G 7,500,000#!"
+ transfer_money.1.o:0 "@money!#G 10,000,000#!"
+
+ ###
