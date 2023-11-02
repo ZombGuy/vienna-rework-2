@@ -19,3 +19,42 @@
  pm_canal_tax_med:0 "Medium Taxes"
  pm_canal_tax_high:0 "High Taxes"
  pm_canal_tax_very_high:0 "Very High Taxes"
+
+###############################
+# Treasury to Investment Pool #
+#      created by Lord R      #
+###############################
+
+#Activate TtIP decisions
+ ttip_activate_decision: "Show Treasury to Investment Pool decisions"
+ ttip_activate_decision_desc: "Shows the Treasury to Investment Pool decisions which allow you to transfer money from your [concept_treasury] to your [concept_investment_pool]."
+
+#Deactivate TtIP decisions
+ ttip_deactivate_decision: "Hide Treasury to Investment Pool decisions"
+ ttip_deactivate_decision_desc: "Hides the Treasury to Investment Pool decisions which allow you to transfer money from your [concept_treasury] to your [concept_investment_pool]."
+
+#Transfer 50000
+ ttip_transfer_50000_decision: "Transfer £50,000"
+ ttip_transfer_50000_decision_desc: "Transfer £50,000 from your [concept_treasury] to your [concept_investment_pool]."
+
+#Transfer 100'000
+ ttip_transfer_100000_decision: "Transfer £100,000"
+ ttip_transfer_100000_decision_desc: "Transfer £100,000 from your [concept_treasury] to your [concept_investment_pool]."
+
+#Transfer 1'000'000
+ ttip_transfer_1000000_decision: "Transfer £1'000'000"
+ ttip_transfer_1000000_decision_desc: "Transfer £1'000'000 from your [concept_treasury] to your [concept_investment_pool]."
+
+#Automate tranfer to investment pool
+ ttip_auto_transfer_activate_decision: "Automatic transfer to the investment pool"
+ ttip_auto_transfer_activate_decision_desc: "With this decision, all money that exceeds 95% of the limit of the [concept_gold_reserves] is automatically moved to the [concept_investment_pool] every month."
+ ttip_auto_transfer_tt: "Automatically transfers all money exceeding 95% of the [concept_gold_reserves] limit to the [concept_investment_pool] each month."
+
+#Remove Automatic tranfer to investment pool
+ ttip_auto_transfer_deactivate_decision: "Stop the automatic transfer to the investment pool"
+ ttip_auto_transfer_deactivate_decision_desc: "Stop automatically moving all money that exceeds 95% of the [concept_gold_reserves] limit into the [concept_investment_pool] every month."
+ ttip_stop_auto_transfer_tt: "No longer automatically transfers all the money above 95% of your [concept_gold_reserves] limit to your [concept_investment_pool] every month."
+
+#Transfer 1'000'000 to treasury
+ ttip_retransfer_1000000_decision: "Transfer £1'000'000 to the [concept_treasury]"
+ ttip_retransfer_1000000_decision_desc: "Transfer £1'000'000 from your [concept_investment_pool] to the [concept_treasury]."
