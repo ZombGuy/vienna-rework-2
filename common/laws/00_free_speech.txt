@@ -55,7 +55,7 @@ law_censorship = {
 		country_authority_add = 100
 		country_promotion_ig_attraction_mult = 0.4
 		country_suppression_ig_attraction_mult = -0.4
-		country_tech_spread_mult = -0.10
+		# country_tech_spread_mult = 0.0
 	}
 	
 	possible_political_movements = {
@@ -99,6 +99,7 @@ law_right_of_assembly = {
 		country_authority_add = 50
 		country_promotion_ig_attraction_mult = 0.3
 		country_suppression_ig_attraction_mult = -0.3
+		country_tech_spread_mult = 0.10
 	}
 	
 	possible_political_movements = {
@@ -167,7 +168,7 @@ law_protected_speech = {
 	}
 	
 	modifier = {
-		country_tech_spread_mult = 0.25
+		country_tech_spread_mult = 0.3
 	}
 	
 	possible_political_movements = {
