@@ -420,9 +420,9 @@ ideology_liberal = {
 
 	lawgroup_birth_control = {	
 		law_no_birth_control_law = neutral
-		law_church_mandated_procreation = neutral
+		law_church_mandated_procreation = disapprove
 		law_child_tax_credits = approve
-		law_free_birth_control = approve
+		law_free_birth_control = strongly_approve
 		law_one_child = disapprove
 	}
 }
