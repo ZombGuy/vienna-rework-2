@@ -1,0 +1,7 @@
+﻿l_english:
+#Leader Ideologies
+ideology_militarist: "Militarist"
+ideology_militarist_desc: "#lore This leader advocates an aggressive foreign policy, emphasize the establishment of a permanent total war system to carry out the nation's ambitions.#!"
+#Army Model group
+ law_no_army: "Disarmed Nation"
+ law_no_army_desc: "The country has no organized armed forces."
