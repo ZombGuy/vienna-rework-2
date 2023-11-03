@@ -4,6 +4,7 @@
 		
 		effect_starting_politics_traditional = yes
 		activate_law = law_type:law_legacy_slavery
+		activate_law = law_type:law_no_womens_rights
 
 		add_technology_researched = sericulture # Silk!
 	}

@@ -13,6 +13,7 @@
 		activate_law = law_type:law_isolationism
 		activate_law = law_type:law_no_schools
 		activate_law = law_type:law_no_police
+		activate_law = law_type:law_no_womens_rights
 
 		add_technology_researched = mass_communication
 		add_technology_researched = egalitarianism
