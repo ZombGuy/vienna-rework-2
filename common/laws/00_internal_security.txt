@@ -47,6 +47,10 @@ law_national_guard = {
 		law_enforcement
 	}
 
+	disallowing_laws = {
+		law_no_army
+	}
+	
 	institution = institution_home_affairs
 	institution_modifier = {
 		state_conscription_rate_add = 0.005

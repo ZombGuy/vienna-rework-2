@@ -681,7 +681,7 @@ trench_works = {
 	category = military
 	
 	unlocking_technologies = {
-		general_staff
+		military_statistics
 		electric_telegraph
 	}
 	
