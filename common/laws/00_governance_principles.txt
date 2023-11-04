@@ -66,6 +66,7 @@ law_monarchy = {
 		law_presidential_republic
 		law_parliamentary_republic
 		law_council_republic
+		law_corporatocracy
 	}
 	
 	pop_support = {
@@ -178,6 +179,7 @@ law_presidential_republic = {
 	possible_political_movements = {
 		law_council_republic
 		law_monarchy
+		law_corporatocracy
 	}
 
 	pop_support = {
@@ -255,6 +257,7 @@ law_parliamentary_republic = {
 	possible_political_movements = {
 		law_council_republic
 		law_monarchy
+		law_corporatocracy
 	}
 
 	pop_support = {
@@ -318,6 +321,7 @@ law_theocracy = {
 		law_presidential_republic
 		law_parliamentary_republic
 		law_council_republic
+		law_corporatocracy
 	}
 
 	pop_support = {

@@ -143,6 +143,7 @@ ideology_atheist = {
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
 		law_council_republic = neutral
+		law_corporatocracy = neutral
 	}
 
 	lawgroup_church_and_state = {
@@ -254,12 +255,14 @@ ideology_republican_leader = {
 		law_council_republic = disapprove
 		law_monarchy = disapprove
 		law_theocracy = disapprove
+		law_corporatocracy = disapprove
 	}
 	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
+		law_meritocratic_bureaucracy = approve
 	}
 	
 	possible = {
@@ -350,7 +353,8 @@ ideology_radical = {
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
 		law_theocracy = strongly_disapprove
-		law_council_republic = strongly_disapprove		
+		law_council_republic = strongly_disapprove	
+		law_corporatocracy = strongly_disapprove	
 		law_presidential_republic = approve
 		law_parliamentary_republic = approve
 	}
@@ -1199,6 +1203,7 @@ ideology_royalist = {
 		law_parliamentary_republic = disapprove
 		law_theocracy = disapprove
 		law_council_republic = strongly_disapprove
+		law_corporatocracy = strongly_disapprove
 	}
 	
 	possible = {
@@ -1451,6 +1456,7 @@ ideology_communist = {
 		law_parliamentary_republic = disapprove
 		law_theocracy = strongly_disapprove
 		law_council_republic = strongly_approve
+		law_corporatocracy = strongly_disapprove
 	}
 
 	lawgroup_economic_system = {	
@@ -1585,6 +1591,7 @@ ideology_vanguardist = {
 		law_parliamentary_republic = disapprove
 		law_theocracy = strongly_disapprove
 		law_council_republic = strongly_approve
+		law_corporatocracy = strongly_disapprove
 	}
 
 	lawgroup_distribution_of_power = {
@@ -2028,6 +2035,7 @@ ideology_anarchist = {
 		law_parliamentary_republic = disapprove
 		law_theocracy = strongly_disapprove
 		law_council_republic = strongly_approve
+		law_corporatocracy = strongly_disapprove
 	}
 	
 	possible = {
@@ -2274,6 +2282,7 @@ ideology_theocrat = {
 		law_presidential_republic = disapprove
 		law_parliamentary_republic = disapprove
 		law_council_republic = disapprove
+		law_corporatocracy = disapprove
 	}
 	
 	possible = {
@@ -3198,6 +3207,7 @@ ideology_jacksonian_democrat = {
 		law_monarchy = strongly_disapprove
 		law_theocracy = strongly_disapprove
 		law_council_republic = strongly_disapprove
+		law_corporatocracy = strongly_disapprove
 		law_parliamentary_republic = neutral
 		law_presidential_republic = approve
 	}
@@ -3216,6 +3226,7 @@ ideology_jacksonian_democrat = {
 
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
+		law_meritocratic_bureaucracy = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
 	}
@@ -3273,6 +3284,7 @@ ideology_positivist = {
 		law_theocracy = strongly_disapprove
 		law_council_republic = strongly_disapprove
 		law_monarchy = strongly_disapprove
+		law_corporatocracy = disapprove
 		law_parliamentary_republic = neutral	
 		law_presidential_republic = approve	
 	}
@@ -3300,6 +3312,7 @@ ideology_positivist = {
 		law_appointed_bureaucrats = strongly_approve
 		law_elected_bureaucrats = disapprove
 		law_hereditary_bureaucrats = strongly_disapprove
+		law_meritocratic_bureaucracy = strongly_approve
 	}
 	
 	possible = {
@@ -3307,6 +3320,10 @@ ideology_positivist = {
 		NAND = {
 			has_role = agitator
 			owner = {
+				OR = {
+					has_law = law_type:law_meritocratic_bureaucracy
+					has_law = law_type:law_appointed_bureaucrats
+				}
 				has_law = law_type:law_appointed_bureaucrats
 				has_law = law_type:law_technocracy
 				has_law = law_type:law_state_atheism

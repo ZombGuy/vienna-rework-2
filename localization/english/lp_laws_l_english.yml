@@ -5,3 +5,9 @@ ideology_militarist_desc: "#lore This leader advocates an aggressive foreign pol
 #Army Model group
  law_no_army: "Disarmed Nation"
  law_no_army_desc: "The country has no organized armed forces."
+ #Bureaucracy
+ law_meritocratic_bureaucracy: "Meritocratic Bureaucracy"
+ law_meritocratic_bureaucracy_desc: "Bureaucrats vie for positions of power through merit. Over time this creates enormous, byzantine administrations."
+ #Government Principles group
+ law_corporatocracy: "Corporatocracy"
+ law_corporatocracy_desc: "Public powers are relegated to a minimal government that only performs security and defense functions, and we aim for privatization of all possible infrastructure and public services."
