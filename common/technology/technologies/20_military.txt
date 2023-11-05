@@ -473,7 +473,7 @@ military_statistics = {
 	}
 	
 	unlocking_technologies = {	
-		electric_telegraph
+		field_works
 		general_staff
 	}
 	
@@ -701,6 +701,7 @@ war_propaganda = {
 	}
 	
 	unlocking_technologies = {	
+		electric_telegraph
 		enlistment_offices
 	}
 	
@@ -721,7 +722,8 @@ wargaming = {
 	}
 	
 	unlocking_technologies = {
-		military_statistics
+		bolt_action_rifles
+		automatic_machine_guns
 	}
 	
 	ai_weight = {
@@ -776,7 +778,7 @@ automatic_machine_guns = {
 	
 	unlocking_technologies = {	
 		handcranked_machine_gun
-		bolt_action_rifles
+		military_statistics
 	}
 	
 	ai_weight = {
@@ -927,7 +929,7 @@ nco_training = {
 	category = military
 	
 	unlocking_technologies = {
-		military_statistics
+		war_propaganda
 		trench_works
 	}
 	
@@ -958,8 +960,8 @@ stormtroopers = {
 	category = military
 	
 	unlocking_technologies = {	
-		wargaming
-		trench_works
+		nco_training
+		flamethrowers
 	}
 	
 	ai_weight = {
@@ -998,7 +1000,7 @@ mobile_armor = {
 	
 	unlocking_technologies = {	
 		military_aviation
-		concrete_fortifications
+		wargaming
 		nco_training
 	}
 	
@@ -1020,7 +1022,7 @@ military_aviation = {
 	}
 	
 	unlocking_technologies = {	
-		defense_in_depth
+		automatic_machine_guns
 	}
 	
 	ai_weight = {
@@ -1035,8 +1037,7 @@ flamethrowers = {
 	category = military
 	
 	unlocking_technologies = {	
-		trench_works
-		automatic_machine_guns
+		defense_in_depth
 	}
 	modifier = {
 		unit_kill_rate_add = 0.05
