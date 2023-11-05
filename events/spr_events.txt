@@ -1,0 +1,93 @@
+namespace = spr_military_event
+
+spr_military_event.1 = {
+	type = country_event
+	placement = root
+	
+
+	title = spr_military_event.1.t
+	desc = spr_military_event.1.d
+	flavor = spr_military_event.1.f
+
+	duration = 3
+
+	trigger = {
+		country_rank = rank_value:super_power
+	}
+
+	event_image = {
+		video = "middleeast_battlefield_trenches"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	option = {
+		name = spr_military_event.1.a
+		default_option = yes
+		add_modifier = {
+			name = army_penalty
+			months = 25
+		}
+	}
+
+	option = {
+		name = spr_military_event.1.b
+		add_modifier = {
+			name = navy_penalty
+			months = 25
+		}
+	}
+}
+
+spr_military_event.2 = {
+	type = country_event
+	placement = root
+	
+
+	title = spr_military_event.2.t
+	desc = spr_military_event.2.d
+	flavor = spr_military_event.2.f
+
+	duration = 3
+
+	trigger = {
+		country_rank = rank_value:super_power
+		is_player = yes
+	}
+
+	event_image = {
+		video = "europenorthamerica_art_gallery"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	option = {
+		name = spr_military_event.2.a
+		default_option = yes
+		add_modifier = {
+			name = prestige_reward_mult
+			months = 25
+		}
+	}
+
+	option = {
+		name = spr_military_event.2.b
+		add_modifier = {
+			name = industrialists_reward
+			months = 61
+		}
+	}
+
+	option = {
+		name = spr_military_event.2.c
+		add_modifier = {
+			name = intelligentsia_reward
+			months = 61
+		}
+	}
+}
+

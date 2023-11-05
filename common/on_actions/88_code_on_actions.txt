@@ -1,0 +1,9 @@
+﻿on_yearly_pulse_country = {
+    random_events = {
+		20 = spr_military_event.1
+		20 = spr_military_event.2
+		20 = spr_industry_event.1
+		20 = spr_industry_event.2
+		20 = spr_industry_event.3		
+	}
+}

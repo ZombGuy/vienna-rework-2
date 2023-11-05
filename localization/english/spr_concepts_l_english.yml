@@ -1,0 +1,70 @@
+﻿l_english:
+
+prestige_reward_mult:0 "Global Respect"
+industrialists_reward:0 "Capitalists Support"
+intelligentsia_reward:0 "Academics Support"
+army_penalty:0 "Grand Rearmament Plan"
+navy_penalty:0 "Grand Rearmament Plan"
+
+super_power:1 "[concept_super_power]"
+super_power_desc:0 "[concept_super_power_desc]"
+
+concept_super_power: "Super Power"
+concept_super_power:0 "Super Power"
+concept_super_powers:1 "Super Powers"
+concept_super_power_desc:3 "In the realm of geopolitical influence and global dominance, there exist a select group of nations that stand head and shoulders above even the mightiest of [Concept('concept_great_power','$concept_great_powers$')]. These distinguished [Concept('concept_country', '$concept_countries$')] are not merely confined by the definition of a [Concept('concept_great_power','$concept_great_power$')]; they transcend it, earning the illustrious title of a super power. These super powers hold the reins of global destiny, shaping the currents of international politics with their immense reach and unparalleled resources. [AddLocalizationIf(GetPlayer.IsValid,'concept_super_power_desc_added')]"
+concept_super_power_desc_added:0 "\n\n$concept_super_powers$ gain the following benefits:\n[GetRankModifier('super_power').GetDesc]"
+
+cock_monarchy.1.t:0 "Militarydawdawd Reorganization"
+
+# Military Events
+
+spr_military_event.1.t:0 "Military Reorganization"
+spr_military_event.1.d:0 "Acknowledging military shortfalls, we prioritize bolstering both army and navy to uphold our global superpower stature effectively."
+spr_military_event.1.f:0 ""The military prowess of these superpowers, while wielding substantial influence, often grapples with inherent limitations. Undertraining, inadequate logistics, and a lack of thorough preparation have collectively dimmed their potential. Despite their towering stature in global affairs, these superpowers find their military forces hampered by these challenges, reminding us that even giants can be burdened by the weight of their own complexities.""
+spr_military_event.1.a:0 "Prioritize the navy" 
+spr_military_event.1.b:0 "Prioritize the Army"
+
+spr_military_event.2.t:0 "Triumphant Powerhouse Ascends"
+spr_military_event.2.d:0 "[ROOT.GetCountry.GetName]'s domestic and international affairs are on the upswing, marking a significant positive change, ushering in an era of growth and global influence."
+spr_military_event.2.f:0 ""In the grand tapestry of global dynamics, an extraordinary narrative unfolds—a dominant force ascends. Through unyielding dedication and visionary direction, this entity has risen above, carving its path among the pinnacle of influence. Meticulous strategy and relentless commitment propel it forward, establishing a formidable presence on the global stage. This ascent underscores the fusion of ambition and action, painting a vivid portrait of a nation poised to mold history's trajectory within the realm of international affairs.""
+spr_military_event.2.a:0 "Temporary prestige bonus"
+spr_military_event.2.b:0 "Industrialists approval"
+spr_military_event.2.c:0 "Intelligentsia approval"
+
+#spr_military_event.x.t:0
+#spr_military_event.x.d:0
+#spr_military_event.x.f:0
+#spr_military_event.x.a:0
+#spr_military_event.x.b:0
+
+# Industry Events
+
+spr_building_training_rate_mult:0 "Work Manuals"
+spr_building_employment_peasants_mult:0 "National Hiring Act"
+politics_approval_positive:0 "Party Funding"
+politics_approval_negative:0 "Immigration Control Funding"
+bureaucracy_inefficiencies:0 "More Paper Work"
+
+#spr_industry_event
+#spr_industry_event
+#spr_industry_event
+#spr_industry_event
+#spr_industry_event
+
+spr_industry_event.1.t:0 "For the Workers"
+spr_industry_event.1.d:0 "[ROOT.GetCountry.GetName] pushes for increasing standard of living. "
+spr_industry_event.1.f:0 ""Our workers, champions of progress, infuse dedication and expertise into every endeavor. They are the backbone of our success, transforming challenges into opportunities and propelling us towards a brighter future.""
+spr_industry_event.1.a:0 "Work Manuals"
+spr_industry_event.1.b:0 "National Hiring Act"
+
+spr_industry_event.2.t:0 "Politics or Immigration"
+spr_industry_event.2.d:0 "[ROOT.GetCountry.GetName] either funds the political parties or funds immigration control"
+spr_industry_event.2.f:0 ""In the intricate tapestry of governance, [ROOT.GetCountry.GetName] stands at a crossroads. Will it allocate its resources to empower political parties, fostering democratic vibrancy, or will it invest in immigration control, securing its borders and shaping its future with strategic determination? The choice is poised to define its trajectory in the global arena.""
+spr_industry_event.2.a:0 "Party Funds Approval"
+spr_industry_event.2.b:0 "Party Funds Denial"
+
+spr_industry_event.3.t:0 "Expansive Goverment"
+spr_industry_event.3.d:0 "[ROOT.GetCountry.GetName]'s goverment is being inefficient."
+spr_industry_event.3.f:0 ""The expanding government grapples with inefficiency, burdened by excessive bureaucracy. We strive to streamline operations, reduce paperwork, and enhance efficiency while meeting diverse societal needs.""
+spr_industry_event.3.a:0 "More Paper Work"

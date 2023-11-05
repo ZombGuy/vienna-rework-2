@@ -1,0 +1,67 @@
+army_penalty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    unit_army_offense_mult = -0.15
+    unit_army_defense_mult = -0.15
+    unit_navy_offense_mult = 0.1
+    unit_navy_defense_mult = 0.1
+    building_barracks_throughput_mult = 0.1
+
+}
+
+navy_penalty = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    unit_navy_offense_mult = -0.15
+    unit_navy_defense_mult = -0.15
+    unit_army_offense_mult = 0.1
+    unit_army_defense_mult = 0.1
+    building_naval_base_throughput_mult = 0.1
+}
+
+prestige_penalty_mult = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    country_prestige_mult = -0.05
+}
+
+prestige_reward_mult = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    country_prestige_mult = 0.05
+}
+
+industrialists_reward = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    interest_group_ig_industrialists_approval_add = 1
+}
+
+intelligentsia_reward = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    interest_group_ig_intelligentsia_approval_add = 1
+}
+
+spr_building_training_rate_mult = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    building_training_rate_mult = 0.1
+}
+
+spr_building_employment_peasants_mult = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    building_employment_peasants_mult = 0.01
+}
+
+politics_approval_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -1
+    state_migration_pull_mult = 0.25
+}
+
+politics_approval_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = 1
+    state_migration_pull_mult = -0.25
+}
+
+bureaucracy_inefficiencies = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_bureaucracy_mult = -0.05
+}
+
+

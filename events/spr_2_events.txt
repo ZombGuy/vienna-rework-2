@@ -1,0 +1,118 @@
+namespace = spr_industry_event
+
+spr_industry_event.1 = {
+	type = country_event
+	placement = root
+	
+
+	title = spr_industry_event.1.t
+	desc = spr_industry_event.1.d
+	flavor = spr_industry_event.1.f
+
+	duration = 3
+
+	trigger = {
+		country_rank = rank_value:super_power
+	}
+
+	event_image = {
+		video = "europenorthamerica_rich_and_poor"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	option = {
+		name = spr_industry_event.1.a
+		default_option = yes
+		add_modifier = {
+			name = spr_building_training_rate_mult
+			months = 25
+		}
+	}
+
+	option = {
+		name = spr_industry_event.1.b
+		add_modifier = {
+			name = spr_building_employment_peasants_mult
+			months = 25
+		}
+	}
+}
+
+spr_industry_event.2 = {
+	type = country_event
+	placement = root
+	
+
+	title = spr_industry_event.2.t
+	desc = spr_industry_event.2.d
+	flavor = spr_industry_event.2.f
+
+	duration = 3
+
+	trigger = {
+		country_rank = rank_value:super_power
+		is_player = yes
+	}
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	option = {
+		name = spr_industry_event.2.a
+		default_option = yes
+		add_modifier = {
+			name = politics_approval_positive
+			months = 25
+		}
+	}
+
+	option = {
+		name = spr_industry_event.2.b
+		add_modifier = {
+			name = politics_approval_negative
+			months = 25
+		}
+	}
+}
+
+spr_industry_event.3 = {
+	type = country_event
+	placement = root
+	
+
+	title = spr_industry_event.3.t
+	desc = spr_industry_event.3.d
+	flavor = spr_industry_event.3.f
+
+	duration = 3
+
+	trigger = {
+		country_rank = rank_value:super_power
+		is_player = yes
+	}
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	option = {
+		name = spr_industry_event.3.a
+		default_option = yes
+		add_modifier = {
+			name = bureaucracy_inefficiencies
+			months = 7
+		}
+	}
+}
