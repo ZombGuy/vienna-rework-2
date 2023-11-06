@@ -1,0 +1,118 @@
+company_Doosan = {
+	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	
+    flavored_company = yes
+	
+	building_types = {  
+		building_tooling_workshops
+		building_motor_industry
+		building_textile_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:korean
+			}
+			is_incorporated = yes
+			any_scope_building = {
+			    OR = {
+				  is_building_type = building_tooling_workshops
+				  is_building_type = building_motor_industry
+				  is_building_type = building_textile_mills
+				}
+				level = 10
+			}
+		}
+		has_technology_researched = central_planning
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Sunhwaguk
+company_sunhwaguk = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/korea_sunhwaguk.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tobacco_plantation
+		building_rice_farm
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:korean
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level = 10
+			}
+		}
+		has_technology_researched = central_planning
+	}
+	
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Korea Tungsten Company
+company_KTC = {
+	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tooling_workshops
+		building_iron_mine
+		building_lead_mine
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:korean
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshops
+				level = 10
+			}
+		}
+		has_technology_researched = mechanized_workshops
+	}
+	
+	prosperity_modifier = {
+		building_steel_mills_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

@@ -1,0 +1,110 @@
+company_SerbianRailway = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_NORTHERN_SERBIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = buidling_railway
+				level > 5
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 25
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_MIN = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+		building_tools_workshop
+		building_logging_camp
+		building_steel_mills
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_NORTHERN_SERBIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = buidling_tools_workshop
+				level > 10
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Zastava
+company_zastava = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/zastava.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_arms_industry
+		building_munition_plants
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_NORTHERN_SERBIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level > 10
+			}
+		}
+		has_technology_researched = gunsmithing
+	}
+	
+	prosperity_modifier = {
+		unit_defense_mult = 0.05
+		unit_recovery_rate_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

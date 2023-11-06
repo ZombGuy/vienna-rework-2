@@ -1,0 +1,147 @@
+# Bunge & Born
+company_bunge_born = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_wheat_farm
+		building_maize_farm
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_la_plata
+	}
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_la_plata
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wheat_farm
+					is_building_type = building_maize_farm
+				}
+				level > 5
+			}
+			count >= 4
+		}
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_rural_folk_pop_attraction_mult = 0.2
+		building_tooling_workshops_throughput_add = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# La Rosada
+company_la_rosada = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_steel_mills
+		building_arms_industry
+		building_artillery_foundries
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_la_plata
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BAJO_PARAGUAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level > 10
+			}
+		}
+		has_technology_researched = shell_gun
+	}
+	
+	prosperity_modifier = {
+		unit_defense_mult = 0.05
+		building_iron_mine_throughput_add = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Tandanor / Talleres Navales de Marina
+company_Tandanor = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_shipyards
+		building_military_shipyards
+	
+	potential = {
+		has_interest_marker_in_region = region_la_plata
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BUENOS_AIRES
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_military_shipyards
+				level > 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_navy_defense_mult = 0.15
+		interest_group_ig_armed_forces_approval_add = 2
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Trapiche
+company_Trapiche = {
+	texture = "gfx/interface/icons/company_icons/basic_wine_and_fruit.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_vineyard_plantation
+	
+	potential = {
+		has_interest_marker_in_region = region_la_plata
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_NEGRO
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_vineyard_plantation
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+		state_loyalists_from_sol_change_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

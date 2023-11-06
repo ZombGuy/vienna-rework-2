@@ -1,0 +1,36 @@
+# Hafnarfjörður Fish Canning Factory
+company_HFCF = {
+	texture = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_fishing_wharf
+		building_whaling_station
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ICELAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_fishing_wharf_throughput_add = 0.15
+		building_whaling_station_throughput_add = 0.15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

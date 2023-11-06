@@ -1,0 +1,244 @@
+# Bell Telephone Company of Canada
+company_BTCC = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_electrics_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ONTARIO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 25
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Labatt Brewing Company
+company_Labatt = {
+	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_wheat_farm
+		building_millet_farm
+		building_rye_farm
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ONTARIO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_wheat_farm
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Grand Trunk Railway
+company_GTR = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_QUEBEC
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level > 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_max_add = 15
+		state_migration_pull_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_GrayDort = {
+	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MANITOBA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_motor_industry
+				level > 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+		interest_group_ig_trade_unions_approval_add = 2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Farr Alpaca Company
+company_Farr = {
+	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+		building_livestock_ranch
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ONTARIO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_supply_consumption_mult = -0.1
+		interest_group_ig_trade_unions_approval_add = 4
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_McLaughlin = {
+	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ONTARIO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_motor_industry
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Hudson Bay Company
+company_hbc = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_food_industry # loose fit
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MANITOBA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 1
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_creation_mult = 0.1
+		building_textile_mills_throughput_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
