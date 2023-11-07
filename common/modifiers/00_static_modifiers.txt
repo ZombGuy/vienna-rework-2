@@ -32,9 +32,15 @@ base_values = {
 	state_expected_sol_from_literacy = 5
 	
 	state_farmers_investment_pool_contribution_add = 0.05
+	state_clergymen_investment_pool_contribution_add = 0.05
 	state_shopkeepers_investment_pool_contribution_add = 0.05
+	state_clerks_investment_pool_contribution_add = 0.10
 	state_aristocrats_investment_pool_contribution_add = 0.10
 	state_capitalists_investment_pool_contribution_add = 0.20
+	state_bureaucrats_investment_pool_contribution_add = 0.10
+	state_academics_investment_pool_contribution_add = 0.05
+	state_engineers_investment_pool_contribution_add = 0.07
+	state_machinists_investment_pool_contribution_add = 0.08
 	
 	# To balance for unincorporated states not paying taxes
 	state_unincorporated_starting_wages_mult = -0.20
