@@ -795,7 +795,7 @@
 				size = 3992
 			}
 		}
-		region_state:CAM = {
+		region_state:DAI = {
 			create_pop = {
 				culture = khmer
 				size = 623202
@@ -939,7 +939,7 @@
 		}
 	}
 	s:STATE_LAOS = {
-		region_state:LUA = {
+		region_state:DAI = {
 			create_pop = {
 				culture = lao
 				size = 240024
