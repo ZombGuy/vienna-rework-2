@@ -34,6 +34,14 @@ law_ethnostate = {
 		law_cultural_exclusion
 	}
 
+	on_activate = {
+		ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary_exclusionist
+			remove_ideology = ideology_reactionary_segregationist
+			remove_ideology = ideology_reactionary_multicultural
+		}
+	}
+
 	pop_support = {
 		value = 0
 	}
@@ -86,6 +94,14 @@ law_national_supremacy = {
 		law_cultural_exclusion
 	}
 
+	on_activate = {
+		ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary_exclusionist
+			remove_ideology = ideology_reactionary_segregationist
+			remove_ideology = ideology_reactionary_multicultural
+		}
+	}
+
 	pop_support = {
 		value = 0
 	}
@@ -134,6 +150,14 @@ law_racial_segregation = {
 		law_cultural_exclusion
 	}
 	
+	on_activate = {
+		ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary_exclusionist
+			remove_ideology = ideology_reactionary_segregationist
+			remove_ideology = ideology_reactionary_multicultural
+		}
+	}
+
 	pop_support = {
 		value = 0
 		
@@ -206,6 +230,14 @@ law_cultural_exclusion = {
 		law_multicultural
 	}
 	
+	on_activate = {
+		ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary_multicultural
+			remove_ideology = ideology_reactionary_exclusionist
+			add_ideology = ideology_reactionary_segregationist
+		}
+	}
+
 	pop_support = {
 		value = 0
 		
@@ -278,6 +310,13 @@ law_multicultural = {
 		law_cultural_exclusion
 	}
 	
+	on_activate = {
+		ig:ig_petty_bourgeoisie ?= {
+			remove_ideology = ideology_reactionary_segregationist
+			add_ideology = ideology_reactionary_exclusionist
+		}
+	}
+
 	pop_support = {
 		value = 0
 		
