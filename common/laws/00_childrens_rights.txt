@@ -10,12 +10,8 @@ law_child_labor_allowed = {
 	progressiveness = -50
 
 	modifier = {
-		state_laborers_mortality_mult = 0.05
-		state_machinists_mortality_mult = 0.05
-		state_farmers_mortality_mult = 0.05
-		state_peasants_mortality_mult = 0.05
-		
-		state_dependent_wage_mult = 0.30
+		state_mortality_mult = 0.05
+		state_dependent_wage_mult = 0.3
 	}
 	
 	possible_political_movements = {
@@ -73,11 +69,9 @@ law_restricted_child_labor = {
 	}
 	
 	modifier = {
-		state_laborers_mortality_mult = 0.02
-		state_farmers_mortality_mult = 0.02
-		state_peasants_mortality_mult = 0.02
-		
+		state_mortality_mult = 0.02
 		state_dependent_wage_mult = 0.15
+		state_education_access_add = 0.05
 		
 		country_institution_schools_max_investment_add = 1
 	}
@@ -148,6 +142,7 @@ law_compulsory_primary_school = {
 	
 	modifier = {
 		country_institution_schools_max_investment_add = 2
+		state_education_access_add = 0.1
 	}
 
 	pop_support = {
