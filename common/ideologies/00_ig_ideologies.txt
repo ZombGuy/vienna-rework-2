@@ -102,6 +102,13 @@ ideology_laissez_faire = {
 		law_homesteading = neutral
 		law_commercialized_agriculture = approve
 	}
+
+		lawgroup_enviromental_protections = {
+		law_pollution_management = strongly_disapprove
+		law_enviromental_standards = disapprove
+		law_pollution_tax = neutral
+		law_no_enviromental_protections = approve
+	}
 }
 
 ideology_individualist = {
@@ -232,6 +239,13 @@ ideology_agrarian = {
 		law_proportional_taxation = neutral
 		law_graduated_taxation = neutral
 		law_land_based_taxation = disapprove
+	}
+
+		lawgroup_enviromental_protections = {
+		law_no_enviromental_protections = neutral
+		law_pollution_tax = neutral
+		law_enviromental_standards = approve
+		law_pollution_management = approve
 	}
 }
 

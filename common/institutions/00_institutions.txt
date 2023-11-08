@@ -57,3 +57,8 @@ institution_childbirth_affairs = {
 		state_dependent_wage_mult = 0.02
 	}
 }
+
+institution_enviromental_regulations = {
+	icon = "gfx/interface/icons/institution_icons/enviromental_protection.dds"
+	background_texture = "gfx/interface/illustrations/institutions/health_service.dds"
+}

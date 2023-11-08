@@ -433,6 +433,7 @@ modern_sewerage = {
 		country_max_weekly_construction_progress_add = 5
 		market_land_trade_capacity_add = 10
 		state_pollution_reduction_health_mult = -0.1
+		country_institution_enviromental_regulations_max_investment_add = 1
 	}
 	
 	unlocking_technologies = {

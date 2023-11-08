@@ -51,9 +51,9 @@ law_charitable_health_system = {
 
 	institution = institution_health_system
 	institution_modifier = {
-		state_mortality_mult = -0.06
+		state_mortality_mult = -0.04
 		interest_group_ig_devout_pol_str_mult = 0.2
-		state_standard_of_living_add = 0.25
+		state_standard_of_living_add = 0.5
 	}
 	
 	# Don't return to charity if we have something more advanced
@@ -118,8 +118,7 @@ law_private_health_insurance = {
 	institution = institution_health_system
 	institution_modifier = {
 		state_mortality_wealth_mult = -0.003
-		state_pollution_reduction_health_mult = -0.1
-		state_standard_of_living_add = 1.25
+		state_standard_of_living_add = 1
 	}
 	
 	pop_support = {
@@ -170,8 +169,7 @@ law_public_health_insurance = {
 	
 	institution = institution_health_system
 	institution_modifier = {
-		state_mortality_mult = -0.04
-		state_pollution_reduction_health_mult = -0.1
+		state_mortality_mult = -0.05
 		state_standard_of_living_add = 1
 	}
 	
