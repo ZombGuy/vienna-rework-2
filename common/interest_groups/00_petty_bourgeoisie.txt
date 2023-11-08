@@ -76,7 +76,84 @@
 	on_character_ig_membership = {}
 
 	pop_potential = {
-		pop_has_primary_culture = yes
+		OR = {
+			AND = {
+				owner = {
+					ig:ig_petty_bourgeoisie ?= {
+						# PB's default stance
+						law_stance = {
+							law = law_type:law_national_supremacy
+							value > approve
+						}
+					}
+				}
+				culture = {
+					# Allowing pops of non-primary cultures that are culturally close to join
+					AND = {
+						shares_heritage_trait_with_any_primary_culture = prev.owner
+						shares_non_heritage_trait_with_any_primary_culture = prev.owner
+					}
+				}
+			}
+			AND = {
+				owner = {
+					ig:ig_petty_bourgeoisie ?= {
+						# If ethnonats or fascists take over
+						law_stance = {
+							law = law_type:law_ethnostate
+							value > approve
+						}
+					}
+				}
+				# vanilla PB pop potential
+				pop_has_primary_culture = yes
+			}
+			owner = {
+				ig:ig_petty_bourgeoisie ?= {
+					# PB lead by an Anarchist or a Humanitarian, unlikely but possible
+					law_stance = {
+						law = law_type:law_multicultural
+						value > disapprove
+					}
+				}
+				# All cultures can join in this case
+			}
+			AND = {
+				owner = {
+					ig:ig_petty_bourgeoisie ?= {
+						# Reformer-lead PB, or if law_multiculturalism is in effect.
+						law_stance = {
+							law = law_type:law_cultural_exclusion
+							value > neutral
+						}
+					}
+				}
+				culture = {
+					# Any culture that is remotely related can join (exclusionist)
+					shares_trait_with_any_primary_culture = prev.owner
+				}
+			}
+			AND = {
+				owner = {
+					ig:ig_petty_bourgeoisie ?= {
+						# Jacksonian PB, or if law_cultural_exclusion is in effect.
+						law_stance = {
+							law = law_type:law_racial_segregation
+							value > neutral
+						}
+						# exluding the default reactionary ideology here
+						law_stance = {
+							law = law_type:law_national_supremacy
+							value < strongly_approve
+						}
+					}
+				}
+				culture = {
+					# Any culture sharing primary heritage can join (segregationist)
+					shares_heritage_trait_with_any_primary_culture = prev.owner
+				}
+			}
+		}
 		NOR = {
 			is_pop_type = aristocrats
 			is_pop_type = capitalists
