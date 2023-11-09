@@ -243,7 +243,6 @@ outmoded_bureaucracy = {
 sick_man_of_europe = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_prestige_mult = -0.33
-	state_poor_standard_of_living_add = 3
 }
 
 iltizam_abolished = {

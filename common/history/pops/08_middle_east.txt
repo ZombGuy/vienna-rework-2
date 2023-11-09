@@ -1111,11 +1111,11 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 840204
+				size = 940204
 			}
 			create_pop = {
 				culture = kurdish
-				size = 20102
+				size = 40102
 			}
 			create_pop = {
 				culture = armenian
@@ -1145,11 +1145,11 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 873786
+				size = 973786
 			}
 			create_pop = {
 				culture = greek
-				size = 16426
+				size = 36426
 			}
 			create_pop = {
 				culture = armenian
@@ -1171,7 +1171,7 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = kurdish
-				size = 351906
+				size = 551906
 			}
 			create_pop = {
 				culture = assyrian
@@ -1180,7 +1180,7 @@
 			}
 			create_pop = {
 				culture = turkish
-				size = 76381
+				size = 116381
 			}
 			create_pop = {
 				culture = mashriqi
@@ -1240,7 +1240,7 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 30012
+				size = 50012
 			}
 			create_pop = {
 				culture = armenian
@@ -1266,11 +1266,11 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 678712
+				size = 778712
 			}
 			create_pop = {
 				culture = armenian
-				size = 36003
+				size = 76003
 			}
 			create_pop = { # Hemshin
 				culture = armenian
@@ -1307,11 +1307,11 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 244045
+				size = 344045
 			}
 			create_pop = {
 				culture = kurdish
-				size = 380301
+				size = 440301
 			}
 			create_pop = {
 				culture = greek
@@ -1405,11 +1405,11 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 1206365
+				size = 1406365
 			}
 			create_pop = {
 				culture = kurdish
-				size = 124470
+				size = 144470
 			}
 			create_pop = {
 				culture = greek
