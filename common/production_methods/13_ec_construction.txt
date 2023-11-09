@@ -265,3 +265,346 @@ pm_electrical_powered_building_construction_sector = {
 		}
 	}
 }
+
+########################################################################################
+
+pm_iron_frame_buildings_25 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+	
+	unlocking_technologies = {
+		urban_planning
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2.75
+		}
+
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 66.25
+			goods_input_fabric_add = 23.75
+			goods_input_iron_add = 12.5
+			goods_input_tools_add = 2.5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_machinists_add = 62.5
+			building_employment_laborers_add = 3937.5
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.00625
+		}	
+	}
+}
+
+pm_iron_frame_buildings_50 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+	
+	unlocking_technologies = {
+		urban_planning
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 3.5
+		}
+
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 57.5
+			goods_input_fabric_add = 22.5
+			goods_input_iron_add = 25
+			goods_input_tools_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_machinists_add = 125
+			building_employment_laborers_add = 3875
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.0075
+		}	
+	}
+}
+
+pm_iron_frame_buildings_75 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+	
+	unlocking_technologies = {
+		urban_planning
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 4.25
+		}
+
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 48.75
+			goods_input_fabric_add = 21.25
+			goods_input_iron_add = 37.5
+			goods_input_tools_add = 7.5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_machinists_add = 187.5
+			building_employment_laborers_add = 3812.5
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.00875
+		}	
+	}
+}
+
+
+pm_steel_frame_buildings_25 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 6.25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 30
+			goods_input_fabric_add = 15
+			goods_input_iron_add = 37.5
+			goods_input_tools_add = 12.5
+			goods_input_steel_add = 12.5
+			goods_input_glass_add = 10
+			goods_input_explosives_add = 2.5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_machinists_add = 375
+			building_employment_laborers_add = 3625
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01125
+		}	
+	}
+}
+
+pm_steel_frame_buildings_50 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 7.5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 20
+			goods_input_fabric_add = 10
+			goods_input_iron_add = 25
+			goods_input_tools_add = 15
+			goods_input_steel_add = 25
+			goods_input_glass_add = 20
+			goods_input_explosives_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_machinists_add = 500
+			building_employment_laborers_add = 3500
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.0125
+		}	
+	}
+}
+
+pm_steel_frame_buildings_75 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 8.75
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 10
+			goods_input_fabric_add = 5
+			goods_input_iron_add = 12.5
+			goods_input_tools_add = 17.5
+			goods_input_steel_add = 37.5
+			goods_input_glass_add = 30
+			goods_input_explosives_add = 7.5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_machinists_add = 625
+			building_employment_laborers_add = 3375
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01375
+		}	
+	}
+}
+
+
+pm_arc_welded_buildings_25 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+
+	unlocking_technologies = {
+		arc_welding
+	}
+		
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 11.25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 25
+			goods_input_steel_add = 50
+			goods_input_glass_add = 40
+			goods_input_explosives_add = 12.5
+			goods_input_electricity_add = 10
+		} 
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_laborers_add = 3187.5
+			building_employment_machinists_add = 750
+			building_employment_engineers_add = 62.5
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01625
+		}	
+	}
+}
+
+pm_arc_welded_buildings_50 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+
+	unlocking_technologies = {
+		arc_welding
+	}
+		
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 12.5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 30
+			goods_input_steel_add = 50
+			goods_input_glass_add = 40
+			goods_input_explosives_add = 15
+			goods_input_electricity_add = 20
+		} 
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_laborers_add = 3125
+			building_employment_machinists_add = 750
+			building_employment_engineers_add = 125
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.0175
+		}	
+	}
+}
+
+pm_arc_welded_buildings_75 = {
+	texture = "gfx/interface/icons/production_method_icons/CoGr_intermediate_production_method.png"
+
+	unlocking_technologies = {
+		arc_welding
+	}
+		
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 13.75
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 35
+			goods_input_steel_add = 50
+			goods_input_glass_add = 40
+			goods_input_explosives_add = 17.5
+			goods_input_electricity_add = 30
+		} 
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 500
+			building_employment_laborers_add = 3062.5
+			building_employment_machinists_add = 750
+			building_employment_engineers_add = 187.5
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01875
+		}	
+	}
+}

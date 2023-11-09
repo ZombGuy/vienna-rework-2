@@ -1,0 +1,13 @@
+﻿l_english:
+  # Part iron
+ pm_iron_frame_buildings_25:0 "[Localize('pm_iron_frame_buildings')] (25%)"
+ pm_iron_frame_buildings_50:0 "[Localize('pm_iron_frame_buildings')] (50%)"
+ pm_iron_frame_buildings_75:0 "[Localize('pm_iron_frame_buildings')] (75%)"
+  # Part steel
+ pm_steel_frame_buildings_25:0 "[Localize('pm_steel_frame_buildings')] (25%)"
+ pm_steel_frame_buildings_50:0 "[Localize('pm_steel_frame_buildings')] (50%)"
+ pm_steel_frame_buildings_75:0 "[Localize('pm_steel_frame_buildings')] (75%)"
+  # Part arc-welded
+ pm_arc_welded_buildings_25:0 "[Localize('pm_arc_welded_buildings')] (25%)"
+ pm_arc_welded_buildings_50:0 "[Localize('pm_arc_welded_buildings')] (50%)"
+ pm_arc_welded_buildings_75:0 "[Localize('pm_arc_welded_buildings')] (75%)"
