@@ -16,6 +16,7 @@
 		law_autocracy = strongly_approve
 		law_oligarchy = approve
 		law_wealth_voting = neutral
+		law_ecclesiarchy = disapprove
 		law_census_voting = disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
@@ -492,6 +493,7 @@ ideology_republican = {
 		law_landed_voting = neutral
 		law_single_party_state = neutral
 		law_technocracy = neutral
+		law_ecclesiarchy = disapprove
 		law_oligarchy = disapprove
 		law_autocracy = disapprove
 		law_anarchy = strongly_disapprove
@@ -589,6 +591,7 @@ ideology_populist = {
 		law_wealth_voting = disapprove
 		law_landed_voting = disapprove
 		law_technocracy = disapprove
+		law_ecclesiarchy = disapprove
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove		
 	}
@@ -684,6 +687,7 @@ ideology_plutocratic = {
 		law_census_voting = neutral
 		law_single_party_state = neutral
 		law_autocracy = disapprove
+		law_ecclesiarchy = disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 	}

@@ -11,3 +11,7 @@ ideology_militarist_desc: "#lore This leader advocates an aggressive foreign pol
  #Government Principles group
  law_corporatocracy: "Corporatocracy"
  law_corporatocracy_desc: "Public powers are relegated to a minimal government that only performs security and defense functions, and we aim for privatization of all possible infrastructure and public services."
+ #Distribution of Power group
+ law_ecclesiarchy: "Ecclesiarchy"
+ law_ecclesiarchy_desc: "A council of respected clergys, with morality and faithfulness, rule the state according to the interpretation of holy scripture. Value the horizontal consensus of the clergy rather than the authority of religious leaders."
+ 

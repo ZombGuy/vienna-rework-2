@@ -17,6 +17,7 @@
 		law_landed_voting = approve	
 		law_wealth_voting = approve	
 		law_census_voting = neutral		
+		law_ecclesiarchy = disapprove
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
 		law_single_party_state = disapprove
@@ -183,6 +184,7 @@ ideology_legitimist = {
 	lawgroup_distribution_of_power = {
 		law_autocracy = strongly_approve
 		law_oligarchy = neutral
+		law_ecclesiarchy = neutral
 		law_single_party_state = disapprove
 		law_landed_voting = strongly_disapprove	
 		law_wealth_voting = strongly_disapprove	
@@ -324,6 +326,7 @@ ideology_bonapartist = {
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_ecclesiarchy = strongly_disapprove
 	}
 
 	lawgroup_army_model = {

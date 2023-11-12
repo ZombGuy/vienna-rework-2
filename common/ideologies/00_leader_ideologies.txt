@@ -208,6 +208,7 @@ ideology_atheist = {
 						has_law = law_type:law_state_religion
 						has_law = law_type:law_theocracy
 						has_law = law_type:law_monarchy
+						has_law = law_type:law_ecclesiarchy
 					}
 				}
 			}
@@ -366,6 +367,7 @@ ideology_radical = {
 		law_technocracy = disapprove
 		law_landed_voting = disapprove
 		law_anarchy = strongly_disapprove
+		law_ecclesiarchy = strongly_disapprove
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
 		law_single_party_state = disapprove
@@ -456,6 +458,7 @@ ideology_radical = {
 							has_law = law_type:law_outlawed_dissent
 							has_law = law_type:law_autocracy
 							has_law = law_type:law_oligarchy
+							has_law = law_type:law_ecclesiarchy
 						}
 						any_scope_state = {
 							is_incorporated = yes
@@ -490,6 +493,7 @@ ideology_radical = {
 							has_law = law_type:law_outlawed_dissent
 							has_law = law_type:law_autocracy
 							has_law = law_type:law_oligarchy
+							has_law = law_type:law_ecclesiarchy
 						}
 					}
 				}
@@ -1312,6 +1316,7 @@ ideology_social_democrat = {
 		law_landed_voting = disapprove
 		law_anarchy = disapprove
 		law_technocracy = disapprove
+		law_ecclesiarchy = disapprove
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove	
 		law_single_party_state = strongly_disapprove	
@@ -1596,7 +1601,8 @@ ideology_vanguardist = {
 
 	lawgroup_distribution_of_power = {
 		law_oligarchy = strongly_disapprove
-		law_autocracy = strongly_disapprove		
+		law_autocracy = strongly_disapprove	
+		law_ecclesiarchy = strongly_disapprove	
 		law_anarchy = disapprove
 		law_universal_suffrage = disapprove
 		law_census_voting = strongly_disapprove
@@ -1789,6 +1795,7 @@ ideology_fascist = {
 		law_autocracy = approve
 		law_oligarchy = neutral
 		law_technocracy = strongly_disapprove
+		law_ecclesiarchy = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_census_voting = strongly_disapprove
@@ -1993,6 +2000,7 @@ ideology_anarchist = {
 		law_landed_voting = disapprove
 		law_technocracy = strongly_disapprove
 		law_oligarchy = strongly_disapprove
+		law_ecclesiarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove	
 		law_single_party_state = disapprove		
 	}
@@ -2283,6 +2291,18 @@ ideology_theocrat = {
 		law_parliamentary_republic = disapprove
 		law_council_republic = disapprove
 		law_corporatocracy = disapprove
+	}
+	lawgroup_distribution_of_power = {	
+		law_ecclesiarchy = strongly_approve
+		law_autocracy = disapprove
+		law_technocracy = disapprove
+		law_oligarchy = disapprove
+		law_landed_voting = disapprove
+		law_wealth_voting = disapprove
+		law_census_voting = disapprove
+		law_universal_suffrage = disapprove
+		law_anarchy = disapprove
+		law_single_party_state = disapprove
 	}
 	
 	possible = {
@@ -2696,6 +2716,7 @@ ideology_authoritarian = {
 		law_census_voting = strongly_disapprove
 		law_wealth_voting = disapprove
 		law_landed_voting = disapprove
+		law_ecclesiarchy = neutral
 		law_technocracy = neutral
 		law_oligarchy = approve
 		law_autocracy = approve
@@ -3218,6 +3239,7 @@ ideology_jacksonian_democrat = {
 		law_wealth_voting = neutral
 		law_landed_voting = disapprove
 		law_anarchy = strongly_disapprove
+		law_ecclesiarchy = strongly_disapprove
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
 		law_single_party_state = disapprove
@@ -3304,6 +3326,7 @@ ideology_positivist = {
 		law_oligarchy = neutral
 		law_census_voting = disapprove
 		law_landed_voting = disapprove
+		law_ecclesiarchy = strongly_disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 	}
