@@ -37,9 +37,8 @@ decree_homeland_removal = {
 		state_assimilation_mult = 1
 		state_conversion_mult = 1
 		state_radicals_from_discrimination_mult = 1
-		state_radicals_from_sol_change_mult = 0.25
-		state_turmoil_effects_mult = 0.25
-		#state_tax_waste_add = 0.25 ##Removed
+		state_radicals_from_sol_change_mult = 0.5
+		state_turmoil_effects_mult = 0.5
 	}
 	cost = 100
 
@@ -56,9 +55,9 @@ decree_childbirth_incentive = {
 		}
 	}
 	modifier = {
-		state_birth_rate_mult = 0.2
-		state_working_adult_ratio_add = -0.05
-		state_tax_waste_add = 0.05
+		state_birth_rate_mult = 0.1
+		state_working_adult_ratio_add = -0.2
+		state_tax_waste_add = 0.5
 	}
 	cost = 100
 
@@ -103,7 +102,8 @@ decree_reclaim_land = {
 		}
 	}
 	modifier = {
-		state_construction_mult = -0.50 ##Changed from "state_mortality_mult = 0.1"
+		state_construction_mult = -0.5
+		state_mortality_mult = 0.1
 	}
 	cost = 100
 

@@ -1,4 +1,3 @@
-
 decree_exile_pop = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
