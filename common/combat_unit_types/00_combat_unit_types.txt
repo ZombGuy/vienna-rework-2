@@ -328,6 +328,70 @@ combat_unit_type_skirmish_infantry = {
 	}
 }
 
+combat_unit_type_early_trench_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 1
+        goods_input_ammunition_add = 1.5
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 15
+        unit_defense_add = 40
+        unit_morale_loss_add = 8
+    }
+
+	unlocking_technologies = { trench_works }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_trench.dds"
+    }
+	
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_trench.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_trench_infantry
+        combat_unit_type_late_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+    }
+}
+
 combat_unit_type_trench_infantry = {
     group = combat_unit_group_infantry
 
@@ -339,6 +403,69 @@ combat_unit_type_trench_infantry = {
     battle_modifier = {
         unit_offense_add = 20
         unit_defense_add = 40
+        unit_morale_loss_add = 8
+    }
+
+	unlocking_technologies = { trench_works }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_trench.dds"
+    }
+	
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_trench.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_late_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_late_trench_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 1
+        goods_input_ammunition_add = 2.5
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 45
         unit_morale_loss_add = 8
     }
 
@@ -400,7 +527,7 @@ combat_unit_type_squad_infantry = {
     }
     
     battle_modifier = {
-        unit_offense_add = 25
+        unit_offense_add = 30
         unit_defense_add = 50
         unit_morale_loss_add = 6
     }
@@ -465,7 +592,7 @@ combat_unit_type_mechanized_infantry = {
     
     battle_modifier = {
         unit_offense_add = 35
-        unit_defense_add = 70
+        unit_defense_add = 85
         unit_morale_loss_add = 4
         unit_defense_mult = 0.1
         unit_devastation_mult = 0.1
@@ -1050,7 +1177,7 @@ combat_unit_type_lancers = {
     }
 }
 
-combat_unit_light_tanks = {
+combat_unit_type_light_tanks = {
     group = combat_unit_group_cavalry
     
     upkeep_modifier = {
