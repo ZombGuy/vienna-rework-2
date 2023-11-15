@@ -1157,18 +1157,18 @@ NEconomy = {
 	MAX_WAGE_STEP_CHANGE = 0.1					# Wage rates can change at most this much each week
 	SUBSIDIES_MIN_GAIN = 0						# If a building is subsidized, it will always collect enough subsidies to ensure at least this weekly cash reserve growth
 	HIRING_RATE = 0.1 							# Weekly hiring limit applied in a building per profession as a ratio of full employment
-	EMPLOYMENT_PROPORTIONALITY_LIMIT = 0.1		# A building cannot have a difference of ratio of full employment between any two professions greater than this limit
+	EMPLOYMENT_PROPORTIONALITY_LIMIT = 1.0		# A building cannot have a difference of ratio of full employment between any two professions greater than this limit
 	MINIMUM_EMPLOYEES = 10						# If a building has fewer employees than this, it will always attempt to hire
 	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50 # Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
 	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.66 # Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
 	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.33 # Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
 	BUILDING_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 2  # Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold
-	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.3		# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.25	# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.15	# If profit margin is this or below, consider lowering wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
-	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.5 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
+	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.6 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
 	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 12		# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
 	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 4 # Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. Only used when unprofitable.
-	MIN_RAISE_TO_HIRE = 0.10					# The minimum required increase in wages for an employee to switch jobs (1.0 = +100% = x2)
+	MIN_RAISE_TO_HIRE = 0.05					# The minimum required increase in wages for an employee to switch jobs (1.0 = +100% = x2)
 	BASE_RESOURCE_DISCOVER_CHANCE = 0.02 		# Per day (1.0 = 1%)
 	EMPLOYMENT_RESOURCE_DEPLETE_CHANCE = 0.005	# Multiplied by number of fully employed levels of the building
 	RESOURCE_DISCOVER_MIN_FRACTION = 0.2		# Min fraction of resources that will be discovered for each successful roll
@@ -1178,11 +1178,11 @@ NEconomy = {
 	RESOURCE_DEPLETE_MAX_AMOUNT = 5				# Max amount of resources that will be depleted for each successful roll	
 	QUALITY_OF_LIFE_MIN = 1
 	QUALITY_OF_LIFE_MAX = 100
-	SUBSISTENCE_OUTPUT_AVERAGE_WAGE_RATE_FACTOR = 150   # Each 1.0 of subsistence output counts as this much wage rate when setting normal wages
-	PEASANT_STARTING_WAGE_RATE_FACTOR = 1.0		# For the sake of calculating starting normal wages, treat peasants as having this pop type wage multiplier
+	SUBSISTENCE_OUTPUT_AVERAGE_WAGE_RATE_FACTOR = 125   # Each 1.0 of subsistence output counts as this much wage rate when setting normal wages
+	PEASANT_STARTING_WAGE_RATE_FACTOR = 0.8		# For the sake of calculating starting normal wages, treat peasants as having this pop type wage multiplier
 	STARTING_WAGE_RATE_MULTIPLIER = 1.0			# Starting wage rate is multiplied by this (for easy balancing)
 	NORMAL_WAGE_RATE_FALLBACK = 500.0			# If it's impossible to compute a normal wage rate (e.g. if every incorporated pop works in government buildings) set it to this (weekly £ per POP_SIZE_PACKAGE employees)
-	MINIMUM_WAGE_RATE = 10.0					# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
+	MINIMUM_WAGE_RATE = 1.0	   					# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
 	MAXIMUM_WAGE_RATE = 100000.0				# The absolute maximum that a building's wage rate can be increased to.
 	CREDIT_RATIO_HEALTH_THRESHOLD = 0.5			# If the principal is smaller than this ratio of the total credit, the economy is considered to be healthy
 	GOLD_RESERVE_MIN = 1000000						# If Gold Reserves are computed to be lower than this, it's instead set to this
