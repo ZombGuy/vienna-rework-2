@@ -158,7 +158,8 @@ law_meritocratic_bureaucracy = {
 	}
 
 	modifier = {
-		country_bureaucrats_pol_str_mult = 0.25
+		country_clerks_pol_str_mult = 0.10
+		country_bureaucrats_pol_str_mult = 0.10
 		building_government_administration_throughput_add = 0.2
 		country_bureaucracy_mult = 0.1
 	}
