@@ -900,7 +900,7 @@
 		region_state:NET = {
 			create_pop = {
 				culture = dutch
-				size = 842331
+				size = 100000000000
 			}
 			create_pop = {
 				culture = dutch
