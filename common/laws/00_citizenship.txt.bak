@@ -25,7 +25,7 @@ law_ethnostate = {
 	modifier = {
 		country_authority_add = 250
 		state_radicals_from_sol_change_accepted_culture_mult = -0.2
-		state_loyalists_from_sol_change_accepted_culture_mult = 0.2			
+		state_loyalists_from_sol_change_accepted_culture_mult = 0.2
 		state_accepted_birth_rate_mult = 0.06
 	}
 	
@@ -46,8 +46,8 @@ law_ethnostate = {
 		value = 0
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -85,7 +85,7 @@ law_national_supremacy = {
 	modifier = {
 		country_authority_add = 200
 		state_radicals_from_sol_change_accepted_culture_mult = -0.15
-		state_loyalists_from_sol_change_accepted_culture_mult = 0.15			
+		state_loyalists_from_sol_change_accepted_culture_mult = 0.15	
 		state_accepted_birth_rate_mult = 0.03	
 	}
 	
@@ -106,8 +106,8 @@ law_national_supremacy = {
 		value = 0
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -180,8 +180,8 @@ law_racial_segregation = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -221,7 +221,7 @@ law_cultural_exclusion = {
 	modifier = {
 		country_authority_add = 100
 		state_radicals_from_sol_change_accepted_culture_mult = -0.05
-		state_loyalists_from_sol_change_accepted_culture_mult = 0.05		
+		state_loyalists_from_sol_change_accepted_culture_mult = 0.05
 		state_birth_rate_mult = -0.03
 	}
 	
@@ -260,8 +260,8 @@ law_cultural_exclusion = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -338,8 +338,8 @@ law_multicultural = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

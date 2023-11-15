@@ -221,8 +221,8 @@ law_colonial_exploitation = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	

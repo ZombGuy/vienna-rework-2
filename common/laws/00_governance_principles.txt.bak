@@ -26,8 +26,8 @@ law_chiefdom = {
 		value = 0
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -82,8 +82,8 @@ law_monarchy = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	ai_will_do = {
@@ -174,20 +174,6 @@ law_presidential_republic = {
 				add = 1
 			}
 		}
-		if = {
-			limit = {
-				any_interest_group = {
-					has_ideology = ideology:ideology_constitutionalist
-				}
-			}
-			every_interest_group = {
-				limit = {
-					has_ideology = ideology:ideology_constitutionalist
-				}
-				remove_ideology = ideology_constitutionalist
-				add_ideology = ideology_republican
-			}
-		}
 	}
 	
 	possible_political_movements = {
@@ -209,8 +195,8 @@ law_presidential_republic = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	ai_will_do = {
@@ -220,14 +206,9 @@ law_presidential_republic = {
 		}
 	}
 
-	ai_enact_weight_modifier = {
-		value = 0		
-		if = {
-			limit = {
-				has_journal_entry = je_pedro_republic
-			}
-			add = 100
-		}
+	ai_enact_weight_modifier = { #Petitions
+		value = 0
+		
 		if = {
 			limit = { 
 				has_journal_entry = je_government_petition
@@ -271,20 +252,6 @@ law_parliamentary_republic = {
 				add = 1
 			}
 		}
-		if = {
-			limit = {
-				any_interest_group = {
-					has_ideology = ideology:ideology_constitutionalist
-				}
-			}
-			every_interest_group = {
-				limit = {
-					has_ideology = ideology:ideology_constitutionalist
-				}
-				remove_ideology = ideology_constitutionalist
-				add_ideology = ideology_republican
-			}
-		}
 	}
 
 	possible_political_movements = {
@@ -306,8 +273,8 @@ law_parliamentary_republic = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	ai_will_do = {
@@ -371,8 +338,8 @@ law_theocracy = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	ai_will_do = {
@@ -491,20 +458,6 @@ law_council_republic = {
 	on_activate = {		
 		custom_tooltip = {
 			text = enact_law_radical_leftist_government_warning_desc
-		}
-		if = {
-			limit = {
-				any_interest_group = {
-					has_ideology = ideology:ideology_constitutionalist
-				}
-			}
-			every_interest_group = {
-				limit = {
-					has_ideology = ideology:ideology_constitutionalist
-				}
-				remove_ideology = ideology_constitutionalist
-				add_ideology = ideology_republican
-			}
 		}	
 	}		
 
@@ -533,8 +486,8 @@ law_council_republic = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	ai_will_do = {

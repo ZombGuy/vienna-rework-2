@@ -14,8 +14,8 @@
 		value = 0
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	# AI shouldn't try to abolish institutions
@@ -51,7 +51,6 @@ law_national_guard = {
 	institution_modifier = {
 		state_conscription_rate_add = 0.005
 		building_training_rate_mult = 0.1
-		political_movement_radicalism_mult = -0.05
 	}
 	
 	possible_political_movements = {
@@ -72,8 +71,8 @@ law_national_guard = {
 		}	
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	pop_support = {
@@ -173,8 +172,6 @@ law_guaranteed_liberties = {
 	institution = institution_home_affairs
 	institution_modifier = {
 		state_standard_of_living_add = 0.2
-		state_radicals_from_sol_change_mult = -0.05
-		state_loyalists_from_sol_change_mult = 0.05
 	}
 	
 	possible_political_movements = {
@@ -189,8 +186,8 @@ law_guaranteed_liberties = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

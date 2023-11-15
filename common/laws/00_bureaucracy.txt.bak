@@ -191,8 +191,8 @@ law_meritocratic_bureaucracy = {
 		}
 	}
 
-	ob_impose = { 
-
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
@@ -259,8 +259,8 @@ law_elected_bureaucrats = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions

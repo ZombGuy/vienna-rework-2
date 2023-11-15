@@ -12,8 +12,8 @@
 		value = 0
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 	
 	# AI shouldn't try to abolish institutions
@@ -53,8 +53,7 @@ law_charitable_health_system = {
 	institution_modifier = {
 		state_mortality_mult = -0.04
 		interest_group_ig_devout_pol_str_mult = 0.2
-		#state_standard_of_living_add = 0.5
-		state_poor_standard_of_living_add = 0.5
+		state_standard_of_living_add = 0.5
 	}
 	
 	# Don't return to charity if we have something more advanced
@@ -84,8 +83,8 @@ law_charitable_health_system = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 	
 
 	ai_enact_weight_modifier = { #Petitions
@@ -118,9 +117,7 @@ law_private_health_insurance = {
 	
 	institution = institution_health_system
 	institution_modifier = {
-		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
 		state_mortality_wealth_mult = -0.003
-		state_pollution_reduction_health_mult = -0.1
 		state_standard_of_living_add = 1
 	}
 	
@@ -138,8 +135,8 @@ law_private_health_insurance = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 	
 
 	ai_enact_weight_modifier = { #Petitions
@@ -173,7 +170,6 @@ law_public_health_insurance = {
 	institution = institution_health_system
 	institution_modifier = {
 		state_mortality_mult = -0.05
-		state_pollution_reduction_health_mult = -0.15
 		state_standard_of_living_add = 1
 	}
 	
@@ -190,8 +186,8 @@ law_public_health_insurance = {
 		}
 	}
 
-	on_impose = { 
-			
+	can_impose = { 
+		is_subject_of = scope:initiator	
 	} 
 
 	ai_enact_weight_modifier = { #Petitions
