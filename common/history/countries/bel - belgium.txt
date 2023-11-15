@@ -15,7 +15,6 @@
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_right_of_assembly
 		activate_law = law_type:law_national_militia
-		activate_law = law_type:law_no_womens_rights
 		
 		set_tax_level = medium
 		
@@ -31,5 +30,7 @@
 		ig:ig_industrialists = {
 			add_ruling_interest_group = yes
 		}
+
+		add_company = company_type:company_john_cockerill
 	}
 }
