@@ -4,7 +4,7 @@
 	category = society
 	
 	modifier = {
-		country_institution_birth_control_max_investment_add = 1
+		country_institution_birth_control_max_investment_add = 2
 	}
 	
 	unlocking_technologies = {
