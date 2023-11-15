@@ -10,9 +10,9 @@ law_outlawed_dissent = {
 	
 	modifier = {
 		country_authority_add = 200
-		country_promotion_ig_attraction_mult = 0.5
-		country_suppression_ig_attraction_mult = -0.5
-		country_tech_spread_mult = -0.15
+		country_promotion_ig_attraction_mult = 1
+		country_suppression_ig_attraction_mult = -1
+		country_tech_spread_mult = -0.3
 	}
 	
 	possible_political_movements = {
@@ -53,9 +53,9 @@ law_censorship = {
 	
 	modifier = {
 		country_authority_add = 100
-		country_promotion_ig_attraction_mult = 0.4
-		country_suppression_ig_attraction_mult = -0.4
-		# country_tech_spread_mult = 0.0
+		country_promotion_ig_attraction_mult = 0.75
+		country_suppression_ig_attraction_mult = -0.75
+		country_tech_spread_mult = 0.1
 	}
 	
 	possible_political_movements = {
@@ -97,9 +97,9 @@ law_right_of_assembly = {
 	
 	modifier = {
 		country_authority_add = 50
-		country_promotion_ig_attraction_mult = 0.3
-		country_suppression_ig_attraction_mult = -0.3
-		country_tech_spread_mult = 0.10
+		country_promotion_ig_attraction_mult = 0.25
+		country_suppression_ig_attraction_mult = -0.25
+		country_tech_spread_mult = 0.2
 	}
 	
 	possible_political_movements = {
@@ -168,7 +168,7 @@ law_protected_speech = {
 	}
 	
 	modifier = {
-		country_tech_spread_mult = 0.3
+		country_tech_spread_mult = 0.5
 	}
 	
 	possible_political_movements = {
