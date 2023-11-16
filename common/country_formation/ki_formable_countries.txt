@@ -22,10 +22,11 @@
 			NOT = { has_game_rule = plausible_formable_nations }
 	}
 }
+
 EUR = { #Império Português
 	use_culture_states = yes
 
-	required_states_fraction = 0.0
+	required_states_fraction = 0.75
 
 	possible = {
 		has_technology_researched = pan-nationalism
@@ -42,7 +43,7 @@ BNL = { #Benelux
 		STATE_WALLONIA
 	}
 
-	required_states_fraction = 0
+	required_states_fraction = 1
 	
 	ai_will_do = { always = yes }
 
@@ -171,6 +172,7 @@ IFR = {
 			NOT = { has_game_rule = plausible_formable_nations }
 	}
 }
+
 SOM = {
 	use_culture_states = yes
 	

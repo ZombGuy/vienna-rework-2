@@ -2,9 +2,9 @@
 	color = { 110  125  158 }
 	country_type = recognized
 	
-	tier = empire
+	tier = hegemony
 	
-	cultures = { dutch flemish wallonian french north_german south_german}
+	cultures = { dutch flemish wallonian french north_german alemannic }
 	capital = STATE_WALLONIA
 }
 EUR = {
