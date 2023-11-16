@@ -1,0 +1,108 @@
+# B.Grimm
+company_b_grimm = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_rice_farm # aided in irrigation projects
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BANGKOK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_rice_farm
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 0.1
+		building_food_industry_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Siam Cement Company
+company_SiamCement = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_steel_mills
+		building_chemical_plants
+		building_explosives_factory
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+	
+	possible = {
+	    has_law = law_type:law_monarchy
+		any_scope_state = {
+			state_region = s:STATE_BANGKOK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_construction_sector
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_max_weekly_construction_progress_add = 10
+		building_construction_sector_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Charoen Pokphand
+company_Charoen = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_rice_farm
+		building_livestock_ranch
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BANGKOK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_rice_farm
+				level > 10
+			}
+		}
+		has_technology_researched = pan_nationalism
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

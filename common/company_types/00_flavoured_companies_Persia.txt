@@ -1,0 +1,72 @@
+# Anglo-Persian Oil Company
+company_AP = {
+	texture = "gfx/interface/icons/company_icons/basic_oil.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_oil_rig
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_persia
+	}
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_persia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level > 5
+			}
+		}
+		has_technology_researched = pumpjacks
+	}
+	
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.1
+		country_minting_mult = 0.15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Imperial Tobacco Corporation of Persia, Limited
+company_imperial_tobacco = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tobacco_plantation
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_persia
+	}
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_persia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level > 5
+			}
+			count >= 4
+		}
+		has_technology_researched = corporatism
+	}
+	
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.2
+		interest_group_ig_rural_folk_approval_add = -2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

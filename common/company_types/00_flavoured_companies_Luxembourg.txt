@@ -1,0 +1,36 @@
+
+# Arbed S.A.
+company_Arbed = {
+    texture = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_iron_mine
+		building_steel_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+				state_region = s:STATE_WALLONIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_iron_mine_throughput_add = 0.1
+		building_steel_mills_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

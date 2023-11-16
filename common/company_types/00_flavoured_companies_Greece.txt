@@ -1,0 +1,154 @@
+# Basileiades
+company_basileiades = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/basileiades.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_shipyards
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ATTICA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_shipyards
+				}
+				level > 10
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.2
+		state_infrastructure_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Achilleas Kouppas Machine Manufacturing A.E.
+company_kouppas = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/kouppas.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_tooling_workshops
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ATTICA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_tooling_workshops
+				}
+				level > 10
+			}
+		}
+		has_technology_researched = mechanical_tools
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		building_steel_mills_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Neorion
+company_Neorion = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WEST_AEGEAN_ISLANDS
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level > 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+        country_military_tech_spread_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Karelia Tobacco Company
+company_KareliaTobacco = {
+	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tobacco_plantation
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_PELOPONNESE
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_tobacco_plantation
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.1
+
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

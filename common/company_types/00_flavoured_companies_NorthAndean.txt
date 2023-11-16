@@ -1,0 +1,144 @@
+# National Federation of Coffee Growers of Colombia
+company_NFCGC = {
+	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_coffee_plantation
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	possible = {
+		any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coffee_plantation
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_trade_unions_approval_add = 4
+		building_coffee_plantation_throughput_add = 0.2
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_HouseOfAngo = {
+	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	
+	flavored_company = yes
+	
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	possible = {
+		any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.1
+		country_convoys_capacity_mult = 0.1
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Caribbean Petroleum Company
+company_caribbean_petroleum = {
+	texture = "gfx/interface/icons/company_icons/basic_oil.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_oil_rig
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_ZULIA
+				state_region = s:STATE_MIRANDA
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level > 10
+			}
+		}
+		has_technology_researched = pumpjacks
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+		interest_group_ig_industrialists_approval_add = 3
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Fábrica de Armas de la Nación
+company_famae = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_arms_industry
+		building_artillery_foundries
+		building_munition_plants
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SANTIAGO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level > 10
+			}
+		}
+		has_technology_researched = gunsmithing
+	}
+	
+	prosperity_modifier = {
+		unit_offense_mult = 0.1
+		building_steel_mills_throughput_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

@@ -1,0 +1,109 @@
+# San Miguel
+company_san_miguel = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_indonesia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 10
+			}
+		}
+		has_technology_researched = corporatism
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Pindad
+company_Pindad = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_munition_plants
+		building_artillery_foundries
+		building_explosives_factory
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EAST_JAVA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level > 10
+			}
+		}
+		has_technology_researched = percussian_cap
+	}
+	
+	prosperity_modifier = {
+		unit_army_offense_mult = 0.1
+		unit_army_defense_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Sampoerna
+company_Sampoerna = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tobacco_plantation
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EAST_JAVA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level > 10
+			}
+		}
+		has_technology_researched = pumpjacks
+	}
+	
+	prosperity_modifier = {
+		country_influence_mult = 0.1
+		country_prestige_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

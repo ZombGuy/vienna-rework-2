@@ -1,0 +1,139 @@
+# Căile Ferate Române
+company_cfr = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/romania_cfr.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_danubia
+		country_has_primary_culture = cu:romanian
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 2
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.05
+		market_land_trade_capacity_add = 15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Steaua Română
+company_romanian_star = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/romania_steaua_romana.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_oil_rig
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_danubia
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WALLACHIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_oil_extraction_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Atelierul Vlad / Napolact
+company_AV = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_danubia
+		country_has_primary_culture = cu:romanian
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			has_building = building_food_industry
+			count >= 10
+		}
+	}
+	
+	prosperity_modifier = {
+		building_livestock_ranch_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Roman
+company_RLaWF = {
+	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_danubia
+		country_has_primary_culture = cu:romanian
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			has_building = building_motor_industry
+			count >= 10
+		}
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

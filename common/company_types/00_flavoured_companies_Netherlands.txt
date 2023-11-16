@@ -1,0 +1,327 @@
+company_KNSM = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.25
+		interest_group_ig_industrialists_approval_add = 2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_Heineken = {
+	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+		building_rye_farm
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_chemical_plants_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Koninklijke Nederlandse Petroleum Maatschappij
+company_nederlandse_petroleum = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/maatschappij.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_oil_rig
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+	
+	possible = {
+		country_has_primary_culture = cu:dutch
+		any_scope_state = {
+			region = sr:region_indonesia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level > 10
+			}
+		}
+		has_technology_researched = pumpjacks
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Koninklijke Philips N.V.
+company_philips = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/philips.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_electrics_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry
+				level > 10
+			}
+		}
+		has_technology_researched = electrical_generation
+	}
+	
+	prosperity_modifier = {
+		country_weekly_innovation_mult = 0.05
+		country_weekly_innovation_max_add = 15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_Ahold = {
+	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_vineyard_plantation_throughput_add = 0.1
+		state_birth_rate_mult = 0.075
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# KLM Royal Dutch Airlines
+company_KLMR = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_war_machine_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+	
+	possible = {
+		country_has_primary_culture = cu:dutch
+		any_scope_state = {
+			region = sr:region_indonesia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_war_machine_industry
+				level > 5
+			}
+		}
+		has_technology_researched = pumpjacks
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+		state_migration_pull_mult = 0.25
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# KNHS
+company_KNHS = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_iron_mine
+		building_steel_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_HOLLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_power_plant_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Koninklijke Nederlandse Papierfabriek
+company_KNP = {
+	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_paper_mills
+		building_logging_camp
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_GELRE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Nederlandse Spoorwegen
+company_NeSp = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_HOLLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level > 7
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

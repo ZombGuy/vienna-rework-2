@@ -1,0 +1,243 @@
+# Great Indian Peninsula Railway
+company_great_indian_railway = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_south_india
+				region = sr:region_north_india
+			}
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 6
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 0.05
+		state_infrastructure_from_population_max_add = 20
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Tata
+company_tata = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/india_tata.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+		building_steel_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_india
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BOMBAY
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mills
+					is_building_type = building_steel_mills
+				}
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_construction_sector_throughput_add = 0.05
+		country_max_weekly_construction_progress_add = 10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Calcutta and Burma Steamship Navigation Company
+company_CaBSNC = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_port
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+			has_interest_marker_in_region = region_indochina
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+		    OR = {
+			state_region = s:STATE_SOUTH_BENGAL
+			state_region = s:STATE_PEGU
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_port
+				}
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_trade_center_throughput_add = 0.1
+		unit_army_offense_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# British India Corporation 
+company_BIC = {
+	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+		building_cotton_plantation
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mills
+					is_building_type = building_cotton_plantation
+				}
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_GreavesCotton = {
+	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_tooling_workshops
+		building_oil_rig
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_tooling_workshops
+				}
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# JTC Tea Industries Pvt. Ltd.
+company_JTC = {
+	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tea_plantation
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_tea_plantation
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+		building_tea_plantation_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
