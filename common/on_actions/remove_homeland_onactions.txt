@@ -8,10 +8,10 @@ on_monthly_pulse_state = {
 
 remove_homeland_actions = {
 	random_events = {
-		450 = 0
+		355 = 0
 		1 = remove_homeland_events.100
 		3 = remove_homeland_events.101
-		15 = remove_homeland_events.102
+		60 = remove_homeland_events.102
 		3 = remove_homeland_events.2
 		3 = remove_homeland_events.3
 		3 = remove_homeland_events.4
@@ -24,7 +24,7 @@ remove_homeland_actions = {
 		3 = remove_homeland_events.11
 		3 = remove_homeland_events.12
 		3 = remove_homeland_events.13
-		50 = remove_homeland_events.104
+		100 = remove_homeland_events.104
 	}
 	events = {
 		remove_homeland_events.103
