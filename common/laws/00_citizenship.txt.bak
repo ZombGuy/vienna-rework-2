@@ -98,7 +98,7 @@ law_national_supremacy = {
 		ig:ig_petty_bourgeoisie ?= {
 			remove_ideology = ideology_reactionary_exclusionist
 			remove_ideology = ideology_reactionary_segregationist
-			#remove_ideology = ideology_reactionary_multicultural
+			remove_ideology = ideology_reactionary_multicultural
 		}
 	}
 
@@ -154,7 +154,7 @@ law_racial_segregation = {
 		ig:ig_petty_bourgeoisie ?= {
 			remove_ideology = ideology_reactionary_exclusionist
 			remove_ideology = ideology_reactionary_segregationist
-			#remove_ideology = ideology_reactionary_multicultural
+			remove_ideology = ideology_reactionary_multicultural
 		}
 	}
 
@@ -232,7 +232,7 @@ law_cultural_exclusion = {
 	
 	on_activate = {
 		ig:ig_petty_bourgeoisie ?= {
-			#remove_ideology = ideology_reactionary_multicultural
+			remove_ideology = ideology_reactionary_multicultural
 			remove_ideology = ideology_reactionary_exclusionist
 			add_ideology = ideology_reactionary_segregationist
 		}

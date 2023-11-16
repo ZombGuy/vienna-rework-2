@@ -1,4 +1,4 @@
-ideology_reactionary = {
+﻿ideology_reactionary = {
 	icon = "gfx/interface/icons/ideology_icons/reactionary.dds"
 	
 	lawgroup_governance_principles = {
@@ -52,16 +52,16 @@ ideology_reactionary_exclusionist  = {
 	}
 }
 
-ideology_reactionary_multicultural  = {
-	icon = "gfx/interface/icons/ideology_icons/reactionary.dds"
-
-	priority = 100
-	
-	lawgroup_citizenship = {
-		law_ethnostate = disapprove
-		law_national_supremacy = disapprove
-		law_racial_segregation = disapprove
-		law_cultural_exclusion = disapprove
-		law_multicultural = neutral	
-	}
-}
+#ideology_reactionary_multicultural  = {
+#	icon = "gfx/interface/icons/ideology_icons/reactionary.dds"
+#
+#	priority = 100
+#	
+#	lawgroup_citizenship = {
+#		law_ethnostate = disapprove
+#		law_national_supremacy = disapprove
+#		law_racial_segregation = disapprove
+#		law_cultural_exclusion = disapprove
+#		law_multicultural = neutral	
+#	}
+#}
