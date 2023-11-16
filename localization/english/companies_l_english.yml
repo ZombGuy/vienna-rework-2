@@ -1,6 +1,8 @@
 ﻿l_english:
 
  COMPANIES: "[Concept('concept_company','$concept_companies$')]"
+ COMPANIES_HEADER: "[SelectLocalization(GetVariableSystem.Exists('hide_current_companies'), 'SELECT_COMPANY', 'COMPANIES')]"
+ SELECT_COMPANY: "Select [concept_company]"
  NO_COMPANIES: "No $COMPANIES$"
  NO_POTENTIAL_COMPANIES: "No Potential $COMPANIES$"
  COMPANIES_OVERVIEW: "Companies"
@@ -53,7 +55,7 @@
  ESTABLISHED_COMPANIES: "Established Companies"
  AVAILABLE_COMPANIES: "Available Companies"
  POTENTIAL_COMPANIES: "Potential Companies"
- UNAVAILABLE_COMPANIES: "Unavailable Companies"
+ ATTAINABLE_COMPANIES: "Attainable Companies"
  
  # Fallback names if dynamic naming fails
  company_basic_agriculture_1: "Quality Grains Inc."
@@ -147,13 +149,13 @@
  dynamic_company_name_country_4: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ Inc."
  dynamic_company_name_country_5: "Combined [COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  
- dynamic_company_name_state_1: "[STATE_REGION.GetName] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
- dynamic_company_name_state_2: "[STATE_REGION.GetName] $DYNAMIC_NAME_TAG$"
- dynamic_company_name_state_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ of [STATE_REGION.GetName]"
- dynamic_company_name_state_4: "[STATE_REGION.GetName] Premium $DYNAMIC_NAME_TAG$"
- dynamic_company_name_state_5: "United [STATE_REGION.GetName] $DYNAMIC_NAME_TAG$ Producers"
+ dynamic_company_name_state_1: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
+ dynamic_company_name_state_2: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$"
+ dynamic_company_name_state_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ of [STATE_REGION.GetNameNoFormatting]"
+ dynamic_company_name_state_4: "[STATE_REGION.GetNameNoFormatting] Premium $DYNAMIC_NAME_TAG$"
+ dynamic_company_name_state_5: "United [STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ Producers"
 
- # Flavoured Companies
+ # Flavored Companies
  
  # Germany
  company_krupp: "Friedrich Krupp"
@@ -249,7 +251,7 @@
 # Great Britain
  company_east_india_company: "East India Company"
  company_j_p_coats: "J. & P. Coats"
- company_armstrong_whitworth: "Armstrong-Whitworth"
+ company_armstrong_whitworth: "Sir W. G. Armstrong Whitworth & Co."
  company_john_brown: "John Brown & Company"
  company_gwr: "Great Western Railway"
  company_bolckow_vaughan: "Bolckow, Vaughan & Co."
@@ -281,6 +283,7 @@
  company_mantetsu: "South Manchuria Railway Company"
  
 # USA
+
  company_general_electric: "General Electric"
  company_us_steel: "Carnegie Steel Company"
  company_united_fruit: "United Fruit Company"
@@ -316,6 +319,12 @@
  company_Li: "Li & Fung Limited"
 
 # Belgium and the Netherlands
+ company_skoda: "Škoda Works"
+ company_mav: "MÁVAG"
+ company_manfred_weiss: "Manfréd Weiss Steel and Metal Works" # Weiss Manfréd Acél- és Fémművek
+ company_galician_carpathian_oil: "Galician Carpathian Petroleum Company" # Galizisch-Karpathische Petroleum Aktien-Gesellschaft
+ company_oevg: "Österreichische Waffenfabriks-Gesellschaft"
+
  company_ccci: "Compagnie du Congo"
  company_franco_belge: "Société Franco-Belge"
  company_john_cockerill: "Société anonyme John Cockerill"
@@ -365,9 +374,12 @@
  company_la_rosada: "La Rosada"
  company_Tandanor: "Talleres Navales de Marina"
  company_Trapiche: "Trapiche"
+ company_famae: "Fábrica de Armas de la Nación"
+ company_peruvian_amazon: "Peruvian Amazon Company"
  
  # Brazil
  company_Klabin: "Klabin Irmãos & Cia."
+ company_kablin: "Klabin Irmãos & Cia."
  company_Rossi: "Amadeo Rossi S.A."
  company_Elekeiroz: "Elekeiroz"
  company_Light: "Light S.A."
@@ -391,6 +403,7 @@
  # Sweden
  company_ericsson: "Ericsson"
  company_lkab: "LKAB"
+ company_nokia: "Nokia"
  company_gotaverken: "Götaverken"
  company_Hastens: "Hästens Sängar AB"
  company_Gevalia: "Gevalia"
@@ -580,3 +593,15 @@
 # Canals
  company_panama_company: "Panama Canal Company"
  company_suez_company: "Suez Canal Company"
+
+ company_sao_paulo_railway: "São Paulo Railway Co. Ltd."
+ company_estaleiro_maua: "Estaleiro Mauá"
+ company_pernambuco_textiles: "Companhia Fiação e Tecidos de Pernambuco"
+ company_fundicao_ipanema: "Fundição Ipanema"
+ company_rossi: "Amadeo Rossi & Cia."
+ company_estanifera_llallagua: "Compañía Estañífera de Llallagua"
+ company_argentinian_wine: "Centro Vitivinícola Nacional"
+ company_cordoba_railway: "Ferrocarril Central Córdoba"
+ company_sudamericana_de_vapores: "Compañía Sudamericana de Vapores"
+ company_electricidad_de_caracas: "C.A. La Electricidad de Caracas"
+ company_eea: "Empresas Eléctricas Asociadas"
