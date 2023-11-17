@@ -1,0 +1,5 @@
+﻿#Building modifiers
+building_group_bg_public_infrastructure_employee_mult = {
+	good = no
+	percent = yes
+}

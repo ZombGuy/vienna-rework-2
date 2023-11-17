@@ -121,7 +121,7 @@ law_technocracy = {
 		country_officers_pol_str_mult = 0.5
 		country_authority_add = 150
 		building_group_bg_government_employee_mult = -0.3
-		country_government_wages_mult = 0.3
+		building_group_bg_public_infrastructure_employee_mult = -0.3
 		building_group_bg_government_throughput_add = 0.2
 	}
 
