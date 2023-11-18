@@ -193,25 +193,25 @@
 #	}
 #}
 
-#BNL = { #Benelux
-#	states = {
-#		STATE_HOLLAND
-#		STATE_FRIESLAND
-#		STATE_GELRE
-#		STATE_FLANDERS
-#		STATE_WALLONIA
-#	}
-#
-#	required_states_fraction = 1
-#
-#	possible = { BEL = no }
-#	
-#	ai_will_do = { always = yes }
-#
-#	possible = {
-#			has_technology_researched = pan-nationalism
-#	}
-#}
+BNL = { #Benelux
+	states = {
+		STATE_HOLLAND
+		STATE_FRIESLAND
+		STATE_GELRE
+		STATE_FLANDERS
+		STATE_WALLONIA
+	}
+
+	required_states_fraction = 1
+
+	possible = { BEL = no }
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+			has_technology_researched = pan-nationalism
+	}
+}
 CEL = { #Celtica
 	use_culture_states = yes
 
@@ -933,22 +933,22 @@ ALM = { #
 	ai_will_do = { always = yes }
 }
 
-#BGD = { #
-#	states = {
-#		STATE_BURGUNDY
-#		STATE_SAVOY
-#		STATE_PROVENCE
-#		STATE_WEST_SWITZERLAND
-#		STATE_RHONE
-#		STATE_FRANCHE_COMTE
-#	}
-#	
-#	is_major_formation = no
-#
-#	required_states_fraction = 0.67	
-#	
-#	ai_will_do = { always = yes }
-#}
+BGD = { #
+	states = {
+		STATE_BURGUNDY
+		STATE_SAVOY
+		STATE_PROVENCE
+		STATE_WEST_SWITZERLAND
+		STATE_RHONE
+		STATE_FRANCHE_COMTE
+	}
+	
+	is_major_formation = no
+
+	required_states_fraction = 0.67	
+	
+	ai_will_do = { always = yes }
+}
 
 LVT = { #
 
