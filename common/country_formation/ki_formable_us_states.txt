@@ -1,9 +1,13 @@
-ACA = { #Acadia
-	use_culture_states = yes
+﻿ACA = { #Acadia
+	states = {
+		STATE_LOUISIANA
+		STATE_ARKANSAS
+		STATE_MISSOURI
+	}
 	
 	is_major_formation = no
 
-	required_states_fraction = 1
+	required_states_fraction = 0.55
 	
 	ai_will_do = { always = yes }
 }
@@ -57,7 +61,7 @@ PAS = { #Pacific States
 	
 	ai_will_do = { always = yes }
 }
-CSC = { #Cascadia
+CAC = { #Cascadia
 	states = {
 		STATE_WASHINGTON
 		STATE_OREGON
@@ -68,7 +72,9 @@ CSC = { #Cascadia
 
 	required_states_fraction = 0.75	
 	
-	possible = { is_subject = no }
+	possible = { is_subject = no 
+				has_technology_researched = nationalism }
+	
 	
 	ai_will_do = { always = yes }
 	
@@ -172,25 +178,25 @@ MWR = { # Midwest Republic
 	
 	ai_will_do = { always = yes }
 }
-DIX = { # Dixie
-	states = {
-		STATE_ALABAMA
-		STATE_LOUISIANA
-		STATE_FLORIDA
-		STATE_GEORGIA
-		STATE_SOUTH_CAROLINA
-		STATE_ARKANSAS
-		STATE_TENNESSEE
-		STATE_MISSISSIPPI
-		STATE_NORTH_CAROLINA
-		STATE_KENTUCKY
-	}
-	is_major_formation = no
-
-	required_states_fraction = 0.75	
-	
-	ai_will_do = { always = no }
-}
+#DIX = { # Dixie
+#	states = {
+#		STATE_ALABAMA
+#		STATE_LOUISIANA
+#		STATE_FLORIDA
+#		STATE_GEORGIA
+#		STATE_SOUTH_CAROLINA
+#		STATE_ARKANSAS
+#		STATE_TENNESSEE
+#		STATE_MISSISSIPPI
+#		STATE_NORTH_CAROLINA
+#		STATE_KENTUCKY
+#	}
+#	is_major_formation = no
+#
+#	required_states_fraction = 0.75	
+#	
+#	ai_will_do = { always = no }
+#}
 GTX = { # Greater Texas
 	states = {
 		STATE_TEXAS
@@ -252,20 +258,18 @@ TTC = { # Thirteen Colonies
 	
 	ai_will_do = { always = yes }
 }
-ARC = { # Arctic States
+NEN = { # New England
 	states = {
-		STATE_ALASKA
-		STATE_NORTHWEST_TERRITORIES
-		STATE_NUNAVUT
-		STATE_YUKON_TERRITORY
-		STATE_BRITISH_COLUMBIA
-		STATE_ALBERTA
-		STATE_SASKATCHEWAN
-		STATE_MANITOBA
+		STATE_MASSACHUSETTS
+		STATE_RHODE_ISLAND
+		STATE_MAINE
+		STATE_VERMONT
+		STATE_NEW_HAMPSHIRE
+		STATE_CONNECTICUT
 	}
 	is_major_formation = no
 
-	required_states_fraction = 0.6	
+	required_states_fraction = 0.75	
 	
-	ai_will_do = { always = no }
+	ai_will_do = { always = yes }
 }

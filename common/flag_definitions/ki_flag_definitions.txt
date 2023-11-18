@@ -1,4 +1,4 @@
-CRT = { # Carthage
+﻿CRT = { # Carthage
 	flag_definition = {
 		coa = CRT
 		}
@@ -117,13 +117,6 @@ CRB = { # Caribbean
 		priority = 9
 		trigger = { 
 			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = CRB_absolute_monarchy
-		priority = 10
-		trigger = { 
-			coa_def_absolute_monarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
@@ -451,6 +444,13 @@ BAA = { # Banatia
 	flag_definition = {
 		coa = BAA
 		}
+	flag_definition = {
+		coa = BAA_republic
+		priority = 9
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
 }
 
 ILY = { # Illyria
@@ -485,22 +485,6 @@ JAU = { # Illyria
 	flag_definition = {
 		coa = JAU
 		}
-	flag_definition = {
-		coa = JAU_monarchy
-		priority = 9
-		trigger = { 
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	flag_definition = {
-		coa = JAU_subject_JAP
-		allow_overlord_canton = yes		
-		subject_canton = LMV
-		priority = 50
-		trigger = { 
-			coa_def_japanese_ensign_trigger = yes
-		}
-	}
 }
 
 EAF = { # Eaf
@@ -523,15 +507,156 @@ EAF = { # Eaf
 	}
 }
 
-MRV = { # Greater Moravia
+GMV = { # Greater Moravia
 	flag_definition = {
-		coa = EAF
+		coa = GMV
 		}
 	flag_definition = {
-		coa = MRV_communist
+		coa = GMV_communist
 		priority = 1500
 		trigger = { 
 			coa_def_communist_flag_trigger = yes
 		}
 	}
+}
+
+AAL = { # 
+	flag_definition = {
+		coa = AAL
+		}
+	flag_definition = {
+		coa = AAL_republic
+		priority = 9
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+}
+
+SUT = {
+	flag_definition = {
+		coa = SUT
+		subject_canton = SUT
+		priority = 1
+	}
+
+	flag_definition = {
+		coa = SUT_republic
+		subject_canton = SUT
+		priority = 10
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = SUT_monarchy
+		priority = 20
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = SUT_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = SUT_dictator
+		priority = 20
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = SUT_fascist
+		priority = 30
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = SUT_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = SUT_anarchy
+		priority = 2000
+		trigger = { 
+			coa_def_anarchy_flag_trigger = yes
+		}
+	}
+}
+
+AGV = { 
+	flag_definition = {
+		coa = AGV
+		}
+	flag_definition = {
+		coa = AGV_republic
+		priority = 9
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+}
+
+EST = { 
+	flag_definition = {
+		coa = EST_nordic
+		allow_overlord_canton = no		
+		priority = 50
+		trigger = { 
+			coa_def_nordic_overlord_trigger = yes
+		}
+	}
+}
+
+LAT = { 
+	flag_definition = {
+		coa = LAT_nordic
+		allow_overlord_canton = no		
+		priority = 50
+		trigger = { 
+			coa_def_nordic_overlord_trigger = yes
+		}
+	}
+}
+
+LIT = { 
+	flag_definition = {
+		coa = LIT_nordic
+		allow_overlord_canton = no		
+		priority = 50
+		trigger = { 
+			coa_def_nordic_overlord_trigger = yes
+		}
+	}
+}
+
+NOV = { 
+	flag_definition = {
+		coa = NOV_nordic
+		allow_overlord_canton = no		
+		priority = 50
+		trigger = { 
+			coa_def_nordic_overlord_trigger = yes
+		}
+	}
+}
+
+GBD = { 
+	flag_definition = {
+		coa = UBD
+		}
 }

@@ -1,0 +1,20 @@
+﻿gov_sultanate = {
+	transfer_of_power = hereditary
+	
+	male_ruler = "RULER_TITLE_SULTAN"
+	female_ruler = "" # Empty on purpose
+
+	male_heir = "RULER_TITLE_IMPERIAL_PRINCE"
+	female_heir = "" # Empty on purpose
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		or = {
+			AND = { exists = c:LVT c:LVT = ROOT }
+		}
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+}
