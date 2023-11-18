@@ -25,9 +25,6 @@ remove_homeland_events.100 = {
 			has_homeland = prev
 			NOT = { is_primary_culture_of = root.owner }
 		}
-		any_scope_culture = {
-			is_primary_culture_of = root.owner
-		}
 
 		exists = var:homeland_var
 		var:homeland_var >= 1
@@ -40,8 +37,21 @@ remove_homeland_events.100 = {
 
 	option = {
 		name = remove_homeland_events.1.a
-		remove_homeland_custom = yes
-		add_homeland_custom = yes
+		every_scope_culture = {
+			limit = {
+				has_homeland = root
+			}
+			root.state_region = {
+				remove_homeland = prev
+			}
+		}
+		owner = {
+			every_primary_culture = {
+				root.state_region = {
+					add_homeland = prev
+				}
+			}
+		}
 		add_modifier = {
 			name = homeland_add_modifier
 			months = 60
@@ -75,9 +85,6 @@ remove_homeland_events.101 = {
 			has_homeland = prev
 			NOT = { is_primary_culture_of = root.owner }
 		}
-		any_scope_culture = {
-			is_primary_culture_of = root.owner
-		}
 
 		exists = var:homeland_var
 		var:homeland_var >= 2
@@ -90,8 +97,21 @@ remove_homeland_events.101 = {
 
 	option = {
 		name = remove_homeland_events.1.a
-		remove_homeland_custom = yes
-		add_homeland_custom = yes
+		every_scope_culture = {
+			limit = {
+				has_homeland = root
+			}
+			root.state_region = {
+				remove_homeland = prev
+			}
+		}
+		owner = {
+			every_primary_culture = {
+				root.state_region = {
+					add_homeland = prev
+				}
+			}
+		}
 		add_modifier = {
 			name = homeland_add_modifier
 			months = 60
@@ -125,9 +145,6 @@ remove_homeland_events.102 = {
 			has_homeland = prev
 			NOT = { is_primary_culture_of = root.owner }
 		}
-		any_scope_culture = {
-			is_primary_culture_of = root.owner
-		}
 
 		exists = var:homeland_var
 		var:homeland_var >= 3
@@ -140,8 +157,21 @@ remove_homeland_events.102 = {
 
 	option = {
 		name = remove_homeland_events.1.a
-		remove_homeland_custom = yes
-		add_homeland_custom = yes
+		every_scope_culture = {
+			limit = {
+				has_homeland = root
+			}
+			root.state_region = {
+				remove_homeland = prev
+			}
+		}
+		owner = {
+			every_primary_culture = {
+				root.state_region = {
+					add_homeland = prev
+				}
+			}
+		}
 		add_modifier = {
 			name = homeland_add_modifier
 			months = 60
@@ -175,9 +205,6 @@ remove_homeland_events.103 = {
 			has_homeland = root
 			NOT = { is_primary_culture_of = root.owner }
 		}
-		any_scope_culture = {
-			is_primary_culture_of = root.owner
-		}
 
 		exists = var:homeland_var
 		var:homeland_var >= 4
@@ -190,8 +217,21 @@ remove_homeland_events.103 = {
 
 	option = {
 		name = remove_homeland_events.1.a
-		remove_homeland_custom = yes
-		add_homeland_custom = yes
+		every_scope_culture = {
+			limit = {
+				has_homeland = root
+			}
+			root.state_region = {
+				remove_homeland = prev
+			}
+		}
+		owner = {
+			every_primary_culture = {
+				root.state_region = {
+					add_homeland = prev
+				}
+			}
+		}
 		add_modifier = {
 			name = homeland_add_modifier
 			months = 60
@@ -227,9 +267,6 @@ remove_homeland_events.104 = {
 				NOT = { is_primary_culture_of = root.owner }
 			}
 		}
-		any_scope_culture = {
-			is_primary_culture_of = root.owner
-		}
 	}
 
 	immediate = {
@@ -237,7 +274,13 @@ remove_homeland_events.104 = {
 
 	option = {
 		name = remove_homeland_events.1.a
-		add_homeland_custom = yes
+		owner = {
+			every_primary_culture = {
+				root.state_region = {
+					add_homeland = prev
+				}
+			}
+		}
 		add_modifier = {
 			name = homeland_add_modifier
 			months = 60

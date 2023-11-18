@@ -26,12 +26,6 @@ decree_homeland_removal = {
 				}
 			}
 		}
-		custom_tooltip = {
-			text = homeland_decree.tt2
-			any_scope_culture = {
-				is_primary_culture_of = root.owner
-			}
-		}
 	}
 	modifier = {
 		state_assimilation_mult = 1
