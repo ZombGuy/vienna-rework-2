@@ -75,7 +75,7 @@ company_Majello = {
 					is_building_type = building_glassworks
 					is_building_type = building_furniture_manufacturies
 				}
-				level >= 10
+				level >= 7
 			}
 		}
 	}
@@ -121,7 +121,7 @@ company_Beretta = {
 					is_building_type = building_arms_industry
 					is_building_type = building_munition_plants
 				}
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -164,7 +164,7 @@ company_Fedrigoni = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level >= 10
+				level >= 7
 			}
 		}
 	}
@@ -207,7 +207,7 @@ company_Montecatini = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_chemical_plants
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -250,7 +250,7 @@ company_ilva = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level >= 10
+				level >= 8
 			}
 		}
 		has_technology_researched = arc_welding
@@ -483,7 +483,7 @@ company_Pirelli = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_urban_center
-				level > 20
+				level >= 20
 			}
 		}
 	}
@@ -527,7 +527,7 @@ company_Olivetti = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = telephone
@@ -571,7 +571,7 @@ company_EdisonSpA = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level > 7
+				level >= 5
 			}
 		}
 		has_technology_researched = telephone
@@ -615,7 +615,7 @@ company_Barilla = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_wheat_farm
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -623,6 +623,93 @@ company_Barilla = {
 	prosperity_modifier = {
 		state_loyalists_from_sol_change_mult = 0.1
 		state_birth_rate_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+# Cantiere navale di Palermo
+company_Cantiere = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SICILY			
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_SICILY
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_military_shipyards
+				level >= 5
+			}
+		}
+		has_technology_researched = gantry_cranes
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.7
+		interest_group_ig_armed_forces_approval_add = 3
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Luigi Lavazza S.p.A.
+company_Lavazza = {
+	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations_2.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_coffee_plantation
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOMBARDY			
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_LOMBARDY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 6
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = 0.05
+		state_loyalists_from_sol_change_mult = 0.15
+		state_colony_growth_speed_mult = 0.05
 	}
 	
 	ai_weight = {

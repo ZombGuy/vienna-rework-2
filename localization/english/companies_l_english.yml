@@ -195,6 +195,7 @@
  company_AugustK: "Papierfabrik August Köhler"
  company_HarzerBergbau: "Harzer Bergbau AG"
  company_GermanNobel: "Alfred Nobel & Co"
+ company_Seeberger: "Seeberger"
 
 # Austria-Hungary
  company_GanzWorks: "Ganz Works"
@@ -313,6 +314,8 @@
  company_Coors: "Coors Brewing Company"
  company_VFC: "Reading Glove and Mitten Manufacturing Company"
  company_McIlhenny: "McIlhenny Company"
+ company_3M: "Minnesota Mining and Manufacturing Company"
+ company_Leggett: "Leggett & Platt"
 
 # China / Great Qing
  company_kaiping_mining: "Kaiping Mining Company"
@@ -469,6 +472,7 @@
  company_CUF: "Companhia União Fabril"
  company_CdTd: "Companhia dos Tabacos de Portugal"
  company_CNN: "Companhia Nacional de Navegação"
+ company_Arsenal_Alfeite: "Arsenal do Alfeite S.A."
  
  # Spain
  company_altos_hornos_de_vizcaya: "Altos Hornos de Vizcaya"
@@ -521,6 +525,8 @@
  company_Olivetti: "Olivetti S.p.A."
  company_EdisonSpA: "Edison S.p.A."
  company_Barilla: "Barilla G. e R. Fratelli S.p.A"
+ company_Cantiere: "Cantiere navale di Palermo"
+ company_Lavazza: "Luigi Lavazza S.p.A."
 
 # Ottoman Empire / Turkey
  company_imperial_arsenal: "Tersâne-i Âmire"
@@ -615,9 +621,16 @@
  company_Johannesburg: "Johannesburg Gas Works"
  company_WGMC: "Witwatersrand Gold Mining Company"
  
- # West Africa
+# West Africa
  company_LNPA: "Liberian National Port Authority"
  company_JohnHolt: "John Holt & Co."
+ 
+# Morocco
+ company_OfficeCh: "Office Chérifien des Phosphates"
+ company_Maroc: "Compagnie de Transports au Maroc"
+ 
+# Tunisia
+ company_phosphat_Gafsa: "Compagnie des phosphates de Gafsa"
 
 # Canals
  company_panama_company: "Panama Canal Company"

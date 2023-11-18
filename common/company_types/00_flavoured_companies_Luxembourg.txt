@@ -28,7 +28,7 @@ company_Arbed = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 5
 			}
 		}
 	}

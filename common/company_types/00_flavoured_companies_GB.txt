@@ -29,7 +29,7 @@ company_Wedgewood = {
 					is_building_type = building_glassworks
 					is_building_type = building_furniture_manufacturies
 				}
-			    level > 10
+			    level >= 10
 			}
 		}
 	}
@@ -72,7 +72,7 @@ company_BritishGas = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_urban_center
-				level > 50
+				level >= 50
 			}
 		}
 	}
@@ -114,7 +114,7 @@ company_Cadbury = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -204,7 +204,7 @@ company_RollsRoyce = {
 					is_building_type = building_motor_industry
 					is_building_type = building_war_machine_industry
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = combustion_engine
@@ -499,7 +499,7 @@ company_ICI = {
 					is_building_type = building_chemical_plants
 					is_building_type = building_synthetics_plants
 				}
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -541,7 +541,7 @@ company_Unilever = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -585,7 +585,7 @@ company_PandO = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_port
-				level > 7
+				level >= 8
 			}
 		}
 	}
@@ -629,7 +629,7 @@ company_Carr = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -674,13 +674,13 @@ company_Courta = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 10
 			}
 		}
 	}
 	
 	prosperity_modifier = {
-		building_textile_mills_throughput_add = 0.2
+		building_textile_mills_throughput_add = 0.15
 	}	
 	
 	ai_weight = {

@@ -30,7 +30,7 @@ company_basileiades = {
 					is_building_type = building_motor_industry
 					is_building_type = building_shipyards
 				}
-				level >= 10
+				level >= 4
 			}
 		}
 		has_technology_researched = railways
@@ -78,7 +78,7 @@ company_kouppas = {
 					is_building_type = building_motor_industry
 					is_building_type = building_tooling_workshops
 				}
-				level >= 10
+				level >= 5
 			}
 		}
 		has_technology_researched = mechanical_tools
@@ -127,7 +127,7 @@ company_Neorion = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level > 3
+				level >= 2
 			}
 		}
 	}
@@ -170,7 +170,7 @@ company_KareliaTobacco = {
 			is_incorporated = yes
 			any_scope_building = {
 					is_building_type = building_tobacco_plantation
-				level > 10
+				level >= 6
 			}
 		}
 	}

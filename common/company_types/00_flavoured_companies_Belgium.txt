@@ -31,7 +31,7 @@ company_BellTelephone = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_electrics_industry
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -128,7 +128,7 @@ company_franco_belge = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -179,7 +179,7 @@ company_john_cockerill = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -224,7 +224,7 @@ company_SgdB = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_urban_center
-				level > 25
+				level >= 25
 			}
 		}
 	}
@@ -309,7 +309,7 @@ company_AdCE = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level > 10
+				level >= 4
 			}
 		}
 	}

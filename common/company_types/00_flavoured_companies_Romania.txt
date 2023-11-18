@@ -113,7 +113,7 @@ company_AV = {
 			}
 			is_incorporated = yes
 			has_building = building_food_industry
-			count >= 10
+			count >= 6
 		}
 	}
 	
@@ -156,7 +156,7 @@ company_RLaWF = {
 			}
 			is_incorporated = yes
 			has_building = building_motor_industry
-			count >= 10
+			count >= 6
 		}
 	}
 	

@@ -31,7 +31,7 @@ company_LNPA = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level > 10
+				level >= 4
 			}
 		}
 		has_technology_researched = gantry_cranes
@@ -79,7 +79,7 @@ company_JohnHolt = {
 					is_building_type = building_tooling_workshops
 					is_building_type = building_power_plant
 				}
-				level > 10
+				level >= 5
 			}
 		}
 	}

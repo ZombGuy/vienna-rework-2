@@ -295,7 +295,7 @@ company_CocaCola = {
 				is_building_type = building_sugar_plantation
 				is_building_type = building_opium_plantation
 				}
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -343,7 +343,7 @@ company_JohnDeere = {
 				is_building_type = building_tooling_workshops
 				is_building_type = building_motor_industry
 				}
-				level > 10
+				level >= 10
 			}	
 		}
 		has_technology_researched = combustion_engine
@@ -430,7 +430,7 @@ company_JackDaniels = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 8
 			}
 		}	
 		has_technology_researched = fractional_distillation
@@ -479,7 +479,7 @@ company_Remington = {
 				is_building_type = building_munition_plants
 				is_building_type = building_arms_industry
 				}
-				level > 10
+				level >= 8
 			}
 		}
 		has_technology_researched = rifling
@@ -527,7 +527,7 @@ company_DuPont = {
 				is_building_type = building_munition_plants
 				is_building_type = building_explosives_factory
 				}
-			    level > 10
+			    level >= 10
 			}
 		}
 		has_technology_researched = nitroglycerin
@@ -569,7 +569,7 @@ company_IPC = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level > 10
+				level >= 6
 			}
 		}
 		has_technology_researched = chemical_bleaching
@@ -613,7 +613,7 @@ company_Levi = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = vulcanization
@@ -622,6 +622,7 @@ company_Levi = {
 	prosperity_modifier = {
 		state_radicals_from_sol_change_mult = -0.1
 		country_influence_mult = 0.15
+		country_prestige_mult = 0.05
 	}
 	
 	ai_weight = {
@@ -660,7 +661,7 @@ company_ASARCO = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_iron_mine
-				level > 10
+				level >= 8
 			}
 		}
 	}
@@ -703,7 +704,7 @@ company_ClearMountain = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 5
 			}
 		}
 		has_technology_researched = shift_work
@@ -747,7 +748,7 @@ company_Ball = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_glassworks
-				level > 10
+				level >= 7
 			}
 		}
 		has_technology_researched = vacuum_canning
@@ -791,7 +792,7 @@ company_Coors = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 5
 			}
 		}
 		has_technology_researched = vacuum_canning
@@ -835,7 +836,7 @@ company_VFC = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 5
 			}
 		}
 		has_technology_researched = mechanized_workshops
@@ -879,7 +880,7 @@ company_McIlhenny = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 6
 			}
 		}
 	}
@@ -888,6 +889,95 @@ company_McIlhenny = {
 		state_migration_pull_mult = 0.05
 		country_influence_mult = 0.05
 	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# 3M
+company_3M = {
+	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_paper_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_the_midwest
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MINNESOTA
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MINNESOTA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 6
+			}
+		}
+		has_technology_researched = art_silk
+	}
+	
+	prosperity_modifier = {
+		building_glassworks_throughput_add = 0.15
+		country_production_tech_spread_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Leggett & Platt
+company_Leggett = {
+	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_furniture_manufacturies
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_the_midwest
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MISSOURI
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MISSOURI
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_furniture_manufacturies
+				level >= 6
+			}
+		}
+		has_technology_researched = rotary_valve_engine
+	}
+	
+	prosperity_modifier = {
+		building_furniture_manufacturies_throughput_add = 0.05
+		building_motor_industry_throughput_add = 0.05
+		state_loyalists_from_sol_change_mult = 0.1
+	}	
 	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies

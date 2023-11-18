@@ -22,6 +22,7 @@ company_great_indian_railway = {
 					region = sr:region_south_india
 					region = sr:region_north_india
 				}
+				is_incorporated = yes
 			}
 		}
 	}			
@@ -177,6 +178,7 @@ company_BIC = {
 					region = sr:region_south_india
 					region = sr:region_north_india
 				}
+				is_incorporated = yes
 			}
 		}
 	}			

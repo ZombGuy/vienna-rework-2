@@ -27,7 +27,7 @@ company_Rosneft = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 5
+				level >= 5
 			}
 		}
 		has_technology_researched = pumpjacks
@@ -74,7 +74,7 @@ company_Kreeholm = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 8
 			}
 		}
 		has_technology_researched = lathe
@@ -168,7 +168,7 @@ company_putilov_company = {
 					is_building_type = building_military_shipyards
 					is_building_type = building_artillery_foundries
 				}
-				level >= 10
+				level >= 8
 			}
 		}
 		has_technology_researched = railways
@@ -256,7 +256,7 @@ company_izhevsk_arms_plant = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 5
 			}
 		}
 		has_technology_researched = rifling # corresponds roughly with the Izhevsk plant's incorporation as a private commercial enterprise, and not a state arsenal.

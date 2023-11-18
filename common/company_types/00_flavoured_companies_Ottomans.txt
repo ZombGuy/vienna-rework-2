@@ -26,7 +26,7 @@ company_imperial_arsenal = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_military_shipyards
-				level >= 10
+				level >= 5
 			}
 		}
 		has_technology_researched = hydraulic_cranes
@@ -76,7 +76,7 @@ company_zeytinburnu = {
 					is_building_type = building_steel_mills
 					is_building_type = building_motor_industry
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		NOR = {
@@ -128,7 +128,7 @@ company_bakiroy = {
 					is_building_type = building_munition_plants
 					is_building_type = building_explosives_factory
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		NOR = {
@@ -310,7 +310,7 @@ company_Kuzguncuk = {
 					is_building_type = building_coal_mine
 					is_building_type = building_power_plant
 				}
-				level > 10
+				level >= 7
 			}
 		}
 		NOR = {
@@ -363,7 +363,7 @@ company_SarsilmazArms = {
 					is_building_type = building_arms_industry
 					is_building_type = building_munition_plants
 				}
-				level > 10
+				level >= 5
 			}
 		}
 		NOR = {
@@ -412,7 +412,7 @@ company_BasakTraktor = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level > 10
+				level >= 8
 			}
 		}
 		has_technology_researched = combustion_engine
@@ -460,7 +460,7 @@ company_IETT = {
 					is_building_type = building_railway
 					is_building_type = building_power_plant
 				}
-				level > 10
+				level >= 5
 			}
 		}
 		NOR = {
@@ -508,7 +508,7 @@ company_OIHS = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_war_machine_industry
-				level > 10
+				level >= 4
 			}
 		}
 		NOR = {

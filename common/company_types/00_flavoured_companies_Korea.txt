@@ -126,7 +126,7 @@ company_KTC = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
-				level >= 10
+				level >= 7
 			}
 		}
 		has_technology_researched = mechanized_workshops
@@ -171,7 +171,7 @@ company_DongIlbo = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level >= 10
+				level >= 7
 			}
 		}
 		has_technology_researched = political_agitation
@@ -217,7 +217,7 @@ company_Hangseong = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -246,14 +246,23 @@ company_Hanguk = {
 		has_interest_marker_in_region = region_manchuria
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}
+	
 	possible = { 
 		country_or_subject_owns_entire_state_region = STATE_GYEONGGI
 		any_scope_state = {
 			state_region = {
 				is_homeland = cu:korean
 			}
+			is_incorporated = yes
 			has_building = building_railway
-			count >= 5
+			count >= 4
 		}
 		has_technology_researched = railways
 	}

@@ -27,7 +27,7 @@ company_VistaAlegre = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_glassworks
-				level > 10
+				level >= 6
 			}
 		}
 	}
@@ -128,7 +128,7 @@ company_ConservasRamirez = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_fishing_wharf
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -172,7 +172,7 @@ company_CUF = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 6
 			}
 		}
 	}
@@ -216,7 +216,7 @@ company_CdTd = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tobacco_plantation
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -261,13 +261,56 @@ company_CNN = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level > 10
+				level >= 8
 			}
 		}
 	}
 	
 	prosperity_modifier = {
 		country_convoys_capacity_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Arsenal do Alfeite S.A. 
+company_Arsenal_Alfeite = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_military_shipyards
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_iberia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ESTREMADURA
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ESTREMADURA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_military_shipyards
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+		unit_combat_unit_type_submarine_offense_mult = 0.1
 	}
 
 	ai_weight = {

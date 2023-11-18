@@ -261,7 +261,7 @@ company_basf = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_synthetics_plants
-				level >= 10
+				level >= 7
 			}
 		}
 	}
@@ -304,7 +304,7 @@ company_Weihenstephan = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 8
 			}
 		}
 	}
@@ -349,7 +349,7 @@ company_SteamshipCompany = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_urban_center
-				level > 20
+				level >= 20
 			}
 		}
 	}
@@ -395,7 +395,7 @@ company_HannoverWaggonfabrik = {
 					is_building_type = building_railway
 					is_building_type = building_war_machine_industry
 				}
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -443,7 +443,7 @@ company_RoyalPorcelainFactory = {
 					is_building_type = building_glassworks
 					is_building_type = building_furniture_manufacturies
 				}
-				level > 10
+				level >= 7
 			}
 		}
 		has_technology_researched = chemical_bleaching
@@ -487,7 +487,7 @@ company_Haberbusch = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -530,7 +530,7 @@ company_FelixS = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -575,7 +575,7 @@ company_HDW = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level > 10
+				level >= 5
 			}
 		}
 		has_technology_researched = water_tube_boiler
@@ -620,7 +620,7 @@ company_Knorr = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -664,7 +664,7 @@ company_Fissler = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -707,7 +707,7 @@ company_ALange = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 7
 			}
 		}
 		has_technology_researched = mechanized_workshops
@@ -751,7 +751,7 @@ company_Meindl = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -797,14 +797,14 @@ company_MAN = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
-				level > 10
+				level >= 10
 			}
 		}
 	}
 	
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.05
-		country_max_weekly_construction_progress_add = 5
+		country_max_weekly_construction_progress_add = 7.5
 	}
 
 	ai_weight = {
@@ -840,7 +840,7 @@ company_Faber = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -884,7 +884,7 @@ company_MeyerWerft = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -927,7 +927,7 @@ company_Heraeus = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_chemical_plants
-				level > 10
+				level >= 6
 			}
 		}
 	}
@@ -970,7 +970,7 @@ company_Bayer = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_chemical_plants
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = aniline
@@ -1015,7 +1015,7 @@ company_Opel = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
-				level > 10
+				level >= 7
 			}
 		}
 	}
@@ -1058,7 +1058,7 @@ company_DTA = {
 			is_incorporated = yes
 			any_scope_building = {
 					is_building_type = building_coal_mine
-				    level > 10
+				    level >= 10
 			}
 		}
 		has_technology_researched = pumpjacks
@@ -1103,7 +1103,7 @@ company_DaimlerMG = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_railway
-				level > 7
+				level >= 4
 			}
 		}
 	}
@@ -1145,7 +1145,7 @@ company_DeEdison = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -1189,7 +1189,7 @@ company_CarlZeiss = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level > 10
+				level >= 4
 			}
 		}
 	}
@@ -1232,7 +1232,7 @@ company_Mannesmann = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 8
 			}
 		}
 	}
@@ -1274,7 +1274,7 @@ company_Meissener = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_glassworks
-				level > 10
+				level >= 6
 			}
 		}
 	}
@@ -1318,7 +1318,7 @@ company_AGFA = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_chemical_plants
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = aniline
@@ -1361,7 +1361,7 @@ company_Henkel = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_chemical_plants
-				level > 10
+				level >= 8
 			}
 		}
 	}
@@ -1407,7 +1407,7 @@ company_Blohm = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -1452,7 +1452,7 @@ company_HugoS = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_coal_mine
-				level > 20
+				level >= 20
 			}
 		}
 		has_technology_researched = corporate_management
@@ -1498,7 +1498,7 @@ company_Kraus_Maffei = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_railway
-				level > 7
+				level >= 5
 			}
 		}
 	}
@@ -1542,7 +1542,7 @@ company_AugustK = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -1587,7 +1587,7 @@ company_HarzerBergbau = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_iron_mine
-				level > 10
+				level >= 8
 			}
 		}
 	}
@@ -1631,13 +1631,58 @@ company_GermanNobel = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_explosives_factory
-				level > 10
+				level >= 10
 			}
 		}
 	}
 	
 	prosperity_modifier = {
 		building_explosives_factory_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Seeberger
+company_Seeberger = {
+	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations_2.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_coffee_plantation
+		building_sugar_plantation
+		building_tobacco_plantation
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BADEN
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BADEN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 6
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.12
+		state_loyalists_from_sol_change_mult = 0.05
 	}
 
 	ai_weight = {

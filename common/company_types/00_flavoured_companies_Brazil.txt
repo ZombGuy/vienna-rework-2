@@ -26,7 +26,7 @@ company_rossi = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -68,7 +68,7 @@ company_Elekeiroz = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_chemical_plants
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -112,7 +112,7 @@ company_kablin = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level >= 10
+				level >= 8
 			}
 		}
 		has_technology_researched = mechanical_tools
@@ -155,7 +155,7 @@ company_Light = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -197,7 +197,7 @@ company_Gerdau = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 5
 			}
 		}
 		has_technology_researched = open_hearth_process
@@ -293,7 +293,7 @@ company_estaleiro_maua = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -335,7 +335,7 @@ company_pernambuco_textiles = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -382,7 +382,7 @@ company_fundicao_ipanema = {
 					is_building_type = building_iron_mine
 
 				}
-				level >= 10
+				level >= 5
 			}
 		}
 	}

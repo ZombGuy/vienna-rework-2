@@ -109,7 +109,7 @@ company_Pudliszki = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_ICELAND
+				state_region = s:STATE_GREATER_POLAND
 			}
 		}
 	}
@@ -120,7 +120,7 @@ company_Pudliszki = {
 			    is_incorporated = yes
 			    any_scope_building = {
 				  is_building_type = building_food_industry
-				  level > 10
+				  level >= 10
 			}
 		}
 		has_technology_researched = canneries
@@ -164,7 +164,7 @@ company_KRudzki = {
 			    is_incorporated = yes
 			    any_scope_building = {
 				  is_building_type = building_steel_mills
-				  level > 10
+				  level >= 10
 			}
 		}
 		has_technology_researched = steel-frame_building
@@ -209,7 +209,7 @@ company_Cegielski = {
 			    is_incorporated = yes
 			    any_scope_building = {
 				  is_building_type = building_tooling_workshops
-				  level > 10
+				  level >= 10
 			}
 		}
 	}
@@ -252,7 +252,7 @@ company_Arcelor = {
 			    is_incorporated = yes
 			    any_scope_building = {
 				  is_building_type = building_iron_mine
-				  level > 10
+				  level >= 10
 			}
 		}
 	}
@@ -295,7 +295,7 @@ company_OSM = {
 			    is_incorporated = yes
 			    any_scope_building = {
 				  is_building_type = building_livestock_ranch
-				  level > 10
+				  level >= 10
 			}
 		}
 		has_technology_researched = socialism

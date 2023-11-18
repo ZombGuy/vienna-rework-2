@@ -27,7 +27,7 @@ company_Grieve = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level > 5
+				level >= 2
 			}
 		}
 		has_technology_researched = combustion_engine
@@ -71,14 +71,14 @@ company_Caracoles = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_gold_mine
-				level > 2
+				level >= 2
 			}
 		}
 	}
 	
 	prosperity_modifier = {
 		state_migration_pull_mult = 0.1
-		country_minting_mult = 0.1
+		country_minting_mult = 0.05
 	}
 	
 	ai_weight = {
@@ -114,7 +114,7 @@ company_VinaO = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_vineyard_plantation
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -201,7 +201,7 @@ company_peruvian_amazon = {
 			state_region = s:STATE_PASTAZA
 			any_scope_building = {
 				is_building_type = building_rubber_plantation
-				level >= 10
+				level >= 5
 			}
 		}
 		has_technology_researched = rubber_mastication
@@ -244,7 +244,7 @@ company_estanifera_llallagua = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_lead_mine
-				level >= 10
+				level >= 5
 			}
 		}
 	}
@@ -286,7 +286,7 @@ company_eea = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level >= 5
+				level >= 4
 			}
 		}
 	}

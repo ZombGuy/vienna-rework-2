@@ -28,7 +28,7 @@ company_HFCF = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 5
+				level >= 3
 			}
 		}
 	}

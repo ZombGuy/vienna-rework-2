@@ -18,6 +18,7 @@ company_bunge_born = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				region = sr:region_la_plata
+				is_incorporated = yes
 			}
 		}
 	}		
@@ -77,7 +78,7 @@ company_la_rosada = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 5
 			}
 		}
 		has_technology_researched = shell_gun
@@ -122,7 +123,7 @@ company_Tandanor = {
 			is_incorporated = yes
 			any_scope_building = {
 					is_building_type = building_military_shipyards
-				level > 5
+				level >= 5
 			}
 		}
 	}
@@ -164,7 +165,7 @@ company_Trapiche = {
 			is_incorporated = yes
 			any_scope_building = {
 					is_building_type = building_vineyard_plantation
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -206,7 +207,7 @@ company_argentinian_wine = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_vineyard_plantation
-				level >= 10
+				level >= 5
 			}
 			count >= 2
 		}
@@ -228,6 +229,7 @@ company_sudamericana_de_vapores = {
 	
 	building_types = {  
 		building_port
+		building_shipyards
 	}
 	
 	potential = {
@@ -249,7 +251,7 @@ company_sudamericana_de_vapores = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_port
-				level >= 10
+				level >= 5
 			}
 		}
 		has_technology_researched = screw_frigate
