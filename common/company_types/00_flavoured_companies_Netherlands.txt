@@ -12,6 +12,17 @@ company_KNSM = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -50,6 +61,17 @@ company_Heineken = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -84,20 +106,27 @@ company_nederlandse_petroleum = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_indonesia
+		country_has_primary_culture = cu:dutch
+	}	
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_indonesia
+			}
+		}
 	}
 	
 	possible = {
-		country_has_primary_culture = cu:dutch
+		has_technology_researched = pumpjacks
 		any_scope_state = {
 			region = sr:region_indonesia
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_oil_rig
-				level > 10
+				level >= 5
 			}
 		}
-		has_technology_researched = pumpjacks
 	}
 	
 	prosperity_modifier = {
@@ -123,6 +152,17 @@ company_philips = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -132,7 +172,7 @@ company_philips = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_electrics_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = electrical_generation
@@ -159,6 +199,17 @@ company_Ahold = {
 	
 	potential = {
 		has_interest_marker_in_region = region_rhine
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
 	}
 	
 	possible = {
@@ -199,6 +250,14 @@ company_KLMR = {
 		has_interest_marker_in_region = region_indonesia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_indonesia
+			}
+		}
+	}
+	
 	possible = {
 		country_has_primary_culture = cu:dutch
 		any_scope_state = {
@@ -237,6 +296,14 @@ company_KNHS = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HOLLAND
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_HOLLAND
@@ -272,6 +339,14 @@ company_KNP = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GELRE
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_GELRE
@@ -304,6 +379,14 @@ company_NeSp = {
 	
 	potential = {
 		has_interest_marker_in_region = region_rhine
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HOLLAND
+			}
+		}
 	}
 	
 	possible = {

@@ -13,6 +13,14 @@ company_VistaAlegre = {
 		country_has_primary_culture = cu:portuguese
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ESTREMADURA
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ESTREMADURA
@@ -47,8 +55,19 @@ company_mozambique_company = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_zanj
 		country_has_primary_culture = cu:portuguese
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_MOCAMBIQUE
+					state_region = s:STATE_ZAMBEZIA
+					state_region = s:STATE_LOURENCO_MARQUES
+				}
+			}
+		}
 	}
 	
 	possible = {
@@ -63,7 +82,7 @@ company_mozambique_company = {
 					is_building_type = building_cotton_plantation
 					is_building_type = building_tea_plantation
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = mutual_funds
@@ -93,6 +112,14 @@ company_ConservasRamirez = {
 	potential = {
 		has_interest_marker_in_region = region_iberia
 		country_has_primary_culture = cu:portuguese
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ESTREMADURA
+			}
+		}
 	}
 	
 	possible = {
@@ -131,6 +158,14 @@ company_CUF = {
 		has_interest_marker_in_region = region_iberia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ESTREMADURA
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ESTREMADURA
@@ -165,6 +200,14 @@ company_CdTd = {
 	
 	potential = {
 		has_interest_marker_in_region = region_iberia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ESTREMADURA
+			}
+		}
 	}
 	
 	possible = {
@@ -202,6 +245,14 @@ company_CNN = {
 	
 	potential = {
 		has_interest_marker_in_region = region_iberia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ESTREMADURA
+			}
+		}
 	}
 	
 	possible = {

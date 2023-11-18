@@ -1,8 +1,6 @@
-# Amadeo Rossi
-company_Rossi = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
-	
-	flavored_company = yes
+# Amadeo Rossi SA
+company_rossi = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/brazil_amadeo_rossi.dds"
 	
 	building_types = {  
 		building_arms_industry
@@ -10,29 +8,37 @@ company_Rossi = {
 	}
 	
 	potential = {
+		has_dlc_feature = rp1_content
 		has_interest_marker_in_region = region_brazil
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_GRANDE_DO_SUL
+			}
+		}
+	}
+
 	possible = {
 		any_scope_state = {
-			region = sr:region_brazil
+			state_region = s:STATE_RIO_GRANDE_DO_SUL
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level > 10
+				level >= 10
 			}
 		}
-		has_technology_researched = rifling
 	}
 	
 	prosperity_modifier = {
-		unit_army_offense_mult = 0.1
-	    state_migration_pull_mult = 0.1
+		building_livestock_ranch_throughput_add = 0.1
+		building_chemical_plants_throughput_add = 0.05
 	}
-
+	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
-	}	
+	}
 }
 
 company_Elekeiroz = {
@@ -43,6 +49,14 @@ company_Elekeiroz = {
 	building_types = {  
 		building_chemical_plants
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAO_PAULO
+			}
+		}
+	}		
 	
 	potential = {
 		has_interest_marker_in_region = region_brazil
@@ -60,7 +74,7 @@ company_Elekeiroz = {
 	}
 	
 	prosperity_modifier = {
-		building_construction_sector_throughput_add = 0.2
+		building_construction_sector_throughput_add = 0.1
 	    building_maize_farm_throughput_add = 0.2
 	}
 
@@ -69,8 +83,8 @@ company_Elekeiroz = {
 	}	
 }
 
-# Klabin Irmãos & Cia.
-company_Klabin = {
+# Kablin Irmãos & Cia.
+company_kablin = {
 	texture = "gfx/interface/icons/company_icons/historical_company_icons/brazil_kablin_irmaos_and_cia.dds"
 	
 	flavored_company = yes
@@ -84,13 +98,21 @@ company_Klabin = {
 		has_interest_marker_in_region = region_brazil
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_brazil
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_brazil
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = mechanical_tools
@@ -118,6 +140,14 @@ company_Light = {
 	potential = {
 		has_interest_marker_in_region = region_brazil
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_DE_JANEIRO
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -154,6 +184,13 @@ company_Gerdau = {
 		has_interest_marker_in_region = region_brazil
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_GRANDE_DO_SUL
+			}
+		}
+	}		
 	possible = {
 		any_scope_state = {
 			region = sr:region_brazil
@@ -168,10 +205,194 @@ company_Gerdau = {
 	
 	prosperity_modifier = {
 		state_assimilation_mult = 0.1
-		building_steel_mills_throughput_add = 0.2
+		building_steel_mills_throughput_add = 0.15
 	}
 
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}	
+}
+
+# São Paulo Railway Co. Ltd.
+company_sao_paulo_railway = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/brazil_sao_paulo_railway.dds"
+	
+	building_types = {  
+		building_railway
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_brazil
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAO_PAULO
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SAO_PAULO
+			is_incorporated = yes
+			has_building = building_railway
+			any_scope_building = {
+				is_building_type = building_coffee_plantation
+				level >= 10
+			}
+		}
+		any_scope_state = {
+			region = sr:region_brazil
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 4
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_coffee_plantations_throughput_add = 0.15
+		market_land_trade_capacity_add = 10
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Estaleiro Mauá
+company_estaleiro_maua = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/brazil_estaleiro_maua.dds"
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_brazil
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_DE_JANEIRO
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_DE_JANEIRO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+		building_steel_mills_throughput_add = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Companhia Fiação e Tecidos de Pernambuco
+company_pernambuco_textiles = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/brazil_companhia_fiacai_e_tecidos_de_pernambuco.dds"
+	
+	building_types = {  
+		building_textile_mills
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_brazil
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PERNAMBUCO
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_PERNAMBUCO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_cotton_plantation_throughput_add = 0.1
+		building_rubber_plantation_throughput_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Real Fábrica de Ferro São João de Ipanema
+company_fundicao_ipanema = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/brazil_fundicao_ipanema.dds"
+	
+	building_types = {  
+		building_steel_mills
+		building_iron_mine
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_brazil
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAO_PAULO
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SAO_PAULO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mills
+					is_building_type = building_iron_mine
+
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_munition_plants_throughput_add = 0.05
+		building_arms_industry_throughput_add = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
 }

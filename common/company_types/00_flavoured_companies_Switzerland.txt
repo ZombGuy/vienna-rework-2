@@ -13,11 +13,22 @@ company_Maggi = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WEST_SWITZERLAND
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 		    OR = {
-			state_region = s:STATE_WEST_SWITZERLAND
-			state_region = s:STATE_EAST_SWITZERLAND
+				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
 			}
 			is_incorporated = yes
 			any_scope_building = {
@@ -53,11 +64,22 @@ company_Geigy = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WEST_SWITZERLAND
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 		    OR = {
-			state_region = s:STATE_WEST_SWITZERLAND
-			state_region = s:STATE_EAST_SWITZERLAND
+				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
 			}
 			is_incorporated = yes
 			any_scope_building = {
@@ -91,6 +113,14 @@ company_BrownB = {
 	
 	potential = {
 		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_SWITZERLAND
+			}
+		}
 	}
 	
 	possible = {
@@ -127,6 +157,14 @@ company_LonzaGroup = {
 	
 	potential = {
 		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_SWITZERLAND
+			}
+		}
 	}
 	
 	possible = {
@@ -166,11 +204,22 @@ company_ZVSM = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WEST_SWITZERLAND
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 		    OR = {
-			state_region = s:STATE_WEST_SWITZERLAND
-			state_region = s:STATE_EAST_SWITZERLAND
+				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
 			}
 			is_incorporated = yes
 			any_scope_building = {
@@ -184,6 +233,205 @@ company_ZVSM = {
 	prosperity_modifier = {
 		interest_group_ig_trade_unions_pop_attraction_mult = 0.15
 		interest_group_ig_trade_unions_approval_add = 2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Nestlé
+company_Nestle = {
+	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WEST_SWITZERLAND
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+		    OR = {
+				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.1
+		state_birth_rate_mult = 0.7
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Rieter
+company_Rieter = {
+	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+		building_tooling_workshops
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WEST_SWITZERLAND
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+		    OR = {
+				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_weekly_innovation_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Von Roll
+company_VonRoll = {
+	texture = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_iron_mine
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WEST_SWITZERLAND
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+		    OR = {
+				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_iron_mine
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_add = 25
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Sulzer Brothers Ltd.
+company_Sulzer = {
+	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tooling_workshops
+		building_motor_industry
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WEST_SWITZERLAND
+					state_region = s:STATE_EAST_SWITZERLAND
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+		    OR = {
+				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshops
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_weekly_innovation_mult = 0.1
 	}
 
 	ai_weight = {

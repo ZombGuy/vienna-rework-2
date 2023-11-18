@@ -14,6 +14,14 @@ company_HFCF = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ICELAND			
+			}		
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ICELAND

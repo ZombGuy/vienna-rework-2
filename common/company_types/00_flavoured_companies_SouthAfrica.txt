@@ -12,6 +12,14 @@ company_NRC = {
 		has_interest_marker_in_region = region_southern_africa
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CAPE_COLONY
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_CAPE_COLONY
@@ -46,6 +54,14 @@ company_Anglovaal = {
 	
 	potential = {
 		has_interest_marker_in_region = region_southern_africa
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CAPE_COLONY
+			}
+		}
 	}
 	
 	possible = {
@@ -83,6 +99,14 @@ company_OudeMolen = {
 		has_interest_marker_in_region = region_southern_africa
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CAPE_COLONY
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_CAPE_COLONY
@@ -115,6 +139,14 @@ company_ImperialCC = {
 	
 	potential = {
 		has_interest_marker_in_region = region_southern_africa
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CAPE_COLONY
+			}
+		}
 	}
 	
 	possible = {
@@ -154,6 +186,14 @@ company_Johannesburg = {
 		has_interest_marker_in_region = region_southern_africa
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CAPE_COLONY
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_CAPE_COLONY
@@ -188,6 +228,14 @@ company_WGMC = {
 	
 	potential = {
 		has_interest_marker_in_region = region_southern_africa
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NORTHERN_CAPE
+			}
+		}
 	}
 	
 	possible = {

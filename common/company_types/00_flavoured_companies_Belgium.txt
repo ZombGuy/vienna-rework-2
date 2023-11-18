@@ -1,6 +1,5 @@
-
 company_BellTelephone = {
-	texture = "gfx/interface/icons/company_icons/basic_electrics.dds"
+	texture = "gfx/interface/icons/company_icons/basic_munitions.dds"
 	
 	flavored_company = yes
 	
@@ -11,6 +10,17 @@ company_BellTelephone = {
 	potential = {
 		has_interest_marker_in_region = region_rhine
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WALLONIA
+					state_region = s:STATE_FLANDERS
+				}
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -49,18 +59,17 @@ company_ccci = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_rhine
+		country_has_primary_culture = cu:wallonian
 	}
 	
 	possible = {
-		country_has_primary_culture = cu:wallonian
 		OR = {
 			any_subject_or_below = {
 				any_scope_state = {
 					region = sr:region_congo
 					any_scope_building = {
 						is_building_type = building_rubber_plantation
-						level > 10
+						level >= 10
 					}
 				}
 			}
@@ -68,7 +77,7 @@ company_ccci = {
 				region = sr:region_congo
 				any_scope_building = {
 					is_building_type = building_rubber_plantation
-					level > 10
+					level >= 10
 				}
 			}
 		}
@@ -99,6 +108,17 @@ company_franco_belge = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WALLONIA
+					state_region = s:STATE_FLANDERS
+				}
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -108,7 +128,7 @@ company_franco_belge = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -139,6 +159,17 @@ company_john_cockerill = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WALLONIA
+					state_region = s:STATE_FLANDERS
+				}
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -148,7 +179,7 @@ company_john_cockerill = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -179,6 +210,14 @@ company_SgdB = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FLANDERS
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_FLANDERS
@@ -191,7 +230,7 @@ company_SgdB = {
 	}
 	
 	prosperity_modifier = {
-		country_minting_mult = 0.1
+		country_minting_mult = 0.05
 	}	
 	
 	ai_weight = {
@@ -209,6 +248,14 @@ company_Solvay = {
 		building_chemical_plants
 		building_explosives_factory
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FLANDERS
+			}
+		}
+	}	
 	
 	potential = {
 		has_interest_marker_in_region = region_rhine
@@ -247,6 +294,14 @@ company_AdCE = {
 	potential = {
 		has_interest_marker_in_region = region_rhine
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FLANDERS
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {

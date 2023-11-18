@@ -9,8 +9,15 @@ company_cfr = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_danubia
 		country_has_primary_culture = cu:romanian
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				is_homeland = cu:romanian
+			}
+		}
 	}
 	
 	possible = {
@@ -27,7 +34,7 @@ company_cfr = {
 	prosperity_modifier = {
 		state_infrastructure_mult = 0.05
 		market_land_trade_capacity_add = 15
-	}	
+	}
 	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
@@ -48,13 +55,21 @@ company_romanian_star = {
 		has_interest_marker_in_region = region_danubia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WALLACHIA
+			}
+		}
+	}			
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_WALLACHIA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_oil_rig
-				level > 10
+				level >= 5
 			}
 		}
 	}
@@ -81,6 +96,14 @@ company_AV = {
 	potential = {
 		has_interest_marker_in_region = region_danubia
 		country_has_primary_culture = cu:romanian
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				is_homeland = cu:romanian
+			}
+		}
 	}
 	
 	possible = {
@@ -116,6 +139,14 @@ company_RLaWF = {
 	potential = {
 		has_interest_marker_in_region = region_danubia
 		country_has_primary_culture = cu:romanian
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				is_homeland = cu:romanian
+			}
+		}
 	}
 	
 	possible = {

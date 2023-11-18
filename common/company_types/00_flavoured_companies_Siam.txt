@@ -1,6 +1,6 @@
 # B.Grimm
 company_b_grimm = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/thailand_b_grimm.dds"
 	
 	flavored_company = yes
 	
@@ -12,13 +12,21 @@ company_b_grimm = {
 		has_interest_marker_in_region = region_indochina
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BANGKOK
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BANGKOK
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_rice_farm
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -47,6 +55,14 @@ company_SiamCement = {
 	
 	potential = {
 		has_interest_marker_in_region = region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BANGKOK
+			}
+		}
 	}
 	
 	possible = {
@@ -86,6 +102,14 @@ company_Charoen = {
 		has_interest_marker_in_region = region_indochina
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BANGKOK
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BANGKOK
@@ -106,3 +130,131 @@ company_Charoen = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Bangkok Dock Company
+company_bangkok_dock = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BANGKOK
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BANGKOK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+		building_rice_farm_industry_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Siam Electricity Company
+company_siam_elec = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+		building_power_plant
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BANGKOK
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BANGKOK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+		}
+		has_technology_researched = electrical_generation
+	}
+	
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.1
+		building_power_plant_industry_throughput_add = 0.1
+	}	
+}
+
+# Min Sae Co. Ltd,
+company_min_sae = {
+	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_logging_camp
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BANGKOK
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BANGKOK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_logging_camp
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.05
+		building_sulfur_mine_throughput_add = 0.25
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}	

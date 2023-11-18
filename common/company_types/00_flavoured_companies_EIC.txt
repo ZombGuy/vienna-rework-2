@@ -15,6 +15,17 @@ company_great_indian_railway = {
 		}
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					region = sr:region_south_india
+					region = sr:region_north_india
+				}
+			}
+		}
+	}			
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -28,7 +39,7 @@ company_great_indian_railway = {
 	}
 	
 	prosperity_modifier = {
-		state_infrastructure_from_population_add = 0.05
+		state_infrastructure_from_population_add = 0.5
 		state_infrastructure_from_population_max_add = 20
 	}	
 	
@@ -52,6 +63,14 @@ company_tata = {
 		has_interest_marker_in_region = region_south_india
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BOMBAY
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BOMBAY
@@ -61,7 +80,7 @@ company_tata = {
 					is_building_type = building_textile_mills
 					is_building_type = building_steel_mills
 				}
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -92,6 +111,17 @@ company_CaBSNC = {
 			has_interest_marker_in_region = region_south_india
 			has_interest_marker_in_region = region_north_india
 			has_interest_marker_in_region = region_indochina
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+			       state_region = s:STATE_SOUTH_BENGAL
+			       state_region = s:STATE_PEGU
+			    }
+			}
 		}
 	}
 	
@@ -140,6 +170,17 @@ company_BIC = {
 		}
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					region = sr:region_south_india
+					region = sr:region_north_india
+				}
+			}
+		}
+	}			
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_SOUTH_BENGAL
@@ -181,6 +222,14 @@ company_GreavesCotton = {
 		}
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTH_BENGAL
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_SOUTH_BENGAL
@@ -220,6 +269,14 @@ company_JTC = {
 			has_interest_marker_in_region = region_north_india
 		}
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTH_BENGAL
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {

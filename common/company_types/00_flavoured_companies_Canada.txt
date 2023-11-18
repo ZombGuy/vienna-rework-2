@@ -12,6 +12,14 @@ company_BTCC = {
 		has_interest_marker_in_region = region_canada
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ONTARIO
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ONTARIO
@@ -50,6 +58,14 @@ company_Labatt = {
 		has_interest_marker_in_region = region_canada
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ONTARIO
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ONTARIO
@@ -84,6 +100,14 @@ company_GTR = {
 		has_interest_marker_in_region = region_canada
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_QUEBEC
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_QUEBEC
@@ -117,6 +141,14 @@ company_GrayDort = {
 	potential = {
 		has_interest_marker_in_region = region_canada
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MANITOBA
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -154,6 +186,14 @@ company_Farr = {
 		has_interest_marker_in_region = region_canada
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ONTARIO
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ONTARIO
@@ -167,7 +207,8 @@ company_Farr = {
 	
 	prosperity_modifier = {
 		unit_supply_consumption_mult = -0.1
-		interest_group_ig_trade_unions_approval_add = 4
+		state_radicals_from_sol_change_mult = -0.05
+		interest_group_ig_trade_unions_pop_attraction_mult = 0.15
 	}
 
 	ai_weight = {
@@ -187,6 +228,14 @@ company_McLaughlin = {
 	potential = {
 		has_interest_marker_in_region = region_canada
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ONTARIO
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -210,7 +259,7 @@ company_McLaughlin = {
 
 # Hudson Bay Company
 company_hbc = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/hbc.dds"
 	
 	flavored_company = yes
 	
@@ -222,13 +271,20 @@ company_hbc = {
 		has_interest_marker_in_region = region_canada
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MANITOBA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_MANITOBA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
-				level > 1
 			}
 		}
 	}

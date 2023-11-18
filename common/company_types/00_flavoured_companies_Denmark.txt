@@ -13,6 +13,14 @@ company_chr_hansens = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ZEALAND
@@ -22,7 +30,7 @@ company_chr_hansens = {
 					is_building_type = building_food_industry
 					is_building_type = building_chemical_plants
 				}
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -44,7 +52,6 @@ company_ap_moller = {
 	flavored_company = yes
 	
 	building_types = {  
-		building_port
 		building_shipyards
 	}
 	
@@ -52,13 +59,21 @@ company_ap_moller = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ZEALAND
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_port
-				level > 10
+				is_building_type = building_shipyards
+				level >= 10
 			}
 		}
 	}
@@ -85,6 +100,14 @@ company_SimonsenWeel = {
 	potential = {
 		has_interest_marker_in_region = region_baltic
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -121,6 +144,14 @@ company_RPFD = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ZEALAND
@@ -156,6 +187,14 @@ company_Stevns = {
 	potential = {
 		has_interest_marker_in_region = region_baltic
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -194,6 +233,14 @@ company_Carlsberg = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ZEALAND
@@ -224,11 +271,20 @@ company_DISA = {
 	building_types = {  
 		building_arms_industry
 		building_munition_plants
+		building_tooling_workshops
 	}
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -265,6 +321,14 @@ company_DDS = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ZEALAND
@@ -299,6 +363,14 @@ company_DDB = {
 	potential = {
 		has_interest_marker_in_region = region_baltic
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {

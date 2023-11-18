@@ -12,13 +12,21 @@ company_ursus = {
 		has_interest_marker_in_region = region_poland
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MAZOVIA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
-			state_region = s:STATE_LESSER_POLAND
+			state_region = s:STATE_MAZOVIA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = combustion_engine
@@ -49,6 +57,17 @@ company_lilpop = {
 		has_interest_marker_in_region = region_poland
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_MAZOVIA
+					state_region = s:STATE_GREATER_POLAND
+				}
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -58,7 +77,7 @@ company_lilpop = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = steelworking
@@ -85,6 +104,14 @@ company_Pudliszki = {
 	
 	potential = {
 		has_interest_marker_in_region = region_poland
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ICELAND
+			}
+		}
 	}
 	
 	possible = {
@@ -121,6 +148,14 @@ company_KRudzki = {
 	
 	potential = {
 		has_interest_marker_in_region = region_poland
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GREATER_POLAND
+			}
+		}
 	}
 	
 	possible = {
@@ -160,6 +195,14 @@ company_Cegielski = {
 		has_interest_marker_in_region = region_poland
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_POSEN
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_POSEN
@@ -195,6 +238,14 @@ company_Arcelor = {
 		has_interest_marker_in_region = region_poland
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SILESIA
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_SILESIA
@@ -228,6 +279,14 @@ company_OSM = {
 	
 	potential = {
 		has_interest_marker_in_region = region_poland
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MAZOVIA
+			}
+		}
 	}
 	
 	possible = {

@@ -14,6 +14,14 @@ company_krupp = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RUHR
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_RUHR
@@ -24,7 +32,7 @@ company_krupp = {
 					is_building_type = building_arms_industry
 					is_building_type = building_artillery_foundries
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = steelworking
@@ -39,7 +47,6 @@ company_krupp = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
-
 # Rheinische Metallwaaren- und Maschinenfabrik Aktiengesellschaft
 company_rheinmetall = {
 	texture = "gfx/interface/icons/company_icons/historical_company_icons/german_rheinmetall.dds"
@@ -56,6 +63,17 @@ company_rheinmetall = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_RUHR
+					state_region = s:STATE_NORTH_RHINE
+				}
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -69,14 +87,15 @@ company_rheinmetall = {
 					is_building_type = building_artillery_foundries
 					is_building_type = building_munition_plants
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = automatic_machine_guns
 	}
 	
 	prosperity_modifier = {
-		unit_army_offense_mult = 0.1
+		unit_combat_unit_type_siege_artillery_offense_mult = 0.1
+		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.1
 		unit_army_defense_mult = 0.05
 	}
 
@@ -101,13 +120,21 @@ company_schichau = {
 		has_interest_marker_in_region = region_poland
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_PRUSSIA			
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_WEST_PRUSSIA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = atmospheric_engine
@@ -115,7 +142,7 @@ company_schichau = {
 	
 	prosperity_modifier = {
 		unit_navy_offense_mult = 0.05
-		unit_navy_defense_mult = 0.05
+		unit_combat_unit_type_submarine_offense_mult = 0.1
 	}	
 	
 	ai_weight = {
@@ -137,13 +164,21 @@ company_siemens_and_halske = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BRANDENBURG		
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BRANDENBURG
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_electrics_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = electric_telegraph
@@ -212,13 +247,21 @@ company_basf = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BADEN		
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BADEN
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_synthetics_plants
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -247,6 +290,14 @@ company_Weihenstephan = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BAVARIA
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BAVARIA
@@ -259,8 +310,8 @@ company_Weihenstephan = {
 	}
 	
 	prosperity_modifier = {
-		state_migration_pull_mult = 0.1	
-        state_birth_rate_mult = 0.05
+		state_migration_pull_mult = 0.08	
+        state_birth_rate_mult = 0.07
 	}
 
 	ai_weight = {
@@ -283,6 +334,14 @@ company_SteamshipCompany = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NORTH_RHINE
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -319,6 +378,14 @@ company_HannoverWaggonfabrik = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HANNOVER
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_HANNOVER
@@ -334,7 +401,7 @@ company_HannoverWaggonfabrik = {
 	}
 	
 	prosperity_modifier = {
-		interest_group_ig_armed_forces_approval_add = 5
+		interest_group_ig_armed_forces_approval_add = 3
 		unit_army_defense_mult = 0.05
 	}
 
@@ -358,6 +425,14 @@ company_RoyalPorcelainFactory = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BRANDENBURG
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -398,6 +473,14 @@ company_Haberbusch = {
 		has_interest_marker_in_region = region_poland	
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_POSEN
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_POSEN
@@ -432,6 +515,14 @@ company_FelixS = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WESTPHALIA
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -470,6 +561,14 @@ company_HDW = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SCHLESWIG_HOLSTEIN
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_SCHLESWIG_HOLSTEIN
@@ -484,7 +583,7 @@ company_HDW = {
 	
 	prosperity_modifier = {
 		building_steel_mills_throughput_add = 0.1
-		unit_navy_defense_mult = 0.1
+		unit_navy_defense_mult = 0.05
 		
 	}	
 	
@@ -506,6 +605,14 @@ company_Knorr = {
 	potential = {
 		has_interest_marker_in_region = region_south_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WURTTEMBERG
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -543,6 +650,14 @@ company_Fissler = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RHINELAND
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_RHINELAND
@@ -578,6 +693,14 @@ company_ALange = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAXONY
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_SAXONY
@@ -591,7 +714,7 @@ company_ALange = {
 	}
 	
 	prosperity_modifier = {
-		interest_group_ig_landowners_approval_add = 1
+		interest_group_ig_landowners_approval_add = 2
         interest_group_ig_industrialists_approval_add = 3   		
 	}	
 	
@@ -613,6 +736,14 @@ company_Meindl = {
 	potential = {
 		has_interest_marker_in_region = region_south_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BAVARIA
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -652,6 +783,14 @@ company_MAN = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FRANCONIA
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_FRANCONIA
@@ -665,7 +804,7 @@ company_MAN = {
 	
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.05
-		country_max_weekly_construction_progress_add = 2.5
+		country_max_weekly_construction_progress_add = 5
 	}
 
 	ai_weight = {
@@ -686,6 +825,14 @@ company_Faber = {
 	potential = {
 		has_interest_marker_in_region = region_south_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FRANCONIA
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -723,6 +870,14 @@ company_MeyerWerft = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HANNOVER
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_HANNOVER
@@ -735,7 +890,7 @@ company_MeyerWerft = {
 	}
 	
 	prosperity_modifier = {
-		country_prestige_mult = 0.05
+		country_prestige_mult = 0.1
 		unit_navy_defense_mult = 0.05
 	}	
 	
@@ -757,6 +912,14 @@ company_Heraeus = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HESSE
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -792,6 +955,14 @@ company_Bayer = {
 	potential = {
 		has_interest_marker_in_region = region_rhine
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RUHR
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -830,6 +1001,14 @@ company_Opel = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HESSE
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_HESSE
@@ -864,6 +1043,14 @@ company_DTA = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ANHALT
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -902,6 +1089,14 @@ company_DaimlerMG = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WURTTEMBERG
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_WURTTEMBERG
@@ -935,6 +1130,14 @@ company_DeEdison = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BRANDENBURG
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -972,6 +1175,14 @@ company_CarlZeiss = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAXONY
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_SAXONY
@@ -984,7 +1195,7 @@ company_CarlZeiss = {
 	}
 	
 	prosperity_modifier = {
-		building_university_throughput_add = 0.15
+		building_university_throughput_add = 0.1
 		building_war_machine_industry_throughput_add = 0.15
 	}	
 	
@@ -1006,6 +1217,14 @@ company_Mannesmann = {
 	potential = {
 		has_interest_marker_in_region = region_rhine
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RUHR
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -1040,6 +1259,14 @@ company_Meissener = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAXONY
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -1077,6 +1304,14 @@ company_AGFA = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BRANDENBURG
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_BRANDENBURG
@@ -1112,6 +1347,14 @@ company_Henkel = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NORTH_RHINE
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NORTH_RHINE
@@ -1124,7 +1367,7 @@ company_Henkel = {
 	}
 	
 	prosperity_modifier = {
-		state_loyalists_from_sol_change_mult = 0.1
+		state_loyalists_from_sol_change_mult = 0.05
         state_radicals_from_sol_change_mult = -0.1
 	}	
 	
@@ -1150,6 +1393,14 @@ company_Blohm = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ELBE
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_ELBE
@@ -1163,7 +1414,6 @@ company_Blohm = {
 	
 	prosperity_modifier = {
 		unit_navy_offense_mult = 0.1
-        unit_navy_defense_mult = 0.05
 	}
 
 	ai_weight = {
@@ -1173,7 +1423,7 @@ company_Blohm = {
 
 # Hugo Stinnes GmbH
 company_HugoS = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
 	
 	flavored_company = yes
 	
@@ -1187,6 +1437,14 @@ company_HugoS = {
 	potential = {
 		has_interest_marker_in_region = region_rhine
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RUHR
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -1226,6 +1484,14 @@ company_Kraus_Maffei = {
 		has_interest_marker_in_region = region_south_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BAVARIA
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BAVARIA
@@ -1261,6 +1527,14 @@ company_AugustK = {
 	potential = {
 		has_interest_marker_in_region = region_south_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BADEN
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -1299,6 +1573,14 @@ company_HarzerBergbau = {
 		has_interest_marker_in_region = region_north_germany
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BRUNSWICK
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_BRUNSWICK
@@ -1334,6 +1616,14 @@ company_GermanNobel = {
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ELBE
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {

@@ -12,6 +12,14 @@ company_Wedgewood = {
 		has_interest_marker_in_region = region_england
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIDLANDS
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_MIDLANDS
@@ -50,6 +58,14 @@ company_BritishGas = {
 		has_interest_marker_in_region = region_england
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HOME_COUNTIES
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_HOME_COUNTIES
@@ -84,6 +100,14 @@ company_Cadbury = {
 		has_interest_marker_in_region = region_england
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIDLANDS
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_MIDLANDS
@@ -105,7 +129,7 @@ company_Cadbury = {
 	}
 }
 
-c J. & P. Coats
+# J. & P. Coats
 company_j_p_coats = {
 	texture = "gfx/interface/icons/company_icons/historical_company_icons/gb_jp_coats.dds"
 	
@@ -116,8 +140,16 @@ company_j_p_coats = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_england
+		has_interest_marker_in_region = region_north_sea_coast
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOWLANDS
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -125,7 +157,7 @@ company_j_p_coats = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = cotton_gin
@@ -154,6 +186,14 @@ company_RollsRoyce = {
 	potential = {
 		has_interest_marker_in_region = region_north_sea_coast
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LANCASHIRE
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -196,13 +236,21 @@ company_armstrong_whitworth = {
 		has_interest_marker_in_region = region_england
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_YORKSHIRE
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_YORKSHIRE
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_military_shipyards
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = ironclad_tech
@@ -210,8 +258,8 @@ company_armstrong_whitworth = {
 	}
 	
 	prosperity_modifier = {
-		unit_navy_offense_mult = 0.1
-		unit_navy_defense_mult = 0.05
+		unit_combat_unit_type_carrier_offense_mult = 0.15
+		unit_navy_defense_mult = 0.1
 	}	
 	
 	ai_weight = {
@@ -235,13 +283,21 @@ company_john_brown = {
 		has_interest_marker_in_region = region_north_sea_coast
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOWLANDS
+			}
+		}
+	}			
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_LOWLANDS
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = steelworking
@@ -269,8 +325,16 @@ company_gwr = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_north_sea_coast
+		has_interest_marker_in_region = region_england
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_england
+			}
+		}
+	}			
 	
 	possible = {
 		any_scope_state = {
@@ -321,6 +385,14 @@ company_bolckow_vaughan = {
 		has_interest_marker_in_region = region_england
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_YORKSHIRE
+			}
+		}
+	}			
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_YORKSHIRE
@@ -331,7 +403,7 @@ company_bolckow_vaughan = {
 					is_building_type = building_iron_mine
 					is_building_type = building_steel_mills
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = bessemer_process
@@ -360,56 +432,25 @@ company_east_india_company = {
 	}
 	
 	potential = {
-		OR = {
-			country_has_primary_culture = cu:british
-			country_has_primary_culture = cu:scottish
-		}
-		OR = {
-			has_interest_marker_in_region = region_north_india
-			has_interest_marker_in_region = region_south_india
-		}
+		c:BIC ?= this
 	}
 	
 	possible = {
-		OR = {
-			AND = {
-				OR = {
-					country_has_primary_culture = cu:british
-					country_has_primary_culture = cu:scottish
-				}
-				c:BIC ?= {
-					is_subject_of = root
-					any_scope_state = {
-						OR = {
-							region = sr:region_north_india
-							region = sr:region_south_india
-						}
-						any_scope_building = {
-							OR = {
-								is_building_type = building_tea_plantation
-								is_building_type = building_opium_plantation
-							}
-							level > 10
-						}
-						count >= 4
-					}
-				}
+		c:BIC ?= this
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_india
+				region = sr:region_south_india
 			}
-			c:BIC ?= this
-			any_scope_state = {
+			any_scope_building = {
 				OR = {
-					region = sr:region_north_india
-					region = sr:region_south_india
+					is_building_type = building_tea_plantation
+					is_building_type = building_tobacco_plantation
+					is_building_type = building_opium_plantation
 				}
-				any_scope_building = {
-					OR = {
-						is_building_type = building_tea_plantation
-						is_building_type = building_opium_plantation
-					}
-					level > 10
-				}
-				count >= 4
+				level >= 10
 			}
+			count >= 4
 		}
 		OR = {
 			has_law = law_type:law_mercantilism
@@ -440,6 +481,14 @@ company_ICI = {
 	potential = {
 		has_interest_marker_in_region = region_england
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HOME_COUNTIES
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -478,6 +527,14 @@ company_Unilever = {
 		has_interest_marker_in_region = region_england
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HOME_COUNTIES
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_HOME_COUNTIES
@@ -514,6 +571,14 @@ company_PandO = {
 		has_interest_marker_in_region = region_england
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HOME_COUNTIES
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_HOME_COUNTIES
@@ -536,7 +601,7 @@ company_PandO = {
 
 # Carr's
 company_Carr = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
 	
 	flavored_company = yes
 	
@@ -549,6 +614,14 @@ company_Carr = {
 	potential = {
 		has_interest_marker_in_region = region_england
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LANCASHIRE
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -586,6 +659,14 @@ company_Courta = {
 	potential = {
 		has_interest_marker_in_region = region_england
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIDLANDS
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {

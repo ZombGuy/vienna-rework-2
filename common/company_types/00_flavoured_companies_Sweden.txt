@@ -12,13 +12,21 @@ company_ericsson = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SVEALAND		
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_SVEALAND
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_electrics_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = electric_telegraph
@@ -49,13 +57,21 @@ company_lkab = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NORRLAND	
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NORRLAND
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_iron_mine
-				level > 9
+				level >= 10
 			}
 			has_building = building_railway
 		}
@@ -87,6 +103,14 @@ company_gotaverken = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GOTALAND
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_GOTALAND
@@ -96,7 +120,7 @@ company_gotaverken = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level > 9
+				level >= 10
 			}
 		}
 		has_technology_researched = gantry_cranes
@@ -123,6 +147,14 @@ company_Hastens = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SVEALAND
+			}
+		}
 	}
 	
 	possible = {
@@ -158,6 +190,14 @@ company_Gevalia = {
 	
 	potential = {
 		has_interest_marker_in_region = region_central_america
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SVEALAND
+			}
+		}
 	}
 	
 	possible = {
@@ -197,6 +237,14 @@ company_VolvoPenta = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SVEALAND
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_SVEALAND
@@ -230,6 +278,14 @@ company_ABAtlas = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SVEALAND
+			}
+		}
 	}
 	
 	possible = {
@@ -271,6 +327,14 @@ company_Skanska = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SVEALAND
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_SVEALAND
@@ -305,6 +369,14 @@ company_Boliden = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SVEALAND
+			}
+		}
 	}
 	
 	possible = {
@@ -342,6 +414,14 @@ company_ABSkell = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NORRLAND
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NORRLAND
@@ -377,6 +457,14 @@ company_Nydq = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GOTALAND
+			}
+		}
 	}
 	
 	possible = {

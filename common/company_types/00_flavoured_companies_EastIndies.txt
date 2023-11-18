@@ -1,6 +1,6 @@
 # San Miguel
 company_san_miguel = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/basic_food.dds"
 	
 	flavored_company = yes
 	
@@ -11,6 +11,14 @@ company_san_miguel = {
 	potential = {
 		has_interest_marker_in_region = region_indonesia
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_indonesia
+			}
+		}
+	}			
 	
 	possible = {
 		any_scope_state = {
@@ -35,7 +43,7 @@ company_san_miguel = {
 
 # Pindad
 company_Pindad = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
 	
 	flavored_company = yes
 	
@@ -49,6 +57,14 @@ company_Pindad = {
 	potential = {
 		has_interest_marker_in_region = region_indonesia
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EAST_JAVA
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {
@@ -74,7 +90,7 @@ company_Pindad = {
 
 # Sampoerna
 company_Sampoerna = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
 	
 	flavored_company = yes
 	
@@ -85,6 +101,14 @@ company_Sampoerna = {
 	potential = {
 		has_interest_marker_in_region = region_indonesia
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EAST_JAVA
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {

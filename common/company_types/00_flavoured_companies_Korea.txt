@@ -13,6 +13,14 @@ company_Doosan = {
 		has_interest_marker_in_region = region_manchuria
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = {
@@ -25,7 +33,7 @@ company_Doosan = {
 				  is_building_type = building_motor_industry
 				  is_building_type = building_textile_mills
 				}
-				level = 10
+				level >= 10
 			}
 		}
 		has_technology_researched = central_planning
@@ -55,6 +63,14 @@ company_sunhwaguk = {
 		has_interest_marker_in_region = region_manchuria
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = {
@@ -63,7 +79,7 @@ company_sunhwaguk = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tobacco_plantation
-				level = 10
+				level >= 10
 			}
 		}
 		has_technology_researched = central_planning
@@ -94,6 +110,14 @@ company_KTC = {
 		has_interest_marker_in_region = region_manchuria
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = {
@@ -102,7 +126,7 @@ company_KTC = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
-				level = 10
+				level >= 10
 			}
 		}
 		has_technology_researched = mechanized_workshops
@@ -131,6 +155,14 @@ company_DongIlbo = {
 		has_interest_marker_in_region = region_manchuria
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = {
@@ -139,7 +171,7 @@ company_DongIlbo = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level = 10
+				level >= 10
 			}
 		}
 		has_technology_researched = political_agitation
@@ -169,6 +201,14 @@ company_Hangseong = {
 		has_interest_marker_in_region = region_manchuria
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = {
@@ -177,7 +217,7 @@ company_Hangseong = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
-				level = 10
+				level >= 10
 			}
 		}
 	}

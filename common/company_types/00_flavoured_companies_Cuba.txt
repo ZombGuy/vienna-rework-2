@@ -12,6 +12,14 @@ company_Bacardi = {
 		has_interest_marker_in_region = region_caribbean
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CUBA
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_CUBA
@@ -44,6 +52,14 @@ company_Manati = {
 	potential = {
 		has_interest_marker_in_region = region_caribbean
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CUBA
+			}
+		}
+	}	
 	
 	possible = {
 		any_scope_state = {

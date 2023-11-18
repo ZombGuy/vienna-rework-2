@@ -1,0 +1,82 @@
+# San Miguel
+company_san_miguel = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/manila_la_fabrica_de_cerveza_san_miguel.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_indonesia
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_indonesia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+		has_technology_researched = corporate_charters
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Manila Electric Railroad and Light Company (Meralco)
+company_Meralco = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+		building_power_plant
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 7
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.05
+		building_power_plant_industry_throughput_add = 0.1
+	}	
+}

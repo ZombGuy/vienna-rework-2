@@ -11,6 +11,14 @@ company_MexicanRailway = {
 		has_interest_marker_in_region = region_mexico
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_mexico
@@ -50,6 +58,14 @@ company_TequilaHerrandura = {
 		has_interest_marker_in_region = region_mexico
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_mexico
@@ -87,6 +103,14 @@ company_Penoles = {
 		has_interest_marker_in_region = region_mexico
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_mexico
@@ -110,7 +134,7 @@ company_Penoles = {
 
 # Fundidora de Fierro y Acero de Monterrey, S.A.
 company_fundidora_monterrey = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/fundidora_monterrey.dds"
 	
 	flavored_company = yes
 	
@@ -123,13 +147,21 @@ company_fundidora_monterrey = {
 		has_interest_marker_in_region = region_mexico
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_GRANDE
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_RIO_GRANDE
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = bessemer_process
@@ -147,7 +179,7 @@ company_fundidora_monterrey = {
 
 # Compañía Mexicana de Petróleo El Águila SA
 company_el_aguila = {
-	texture = "gfx/interface/icons/company_icons/basic_oil.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/el_aguila.dds"
 	
 	flavored_company = yes
 	
@@ -159,13 +191,21 @@ company_el_aguila = {
 		has_interest_marker_in_region = region_mexico
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_mexico
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_oil_rig
-				level > 10
+				level >= 5
 			}
 			is_coastal = yes
 		}

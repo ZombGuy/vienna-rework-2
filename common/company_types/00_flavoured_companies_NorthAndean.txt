@@ -12,6 +12,14 @@ company_NFCGC = {
 		has_interest_marker_in_region = region_gran_colombia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_MIRANDA
@@ -46,6 +54,14 @@ company_HouseOfAngo = {
 		has_interest_marker_in_region = region_gran_colombia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 				state_region = s:STATE_MIRANDA
@@ -68,7 +84,7 @@ company_HouseOfAngo = {
 
 # Caribbean Petroleum Company
 company_caribbean_petroleum = {
-	texture = "gfx/interface/icons/company_icons/basic_oil.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_caribbean_petroleum_company.dds"
 	
 	flavored_company = yes
 	
@@ -80,6 +96,17 @@ company_caribbean_petroleum = {
 		has_interest_marker_in_region = region_gran_colombia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_ZULIA
+					state_region = s:STATE_MIRANDA
+				}
+			}
+		}
+	}	
+	
 	possible = {
 		any_scope_state = {
 			OR = {
@@ -89,7 +116,7 @@ company_caribbean_petroleum = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_oil_rig
-				level > 10
+				level >= 5
 			}
 		}
 		has_technology_researched = pumpjacks
@@ -107,7 +134,7 @@ company_caribbean_petroleum = {
 
 # Fábrica de Armas de la Nación
 company_famae = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/chile_fabrica_de_armas_de_la_nacion.dds"
 	
 	flavored_company = yes
 	
@@ -118,8 +145,16 @@ company_famae = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_gran_colombia
+		has_interest_marker_in_region = region_la_plata
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SANTIAGO
+			}
+		}
+	}			
 	
 	possible = {
 		any_scope_state = {
@@ -127,7 +162,7 @@ company_famae = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = gunsmithing
@@ -136,6 +171,48 @@ company_famae = {
 	prosperity_modifier = {
 		unit_offense_mult = 0.1
 		building_steel_mills_throughput_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# C.A. La Electricidad de Caracas
+company_electricidad_de_caracas = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_c_a_la_electricidad_de_caracas.dds"
+	
+	building_types = {  
+		building_power_plant
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MIRANDA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 0.05
+		state_infrastructure_from_population_max_add = 10
 	}
 	
 	ai_weight = {

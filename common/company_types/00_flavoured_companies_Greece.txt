@@ -13,6 +13,14 @@ company_basileiades = {
 		has_interest_marker_in_region = region_balkans
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ATTICA			
+			}		
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ATTICA
@@ -22,7 +30,7 @@ company_basileiades = {
 					is_building_type = building_motor_industry
 					is_building_type = building_shipyards
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = railways
@@ -53,6 +61,14 @@ company_kouppas = {
 		has_interest_marker_in_region = region_balkans
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ATTICA			
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ATTICA
@@ -62,7 +78,7 @@ company_kouppas = {
 					is_building_type = building_motor_industry
 					is_building_type = building_tooling_workshops
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = mechanical_tools
@@ -94,6 +110,14 @@ company_Neorion = {
 		has_interest_marker_in_region = region_balkans
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_AEGEAN_ISLANDS			
+			}		
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_WEST_AEGEAN_ISLANDS
@@ -103,7 +127,7 @@ company_Neorion = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level > 5
+				level > 3
 			}
 		}
 	}
@@ -131,6 +155,14 @@ company_KareliaTobacco = {
 	potential = {
 		has_interest_marker_in_region = region_balkans
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PELOPONNESE			
+			}		
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {

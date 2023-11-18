@@ -12,6 +12,14 @@ company_FlordeCana = {
 		has_interest_marker_in_region = region_central_america
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NICARAGUA
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 				state_region = s:STATE_NICARAGUA
@@ -46,6 +54,14 @@ company_CCN = {
 	potential = {
 		has_interest_marker_in_region = region_central_america
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NICARAGUA
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -82,6 +98,14 @@ company_panama_company = {
 		has_interest_marker_in_region = region_central_america
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PANAMA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_PANAMA
@@ -115,6 +139,14 @@ company_SIMAN = {
 	potential = {
 		has_interest_marker_in_region = region_central_america
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAN_SALVADOR
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {

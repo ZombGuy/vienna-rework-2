@@ -12,6 +12,14 @@ company_AP = {
 		has_interest_marker_in_region = region_persia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_persia
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_persia
@@ -36,7 +44,7 @@ company_AP = {
 
 # Imperial Tobacco Corporation of Persia, Limited
 company_imperial_tobacco = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/imperial_tobacco.dds"
 	
 	flavored_company = yes
 	
@@ -48,17 +56,25 @@ company_imperial_tobacco = {
 		has_interest_marker_in_region = region_persia
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_persia
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_persia
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tobacco_plantation
-				level > 5
+				level >= 5
 			}
 			count >= 4
 		}
-		has_technology_researched = corporatism
+		has_technology_researched = corporate_charters
 	}
 	
 	prosperity_modifier = {

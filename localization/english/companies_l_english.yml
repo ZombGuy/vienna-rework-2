@@ -155,7 +155,7 @@
  dynamic_company_name_state_4: "[STATE_REGION.GetNameNoFormatting] Premium $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_5: "United [STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ Producers"
 
- # Flavored Companies
+ # Flavoured Companies
  
  # Germany
  company_krupp: "Friedrich Krupp"
@@ -219,6 +219,10 @@
  company_BrownB: "Brown, Boveri & Cie."
  company_LonzaGroup: "Lonza Group AG"
  company_ZVSM: "Zentralverband schweizerischer Milchproduzenten"
+ company_Nestle: "Nestlé"
+ company_Rieter: "Rieter"
+ company_VonRoll: "Gesellschaft der Ludwig von Roll'schen Eisenwerke"
+ company_Sulzer: "Sulzer Brothers Ltd."
 
 # Russia
  company_vodka_monopoly: "Vodka Monopoly"
@@ -247,11 +251,15 @@
  company_EJB: "Établissements Jules Bel"
  company_ThomsonCSF: "Thomson-CSF"
  company_Montagut: "Montagut"
+ company_NavalGroup: "Direction des Constructions Navales"
+ company_SaintGobain: "Compagnie de Saint-Gobain S.A."
+ company_Baccarat: "Baccarat"
+ company_Vinci: "Société Générale d’Entreprises S.A."
 
 # Great Britain
  company_east_india_company: "East India Company"
  company_j_p_coats: "J. & P. Coats"
- company_armstrong_whitworth: "Sir W. G. Armstrong Whitworth & Co."
+ company_armstrong_whitworth: "Armstrong-Whitworth"
  company_john_brown: "John Brown & Company"
  company_gwr: "Great Western Railway"
  company_bolckow_vaughan: "Bolckow, Vaughan & Co."
@@ -278,12 +286,13 @@
  company_Kawasaki: "Kawasaki Jūkōgyō Kabushiki-gaisha"
  company_Kabushiki: "Kabushiki-gaisha Kubota"
  company_Kirin: "Kirin Brewery Company"
+ company_Osaka_Shosen: "Osaka Shosen Kaisha"
+ company_SomaCo: "Soma Co. Ltd."
 # Japan Colony Companies 
  company_OrientalB: "Oriental Brewery"
  company_mantetsu: "South Manchuria Railway Company"
  
 # USA
-
  company_general_electric: "General Electric"
  company_us_steel: "Carnegie Steel Company"
  company_united_fruit: "United Fruit Company"
@@ -317,14 +326,17 @@
  company_DuoYunXuan: "Duo Yun Xuan"
  company_Bianyifang: "Bianyifang"
  company_Li: "Li & Fung Limited"
+ company_Xie_Zhi: "Xie Zhi Business Enterprise"
+ company_Jian_Hsin: "Jian Hsin Corporation Limited"
+ company_ITA: "Imperial Telegraph Administration"
+ company_Jiangnan_Arsenal: "Jiangnan Arsenal"
+ company_CEaMC: "Chinese Engineering and Mining Company"
+ company_CMSNC: "China Merchants Steam Navigation Company"
+ company_Cohong: "Cohong"
+ company_Honkong_Electric: "Hongkong Electric Company"
+ 
 
 # Belgium and the Netherlands
- company_skoda: "Škoda Works"
- company_mav: "MÁVAG"
- company_manfred_weiss: "Manfréd Weiss Steel and Metal Works" # Weiss Manfréd Acél- és Fémművek
- company_galician_carpathian_oil: "Galician Carpathian Petroleum Company" # Galizisch-Karpathische Petroleum Aktien-Gesellschaft
- company_oevg: "Österreichische Waffenfabriks-Gesellschaft"
-
  company_ccci: "Compagnie du Congo"
  company_franco_belge: "Société Franco-Belge"
  company_john_cockerill: "Société anonyme John Cockerill"
@@ -362,28 +374,35 @@
  company_Caracoles: "Caracoles"
  company_VinaO: "Ochagavia Wines"
  company_peruvian_amazon: "Peruvian Amazon Company"
+ company_eea: "Empresas Eléctricas Asociadas"
  
  # North Andean
  company_caribbean_petroleum: "Caribbean Petroleum Company"
  company_NFCGC: "National Federation of Coffee Growers"
  company_HouseOfAngo: "House of Ango"
  company_famae: "Fábrica de Armas de la Nación"
+ company_electricidad_de_caracas: "C.A. La Electricidad de Caracas"
+ 
  
  # Argentina, Paraguay and Chile
  company_bunge_born: "Bunge & Born"
  company_la_rosada: "La Rosada"
  company_Tandanor: "Talleres Navales de Marina"
  company_Trapiche: "Trapiche"
- company_famae: "Fábrica de Armas de la Nación"
- company_peruvian_amazon: "Peruvian Amazon Company"
+ company_argentinian_wine: "Centro Vitivinícola Nacional"
+ company_sudamericana_de_vapores: "Compañía Sudamericana de Vapores"
+ company_cordoba_railway: "Ferrocarril Central Córdoba"
  
  # Brazil
- company_Klabin: "Klabin Irmãos & Cia."
  company_kablin: "Klabin Irmãos & Cia."
- company_Rossi: "Amadeo Rossi S.A."
+ company_rossi: "Amadeo Rossi & Cia."
  company_Elekeiroz: "Elekeiroz"
  company_Light: "Light S.A."
  company_Gerdau: "Gerdau"
+ company_sao_paulo_railway: "São Paulo Railway Co. Ltd."
+ company_estaleiro_maua: "Estaleiro Mauá"
+ company_pernambuco_textiles: "Companhia Fiação e Tecidos de Pernambuco"
+ company_fundicao_ipanema: "Fundição Ipanema"
  
  # Canada
  company_hbc: "Hudson Bay Company"
@@ -403,7 +422,6 @@
  # Sweden
  company_ericsson: "Ericsson"
  company_lkab: "LKAB"
- company_nokia: "Nokia"
  company_gotaverken: "Götaverken"
  company_Hastens: "Hästens Sängar AB"
  company_Gevalia: "Gevalia"
@@ -534,11 +552,11 @@
  company_Hangseong: "Hangseong Jeongi Hoesa"
  company_Hanguk: "Chōsen Government Railway"
 
- 
  # Vietnam / Dai Nam 
  company_nam_dinh: "Nam Định Textile Factory"
  company_VRailways: "Vietnam Railways"
  company_Habeco: "Habeco"
+ company_saigon_iron: "Saigon Ironworks"
  
  # Iran / Persia
  company_imperial_tobacco: "Imperial Tobacco Corporation of Persia"
@@ -548,6 +566,10 @@
  company_san_miguel: "San Miguel"
  company_Pindad: "Pindad"
  company_Sampoerna: "Sampoerna"
+ 
+ # Malaysia
+ company_Kumpulan_Guthrie: "Kumpulan Guthrie Berhad"
+ company_boustead: "Boustead & Co."
  
  # Australia
  company_william_sandford: "William Sandford Limited"
@@ -562,6 +584,13 @@
  company_b_grimm: "B.Grimm"
  company_SiamCement: "Siam Cement Company"
  company_Charoen: "Charoen Pokphand"
+ company_bangkok_dock: "Bangkok Dock Company"
+ company_siam_elec: "Siam Electricity Company"
+ company_min_sae: "Min Sae Co. Ltd."
+ 
+ # Philippines
+ company_san_miguel: "San Miguel"
+ company_Meralco: "Manila Electric Railroad and Light Company"
 
 # Egypt
  company_misr: "Misr Spinning and Weaving Company"
@@ -593,15 +622,3 @@
 # Canals
  company_panama_company: "Panama Canal Company"
  company_suez_company: "Suez Canal Company"
-
- company_sao_paulo_railway: "São Paulo Railway Co. Ltd."
- company_estaleiro_maua: "Estaleiro Mauá"
- company_pernambuco_textiles: "Companhia Fiação e Tecidos de Pernambuco"
- company_fundicao_ipanema: "Fundição Ipanema"
- company_rossi: "Amadeo Rossi & Cia."
- company_estanifera_llallagua: "Compañía Estañífera de Llallagua"
- company_argentinian_wine: "Centro Vitivinícola Nacional"
- company_cordoba_railway: "Ferrocarril Central Córdoba"
- company_sudamericana_de_vapores: "Compañía Sudamericana de Vapores"
- company_electricidad_de_caracas: "C.A. La Electricidad de Caracas"
- company_eea: "Empresas Eléctricas Asociadas"

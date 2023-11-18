@@ -13,6 +13,14 @@ company_AGL = {
 		has_interest_marker_in_region = region_oceania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NEW_SOUTH_WALES
@@ -50,6 +58,14 @@ company_Elders = {
 		has_interest_marker_in_region = region_oceania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NEW_SOUTH_WALES
@@ -85,6 +101,14 @@ company_Penfolds = {
 		has_interest_marker_in_region = region_oceania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NEW_SOUTH_WALES
@@ -97,7 +121,7 @@ company_Penfolds = {
 	}
 	
 	prosperity_modifier = {
-		country_prestige_mult = 0.2
+		country_prestige_mult = 0.15
 	}
 
 	ai_weight = {
@@ -119,6 +143,14 @@ company_Gunns = {
 	potential = {
 		has_interest_marker_in_region = region_oceania
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -154,6 +186,14 @@ company_NeradaTea = {
 	potential = {
 		has_interest_marker_in_region = region_oceania
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -192,6 +232,14 @@ company_BHP = {
 		has_interest_marker_in_region = region_oceania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NEW_SOUTH_WALES
@@ -214,7 +262,7 @@ company_BHP = {
 
 # William Sandford Limited
 company_william_sandford = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/william_sandford_limited.dds"
 	
 	flavored_company = yes
 	
@@ -226,13 +274,21 @@ company_william_sandford = {
 		has_interest_marker_in_region = region_oceania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NEW_SOUTH_WALES
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = bessemer_process

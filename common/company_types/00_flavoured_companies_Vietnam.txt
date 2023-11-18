@@ -1,6 +1,6 @@
 # Nam Định Textile Factory
 company_nam_dinh = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
 	
 	flavored_company = yes
 	
@@ -12,16 +12,24 @@ company_nam_dinh = {
 		has_interest_marker_in_region = region_indochina
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TONKIN
+			}
+		}
+	}			
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_TONKIN
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 10
 			}
 		}
-		has_technology_researched = corporatism
+		has_technology_researched = corporate_charters
 	}
 	
 	prosperity_modifier = {
@@ -45,6 +53,14 @@ company_VRailways = {
 	
 	potential = {
 		has_interest_marker_in_region = region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TONKIN
+			}
+		}
 	}
 	
 	possible = {
@@ -82,6 +98,14 @@ company_Habeco = {
 		has_interest_marker_in_region = region_indochina
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TONKIN
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_TONKIN
@@ -95,6 +119,50 @@ company_Habeco = {
 	
 	prosperity_modifier = {
 		state_loyalists_from_sol_change_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Saigon Ironworks
+company_saigon_iron = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tooling_workshops
+		building_iron_mine
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MEKONG
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MEKONG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshops
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_iron_mine_throughput_add = 0.15
+		building_steel_industry_throughput_add = 0.1
 	}	
 	
 	ai_weight = {

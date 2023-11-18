@@ -12,6 +12,14 @@ company_Nydalens = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_EASTERN_NORWAY
@@ -44,6 +52,14 @@ company_Nobel = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
 	}
 	
 	possible = {
@@ -80,6 +96,14 @@ company_AlbertC = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
 	}
 	
 	possible = {
@@ -124,6 +148,14 @@ company_HOFF = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_EASTERN_NORWAY
@@ -164,13 +196,21 @@ company_aker_mek = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_EASTERN_NORWAY
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = gantry_cranes
@@ -201,6 +241,14 @@ company_Kosmos = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WESTERN_NORWAY
+			}
+		}
 	}
 	
 	possible = {
@@ -238,6 +286,14 @@ company_NorskHydro = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
 	}
 	
 	possible = {
@@ -281,6 +337,14 @@ company_Sulit = {
 		has_interest_marker_in_region = region_baltic
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NORTHERN_NORWAY
+			}
+		}
+	}
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_NORTHERN_NORWAY
@@ -318,6 +382,14 @@ company_Kongsberg = {
 	
 	potential = {
 		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WESTERN_NORWAY
+			}
+		}
 	}
 	
 	possible = {

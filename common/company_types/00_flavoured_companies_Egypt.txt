@@ -11,6 +11,14 @@ company_misr = {
 	
 	potential = {
 		has_interest_marker_in_region = region_nile_basin
+	}	
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOWER_EGYPT
+			}	
+		}
 	}
 	
 	possible = { 
@@ -19,7 +27,7 @@ company_misr = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = corporate_charters
@@ -46,21 +54,70 @@ company_egyptian_rail = {
 	
 	potential = {
 		country_has_primary_culture = cu:misri
-	}
-	
+	}	
+
+    attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_nile_basin
+			}
+		}
+	}	
+
 	possible = { 
 		any_scope_state = {
 			region = sr:region_nile_basin
 			is_incorporated = yes
 			has_building = building_railway
-			count > 3
+			count >= 4
 		}
-		has_technology_researched = corporate_charters
+		has_technology_researched = corporate_charters			
 	}
 	
 	prosperity_modifier = {
-		state_infrastructure_from_population_max_add = 15
+		state_infrastructure_from_population_max_add = 20
+		market_land_trade_capacity_add = 10
 	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Suez Canal Company
+company_suez_company = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/suez_company.dds"
+	
+	building_types = {
+		building_suez_canal
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_nile_basin
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SINAI
+			}	
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SINAI
+			any_scope_building = {
+				is_building_type = building_suez_canal
+				occupancy >= 0.5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_trade_route_cost_mult = -0.1
+		unit_convoy_requirements_mult = -0.15
+	}
 	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
@@ -75,10 +132,19 @@ company_RCWoE = {
 	
 	building_types = { 
 		building_food_industry
+		building_sugar_plantation
 	}
 	
 	potential = {
 		has_interest_marker_in_region = region_nile_basin
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOWER_EGYPT
+			}	
+		}
 	}
 	
 	possible = { 
@@ -97,39 +163,6 @@ company_RCWoE = {
 		state_loyalists_from_sol_change_mult = 0.1
 		interest_group_ig_landowners_approval_add = 3     
 	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-
-# Suez Canal Company
-company_suez_company = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/suez_company.dds"
-	
-	building_types = {
-		building_suez_canal
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_nile_basin
-	}
-	
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_SINAI
-			any_scope_building = {
-				is_building_type = building_suez_canal
-				occupancy >= 0.5
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		country_trade_route_cost_mult = -0.1
-		unit_convoy_requirements_mult = -0.15
-	}
 	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies

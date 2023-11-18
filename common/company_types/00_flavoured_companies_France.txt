@@ -14,6 +14,14 @@ company_CompagnieFraissinet = {
 		has_interest_marker_in_region = region_france
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PROVENCE
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_PROVENCE
@@ -51,6 +59,14 @@ company_HermesFreres = {
 		has_interest_marker_in_region = region_france
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_ILE_DE_FRANCE
@@ -60,13 +76,13 @@ company_HermesFreres = {
 					is_building_type = building_furniture_manufacturies
 					is_building_type = building_textile_mills
 				}
-				level > 10
+				level > 15
 			}
 		}
 	}
 	
 	prosperity_modifier = {
-		country_prestige_mult = 0.25
+		country_prestige_mult = 0.2
 	}
 
 	ai_weight = {
@@ -89,6 +105,14 @@ company_SocieteJF = {
 	potential = {
 		has_interest_marker_in_region = region_france
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -128,6 +152,14 @@ company_LouisVuitton = {
 		has_interest_marker_in_region = region_france
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_ILE_DE_FRANCE
@@ -164,12 +196,20 @@ company_societe_mokta_el_hadid = {
 		has_interest_marker_in_region = region_north_africa
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CONSTANTINE
+			}
+		}
+	}		
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_CONSTANTINE
 			any_scope_building = {
 				is_building_type = building_iron_mine
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = bessemer_process
@@ -200,13 +240,21 @@ company_schneider_creusot = {
 		has_interest_marker_in_region = region_france
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BURGUNDY
+			}
+		}
+	}			
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_BURGUNDY
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = steelworking
@@ -221,7 +269,6 @@ company_schneider_creusot = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
-
 # Dollfus-Mieg et Compagnie
 company_dmc = {
 	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_dmc.dds"
@@ -237,13 +284,21 @@ company_dmc = {
 		has_interest_marker_in_region = region_rhine
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BURGUNDY
+			}
+		}
+	}			
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_BURGUNDY
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = cotton_gin
@@ -269,7 +324,10 @@ company_cgv = {
 	}
 	
 	potential = {
-		c:FRA ?= this
+		OR = {
+			country_has_primary_culture = cu:french
+			country_has_primary_culture = cu:occitan
+		}
 	}
 	
 	possible = {
@@ -277,7 +335,7 @@ company_cgv = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_vineyard_plantation
-				level > 10
+				level >= 10
 			}
 			count >= 4
 		}
@@ -311,13 +369,21 @@ company_saint_etienne = {
 		has_interest_marker_in_region = region_occitania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RHONE
+			}
+		}
+	}			
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_RHONE
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = bolt_action_rifles
@@ -350,6 +416,14 @@ company_fcm = {
 		has_interest_marker_in_region = region_occitania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PROVENCE
+			}
+		}
+	}		
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_PROVENCE
@@ -359,7 +433,7 @@ company_fcm = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = ironclad_tech
@@ -367,14 +441,13 @@ company_fcm = {
 	
 	prosperity_modifier = {
 		unit_navy_offense_mult = 0.05
-		unit_offense_mult = 0.05
+		unit_combat_unit_type_heavy_tank_offense_mult = 0.1
 	}	
 	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
-
 # Compagnie des mines d'Anzin
 company_mines_anzin = {
 	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_compagnie_des_mines_danzin.dds"
@@ -389,13 +462,21 @@ company_mines_anzin = {
 		has_interest_marker_in_region = region_france
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FRENCH_LOW_COUNTRIES
+			}
+		}
+	}			
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_FRENCH_LOW_COUNTRIES
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_coal_mine
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -412,7 +493,7 @@ company_mines_anzin = {
 
 # Peugeot
 company_Peugeot = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_dmc.dds"
+	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
 	
 	flavored_company = yes
 	
@@ -425,6 +506,14 @@ company_Peugeot = {
 	potential = {
 		has_interest_marker_in_region = region_france
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -462,6 +551,14 @@ company_Bonduelle = {
 		has_interest_marker_in_region = region_france
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_ILE_DE_FRANCE
@@ -496,6 +593,14 @@ company_EJB = {
 	potential = {
 		has_interest_marker_in_region = region_france
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BURGUNDY
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -533,6 +638,14 @@ company_ThomsonCSF = {
 	potential = {
 		has_interest_marker_in_region = region_france
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
 	
 	possible = { 
 		any_scope_state = {
@@ -572,6 +685,14 @@ company_Montagut = {
 		has_interest_marker_in_region = region_occitania
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RHONE
+			}
+		}
+	}	
+	
 	possible = { 
 		any_scope_state = {
 			state_region = s:STATE_RHONE
@@ -585,6 +706,179 @@ company_Montagut = {
 	
 	prosperity_modifier = {
 		state_radicals_from_sol_change_mult = -0.05
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Naval Group
+company_NavalGroup = {
+	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_military_shipyards
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_construction_sector
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_navy_defense_mult = 0.1
+		country_max_weekly_construction_progress_add = 5
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Saint-Gobain
+company_SaintGobain = {
+	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_glassworks
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_glassworks
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Baccarat
+company_Baccarat = {
+	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_glassworks
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LORRAINE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_LORRAINE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_glassworks
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Société Générale d’Entreprises S.A.
+company_Vinci = {
+	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_steel_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_construction_sector
+				level > 20
+			}
+		}
+		has_technology_researched = steelframe_building
+	}
+	
+	prosperity_modifier = {
+		country_max_weekly_construction_progress_add = 10
+		building_construction_sector_throughput_add = 0.1
+		
 	}
 
 	ai_weight = {

@@ -1,6 +1,6 @@
 # Bunge & Born
 company_bunge_born = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/argentina_bunge_y_born.dds"
 	
 	flavored_company = yes
 	
@@ -14,6 +14,14 @@ company_bunge_born = {
 		has_interest_marker_in_region = region_la_plata
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_la_plata
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			region = sr:region_la_plata
@@ -23,7 +31,7 @@ company_bunge_born = {
 					is_building_type = building_wheat_farm
 					is_building_type = building_maize_farm
 				}
-				level > 5
+				level >= 5
 			}
 			count >= 4
 		}
@@ -41,7 +49,7 @@ company_bunge_born = {
 
 # La Rosada
 company_la_rosada = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/paraguay_la_rosada.dds"
 	
 	flavored_company = yes
 	
@@ -54,6 +62,14 @@ company_la_rosada = {
 	potential = {
 		has_interest_marker_in_region = region_la_plata
 	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BAJO_PARAGUAY
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -61,7 +77,7 @@ company_la_rosada = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = shell_gun
@@ -86,10 +102,19 @@ company_Tandanor = {
 	building_types = {
 		building_shipyards
 		building_military_shipyards
+	}
 	
 	potential = {
 		has_interest_marker_in_region = region_la_plata
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BUENOS_AIRES
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -103,8 +128,7 @@ company_Tandanor = {
 	}
 	
 	prosperity_modifier = {
-		unit_navy_defense_mult = 0.15
-		interest_group_ig_armed_forces_approval_add = 2
+		unit_navy_defense_mult = 0.1
 	}
 	
 	ai_weight = {
@@ -120,10 +144,19 @@ company_Trapiche = {
 	
 	building_types = {
 		building_vineyard_plantation
+	}
 	
 	potential = {
 		has_interest_marker_in_region = region_la_plata
 	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_NEGRO
+			}
+		}
+	}		
 	
 	possible = {
 		any_scope_state = {
@@ -139,6 +172,137 @@ company_Trapiche = {
 	prosperity_modifier = {
 		country_prestige_mult = 0.1
 		state_loyalists_from_sol_change_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Centro Vitivinícola Nacional
+company_argentinian_wine = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/argentina_centro_vitivinicola_nacional.dds"
+	
+	building_types = {  
+		building_vineyard_plantation
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		c:ARG ?= this
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_la_plata
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_la_plata
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_vineyard_plantation
+				level >= 10
+			}
+			count >= 2
+		}
+		has_technology_researched = central_planning
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.2
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Compañía Sudamericana de Vapores (Chile)
+company_sudamericana_de_vapores = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/chile_csav.dds"
+	
+	building_types = {  
+		building_port
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_la_plata
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SANTIAGO
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SANTIAGO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_port
+				level >= 10
+			}
+		}
+		has_technology_researched = screw_frigate
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+		country_convoys_capacity_mult = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Córdoba Central Railway
+company_cordoba_railway = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/argentina_cordoba_cenral_railway.dds"
+	
+	building_types = {  
+		building_railway
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_la_plata
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LA_PAMPA
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LA_PAMPA
+			is_incorporated = yes
+			has_building = building_railway
+		}
+		any_scope_state = {
+			has_state_trait = state_trait_pampas
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 2
+		}
+	}
+	
+	prosperity_modifier = {
+		building_wheat_farm_throughput_add = 0.1
+		building_livestock_ranch_throughput_add = 0.05
 	}
 	
 	ai_weight = {

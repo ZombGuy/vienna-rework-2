@@ -13,6 +13,14 @@ company_Grieve = {
 		has_interest_marker_in_region = region_andes
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LIMA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_LIMA
@@ -49,6 +57,14 @@ company_Caracoles = {
 		has_interest_marker_in_region = region_andes
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ANTOFAGASTA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ANTOFAGASTA
@@ -84,6 +100,14 @@ company_VinaO = {
 		has_interest_marker_in_region = region_andes
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SANTIAGO
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_SANTIAGO
@@ -107,7 +131,7 @@ company_VinaO = {
 
 # Compañía de Salitres y Ferrocarril de Antofagasta
 company_csfa = {
-	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_csfa.dds"
 	
 	flavored_company = yes
 	
@@ -120,13 +144,21 @@ company_csfa = {
 		has_interest_marker_in_region = region_andes
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ANTOFAGASTA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_ANTOFAGASTA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_sulfur_mine
-				level > 7
+				level >= 5
 			}
 		}
 		has_technology_researched = railways
@@ -156,12 +188,20 @@ company_peruvian_amazon = {
 		has_interest_marker_in_region = region_andes
 	}
 	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PASTAZA
+			}
+		}
+	}		
+	
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_PASTAZA
 			any_scope_building = {
 				is_building_type = building_rubber_plantation
-				level > 10
+				level >= 10
 			}
 		}
 		has_technology_researched = rubber_mastication
@@ -170,6 +210,90 @@ company_peruvian_amazon = {
 	prosperity_modifier = {
 		state_loyalists_from_sol_change_mult = 0.1
 		building_group_bg_rubber_mortality_mult = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Compañía Estañífera de Llallagua
+company_estanifera_llallagua = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_compania_estanifera_de_llallagua.dds"
+	
+	building_types = {  
+		building_lead_mine
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_andes
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_POTOSI
+			}
+		}
+	}	
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_POTOSI
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_lead_mine
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_lead_mine_throughput_add = 0.1
+		interest_group_ig_industrialists_pol_str_mult = 0.15
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Empresas Eléctricas Asociadas
+company_eea = {
+	texture = "gfx/interface/icons/company_icons/historical_company_icons/peru_empresas_electricas_asociadas.dds"
+	
+	building_types = {  
+		building_power_plant
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_andes
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LIMA
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LIMA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 0.05
+		state_construction_mult = 0.05
 	}
 	
 	ai_weight = {
