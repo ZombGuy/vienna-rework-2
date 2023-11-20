@@ -97,7 +97,7 @@ STATES = {
 	s:STATE_HOLLAND = {
 		create_state = {
 			country = c:NET
-			owned_provinces = { x777732 x80C0A0 xC04021 x01C0A0 }
+			owned_provinces = { x777732 x80C0A0 xC04021 }
 		}
 		
 		add_homeland = cu:dutch
@@ -3370,7 +3370,7 @@ STATES = {
 	s:STATE_FRIESLAND = {
 		create_state = {
 			country = c:NET
-			owned_provinces = { x41C021 xC0C021 xC041A0 x4141A0 x5A48A2 }
+			owned_provinces = { x41C021 xC0C021 xC041A0 x4141A0 x5A48A2 x41C0A0 xAF3A54 }
 		}
 		
 		add_homeland = cu:dutch
@@ -3378,7 +3378,7 @@ STATES = {
 	s:STATE_GELRE = {
 		create_state = {
 			country = c:NET
-			owned_provinces = { x0000DF xC0C0A0 x4C4894 xAF3A54 x41C0A0 }
+			owned_provinces = { x0000DF xC0C0A0 x4C4894 x01C0A0 }
 		}
 
 		add_homeland = cu:dutch
