@@ -1788,5 +1788,15 @@
 				size = 85002
 			}
 		}		
+		region_state:PRU = {
+			create_pop = {
+				culture = north_german
+				size = 70530
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 1050
+			}
+		}
 	}
 }
