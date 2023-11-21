@@ -230,7 +230,8 @@ pm_switch_boards = {
 
 		level_scaled = {
 			building_employment_clerks_add = 2500
-			building_employment_bureaucrats_add = 2500
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 500	
 		}
 	}	
 }
@@ -255,6 +256,7 @@ pm_professional_bureaucrats = {
 	
 	disallowing_laws = {
 		law_hereditary_bureaucrats
+		law_communal_adminstration	
 	}	
 	
 	building_modifiers = {
@@ -262,7 +264,37 @@ pm_professional_bureaucrats = {
 			building_employment_bureaucrats_add = 500
 		}
 	}			
-}	
+}
+
+pm_communal_adminstration = {
+	texture = "gfx/interface/icons/production_method_icons/professional_bureaucrats.dds"
+	
+	unlocking_laws = {
+        law_communal_adminstration
+	}
+	
+	unlocking_production_methods = {
+        pm_secular_bureaucrats
+	}
+
+	state_modifiers = {
+		unscaled = {
+        building_group_bg_agriculture_throughput_add = 0.25
+        building_group_bg_mining_throughput_add = 0.25
+        building_group_bg_manufacturing_throughput_add = 0.25
+        building_group_bg_plantations_throughput_add = 0.25		
+		}		
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 150
+			building_employment_machinists_add = 150
+			building_employment_farmers_add = 100			
+			building_employment_bureaucrats_add = -400			
+		}
+	}			
+}
 
 pm_secular_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
