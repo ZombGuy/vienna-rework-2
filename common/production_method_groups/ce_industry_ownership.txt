@@ -196,7 +196,7 @@ pmg_ownership_capital_building_military_shipyards = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	production_methods = {
 		pm_merchant_guilds_building_shipyards
-		pm_privately_owned_building_shipyards
+		pm_privately_owned_building_military_shipyards
 		pm_publicly_traded_building_military_shipyards
 		pm_aristocratic_industry
 		pm_integralism_industry
@@ -260,7 +260,7 @@ pmg_ownership_capital_building_artillery_foundries = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	production_methods = {
 		pm_merchant_guilds_building_arms_industry
-		pm_privately_owned_building_arms_industry
+		pm_privately_owned_building_artillery_foundries
 		pm_publicly_traded_building_artillery_foundries
 		pm_aristocratic_industry
 		pm_integralism_industry

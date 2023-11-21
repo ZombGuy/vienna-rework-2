@@ -12,7 +12,13 @@ pmg_ownership_investment_center = {
 	production_methods = {
 		pm_investment_center_merchant_guilds
 		pm_investment_center_privately_owned
+		pm_investment_center_publicly_traded
+		pm_aristocratic_industry
+		pm_integralism_industry
+		pm_dirigisme_industry
+		pm_technocratic_dirigisme_light_industry
 		pm_investment_center_government_run
 		pm_investment_center_worker_cooperative
+		pm_investment_center_communal_management
 	}
 }
