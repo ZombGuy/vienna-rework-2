@@ -1263,13 +1263,13 @@ NEconomy = {
 	CUSTOMS_UNION_CONTROLLER_MINIMUM_TARIFFS_SPLIT = 0.25	# Minimum amount of tariffs that the senior partner of a customs union gets. The rest will be split among the junior partners, according to their GDP contribution (between 0 and 1)
 	
 	REINVESTMENT_EFFICIENCY_MAX = 3.0					# Maximum conversion of reinvestment to investment pool
-	REINVESTMENT_EFFICIENCY_MIN = 0.3					# Minimum conversion of reinvestment to investment pool
-	REINVESTMENT_FALLOFF_START = 10000000				# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
-	REINVESTMENT_FALLOFF_END = 2000000000				# Above REINVESTMENT_FALLOFF_START but below this, apply minimum reinvestment multiplier on a linear scale down to REINVESTMENT_EFFICIENCY_MIN, above this always use REINVESTMENT_EFFICIENCY_MIN
+	REINVESTMENT_EFFICIENCY_MIN = 1.0					# Minimum conversion of reinvestment to investment pool
+	REINVESTMENT_FALLOFF_START = 999999999999				# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
+	REINVESTMENT_FALLOFF_END = 9999999999999				# Above REINVESTMENT_FALLOFF_START but below this, apply minimum reinvestment multiplier on a linear scale down to REINVESTMENT_EFFICIENCY_MIN, above this always use REINVESTMENT_EFFICIENCY_MIN
 	
-	GOVERNMENT_DIVIDENDS_EFFICIENCY_MIN = 0.2			# Minimum dividend fraction from buildings with government shares that will reach the treasury - the rest will be wasted
-	GOVERNMENT_DIVIDENDS_FALLOFF_START = 10000000		# Below this amount of GDP, no government dividends will be wasted
-	GOVERNMENT_DIVIDENDS_FALLOFF_END = 2000000000		# Above GOVERNMENT_DIVIDENDS_FALLOFF_START but below this, apply minimum reinvestment multiplier on a linear scale down to GOVERNMENT_DIVIDENDS_FALLOFF_END, above this always use GOVERNMENT_DIVIDENDS_FALLOFF_END
+	GOVERNMENT_DIVIDENDS_EFFICIENCY_MIN = 1.1			# Minimum dividend fraction from buildings with government shares that will reach the treasury - the rest will be wasted
+	GOVERNMENT_DIVIDENDS_FALLOFF_START = 999999999999		# Below this amount of GDP, no government dividends will be wasted
+	GOVERNMENT_DIVIDENDS_FALLOFF_END = 9999999999999		# Above GOVERNMENT_DIVIDENDS_FALLOFF_START but below this, apply minimum reinvestment multiplier on a linear scale down to GOVERNMENT_DIVIDENDS_FALLOFF_END, above this always use GOVERNMENT_DIVIDENDS_FALLOFF_END	
 
 	COMPANY_COMPETITION_DIVISOR = 0.33					# For each company over one associated with the same building type, the total throughput bonus for the building is divided by ( 1 + number of companies over one * this )
 	COMPANY_PRODUCTIVITY_RATIO_HIGH_THRESHOLD = 1.25	# Companies whose productivity exceeds this factor of the global average will be considered high-productivity companies
