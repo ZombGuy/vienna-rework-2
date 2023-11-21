@@ -1,0 +1,105 @@
+﻿pm_privately_owned_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	
+	disallowing_laws = {
+		law_cooperative_ownership
+		law_command_economy
+		law_homesteading
+		law_communal_principle
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_clergymen_add = 150
+			building_employment_aristocrats_add = 100
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 10
+			building_clergymen_shares_add = 2
+		}
+	}
+}
+
+pm_homesteading_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/homesteading.dds" 
+	
+	unlocking_laws = {
+		law_homesteading
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_clergymen_add = 150
+			building_employment_aristocrats_add = 25
+			building_employment_farmers_add = 75
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 10
+			building_clergymen_shares_add = 2
+			building_farmers_shares_add = 3
+		}
+	}
+}
+
+
+pm_worker_cooperative_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_laws = {
+		law_collectivized_agriculture
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+		law_communal_principle
+		
+	}	
+	
+	building_modifiers = {
+		unscaled = {
+			building_workforce_shares_add = 1
+		}
+	}
+}
+
+pm_government_run_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	unlocking_laws = {
+		law_collectivized_agriculture
+	}
+	
+	disallowing_laws = {
+		law_communal_principle
+		law_cooperative_ownership		
+	}	
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 100
+		}
+		unscaled = {
+			building_government_shares_add = 1
+		}
+	}
+}
+
+pm_communal_management_building_subsistence  = {
+	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
+
+	unlocking_laws = {
+		law_collectivized_agriculture
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership		
+	}	
+
+	building_modifiers = {	
+		unscaled = {
+			building_workforce_shares_add = 9 
+			building_government_shares_add = 1			
+		}
+	}
+}

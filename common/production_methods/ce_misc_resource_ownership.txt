@@ -1,0 +1,421 @@
+﻿pm_merchant_guilds_building_logging_camp = {
+	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
+
+	unlocking_production_methods = {
+		pm_simple_forestry
+	}
+
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+}
+
+pm_privately_owned_building_logging_camp = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+
+	unlocking_production_methods = {
+		pm_saw_mills
+		pm_electric_saw_mills
+	}
+
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 100
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+
+pm_publicly_traded_building_logging_camp = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+
+	unlocking_production_methods = {
+		pm_saw_mills
+		pm_electric_saw_mills
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 150
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+
+pm_government_run_building_logging_camp = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+	unlocking_laws = {
+		law_command_economy
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 150
+		}
+		unscaled = {
+			building_government_shares_add = 1
+		}
+	}
+}
+
+pm_worker_cooperative_building_logging_camp = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_production_methods = {
+		pm_saw_mills
+		pm_electric_saw_mills
+	}
+
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		unscaled = {
+			building_workforce_shares_add = 1
+
+		}
+	}
+}
+
+pm_communal_management_building_logging_camp = {
+	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
+
+	unlocking_production_methods = {
+		pm_saw_mills
+		pm_electric_saw_mills
+	}
+
+	unlocking_laws = {
+        law_communal_principle
+	}
+
+	building_modifiers = {	
+		unscaled = {
+			building_workforce_shares_add = 9 
+			building_government_shares_add = 1			
+		}
+	}
+}
+
+pm_merchant_guilds_building_fishing_wharf = {
+	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
+
+	unlocking_production_methods = {
+		pm_simple_fishing
+		pm_fishing_trawlers
+	}
+
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+}
+
+pm_privately_owned_building_fishing_wharf = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+
+	unlocking_production_methods = {				
+		pm_fishing_trawlers
+		pm_steam_trawlers
+	}
+
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 100
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+
+pm_publicly_traded_building_fishing_wharf = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 150
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+
+pm_government_run_building_fishing_wharf = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	
+	unlocking_laws = {
+		law_command_economy
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 150
+		}
+		unscaled = {
+			building_government_shares_add = 1
+		}
+	}
+}
+
+pm_worker_cooperative_building_fishing_wharf = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_production_methods = {
+		pm_steam_trawlers
+	}
+
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		unscaled = {
+			building_workforce_shares_add = 1
+
+		}
+	}
+}
+
+pm_communal_management_building_fishing_wharf = {
+	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
+
+	unlocking_production_methods = {
+		pm_steam_trawlers
+	}
+
+	unlocking_laws = {
+        law_communal_principle
+	}
+
+	building_modifiers = {	
+		unscaled = {
+			building_workforce_shares_add = 9 
+			building_government_shares_add = 1			
+		}
+	}
+}
+
+pm_merchant_guilds_building_whaling_station = {
+	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
+
+	unlocking_production_methods = {
+		pm_wooden_whaling_ships
+	}
+
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+}		
+
+pm_privately_owned_building_whaling_station = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	
+	unlocking_production_methods = {
+		pm_wooden_whaling_ships
+		pm_steam_whaling_ships
+	}				
+	
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 100
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+
+pm_publicly_traded_building_whaling_station = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"				
+	unlocking_production_methods = {
+		pm_wooden_whaling_ships
+		pm_steam_whaling_ships
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 150
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+
+pm_government_run_building_whaling_station = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+
+	unlocking_laws = {
+		law_command_economy
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 150
+		}
+		unscaled = {
+			building_government_shares_add = 1
+		}
+	}
+}
+
+pm_worker_cooperative_building_whaling_station = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_production_methods = {
+		pm_steam_whaling_ships
+	}
+
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		unscaled = {
+			building_workforce_shares_add = 1
+
+		}
+	}
+}
+
+pm_communal_management_building_whaling_station = {
+	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
+
+	unlocking_production_methods = {
+		pm_steam_whaling_ships
+	}
+
+	unlocking_laws = {
+        law_communal_principle
+	}
+
+	building_modifiers = {
+		unscaled = {
+			building_workforce_shares_add = 9 
+			building_government_shares_add = 1			
+		}
+	}
+}
+
+pm_publicly_traded_building_oil_rig = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	disallowing_laws = {
+		law_command_economy
+        law_communal_principle
+		law_cooperative_ownership
+
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 150
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+

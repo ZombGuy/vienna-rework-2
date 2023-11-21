@@ -1,0 +1,36 @@
+﻿l_simp_chinese:
+#政党
+ party_SR:0 "社会革命党"
+ party_bolsheviks:0 "俄国社会民主工党（布尔什维克）"
+ party_menshevik_party:0 "俄国社会民主工党（孟什维克）"
+ party_bolsheviksCP:0 "俄国共产党（布尔什维克）"
+ #party_spdS:0 "德国社会民主党（斯巴达克斯）"
+ party_spd:0 "德国社会民主党"
+
+#群众组织
+ mass_association_faud:0 "自由工人联合会"
+ mass_association_516legion:0 "五一六兵团"
+ #mass_association_spartacusbund:0 "斯巴达克斯同盟"
+ mass_association_bolshevik:0 "布尔什维克正统派"
+ mass_association_freikorp:0 "自由军团"
+ mass_association_sr:0 "社会革命党同情者"
+ mass_association_ftu:0 "工人自治联合会"
+ mass_association_rfb:0 "红色阵线战士同盟"
+ mass_association_centerist:0 "新经济政策拥护者" 
+ mass_association_liandong:0 "联动分子" 
+ #外交行动
+ change_regime:0 "颠覆政体"
+ change_regime_action_name:0 "颠覆政体为委员会共和国"
+ change_regime_desc:0 "#header $change_regime$#!\n$TOOLTIP_DELIMITER$\n一种[concept_instant_diplomatic_action]，可要求对方立刻将权力移交给劳动群众。"
+ change_regime_proposal_notification_name:0 "提议$change_regime_action_name$"
+ change_regime_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName]提议改变我国政体为委员会共和国"
+ change_regime_proposal_notification_effects_desc:0 "$change_regime_action_name$"
+ change_regime_proposal_accepted_name:0 "接受$change_regime_action_name$"
+ change_regime_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName]的统治阶级被迫把权力移交给了劳动群众。"
+ change_regime_proposal_declined_name:0 "拒绝$change_regime_action_name$"
+ change_regime_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName]的统治阶级拒绝把权力移交给了劳动群众。"
+ change_regime_proposal_third_party_accepted_name:0 "接受$change_regime_action_name$"
+ change_regime_proposal_third_party_accepted_desc:0 "[INITIATOR_COUNTRY.GetName]改变了[TARGET_COUNTRY.GetName]的政体。"
+ change_regime_proposal_third_party_declined_name:0 "拒绝$change_regime_action_name$"
+ change_regime_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName]改变了[INITIATOR_COUNTRY.GetName]的政体。"
+

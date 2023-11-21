@@ -1,0 +1,106 @@
+﻿reactionary = {
+	color = { 190 64 125 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = mass_association_freikorp
+				trigger = {
+						OR = {
+							country_has_primary_culture = cu:north_german
+							country_has_primary_culture = cu:south_german
+						}
+					}
+				}		
+			triggered_desc = {
+				desc = mass_association_sr
+				trigger = {
+					country_has_primary_culture = cu:russian
+					}
+				}
+			triggered_desc = {
+				desc = mass_association_thermidoriens
+				trigger = {
+					exists = c:FRA
+					THIS = c:FRA
+				}
+			}				
+			triggered_desc = {
+				desc = mass_association_ftu
+				trigger = {
+						OR = {
+							country_has_primary_culture = cu:han
+							country_has_primary_culture = cu:hakka
+							country_has_primary_culture = cu:miao
+							country_has_primary_culture = cu:min
+							country_has_primary_culture = cu:zhuang
+							country_has_primary_culture = cu:yi
+							country_has_primary_culture = cu:yue
+					}
+				}
+			}		
+			triggered_desc = {
+				desc = mass_association_right_radical
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/conservatism.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+		has_law = law_type:law_council_republic
+			OR = {
+			has_law = law_type:law_mass_democracy 
+			has_law = law_type:law_anarchy 
+			}
+		}
+		leader = {
+				NOR = {
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_vanguardist
+					    has_ideology = ideology:ideology_syndicalism						
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism							
+  						has_ideology = ideology:ideology_social_democrat						
+			}
+		}
+	     	NOT = {
+	         	owner = {
+	         		has_variable = only_valid_party
+	         	}
+	        }		
+	}
+	join_weight = {
+		value = {
+			value = -5
+			desc = "base_value"
+		}
+		if = { # against lefts
+			limit = {
+				leader = { 
+				NOR = {
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_vanguardist
+					    has_ideology = ideology:ideology_syndicalism						
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism							
+  						has_ideology = ideology:ideology_social_democrat						
+			        }
+				}
+			}
+			add = {
+				value = 20
+				desc = "from_against_lefts"
+			}
+		}
+	}
+}

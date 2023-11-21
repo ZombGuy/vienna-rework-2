@@ -1,0 +1,84 @@
+﻿l_simp_chinese:
+#意识形态
+ ideology_communist:0 "科学社会主义者"
+ ideology_communist_desc:0 "#lore 这个领袖信仰科学社会主义，认为资本主义的内在矛盾会导致工人阶级夺取政治权力。#!"
+
+ ideology_left_communism:0 "左翼共产主义者"
+ ideology_left_communism_desc:0 "#lore 这个领袖强烈质疑当前工会和政党在共产主义运动中的作用，因而要求利用工人委员会作为无产阶级革命的组织中心。#!"
+
+ ideology_technocratic_socialism:0 "科工社会主义者"
+ ideology_technocratic_socialism_desc:0 "#lore 这个领袖认为阶级斗争作为社会改造的工具尚不充分，要求利用大规模工业化和技术进步来建立真正的社会主义。#!"
+ 
+ ideology_syndicalism:0 "革命工团主义者"
+ ideology_syndicalism_desc:0 "#lore 这个领袖深受工团主义思想的影响，认为只有在总罢工行动的基础上才能建立以工会为核心的社会主义社会。#!"
+
+#政府体制
+ gov_cybernetic_state: "科工委员会"
+ gov_cybernetic_state_desc: "这种[concept_government_type]下，[concept_country]由社会主义国家各技术团体代表任命的专家委员会统治。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ RULER_FOREMAN: "督工"
+ RULER_FOREWOMAN: "女督工"
+ 
+ gov_syndicalist_republic:0 "工团共和国"
+ gov_syndicalist_republic_desc:1 "这种[concept_government]体制将权力交予工会组织，全体工人[Concept('concept_election','$concept_elected$')]产生各级工会的治理机构来管理[concept_country]的政治经济等社会事务。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ 
+ gov_peoples_commune:0 "人民公社"
+ gov_peoples_commune_desc:1 "这种[concept_government]体制与其他社会主义政体相似，[concept_country]由工人[Concept('concept_election','$concept_elected$')]产生的公社委员会进行统治，但与此同时劳动者群体直接参加国家和社会管理的程度更深。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ sps_mass_organization_emerge:0 "该法律将使得政党政治退居幕后而让群众组织出现"
+ 
+ 
+ #群众组织加入理由
+ from_left_communism:0 "喜欢经济民主"
+ from_left_communism_hate:0 "没有经济民主"
+ from_continuous_revolution:0 "支持继续革命"
+ from_hate_bureaucracy:0 "反对官僚化"
+ from_left_radical:0 "反对极左"
+ from_communal_adminstration:0 "工团保守化"
+ from_against_lefts:0 "反对社会主义"
+ from_like_collectivized:0 "要求农业集体化"
+ from_like_planed_economy:0 "要求计划经济"
+ from_hate_religion:0 "反对宗教"
+ from_non_public_education:0 "反对非公共教育"
+ from_against_authoritarianism:0 "反对威权主义"
+ from_left_moderate:0 "温和左派"
+ from_cooperative_ownership:0 "工人贵族"
+ from_centrist_commie_hate_radicals:0 "中间派反对极左"
+ from_social_progress_radically:0 "要求社会进步"
+ 
+ #事件
+ ce_ca.2.e:0 "代表们选举了一个由工人和技术专家共同组成的科工委员会"
+ clr_anti_socialist_tt:0 "所有反对社会主义的政治家都被清退出局了"
+ 
+ #国家
+ dyn_c_grand_republic_of_china:0 "大中华民国"
+ 
+ #政党
+ mass_association_Hebertistes:0 "埃贝尔派"
+ mass_association_jacobin:0 "雅各宾派"
+ mass_association_gironde:0 "吉伦特派"
+ mass_association_thermidoriens:0 "热月派"
+ 
+ #事件
+ commierev.5.t:0 "[SCOPE.sState('coop_state').GetName][SCOPE.sBuilding('coop_building').GetName]宪法"
+ commierev.5.d:0 "[SCOPE.sState('coop_state').GetName]的劳动者在[SCOPE.sBuilding('coop_building').GetName]的工人委员会里高票通过了新的工人民主管理法案，旨在推动群众性的技术革新，修正不合理的规章制度，保证工人对企业的管理权。"
+ commierev.5.f:0 "过去，官僚主义者制订生产计划是：指标往下贯，干部受为难，群众一边看。去年，工人群众以高度的主人翁责任感，自下而上地讨论计划，根据实际情况，既充分发挥革命积极性，又留有余地。结果提前完成了全年生产任务。工人阶级掌握企业的管理大权，充分发挥了群众的革命积极性和创造性。"
+ commierev.5.a:0 "改进我们的计划工作"
+ commierev.5.b:0 "向工人阶级致敬"
+ communal_i_modifier:0 "本地群众技术革新"
+ communal_e_modifier:0 "技术人员参加生产"
+ 
+ commierev.6.t:0 "[SCOPE.sState('communal_state').GetName]人民委员会"
+ commierev.6.d:0 "[SCOPE.sState('communal_state').GetName]本地群众选举产生的人民委员会工作效率提高，开启了劳动群众自己治理国家的新模式"
+ commierev.6.f:0 "在这个基础上，旧的“国家政权”的大多数职能已经变得极其简单，已经可以简化为登记、记录、检查这样一些极其简单的手续，以致每一个识字的人都完全能够胜任这些职能，行使这些职能只须付给普通的“工人工资”，并且可以（也应当）把这些职能中任何特权制、“长官制”的痕迹铲除干净。"
+ commierev.6.a:0 "群众民主就是好"
+ commierev.6.b:0 "我也要去看看"
+ commierev_loyalty_modifier:0 "人民委员会支持政府"
+ commierev_migration_modifier:0 "群众学习先进经验"
+ 
+ ce_ca.1.b:0 "委员会暂时否定了召开大会"
+ ce_ca.2.g:0 "与会人员没能达成一致"
+ ce_ca.3.e:0 "与会人员没能达成一致"
+ ce_ca.4.e:0 "与会人员没能达成一致"
+ ce_ca.5.e:0 "与会人员没能达成一致"
+ ce_ca.6.e:0 "与会人员没能达成一致"
+ 
+ 

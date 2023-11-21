@@ -1,0 +1,329 @@
+﻿change_regime = {
+    requires_approval = yes
+    should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+    possible = {
+        is_at_war = no
+		scope:target_country = {
+			NOT = { has_law = law_type:law_council_republic }
+            is_direct_subject_of = root
+		}		
+    }
+    potential = {
+	    has_law = law_type:law_council_republic
+		OR = {
+        has_law = law_type:law_single_party_state
+		has_law = law_type:law_mass_democracy
+		}
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+            is_direct_subject_of = root
+		}
+	}
+    accept_effect = {
+		scope:target_country = {
+		custom_tooltip = {	
+		text = ct_establish_soc
+	    activate_law = law_type:law_council_republic
+		activate_law = law_type:law_universal_suffrage
+	    activate_law = law_type:law_cooperative_ownership	
+		every_interest_group = {
+				limit = {
+				NOR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
+					is_interest_group_type = ig_intelligentsia					
+                }					
+					is_in_government = yes
+
+				}
+				remove_ruling_interest_group = yes
+			}		
+		every_interest_group = {
+				limit = { 
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
+					is_interest_group_type = ig_intelligentsia					
+                }					
+					is_in_government = no
+				}
+				add_ruling_interest_group = yes
+			    add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}				
+		}
+		}
+		if = {
+			limit = {
+			OR = {
+			has_law = law_type:law_homesteading
+			has_law = law_type:law_commercialized_agriculture
+			    }
+			}
+	        activate_law = law_type:law_collectivized_agriculture
+			}		
+		if = {
+			limit = {
+			OR = {
+			has_law = law_type:law_serfdom
+			has_law = law_type:law_tenant_farmers
+			    }
+			}
+	        activate_law = law_type:law_homesteading
+			}			
+		if = {
+			limit = {
+			NOT = { has_law = law_type:law_slavery_banned }
+			}
+	        activate_law = law_type:law_slavery_banned
+		    }
+		custom_tooltip = {	
+			text = clr_anti_socialist_tt		
+		random_list = {
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_social_democrat
+		        }
+			}		
+		20 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_vanguardist
+		        }
+			}
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_communist
+		        }
+			}	
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_anarchist
+		        }
+			}
+		20 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_syndicalism
+		        }
+			}
+		20 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_left_communism
+		        }
+			}	
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_trade_unions
+					ideology = ideology_technocratic_socialism	
+		        }
+			}			
+		}
+		random_list = {
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_social_democrat
+		        }
+			}		
+		25 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_vanguardist
+		        }
+			}
+		25 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_communist
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_anarchist
+		        }
+			}		
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_syndicalism
+		        }
+			}
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_left_communism
+		        }
+			}	
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_rural_folk
+					ideology = ideology_technocratic_socialism
+		        }
+			}			
+		}
+		random_list = {
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_social_democrat
+		        }
+			}		
+		30 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_vanguardist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_communist
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_anarchist
+		        }
+			}
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_syndicalism
+		        }
+			}
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_left_communism
+		        }
+			}	
+		25 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_armed_forces
+					ideology = ideology_technocratic_socialism		
+		        }
+			}			
+		}
+		random_list = {
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_social_democrat
+		        }
+			}		
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_vanguardist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_communist
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_anarchist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_syndicalism
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_left_communism
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = ig_intelligentsia
+					ideology = ideology_technocratic_socialism
+		        }
+			}			
+		}
+		ig_rural_folk = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}
+		}
+		ig_intelligentsia = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}
+		}
+		ig_armed_forces = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}
+		}
+		ig_trade_unions = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}
+		}		
+		}
+		}
+    }
+    ai = {
+        will_propose = {
+            always = yes
+        }
+        propose_score = {
+            value = 1000
+        }
+        accept_score = {
+            value = 1000
+        }
+    }
+}

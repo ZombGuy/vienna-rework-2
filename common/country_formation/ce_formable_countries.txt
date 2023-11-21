@@ -1,0 +1,13 @@
+﻿SOV = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.50
+	
+	ai_will_do = { always = yes }
+	
+	possible = {
+		has_law = law_type:law_council_republic
+		has_law = law_type:law_multicultural
+	}
+}
+

@@ -1,0 +1,59 @@
+je_constitutional_assembly = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	group = je_group_internal_affairs
+
+	complete = {
+		custom_tooltip = { 
+		text = je_ce_ca_tt_1	
+	    has_variable = constitutional_assembly_pp
+	    has_variable = constitutional_assembly_ip		
+	    has_variable = constitutional_assembly_ep
+	    has_variable = constitutional_assembly_fp
+	    has_variable = constitutional_assembly_cp
+        }		
+	}
+
+	on_complete = {
+		trigger_event = { id = ce_ca.7 popup = yes }			
+	}
+
+    on_monthly_pulse = {
+	events = {
+		ce_ca.2		
+		}
+	}
+	
+	weight = 10000
+	should_be_pinned_by_default = yes
+
+	inheritable = no	
+}
+
+je_ideology_construction = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	group = je_group_internal_affairs
+
+	complete = {
+		institution_investment_level = {
+			institution = institution_party_organization
+			value >= 3
+		}		
+	}
+
+	on_complete = {
+		trigger_event = { id = commierev.4 popup = yes }
+		custom_tooltip =  e_ce_ca_oc.tt		
+	}
+	
+	fail = {
+		NOT = { has_law = law_type:law_council_republic }
+	}
+
+	
+	weight = 10000
+	should_be_pinned_by_default = yes
+
+	transferable = no	
+}

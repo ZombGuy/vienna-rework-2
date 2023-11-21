@@ -1,0 +1,1232 @@
+namespace = commierev
+
+commierev.1 = {
+	type = country_event
+	
+	placement = ROOT
+	
+	title = commierev.1.t
+	desc = commierev.1.desc
+	flavor = commierev.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		has_technology_researched = anarchism
+		has_technology_researched = human_rights
+		has_technology_researched = socialism
+		NOT = {has_law = law_type:law_council_republic}
+		OR = {
+        is_revolutionary = yes
+		has_revolution = yes
+		}
+		OR = {
+		    ig:ig_trade_unions = {
+			    is_in_government = yes
+			    is_marginal = no
+			    ig_clout > 0.20
+		    }
+		    ig:ig_rural_folk = {
+			    is_in_government = yes
+			    is_marginal = no
+			    ig_clout > 0.25
+					OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+					has_ideology = ideology:ideology_syndicalism					
+					has_ideology = ideology:ideology_left_communism
+					has_ideology = ideology:ideology_technocratic_socialism						
+				}
+		    }
+		}
+		any_interest_group = {
+			is_in_government = yes
+			leader = {
+				OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				is_in_government = yes
+				ig_clout > 0.15
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_vanguardist
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism							
+					}
+				}
+			}
+			set_variable = communist_ig_var
+			save_scope_as = unions
+			leader = {
+				save_scope_as = union_leader
+			}
+		}
+		set_variable = {
+			name = je_communism_2_var
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_communism_2
+		}
+	}
+	
+option = {
+		name = commierev.1.a
+		every_interest_group = {
+			limit = {
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_vanguardist
+						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism							
+					}
+				}
+			}
+			add_modifier = {
+				name = communist_government_modifier
+				months = normal_modifier_time
+			}
+		}
+	activate_law = law_type:law_council_republic
+		if = {
+			limit = {
+			has_law = law_type:law_serfdom
+			}
+	        activate_law = law_type:law_homesteading
+			}	
+		if = {
+			limit = {
+			NOT = { has_law = law_type:law_slavery_banned }
+			}
+	        activate_law = law_type:law_slavery_banned
+		}	
+	}		
+}
+
+commierev.2 = {
+	type = country_event
+	
+	placement = ROOT
+	
+	title = commierev.2.t
+	desc = commierev.2.desc
+	flavor = commierev.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	trigger = {
+		has_technology_researched = anarchism
+		has_technology_researched = human_rights
+		has_technology_researched = socialism
+		NOT = {has_law = law_type:law_council_republic}
+        is_revolutionary = yes
+		ig:ig_trade_unions = {
+			    is_in_government = yes
+			    is_marginal = no
+			    ig_clout > 0.25
+		    }
+		NOT = {
+		    any_interest_group = {
+			    is_in_government = yes
+			    leader = {
+				    OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+				    }
+			    }
+		    }
+	    }
+    }
+
+immediate = {
+		ig:ig_trade_unions = {
+		save_scope_as = unions
+			leader = {
+				save_scope_as = union_leader
+			}
+		}
+    }
+	
+option = {
+		name = commierev.2.a
+		scope:union_leader = {
+			set_ideology = ideology_vanguardist
+			}
+		}
+	
+option = {
+		name = commierev.2.b
+		default_option = yes
+		scope:union_leader = {
+			set_ideology = ideology_communist
+			}
+		}
+		
+option = {
+		name = commierev.2.c
+		scope:union_leader = {
+			set_ideology = ideology_anarchist
+			}
+		}
+}
+
+commierev.3 = {
+	type = country_event
+	
+	placement = ROOT
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commierev.3.t1
+				trigger = {
+                    has_law = law_type:law_single_party_state
+				}
+			}
+			triggered_desc = {
+				desc = commierev.3.t2
+				trigger = {
+		            has_law = law_type:law_mass_democracy
+				}
+			}
+			triggered_desc = {
+				desc = commierev.3.t3
+				trigger = {
+					has_law = law_type:law_technocracy
+				}
+			}			
+		}
+	}	
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = commierev.3.d1
+				trigger = {
+                    has_law = law_type:law_single_party_state
+				}
+			}
+			triggered_desc = {
+				desc = commierev.3.d2
+				trigger = {
+		            has_law = law_type:law_mass_democracy
+				}
+			}
+			triggered_desc = {
+				desc = commierev.3.d3
+				trigger = {
+					has_law = law_type:law_technocracy
+				}
+			}			
+		}
+	}
+	
+	flavor = commierev.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {	
+		has_law = law_type:law_council_republic
+		OR = {
+        has_law = law_type:law_single_party_state
+		has_law = law_type:law_mass_democracy
+		has_law = law_type:law_technocracy		
+		}
+		institution_investment_level = {
+			institution = institution_party_organization
+			value >= 3
+		}
+		NOT = {
+		    ig:ig_trade_unions = {
+		    has_variable = against_the_party
+	        }
+			ig:ig_rural_folk = {
+		    has_variable = against_the_party
+	        }
+		    ig:ig_intelligentsia = {
+		    has_variable = against_the_party
+	        }
+			ig:ig_armed_forces = {
+		    has_variable = against_the_party
+	        }
+	    }
+		any_interest_group = {
+			OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
+				}
+			leader = {
+				    NOR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+				    }
+			    }
+		}		
+    }
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
+				}
+			leader = {
+				    NOR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist	
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+				    }		
+			    }
+			}
+			save_scope_as = ig_with_flaw	
+		}
+	}
+	
+option = {
+		name = commierev.3.a
+		default_option = yes
+		random_list = {
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:ig_with_flaw	
+					ideology = ideology_social_democrat
+		        }
+			}		
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:ig_with_flaw	
+					ideology = ideology_vanguardist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:ig_with_flaw	
+					ideology = ideology_communist
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:ig_with_flaw	
+					ideology = ideology_anarchist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:ig_with_flaw	
+					ideology = ideology_syndicalism
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:ig_with_flaw	
+					ideology = ideology_left_communism
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:ig_with_flaw	
+					ideology = ideology_technocratic_socialism	
+		        }
+			}			
+		}	
+		scope:ig_with_flaw = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}
+		}
+		ai_chance = {
+			base = 1000
+		}		
+    }		
+	
+option = {
+		name = commierev.3.b
+		scope:ig_with_flaw = {
+			add_modifier = {
+				name = modifier_against_the_party
+				months = normal_modifier_time
+			}
+			set_variable = {
+			name = against_the_party
+			months = normal_modifier_time
+			}
+		}		
+    }
+}	
+
+commierev.4 = {
+	type = country_event
+	
+	placement = ROOT
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commierev.4.t1
+				trigger = {
+                    has_law = law_type:law_single_party_state
+				}
+			}
+			triggered_desc = {
+				desc = commierev.4.t2
+				trigger = {
+		            has_law = law_type:law_mass_democracy
+				}
+			}
+			triggered_desc = {
+				desc = commierev.4.t3
+				trigger = {
+					has_law = law_type:law_technocracy
+				}
+			}			
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = commierev.4.d1
+				trigger = {
+                    has_law = law_type:law_single_party_state
+				}
+			}
+			triggered_desc = {
+				desc = commierev.4.d2
+				trigger = {
+		            has_law = law_type:law_mass_democracy
+				}
+			}
+			triggered_desc = {
+				desc = commierev.4.d3
+				trigger = {
+					has_law = law_type:law_technocracy
+				}
+			}			
+		}
+	}
+	flavor = commierev.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {	
+		has_law = law_type:law_council_republic
+		institution_investment_level = {
+			institution = institution_party_organization
+			value >= 3
+		}
+		any_interest_group = {
+			OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_intelligentsia
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_armed_forces
+				}
+			leader = {
+				    NOR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+				    }
+			    }
+		    }
+        }
+		
+	immediate = {
+		ig:ig_trade_unions = {
+			save_scope_as = unions
+			leader = {
+				save_scope_as = union_leader
+			}
+		}
+		ig:ig_rural_folk = {
+			save_scope_as = folks
+			leader = {
+				save_scope_as = folks_leader
+			}
+		}
+		ig:ig_intelligentsia = {
+			save_scope_as = intelligentsia
+			leader = {
+				save_scope_as = intelligentsia_leader
+			}
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = army
+			leader = {
+				save_scope_as = army_leader
+			}
+		}
+	}
+	
+option = {
+		name = commierev.4.a
+		default_option = yes
+		custom_tooltip = {	
+			text = clr_anti_socialist_tt
+		if = {
+			limit = {
+				scope:union_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist	
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		random_list = {
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:unions
+					ideology = ideology_social_democrat
+		        }
+			}		
+		20 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:unions
+					ideology = ideology_vanguardist
+		        }
+			}
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:unions
+					ideology = ideology_communist
+		        }
+			}	
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:unions
+					ideology = ideology_anarchist
+		        }
+			}
+		20 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:unions
+					ideology = ideology_syndicalism
+		        }
+			}
+		20 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:unions
+					ideology = ideology_left_communism
+		        }
+			}	
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:unions
+					ideology = ideology_technocratic_socialism	
+		        }
+			}			
+		}		
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}
+		}		
+	}
+			
+		if = {
+			limit = {
+				scope:folks_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		random_list = {
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:folks
+					ideology = ideology_social_democrat
+		        }
+			}		
+		25 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:folks
+					ideology = ideology_vanguardist
+		        }
+			}
+		25 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:folks
+					ideology = ideology_communist
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:folks
+					ideology = ideology_anarchist
+		        }
+			}		
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:folks
+					ideology = ideology_syndicalism
+		        }
+			}
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:folks
+					ideology = ideology_left_communism
+		        }
+			}	
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:folks
+					ideology = ideology_technocratic_socialism
+		        }
+			}			
+		}
+		ig:ig_rural_folk = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			    }
+		    }
+		}
+		
+	    if = {
+			limit = {
+				scope:army_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		random_list = {
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:army
+					ideology = ideology_social_democrat
+		        }
+			}		
+		30 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:army
+					ideology = ideology_vanguardist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:army
+					ideology = ideology_communist
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:army
+					ideology = ideology_anarchist
+		        }
+			}
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:army
+					ideology = ideology_syndicalism
+		        }
+			}
+		5 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:army
+					ideology = ideology_left_communism
+		        }
+			}	
+		25 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:army
+					ideology = ideology_technocratic_socialism		
+		        }
+			}			
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			}
+		}		
+	}
+			
+	    if = {
+			limit = {
+				scope:intelligentsia_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		random_list = {
+		10 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:intelligentsia
+					ideology = ideology_social_democrat
+		        }
+			}		
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:intelligentsia
+					ideology = ideology_vanguardist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:intelligentsia
+					ideology = ideology_communist
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:intelligentsia
+					ideology = ideology_anarchist
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:intelligentsia
+					ideology = ideology_syndicalism
+		        }
+			}
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:intelligentsia
+					ideology = ideology_left_communism
+		        }
+			}	
+		15 = {
+		create_character = {
+					ig_leader = yes
+					interest_group = scope:intelligentsia
+					ideology = ideology_technocratic_socialism
+		        }
+			}			
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = modifier_pressure_from_party
+				months = normal_modifier_time
+			    }
+		    }
+	    }
+		}
+		ai_chance = {
+			base = 1000
+		}		
+    }		
+	
+option = {
+		name = commierev.4.b
+		if = {
+			limit = {
+				scope:union_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = modifier_against_the_party
+				months = normal_modifier_time
+			}
+		}		
+	}
+			
+		if = {
+			limit = {
+				scope:folks_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		ig:ig_rural_folk = {
+			add_modifier = {
+				name = modifier_against_the_party
+				months = normal_modifier_time
+			    }
+			}
+	    }
+		if = {
+			limit = {
+				scope:intelligentsia_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = modifier_against_the_party
+				months = normal_modifier_time
+			}
+		}		
+	}
+			
+		if = {
+			limit = {
+				scope:army_leader = {
+					NOR = { 
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_syndicalism					
+						has_ideology = ideology:ideology_left_communism
+						has_ideology = ideology:ideology_technocratic_socialism						
+					}
+				}
+			}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = modifier_against_the_party
+				months = normal_modifier_time
+			    }
+			}
+	    }
+    }
+}
+
+commierev.5 = {
+	type = country_event
+	placement = scope:coop_state
+	title = commierev.5.t
+	desc = commierev.5.d
+	flavor = commierev.5.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {
+		has_law = law_type:law_council_republic
+		any_scope_state = {
+			is_incorporated = yes
+			NOT = { has_modifier = communal_i_modifier }
+			NOT = { has_modifier = communal_e_modifier }
+			any_scope_pop = {
+				pop_is_discriminated = no
+				standard_of_living > 15
+				workplace = {
+					OR = {
+					    has_active_production_method = pm_communal_management_building_food_industry
+					    has_active_production_method = pm_communal_management_building_textile_mills
+					    has_active_production_method = pm_communal_management_building_furniture_manufacturies
+					    has_active_production_method = pm_communal_management_building_glassworks
+					    has_active_production_method = pm_communal_management_building_tooling_workshops
+					    has_active_production_method = pm_communal_management_building_paper_mills
+					    has_active_production_method = pm_communal_management_building_shipyards
+					    has_active_production_method = pm_communal_management_building_arms_industry
+					    has_active_production_method = pm_communal_management_farm
+					    has_active_production_method = pm_communal_management_building_logging_camp
+					    has_active_production_method = pm_communal_management_building_fishing_wharf
+					    has_active_production_method = pm_communal_management_building_whaling_station
+					    has_active_production_method = pm_communal_management_plantation
+					    has_active_production_method = pm_communal_management_industry
+					    has_active_production_method = pm_communal_management_building_coal_mine
+					    has_active_production_method = pm_communal_management_building_iron_mine
+					    has_active_production_method = pm_communal_management_building_lead_mine
+					    has_active_production_method = pm_communal_management_building_sulfur_mine
+                    }
+					cash_reserves_ratio > 0.25
+					weekly_profit > 5
+					occupancy >= 0.95
+					level >= 5
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				NOT = { has_modifier = communal_i_modifier }
+				NOT = { has_modifier = communal_e_modifier }
+				any_scope_pop = {
+					pop_is_discriminated = no
+					standard_of_living > 15
+					workplace = {
+						OR = {
+                            has_active_production_method = pm_communal_management_building_food_industry
+                            has_active_production_method = pm_communal_management_building_textile_mills
+                            has_active_production_method = pm_communal_management_building_furniture_manufacturies
+                            has_active_production_method = pm_communal_management_building_glassworks
+                            has_active_production_method = pm_communal_management_building_tooling_workshops
+                            has_active_production_method = pm_communal_management_building_paper_mills
+                            has_active_production_method = pm_communal_management_building_shipyards
+                            has_active_production_method = pm_communal_management_building_arms_industry
+                            has_active_production_method = pm_communal_management_farm
+                            has_active_production_method = pm_communal_management_building_logging_camp
+                            has_active_production_method = pm_communal_management_building_fishing_wharf
+                            has_active_production_method = pm_communal_management_building_whaling_station
+                            has_active_production_method = pm_communal_management_plantation
+                            has_active_production_method = pm_communal_management_industry
+                            has_active_production_method = pm_communal_management_building_coal_mine
+                            has_active_production_method = pm_communal_management_building_iron_mine
+                            has_active_production_method = pm_communal_management_building_lead_mine
+                            has_active_production_method = pm_communal_management_building_sulfur_mine
+                        }
+						cash_reserves_ratio > 0.25
+						weekly_profit > 5
+						occupancy >= 0.95
+						level >= 5
+					}
+				}
+			}
+			save_scope_as = coop_state
+			random_scope_pop = {
+				limit = {
+					pop_is_discriminated = no
+					standard_of_living > 15
+					workplace = {
+						OR = {
+                            has_active_production_method = pm_communal_management_building_food_industry
+                            has_active_production_method = pm_communal_management_building_textile_mills
+                            has_active_production_method = pm_communal_management_building_furniture_manufacturies
+                            has_active_production_method = pm_communal_management_building_glassworks
+                            has_active_production_method = pm_communal_management_building_tooling_workshops
+                            has_active_production_method = pm_communal_management_building_paper_mills
+                            has_active_production_method = pm_communal_management_building_shipyards
+                            has_active_production_method = pm_communal_management_building_arms_industry
+                            has_active_production_method = pm_communal_management_farm
+                            has_active_production_method = pm_communal_management_building_logging_camp
+                            has_active_production_method = pm_communal_management_building_fishing_wharf
+                            has_active_production_method = pm_communal_management_building_whaling_station
+                            has_active_production_method = pm_communal_management_plantation
+                            has_active_production_method = pm_communal_management_industry
+                            has_active_production_method = pm_communal_management_building_coal_mine
+                            has_active_production_method = pm_communal_management_building_iron_mine
+                            has_active_production_method = pm_communal_management_building_lead_mine
+                            has_active_production_method = pm_communal_management_building_sulfur_mine
+                        }
+						cash_reserves_ratio > 0.25
+						weekly_profit > 5
+						occupancy >= 0.95
+						level >= 5
+					}
+				}
+				save_scope_as = coop_pop
+				workplace = {
+					save_scope_as = coop_building
+				}
+			}
+		}
+	}
+
+	option = {
+		name = commierev.5.a
+		default_option = yes
+		scope:coop_state = {
+			add_modifier = {
+				name = communal_i_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = commierev.5.b
+		scope:coop_state = {
+			add_modifier = {
+				name = communal_e_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+}
+
+
+commierev.6 = {
+	type = country_event
+	placement = scope:communal_state
+	title = commierev.6.t
+	desc = commierev.6.d
+	flavor = commierev.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+
+	trigger = {
+		has_law = law_type:law_council_republic
+		any_scope_state = {
+			is_incorporated = yes
+			NOT = { has_modifier = coop_loyalty_modifier }
+			NOT = { has_modifier = coop_migration_modifier }
+			any_scope_pop = {
+				pop_is_discriminated = no
+				standard_of_living > 15
+				workplace = {
+				is_building_type = building_government_administration
+				level >= 10
+				occupancy > 0.9
+				has_active_production_method = pm_communal_adminstration
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				NOT = { has_modifier = coop_loyalty_modifier }
+				NOT = { has_modifier = coop_migration_modifier }
+			any_scope_pop = {
+				pop_is_discriminated = no
+				standard_of_living > 15
+				workplace = {
+				is_building_type = building_government_administration
+				level >= 10
+				occupancy > 0.9
+				has_active_production_method = pm_communal_adminstration
+				}
+			}
+			}
+			save_scope_as = communal_state
+			random_scope_pop = {
+				limit = {
+					pop_is_discriminated = no
+					standard_of_living > 15
+					workplace = {
+				is_building_type = building_government_administration
+				level >= 10
+				occupancy > 0.9
+				has_active_production_method = pm_communal_adminstration
+					}
+				}
+				save_scope_as = communal_pop
+				workplace = {
+					save_scope_as = communal_building
+				}
+			}
+		}
+	}
+
+	option = {
+		name = commierev.6.a
+		default_option = yes
+		scope:communal_state = {
+			add_modifier = {
+				name = commierev_loyalty_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = commierev.6.b
+		scope:communal_state = {
+			add_modifier = {
+				name = commierev_migration_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+}
+
+commierev.7 = {
+	type = country_event
+	placement = ROOT	
+	title = commierev.7.t
+	desc = commierev.7.d
+	flavor = commierev.7.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+
+	trigger = {
+		has_law = law_type:law_state_atheism 
+		NOT = {religion = rel:atheist}
+		NOT = {has_variable = establish_atheism}		
+	}
+
+	immediate = {
+		set_variable = {
+			name = establish_atheism
+		}
+
+	}
+
+	option = {
+		name = commierev.7.a
+		default_option = yes
+		recalculate_pop_ig_support = yes
+		set_state_religion = rel:atheist
+		add_modifier = {
+			name = antireligious_policies
+			months = long_modifier_time
+		}
+		custom_tooltip = {
+			text = state_atheism_conversion_tt
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+				}
+				convert_population = {
+					target = rel:atheist
+					value = 0.15
+				}
+			}
+		}
+	}
+}

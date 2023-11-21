@@ -1,0 +1,33 @@
+﻿l_simp_chinese:
+
+### HOSTILE INTERACTIONS ###
+ #Assassination | neutralize_target
+ neutralize_target:0 "刺杀"
+ neutralize_target_desc:0 "这个人太危险了，颠覆性太强了，或者在其他方面太不稳定了，不能让他继续活着。快去干掉他们。"
+
+ ### POLITICAL INTERACTIONS ###
+ #Study Political Agenda | study_government_agenda_self
+ study_government_agenda_self:0 "学习政治议程"
+ study_government_agenda_self_desc:0 "也许我们太被动了。在变革的时代，节制有什么用？是什么让一个人保持中立？渴望金子？权力还是一个人天生就有一颗中立的心？"
+ 
+ #Study Political Agenda | study_government_agenda
+ study_government_agenda:0 "学习政治议程"
+ study_government_agenda_desc:0 "这位公众人物的政策议程可以为我们的政府奠定坚实的基础。也许我们可以研究一下？"
+
+ #Sway to Pro-Government Agenda | sway_to_government_agenda
+ sway_to_government_agenda:0 "说服支持政府方针"
+ sway_to_government_agenda_desc:0 "政府内部的派系仍然可以被说服支持我们提出的政府政策议程。也许是时候跟他们会会面？"
+
+ #Sway to Pro-Leader Stance | sway_to_pro_leader_stance
+ sway_to_pro_leader_stance:0 "转向领袖指示"
+ sway_to_pro_leader_stance_desc:0 "如果这位公众人物相信领导层的愿景，那么他的意见将非常宝贵。也许是时候跟他们会会面？"
+
+ #Sway to Anti-Government Stance | sway_to_anti_government_stance
+ sway_to_anti_government_stance:0 "说服反对政府议程"
+ sway_to_anti_government_stance_desc:0 "这位公众人物可能有助于推动反政府议程。也许是时候进行社会变革了？"
+
+
+
+ # 
+ 
+ #

@@ -1,0 +1,11 @@
+﻿SOV = {
+	color = "red_dark"
+	
+	country_type = recognized
+
+	tier = hegemony
+	
+	cultures = { russian byelorussian ukrainian lithuanian latvian estonian tatar ugrian georgian armenian azerbaijani north_caucasian kirgiz uzbek kazak tajik siberian yakut turkmen }
+	capital = STATE_MOSCOW
+}
+

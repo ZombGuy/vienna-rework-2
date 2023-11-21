@@ -1,0 +1,17 @@
+﻿l_english:
+#生产方式
+ pm_communal_management_building_military_shipyards:0 "Workers' Council" 
+ pm_communal_management_building_artillery_foundries:0 "Workers' Council" 
+ 
+ #政党
+ party_spdS:0 "Spartakusbund"
+ party_sad:0 "Sozialistische Arbeiterpartei"
+ party_adav:0 "Allgemeinen Deutschen Arbeitervereins"
+ party_TUC:0 "Trades Union Congress"
+ party_KPSS:0 "KPSS"
+ mass_association_spartacusbund:0 "Revolutionäre Oberste"
+ 
+ #事件
+ eur.1.c:0 "Recently, the Union is not accepting new republics"
+ socrep_great_dont_annex_tt:0 "Such an event will not occur within five years"
+ ct_establish_soc:0 "The government has been people democratized"

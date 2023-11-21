@@ -1,0 +1,37 @@
+﻿pol_rosa_luxemburg_character_template = {
+    first_name = Rosa
+	last_name = Luxemburg
+	historical = yes
+	culture = cu:polish
+	religion = rel:atheist
+	female = yes
+    is_agitator = yes
+	interest_group = ig_trade_unions
+	ideology = ideology_left_communism
+	birth_date = 1871.3.5
+	dna = dna_rosa_luxemburg
+	traits = {
+		firebrand
+        brave
+        romantic
+	}
+}
+
+fra_georges_sorel_character_template = {
+    first_name = Georges
+	last_name = Sorel
+	historical = yes
+	culture = cu:french
+	religion = rel:atheist
+	female = no
+    is_agitator = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_syndicalism
+	birth_date = 1847.11.2
+	dna = dna_georges_sorel
+	traits = {
+		erudite
+        innovative
+        engineer
+	}
+}

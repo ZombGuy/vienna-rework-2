@@ -1,0 +1,169 @@
+﻿l_simp_chinese:
+#改动旧文案
+ communist_unions.tt:0 "[SCOPE.gsInterestGroup('unions').GetName]将总是选择社会主义领袖。\n其他利益集团非常可能选择社会主义领袖。"
+ 
+ chose_vanguardism.tt:0 "[SCOPE.gsInterestGroup('unions').GetName]将总是选择先锋队主义或左翼共产主义领袖。"
+ chose_communism.tt:0 "[SCOPE.gsInterestGroup('unions').GetName]将总是选择共产主义者或科工社会主义领袖。"
+ chose_anarchism.tt:0 "[SCOPE.gsInterestGroup('unions').GetName]将总是选择无政府主义或革命工团主义领袖。"
+#意识形态
+ #ideology_communist:0 "共产主义者"
+ #ideology_communist_desc:0 "#lore 这个领袖信仰科学社会主义，认为先锋队领导下的工人阶级要通过群众性的阶级斗争来夺取政治权力。#!"
+
+ #ideology_vanguardist:0 "唯生产力论者"
+ #ideology_vanguardist_desc:0 "#lore 这个领袖对上级领导机关言听计从，相信社会主义革命的阶段已经结束，所以要通过有组织地发展生产力来实现共产主义社会。#!"
+ 
+ #ideology_anarchist:0 "极左激进主义者"
+ #ideology_anarchist_desc:0 "#lore 这个领袖深受革命工团主义、无政府主义等思想的影响，相信只有绝不妥协的暴力斗争才能建立起人民自我管理的社会主义。#!"
+
+ #ideology_social_democrat:0 "进步社会主义者"
+ #ideology_social_democrat_desc:0 "#lore 这个领袖信仰民主社会主义或是空想社会主义，相信人道、民主的社会主义可以通过议会斗争而非暴力革命手段来建立。#!"
+#群众组织
+ mass_association_right_radical:0 "自由派群众组织"
+ mass_association_conservative:0 "温和派群众组织"
+ mass_association_left_radical:0 "极左派群众组织"
+ mass_association_rebelist:0 "正统派群众组织" 
+ mass_association_workeropposition:0 "工人反对派"
+ mass_association_wrrh:0 "工人革命造反总司令部"
+ mass_association_revobleute:0 "革命工长组织"  
+ #法律
+ law_communal_adminstration:0 "公社自治体"
+ law_communal_adminstration_desc:0 "劳动者直接选举出基层公社委员会来治理社会，取代旧有的官僚体制，以对物的管理代替对人的压迫。"
+ 
+ law_atheism:0 "国家无神论"
+ law_atheism_desc:0 "政府着手主动用科学思维取代宗教与迷信。"
+ #生产方式
+ 
+ pm_communal_adminstration:0 "公社自治体"
+ pm_cultural_palace:0 "科学文化宫"
+ pm_communal_management_farm:0 "人民公社"
+ pm_communal_management_building_food_industry:0 "工人委员会"
+ pm_communal_management_building_textile_mills:0 "工人委员会"
+ pm_communal_management_building_furniture_manufacturies:0 "工人委员会"
+ pm_communal_management_building_building_glassworks:0 "工人委员会"
+ pm_communal_management_building_tooling_workshops:0 "工人委员会"
+ pm_communal_management_building_paper_mills:0 "工人委员会"
+ pm_communal_management_industry:0 "工人委员会"
+ pm_communal_management_building_shipyards:0 "工人委员会"
+ pm_communal_management_building_arms_industry:0 "工人委员会"
+ pm_communal_management_building_coal_mine:0 "工人委员会"
+ pm_communal_management_building_iron_mine:0 "工人委员会"
+ pm_communal_management_building_lead_mine:0 "工人委员会"
+ pm_communal_management_building_sulfur_mine:0 "工人委员会"
+ pm_communal_management_building_gold_mine:0 "工人委员会"
+ pm_communal_management_building_logging_camp:0 "工人委员会"
+ pm_communal_management_building_fishing_wharf:0 "工人委员会"
+ pm_communal_management_building_whaling_station:0 "工人委员会"
+ pm_communal_management_plantation:0 "农民委员会"
+ pm_communal_management_building_railway:0 "工人委员会"
+ pm_communal_management_building_subsistence:0 "人民公社"
+ #政府体制
+ #gov_syndicalist_republic:0 "工团共和国"
+ #gov_syndicalist_republic_desc:1 "这种[concept_government]体制将权力交予工会组织，全体工人[Concept('concept_election','$concept_elected$')]产生各级工会的治理机构来管理[concept_country]的政治经济等社会事务。"
+ #事件
+ modifier_pressure_from_party:0 "政治施压"
+ modifier_against_the_party:0 "拖延决定"
+ 
+ commierev.3.t1:0 "党的会议决定"
+ commierev.3.t2:0 "群众谴责" 
+ commierev.3.d1:0 "由于一部分领导人偏离了无产阶级革命路线，党内已经出现了要求罢免他们的意见，并替换上更合适的干部。"
+ commierev.3.d2:0 "由于工人委员会的一些代表偏离了无产阶级革命路线，群众们举行公开演讲和游行示威，要求罢免他们，而且已经酝酿好了他们心目合适的人选。"
+ commierev.3.f:0 "忘记先进部队和倾向于它的所有群众之间的区别，忘记先进部队的经常责任是把愈益广大的阶层提高到这个先进的水平，那只是欺骗自己，无视我们的巨大任务，缩小这些任务。"
+ 
+ commierev.3.a:0 "默许赶走这些代表"
+ commierev.3.b:0 "这种希望是违反宪法的！"
+ 
+ commierev.4.t1:0 "批评放送"
+ commierev.4.d1:0 "在最近召开的大会上，党内已经出现了要求批评一部分偏离革命路线的领导人的声音，并把罢免这些干部的决议列入了会议议程。现在这些干部的命运取决于大会主席团所作出的决议。"
+ commierev.4.t2:0 "代表大会的报告"
+ commierev.4.d2:0 "在最近召开的大会上，一些群众代表坚决要求批评一部分偏离革命路线的群众组织领导人，并把罢免这些干部的决议列入了会议议程。现在这些干部的命运取决于大会的投票结果。" 
+ commierev.4.f:0 "我们的这个党，当然是信奉共产主义的先进分子，还有广大劳动群众的党。但是，就在这个会场中间，坐着那么些反对革命，反对无产阶级的右倾分子，我们能对此袖手旁观吗？"
+ 
+ commierev.4.a:0 "大会通过了罢免决议" 
+ commierev.4.b:0 "大会否决了罢免决议" 
+ 
+ #日志条目
+ je_constitutional_assembly:0 "人民立宪会议"
+ je_constitutional_assembly_reason:0 "经过艰难的政治斗争，社会主义的康庄大道已经向我们敞开，是时候为新的社会主义共和国制订新的宪法了。"
+ je_ce_ca_tt_1:0 "完成立宪会议的所有议程，包括政体、内政、经济、军事、社会五项。"
+ 
+ je_ideology_construction:0 "意识形态建设"
+ je_ideology_construction_reason:0 "建立社会主义之后，我们所要做的就是建立一套成熟的意识形态灌输体系，将革命思想传播到群众心中。"
+ e_ce_ca_oc.tt:0 "从此只要保持党政机构的投入程度不比现在的情况更少，那么工人、乡村民众、军队、知识分子将会永远有机会回归社会主义道路。"
+ 
+ #日志条目事件
+ ce_ca.1.t:0 "迎接社会主义"
+ ce_ca.1.desc:0 "现在我国的工农群众已经夺取了政权，正准备召开人民立宪会议来制订社会主义宪法，把国家转变为蓝图中的理想国度。人民正在组织立宪会议的代表选举工作。"
+ ce_ca.1.f:0 ".如果没有这些条件，因立宪会议而产生的危机便只有用革命手段才能解决，这就是说，委员会政权要采取最有力、最迅速、最坚决的革命手段来反对反革命势力，而不管他们用什么口号和机构作掩护。"
+ ce_ca.1.a:0 "我也要去投票！" 
+ 
+ ce_ca.2.t:0 "人民立宪会议：政治议程"
+ ce_ca.2.desc:0 "肩负人民期望的代表们已经列席大会。开幕式之后，开始了立宪会议的第一个议程，也就是是确立社会主义政体，不同政治信仰的代表们对此各有意见。"
+ ce_ca.2.f:0 "有代表认为，社会主义应该建立在人道、自由、民主的委员会共和国基础之上，但是观点更加激进的代表相信，如果不摧毁现有的国家机器，把一切政权全部移交给群众自治的组织，社会主义就不得建立。"
+ ce_ca.2.a:0 "大会通过了民主共和国宪法"
+ ce_ca.2.b:0 "政府权力被全部下放给了自治公社"
+ ce_ca.2.c:0 "大会希望建立起无产阶级专政的新国家"
+ ce_ca.2.d:0 "代表们支持建立一党构成的人民委员会"
+ 
+ ce_ca.3.t:0 "人民立宪会议：内政议程"
+ ce_ca.3.desc:0 "通过了政体草案之后，代表们开始讨论新国家的公民权利和宗教政策。"
+ ce_ca.3.f:0 "激进派代表们相当希望能够建立贯彻国际主义、民主平等原则的新国家，宗教将会受到最严格的限制直至消亡。信教者对此相当恐惧，因此温和派们希望能够争取他们的支持。而且，在民族问题上，民族主义者们也不希望过于追求平等。"
+ ce_ca.3.a:0 "向右派妥协"
+ ce_ca.3.b:0 "民族平等与世俗化"
+ ce_ca.3.c:0 "摧毁宗教！民族自决万岁！"
+ ce_ca.3.d:0 "礼赞地上天国"
+ 
+ ce_ca.4.t:0 "人民立宪会议：经济议程"
+ ce_ca.4.desc:0 "新国家的政治问题已经被厘清了。现在要关心的事，就是怎么组织起社会主义的经济平等制度。"
+ ce_ca.4.f:0 "极左派希望能立刻开始废除商品货币制度的进程，围绕人民的需要有计划地来组织生产和消费，他们的内部分歧在于应该由政府的集中机构，还是基层的工人委员会或工会来完成这项工作。其他派别对他们的意见则持保留态度。"
+ ce_ca.4.a:0 "不要急于消灭市场经济"
+ ce_ca.4.b:0 "自由平等互助的合作社接管了经济全局"
+ ce_ca.4.c:0 "集中化的社会大生产会带领我们迅速建立共产主义"
+ ce_ca.4.d:0 "劳动者的组织应该在计划经济中保留位置"
+  
+ ce_ca.5.t:0 "人民立宪会议：军事议程"
+ ce_ca.5.desc:0 "讨论完政治和经济问题，接下来就是最关键的问题——军队该何去何从？"
+ ce_ca.5.f:0 "相当多的代表认为我国强敌环伺，应该配备一支装备精良，训练有素的庞大军队，但是也有代表相信旧军队组织已经不再适应革命的需要，应该取消军衔、军礼、军事条例，用士兵委员会取代长官制度，甚至用全民武装取代常备军制度。"
+ ce_ca.5.a:0 "保留常备军以备抵抗外敌入侵"
+ ce_ca.5.b:0 "士兵委员会和公社民兵会帮助我们解决军事难题"
+ ce_ca.5.c:0 "大规模扩军！世界革命万岁！"
+  
+ ce_ca.6.t:0 "人民立宪会议：社会议程"
+ ce_ca.6.desc:0 "立宪会议进入了最后一项议程，讨论国家的社会政策，代表们对这个环节基本上没有争议。"
+ ce_ca.6.f:0 "教育、医疗、工人保障、社会福利，以及事关国家未来的儿童保护法，对社会主义的建立非常重要，新的社会主义政府必须在这些事业上取得前所未有的进步，否则革命将会失去其应有的价值与意义。这是所有代表都赞同的。"
+ ce_ca.6.a:0 "通向共产主义之路。"
+  
+ ce_ca.7.t:0 "人民立宪会议的闭幕式"
+ ce_ca.7.desc:0 "随着国际歌响起，代表们一齐起身歌唱，代表着这次伟大的大会已经圆满结束。"
+ ce_ca.7.f:0 "对于从资产阶级制度过渡到社会主义制度，对于无产阶级专政，委员会共和国不仅是更高类型的民主机构的形式（与通常那种戴有立宪会议花冠的资产阶级共和国相比），而且是能够保证痛苦最少地过渡到社会主义的唯一形式。"
+ ce_ca.7.a:0 "起来，饥寒交迫的人们！"
+ e_ce_ca_7.tt:0 "立宪会议的所有议程都被完成了"
+ 
+ ce_ca.8.t:0 "社会主义的失败"
+ ce_ca.8.desc:0 "随着社会主义的力量最后消失在政府中，资产阶级制度还是镇压了进步力量。"
+ ce_ca.8.f:0 "我过去这样，现在这样，未来还是这样！"
+ ce_ca.8.a:0 "将来呢？"
+ 
+ eur.1.t:0 "加盟共和国"
+ eur.1.d:0 "国际主义的伟大胜利已经表明共产主义革命的不可阻挡，现在已经有新的社会主义革命战友[SCOPE.sCountry('socrep_annex_country').GetName]愿意加入我们的伟大联邦。"
+ eur.1.f:0 "本次大会的下一项议程：接纳[SCOPE.sCountry('socrep_annex_country').GetName]作为[ROOT.GetCountry.GetName]的新加盟共和国，自该大会议程经多数通过之日起，允许该国履行[ROOT.GetCountry.GetName]宪法所规定的加盟共和国各项义务，享有规定的各项权利。
+ eur.1.a:0 "支持[SCOPE.sCountry('socrep_annex_country').GetName]加入"
+ eur.1.b:0 "这个议题还不合时宜" 
+ 
+ #决议
+ EUR_decision:0 "成立国际主义联邦"
+ EUR_decision_desc:0 "国际共产主义的传播已经开始为曾经支离破碎的欧洲团结为一体提供了可能，我们将着手开始推动这一步。"
+ 
+ #国名
+ EUR:0 "欧洲联邦"
+ EUR.adj:0 "欧盟"
+ dyn_c_EUR_empire:0 "欧罗巴联合帝国"
+ dyn_c_EUR_empire_adj:0 "欧罗巴联合帝国"
+ dyn_c_EUR_republic:0 "欧罗巴联合共和国"
+  dyn_c_EUR_republic_adj:0 "欧罗巴联合共和国"
+ dyn_c_EUR_socialist_republic:0 "自由工人共和国联盟"
+ dyn_c_EUR_socialist_commune:0 "无产阶级公社联邦"
+ dyn_c_EUR_socialist_republic_adj:0 "自由工联"
+ dyn_c_EUR_socialist_commune_adj:0 "无产阶级公社"
+ 
+ #宗教
+  atheism:0 "无神论"

@@ -1,0 +1,165 @@
+namespace = eur
+
+eur.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = eur.1.t
+	desc = eur.1.d
+	flavor = eur.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 3
+
+	cooldown = { months = 4 }
+
+	trigger = {
+		NOT = { has_variable = socrep_great_dont_annex}
+	    OR = {
+		AND = {
+		    exists = c:HRE
+		    c:HRE = ROOT
+		    }
+		AND = {
+		    exists = c:SOV
+		    c:SOV = ROOT
+			has_law = law_type:law_multicultural		
+		    }			
+		}	
+	    has_law = law_type:law_council_republic		
+		any_country = {
+		        capital = {
+			        OR = {
+				        region = sr:region_england
+				        region = sr:region_north_sea_coast
+				        region = sr:region_iberia
+				        region = sr:region_france
+				        region = sr:region_occitania
+				        region = sr:region_rhine
+				        region = sr:region_italy
+				        region = sr:region_balkans
+				        region = sr:region_north_germany
+				        region = sr:region_south_germany
+				        region = sr:region_baltic
+				        region = sr:region_danubia
+				        region = sr:region_poland
+			        }
+		        }
+		    has_law = law_type:law_council_republic
+			OR = {
+				is_subject_of = ROOT
+				AND = {
+				is_subject = no				
+				has_diplomatic_pact = {
+				    who = ROOT
+				    type = customs_union
+					}
+			    }
+			}
+			relations:root >= relations_threshold:amicable
+			is_player = no
+			NOT = { has_variable = socrep_minor_dont_annex }
+		}
+	}
+
+	immediate = {
+		random_country = {
+		    limit = {
+		        capital = {
+			        OR = {
+				        region = sr:region_england
+				        region = sr:region_north_sea_coast
+				        region = sr:region_iberia
+				        region = sr:region_france
+				        region = sr:region_occitania
+				        region = sr:region_rhine
+				        region = sr:region_italy
+				        region = sr:region_balkans
+				        region = sr:region_north_germany
+				        region = sr:region_south_germany
+				        region = sr:region_baltic
+				        region = sr:region_danubia
+				        region = sr:region_poland
+			        }
+		        }
+		    has_law = law_type:law_council_republic
+			OR = {
+				is_subject_of = ROOT
+				AND = {
+				is_subject = no				
+				has_diplomatic_pact = {
+				    who = ROOT
+				    type = customs_union
+					}
+			    }
+			}
+			relations:root >= relations_threshold:amicable
+			is_player = no
+			NOT = { has_variable = socrep_minor_dont_annex }
+		}
+			save_scope_as = socrep_annex_country
+			every_primary_culture = {
+			    save_scope_as = socrep_annex_cultures
+		    }
+		}
+	}
+
+	option = {
+		name = eur.1.a
+		default_option = yes
+		annex = scope:socrep_annex_country
+		add_primary_culture = scope:socrep_annex_cultures
+		ai_chance = {
+			base = 1
+		}
+	}
+	
+	option = {
+		name = eur.1.b
+		change_relations = {
+			country = scope:socrep_annex_country
+			value = 50
+		}
+		scope:socrep_annex_country = {
+			set_variable = {
+				name = socrep_minor_dont_annex
+				days = 1825
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+	option = {
+		name = eur.1.c
+		change_relations = {
+			country = scope:socrep_annex_country
+			value = 50
+		}
+		scope:socrep_annex_country = {
+			set_variable = {
+				name = socrep_minor_dont_annex
+				days = 1825
+			}			
+		}
+		custom_tooltip = {	
+			text = socrep_great_dont_annex_tt
+            }		
+			set_variable = {
+				name = socrep_great_dont_annex
+				days = 1825
+			}		
+		ai_chance = {
+			base = 0
+		}
+	}	
+}

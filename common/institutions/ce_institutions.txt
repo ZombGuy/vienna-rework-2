@@ -1,0 +1,13 @@
+﻿institution_economic_management = { 
+	icon = "gfx/interface/icons/institution_icons/economic_management.dds"
+	background_texture = "gfx/interface/illustrations/institutions/economic_management.dds"
+	modifier = {
+	}
+}
+
+institution_party_organization = {
+	icon = "gfx/interface/icons/institution_icons/party_organization.dds"
+	background_texture = "gfx/interface/illustrations/institutions/party_organization.dds"
+	modifier = {
+	}
+}

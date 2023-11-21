@@ -1,0 +1,113 @@
+﻿l_simp_chinese:
+
+ # Centralization Law-Group
+ lawgroup_centralization:0 "集中化"
+ lawgroup_centralization_desc:0 "国家权力是怎么在地方或中央间分配的"
+ 
+ institution_military_cantons:0 "军事管制"
+ institution_military_cantons_desc:0 "军队稳固权力的程度。"
+ modifier_country_institution_military_cantons_max_investment_add:0 "军事管制程度"
+ institution_unitary:0 "单一制政府"
+ institution_unitary_desc:0 "单一制下中央政府集中权力的程度"
+ modifier_country_institution_unitary_max_investment_add:0 "权力集中度"
+ institution_federation:0 "联邦政府"
+ institution_federation_desc:0 "联邦政府把权力分散至地方政府的程度"
+ modifier_country_institution_federation_max_investment_add:0 "联邦权力分散度"
+ institution_confederation:0 "自治邦联"
+ institution_confederation_desc:0 "邦联系统加强自治体权力的程度"
+ modifier_country_institution_confederation_max_investment_add:0 "地方赋权程度"
+  
+ law_informal_authority:0 "非正式权威"
+ law_informal_authority_desc:0 "国家首都对国家拥有名义上的权力，但其有效投射权力的能力仅限于首都的边界。该国其他地区的权力等级制度完全是非正式的，而是取决于统治者识别地方领导人的能力以及他们是否愿意配合他们的命令。"
+ law_feudalism:0 "封建制度"
+ law_feudalism_desc:0 "封建制度是一种权力下放的治理风格，其中特定的个人被确定为各省的土地所有者，所有这些土地所有者都对整个国家的国家元首怀有个人忠诚。封建主义是一种有点分散的模式，它导致了围绕贵族形成的强大的地方政府，并大大加强了土地所有者的政治权力。这允许采取更权威的行动，但民众会知道谁应对糟糕的生活质量负责。"
+ law_unitary:0 "单一制"
+ law_unitary_desc:0 "单一制国家是指国家的所有地区基本上都是一样的，几乎没有地区差异或具体代表性。统一国家往往非常强大，更有能力进行全面变革，但也更容易忽视特定的地区需求或代表性问题。"
+ law_military_cantons:0 "军区制"
+ law_military_cantons_desc:0 "地方上由军事管理部门组织，名义上隶属于中央国家。每个州根据自己的需要组织起来，同时促进对权力的服从。治理方式越是按照军事化来应对外部威胁，就不难发现内部威胁也是如此。同样，如果在这种治理模式下生活水平下降，当政府不能提供食物时，军队保护人民有什么用？"
+ law_federalism:0 "联邦制"
+ law_federalism_desc:0 "联邦制分散了中央政府的权力--通常利用区域代表制来代表每个州，允许他们经常利用剩余权力来执行内部政策。税收收入并不总是到达国库，因为税收资金往往在国家和州机构之间分配--以及由州提供的资金倡议和补助。分散的权力便于管理人口，各州政府可以照顾其内部商业。这种促进与市场的联系以及当地的基础设施，减轻了中央当局的负担。因此，在这种制度下，当地人往往会感到自己被赋予了权力，而不太愿意在州内寻求暴力变革。"
+ law_confederation:0 "邦联制"
+ law_confederation_desc:0 "联邦制是一种权力极度分散的制度，它不仅赋予地方区域对经济和政治政策的自主控制权，甚至还通过民兵组织享有一定程度的军事自主权。与联邦制相比，这可以说是一种夸张的权力分散--在这种制度下，各省在名义上团结在中央政府之下，建立联盟是很常见的。参加地方民兵组织可以确保社区感、安全感。"
+ 
+  
+ # Voting System Law-Group
+ law_first_past_the_post:0 "先到先得"
+ law_first_past_the_post_desc:0 "这种制度也被称为 "赢家通吃"（Winner Takes All），是指在地区分选举中赢得最多席位的单一候选人当选。它倾向于建立具有强大授权的单党政府，但很容易受到选区划分的影响。"
+ law_proportional_representation:0 "比例代表制"
+ law_proportional_representation_desc:0 "这种制度按照选票数量的比例分配议会席位。它倾向于建立多党联合政府，在这种情况下，妥协是完成任何事情的关键。"
+
+ # Urbanization Law-Group
+ lawgroup_urbanization:0 "城市计划与经济发展"
+ lawgroup_economic_system_desc:0 "国家进行城市规划的制度，以及城市和工业经济的发展。"
+
+ law_sprawl:0 "城市的无序扩张"
+ law_sprawl_desc:0 "古老的财产法和缺乏一致的城市管理相结合。简而言之，该州没有一个标准化的模式来进行城市规划和工业经济发展。这个社会对工业和城市的未来完全没有准备。结果是：这样的城市化导致了大片无序的贫民区和贫民窟，特别难以征税或组织。任何有计划的建设都完全是私人行为者的结果，而且只有在小业主能够自己管理的情况下才会有效。"
+ law_guild_system:0 "行会制度"
+ law_guild_system_desc:0 "行会制度是一种城市发展的方法，主要由富有的商人组织带头，而这些商人本身主要由老牌贵族赞助。因此，一个庞大的资本家阶层无法在这个系统中组织起来，社会流动在很大程度上被限制在中下层，因为行会以寡头垄断的方式关闭了任何即将到来的资本家。"
+ law_bourgeoisie_ownership:0 "资产阶级所有权"
+ law_bourgeoisie_ownership_desc:0 "一个现代的城市发展体系，城市规划只在名义上由国家官僚完成，资金主要来自资本主义捐助者。公司在很大程度上相互竞争，争夺以最低的成本在市场上提供最大数量的商品。国家对经济的管理既是资本主义阶级所不希望的，也是由于缺乏相互联系的系统和工具来管理经济而基本无效的，导致无法有效地补贴建筑。"
+ law_aristocratic_holdings:0 "贵族控股"
+ law_aristocratic_holdings_desc:0 "对工业经济的出现的反应--有产权的庄园和封建关系延伸到商业企业。所有工业经济都是由基于世袭权利和贵族身份的贵族阶层所拥有。商人行会从属于这些贵族家庭，并以他们的名义专营。"
+ law_religious_integralism:0 "宗教整合主义"
+ law_religious_integralism_desc:0 "一种宗教团体主义，将人类历史描述为物质主义和精神主义之间的斗争--因此也是人类精神与自然规律之间的斗争。与自由主义和社会主义相对立；整体主义提倡在宗教政策影响下的规范经济。"
+ law_dirigisme:0 "统制经济"
+ law_dirigisme_desc:0 "一种经济学说，其中国家对市场经济起着强有力的指导作用。统制经济与自由放任经济学相对立，强调国家干预对遏制市场失灵的重要性。统制经济经常利用指示性计划和国家指导的投资，以及使用市场工具来激励和管理市场实体以实现国家经济目标。"
+ law_market_socialism:0 "工人自我管理"
+ law_market_socialism_desc:0 "工人自我管理是一种城市发展体系，其中企业的所有员工都拥有该企业的股份，并在一定程度上分享红利。邻里之间通常从内部进行规划，城市服务由强大的工会提供，无论好坏。与典型的资产阶级政策相比，工人自我管理的经济政策往往导致经济增长缓慢，但许多工会联合起来，通过从一个非常大的团体中的每个人那里获得少量资金，为企业扩张投入资金。"
+ law_planned_economics:0 "计划经济"
+ law_planned_economics_desc:0 "在城市规划和工业发展方面，经济规划的特点是对市场和私营企业的极端限制。经济规划的成败主要取决于管理规划机构的远见和能力。在这种制度下，所有的企业在任何时候都会得到补贴，基本上不会给自己带来任何官方利润，尽管官僚们经常在成功的企业中得到很好的补偿。"
+ 
+ # Land Reform Law-Group
+ lawgroup_land_reform:0 "乡村发展与土地改革"
+ lawgroup_land_reform_desc:0 "该国农村、地方和农业地区的土地所有权的主导模式。"
+
+ law_unorganized_agriculture:0 "无组织的农村"
+ law_unorganized_agriculture_desc:0 "农村的财产法是一个模糊的混乱局面，最终使人几乎无法确定谁是农田的主人。农民们经常侵占对方的土地，私人田地与公共土地混杂在一起，而自然界往往会回收那些闲置的土地。"
+ law_titled_estates:0 "产权地产"
+ law_titled_estates_desc:0 "土地的分布基本上被束缚在由单个人拥有的大规模无序的综合体中，并以自给自足的方式而不是通过在市场上出售来转让。有产权的庄园让贵族们获得了大量自给自足的创收，但相对缺乏竞争和陈旧的商业惯例导致技术的采用较慢。没有受过教育的劳动力通常将他们的困境归咎于地方贵族，而不是国家政府。"
+ law_slave_economy:0 "奴隶制经济"
+ law_slave_economy_desc:0 "一种奇特的制度，其中生产主要由无报酬的劳动者完成，他们被迫在种植园里工作特别长和危险的时间，以产生更大的利润。这种经济中的种植园大亨通过其劳动力无法离开，甚至无法行使基本人权而获得独特的权力，使他们拥有自给自足而又经济强大的地位，他们主要利用这种权力来扩大和充实自己。"
+ law_sharecropping:0 "佃农耕作"
+ law_sharecropping_desc:0 "典型的佃农形式被称为分成制--资本主义投资者拥有土地的权利，并将这块土地提供给当地农民，以换取该农民产品的一定比例。虽然这种制度仍然是剥削性的，但小农可能通过这种安排获得财富，并偶尔利用它为自己和家人购买和开发新农田。资本家投资者经常利用这种制度，通过将负担转移到佃农身上来逃避税收。"
+ law_smallholders:0 "小农户"
+ law_smallholders_desc:0 "农场主要由拥有这些农场的人工作，这些小土地所有者的农民靠他们自己的劳动成果生存和死亡，卖掉多余的东西来支付更多的设备和扩张。小农经济是罕见的，主要存在于殖民社会或其他有很多未开发土地可供耕种的地方，或者在故意颁布土地改革法以确保土地保持小规模的社会。"
+ law_colonial_extraction:0 "粗放剥削"
+ law_colonial_extraction_desc:0 "一种农业生产体系，在这种体系中，当地人口完全被视为可有可无的，是生产尽可能多的原材料的一种手段。工资一直被压低，工作条件糟糕透顶，但这主要是为了有利于其他市场而不是自己的市场，而且投资也相当低。"
+ law_rural_communes:0 "农村公社"
+ law_rural_communes_desc:0 "农村土地被组织成合作式公社或全社会/社会集体所有制的制度。生产按照基于地方、区域和全社会需求的共同计划来发展。这可以根据其他改革，按照市场或计划系统运作。"
+
+ # Discreet Powers Law-Group
+ lawgroup_discreet_powers:0 "自由裁量权"
+ lawgroup_discreet_powers_desc:0 "国家元首（或总督/委员会）的自由裁量权"
+ institution_discreet_powers:0 "自由裁量权"
+ institution_discreet_powers_desc:0 "自由裁量权在名义上的法律程序中被推进和巩固的程度"
+ modifier_country_institution_discreet_powers_max_investment_add:0 "自由裁量权的巩固"
+ modifier_country_institution_discreet_powers_max_investment_add_desc:0 "自由裁量权在多大程度上得到了巩固和扩大"
+ 
+ law_no_reserve_powers:0 "没有自由裁量权"
+ law_no_reserve_powers_desc:0 "目前还没有将特殊的法律或法外的自由裁量权整合到行政部门。"
+ law_decree_powers:0 "政令和否决权"
+ law_decree_powers_desc:0 "这个国家的国家元首对他们的政令几乎没有法律障碍，在大多数时候有效地绕过了立法权。此外，他们扩大的否决权使他们成为一股不可忽视的力量，鼓励政府的其他部门让他们为所欲为，以免他们瘫痪所有活动。"
+ law_HOS_army:0 "准军事组织"
+ law_HOS_army_desc:0 "皇家卫队、共和国卫队、革命卫队：无论叫什么名字，这个国家的国家元首的仪仗队都不仅仅是一个私人保镖。这支部队是领导人的私人军队，他们既增强了正规的常备部队，又确保了异见者受到有力的阻挠。"
+
+ # Crime & Punishment Law-Group
+ #lawgroup_crime:0 "Crime & Punishment"
+ #lawgroup_crime_desc:0 ""
+ 
+ #law_traditional_law:0 "Traditional Law"
+ #law_traditional_law_desc:0 ""
+ #law_elitist_law:0 "Elitist Legal System"
+ #law_elitist_law_desc:0 ""
+ #law_local_law:0 "Local Law"
+ #law_local_law_desc:0 ""
+ #law_liberal_law:0 "Liberal Law"
+ #law_liberal_law_desc:0 ""
+ #law_draconian_law:0 "Draconian Law"
+ #law_draconian_law_desc:0 ""
+ 
+ 
+ 
+ 
+ #

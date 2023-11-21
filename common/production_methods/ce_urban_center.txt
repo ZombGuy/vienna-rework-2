@@ -1,0 +1,182 @@
+﻿pm_state_urban_clergy = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+	
+	disallowing_laws = {
+		law_total_separation
+		law_state_atheism
+	}	
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 200
+		}		
+		
+		unscaled = {
+			building_clergymen_shares_add = 10
+		}
+	}			
+}	
+
+pm_free_urban_clergy = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
+	
+	disallowing_laws = {
+		law_state_religion
+		law_state_atheism
+	}	
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 50
+			building_employment_clergymen_add = 150
+		}	
+
+		unscaled = {
+			building_clergymen_shares_add = 2
+		}		
+	}			
+}
+
+pm_cultural_palace = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
+	
+	unlocking_laws = {
+		law_state_atheism
+	}	
+	
+	state_modifiers = {
+		workforce_scaled = { 
+			state_pop_qualifications_mult = 0.01
+		}	
+	}	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 10													
+		}	
+	
+		level_scaled = {
+			building_employment_academics_add = 50
+			building_employment_clerks_add = 150
+		}	
+
+		unscaled = {
+			building_academics_shares_add = 5
+			building_clerks_shares_add = 2
+		}		
+	}			
+}			
+
+pm_publicly_traded_building_power_plant = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+        law_communal_principle		
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 150
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+	    }
+    }
+}
+
+pm_traditional_patronage = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+        law_communal_principle	
+	}
+
+	building_modifiers = {		
+		level_scaled = {
+			building_employment_aristocrats_add = 150
+			building_employment_academics_add = 850
+		}		
+
+		unscaled = {
+			building_aristocrats_shares_add = 10
+			building_academics_shares_add = 2
+		}
+	}
+}
+
+pm_bourgeoisie_patronage = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+
+	unlocking_technologies = {
+		realism
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+        law_communal_principle	
+	}
+
+	building_modifiers = {		
+		level_scaled = {
+			building_employment_capitalists_add = 100
+			building_employment_aristocrats_add = 50
+			building_employment_academics_add = 850
+		}		
+
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_aristocrats_shares_add = 10
+			building_academics_shares_add = 2
+		}
+	}
+}
+
+pm_independent_artists = {
+	texture = "gfx/interface/icons/production_method_icons/independent_artists.dds"
+
+	unlocking_technologies = {
+		realism
+	}
+
+	building_modifiers = {		
+		level_scaled = {
+			building_employment_academics_add = 1000
+		}		
+
+		unscaled = {
+			building_academics_shares_add = 10
+			building_clerks_shares_add = 2
+		}
+	}
+}
+pm_publicly_traded_building_power_plant = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+		law_communal_principle		
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 150
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}

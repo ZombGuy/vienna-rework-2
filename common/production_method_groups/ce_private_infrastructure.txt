@@ -1,0 +1,10 @@
+﻿pmg_ownership_capital_building_railway = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_building_railway
+		pm_publicly_traded_building_railway
+		pm_government_run_building_railway
+		pm_worker_cooperative_building_railway
+		pm_communal_management_building_railway
+	}
+}

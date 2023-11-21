@@ -1,0 +1,68 @@
+﻿l_simp_chinese:
+  
+  # Honk's Subsistence Farming | pm_sharecropping & pm_smallholders
+  pm_sharecropping_building_subsistence:0 "租佃农业"
+  pm_smallholders_building_subsistence:0 "小农土地"
+ 
+ # Communal Management | pm_communal_management
+ pm_communal_management_building_charcoal_burner:0 "工人委员会"
+ pm_communal_management_building_fish_farm:0 "工人委员会"
+
+ # Dirigisme | pm_dirigisme
+ pm_dirigisme:0 "国家指导"
+ pm_dirigisme_building_food_industry:0 "国家指导"
+ pm_dirigisme_building_textile_mills:0 "国家指导"
+ pm_dirigisme_building_furniture_manufacturies:0 "国家指导"
+ pm_dirigisme_building_building_glassworks:0 "国家指导"
+ pm_dirigisme_building_tooling_workshops:0 "国家指导"
+ pm_dirigisme_building_paper_mills:0 "国家指导"
+ pm_dirigisme_industry:0 "国家指导"
+ pm_dirigisme_building_shipyards:0 "国家指导"
+ pm_dirigisme_building_arms_industry:0 "国家指导"
+ pm_dirigisme_building_coal_mine:0 "国家指导"
+ pm_dirigisme_building_iron_mine:0 "国家指导"
+ pm_dirigisme_building_lead_mine:0 "国家指导"
+ pm_dirigisme_building_sulfur_mine:0 "国家指导"
+ pm_dirigisme_building_gold_mine:0 "国家指导"
+ pm_dirigisme_building_logging_camp:0 "国家指导"
+ pm_dirigisme_building_fishing_wharf:0 "国家指导"
+ pm_dirigisme_building_whaling_station:0 "国家指导"
+ pm_dirigisme_building_railway:0 "国家指导"
+ pm_dirigisme_building_charcoal_burner:0 "国家指导"
+ pm_dirigisme_management_building_fish_farm:0 "国家指导"
+ 
+ # Technocratic Oversight | pm_technocratic
+ pm_technocratic_dirigisme_mines:0 "技术官僚管理"
+ pm_technocratic_dirigisme_logging_camp:0 "技术官僚管理"
+ pm_technocratic_dirigisme_marine:0 "技术官僚管理"
+ pm_technocratic_dirigisme_heavy_industry:0 "技术官僚管理"
+ pm_technocratic_dirigisme_light_industry:0 "技术官僚管理"
+ pm_technocratic_dirigisme_military_industry:0 "技术官僚管理"
+ 
+ # Religious Integralism | pm_integralism
+ pm_integralism:0 "宗教监督"
+ pm_integralism_urban:0 "宗教监督"
+ pm_integralism_rural:0 "宗教监督"
+ pm_integralism_industry:0 "宗教监督"
+ pm_integralism_building_railway:0 "宗教监督"
+ 
+ # 贵族所有 | pm_aristocratic
+ pm_aristocratic:0 "贵族所有"
+ pm_aristocratic_urban:0 "贵族所有"
+ pm_aristocratic_rural:0 "贵族所有"
+ pm_aristocratic_industry:0 "贵族所有"
+ pm_aristocratic_building_railway:0 "贵族所有"
+ 
+ # Military Canton | pm_military_canton
+ pm_military_canton:0 "军事行政"
+ # pm_military_canton_irregular:0 "Military Canton - Irregular Garrison"
+ # pm_military_canton_line:0 "Military Canton - Line Garrison"
+ # pm_military_canton_skirmish:0 "Military Canton - Skirmish Garrison"
+ # pm_military_canton_trench:0 "Military Canton - Trench Garrison" 
+ 
+ # Generic Industry | pm_industry
+ pm_merchant_guilds_industry:0 "商人行会"
+ pm_publicly_traded_industry:0 "公开交易"
+ pmg_ownership_capital_generic_industry:0 "所有制"
+  
+ #

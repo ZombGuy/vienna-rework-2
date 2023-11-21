@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+
+#Council Republics
+ gov_council_commissariat:1 "委员会专员"
+ gov_council_commissariat_desc:2 这是一种[concept_country]由有着[GetLawType('law_decree_powers').GetName]特别权力的，按照[GetLawType('law_appointed_bureaucrats').GetName]原则产生的[Concept('concept_ruler','$RULER_COMMISSAR$')]治理的[Concept('concept_government_type','$PROV_GOVT_TYPE$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+
+# Titles
+ RULER_COMMISSAR:0 "专员"
+
+# MISC
+ PROV_GOVT_TYPE:0 "临时政府"
+ 
+ #

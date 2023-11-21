@@ -1,0 +1,69 @@
+﻿l_simp_chinese:
+# Economic System group
+ law_communal_principle:0 "工人民主计划"
+ law_communal_principle_desc:0 "由劳动者直接选举产生的工人委员会、工会等组织管理的计划经济，其中地方自治机构起到很大作用。"
+ 
+ law_command_economy:0 "指令经济"
+ law_command_economy_desc:0 "政府直接管理生产的大部分方面的内向型干预经济。"
+ 
+ law_one_party_leadership:0 "一党专政"
+ law_one_party_leadership_desc:0 "由唯一而无所不能的强大意识形态集团取代一般官僚机构进行治理。"
+ 
+ law_mass_democracy:0 "群众性大民主"
+ law_mass_democracy_desc:0 "通过广泛存在的政治自由，以及工会等群众组织，劳动者在先锋队领导下直接参加国家管理。"
+ 
+ commierev.1.t:0 "社会主义革命的爆发"
+ commierev.1.desc:0 "在我国，革命内战已经爆发，而如今政治上日益强大的劳动者群众已经明确地表达了自己的态度：建立社会主义！"
+ commierev.1.f:0 "在还没有民主选举的机关的地方和在军队中，全部政权应当完全转归地方委员会和它们选出的委员，或者转归必须由选举产生的其他机关。在国家的全力支持下，应当把工人和革命军队，即经实际证明能够镇压反革命分子的军队，无条件地和普遍地武装起来。"
+ commierev.1.a:0 "一切政权归委员会！"
+ commierev.1.b:0 "工人阶级的先锋队将会引领这次革命"
+ commierev.1.c:0 "安那其妈妈与我们同在"
+ 
+ commierev.2.t:0 "工人阶级要求革命"
+ commierev.2.desc:0 "我国已经处于内战状态，而参加革命的无产阶级群众越发激进，他们开始要求进一步的革命。"
+ commierev.2.f:0 "只要我们还是少数，我们就要进行批评，揭示错误，同时宣传全部国家政权归工人代表委员会的必要性，使群众从实际经验中纠正自己的错误。"
+ commierev.2.a:0 "我们的前途是坚持党对一切工作的绝对领导"
+ commierev.2.b:0 "我们的前途是共产主义"
+ commierev.2.c:0 "我们的前途是无治主义"
+
+ #gov_council_dictatorship:1 "社会主义专政"
+ #gov_council_dictatorship_desc:1 "这种[concept_government]体制下，[concept_country]由党内选举产生的中央领导层代表劳动群众进行统治。"
+ #gov_soviet_dictatorship:1 "苏维埃专政"
+ #gov_soviet_dictatorship_desc:1 "这种[concept_government]体制下，[concept_country]由布尔什维克党领导下的苏维埃代表会议统治。"
+ #gov_peoples_commune:0 "人民公社"
+ #gov_peoples_commune_desc:1 "这种[concept_government]体制与其他社会主义政体相似，[concept_country]由工人[Concept('concept_election','$concept_elected$')]产生的公社委员会进行统治，但与此同时劳动者群体直接参加国家和社会管理的程度更深。"
+ 
+ dp_spread_revolution:0 "输出社会主义革命"
+ dp_spread_revolution_tooltip:1 "#header 发起一场$dp_spread_revolution$[concept_diplomatic_play]#!\n$TOOLTIP_DELIMITER$\n$dp_spread_revolution_desc$"
+ dp_spread_revolution_desc:0 "设置初始[concept_war_goal]，以共产主义世界革命之名吞并资产阶级和其他反动分子的国家政权。"
+ 
+ ai_strategy_five_years_plan:0 "五年计划"
+ ai_strategy_five_years_plan_desc:0 "[COUNTRY.GetName]展开了大规模的建设计划，希望迅速提高自身的工业产能，以期实现共产主义。"
+ ai_strategy_one_state_socialism:0 "一国社会主义"
+ ai_strategy_one_state_socialism_desc:0 "[COUNTRY.GetName]认为当前进入了世界革命的低潮期，所以把更多精力放在内部建设上。"
+ ai_strategy_world_revolution:0 "世界革命"
+ ai_strategy_world_revolution_desc:0 "[COUNTRY.GetName]认为世界革命的浪潮已经到来，希望大规模扩充军备以推行国际主义。"
+ 
+ institution_economic_management:0 "经济管理"
+ institution_economic_management_desc:0 "对经济进行宏观调控与计划指导。"
+ modifier_country_institution_economic_management_max_investment_add:0 "最大$institution_economic_management$[concept_institution]投入等级"
+ modifier_country_institution_economic_management_max_investment_add_desc:0 "对$institution_economic_management$[concept_institution]最大投入等级的增益或惩罚"
+ 
+ #custom_iem_industial_council:0 "生产者代表会议"
+ #custom_iem_department_of_economy:0 "经济部"
+ #custom_iem_commission_of_planning:0 "计划经济委员会"
+ #custom_ipo_mass_association:0 "群众组织"
+ #custom_iem_party_organization:0 "党务机关"
+
+ institution_party_organization:0 "党政机关"
+ institution_party_organization_desc:0 "影响群众，扩大政治宣传。"
+ modifier_country_institution_party_organization_max_investment_add:0 "最大$institution_party_organization$[concept_institution]投入等级"
+ modifier_country_institution_party_organization_max_investment_add_desc:0 "对$institution_party_organization$[concept_institution]最大投入等级的增益或惩罚"
+ 
+ communist_welfare_mod:0 "五年计划成功"
+ 
+ party_communist_all_union:0 "全联盟共产党"
+ 
+ RULER_TITLE_SUPREME_LEADER:0 "元首"
+ 
+ 

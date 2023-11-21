@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+#生产方式
+ pm_communal_management_building_military_shipyards:0 "工人委员会" 
+ pm_communal_management_building_artillery_foundries:0 "工人委员会" 
+ 
+ #政党
+ party_spdS:0 "斯巴达克同盟"
+ party_sad:0 "德国社会主义工人党"
+ party_adav:0 "全德工人联合会"
+ party_TUC:0 "工会联盟"
+ party_KPSS:0 "苏联共产党"
+ mass_association_spartacusbund:0 "革命工长组织"
+ 
+ 
+ #事件
+ eur.1.c:0 "最近联盟不要接受新加盟共和国"
+ socrep_great_dont_annex_tt:0 "五年之内将不会出现这种事件"
+ ct_establish_soc:0 "政府已经人民民主化了"

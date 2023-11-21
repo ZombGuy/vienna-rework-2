@@ -1,0 +1,29 @@
+﻿# For on_actions launched by the code itself.
+
+# Root = Country
+on_monthly_pulse_country = {
+	events = {
+		commierev.1
+		commierev.2	
+		commierev.3
+        ce_ca.1
+        ce_ca.8		
+		eur.1
+		commierev.7
+	}
+}
+
+on_five_year_pulse_country = {
+	events = {
+		commierev.4
+	}
+}
+
+on_yearly_pulse_country = {
+	random_events = {
+		300 = 0
+		30 = commierev.5
+		30 = commierev.6
+		}
+	}
+

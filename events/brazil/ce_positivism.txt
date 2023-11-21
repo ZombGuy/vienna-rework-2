@@ -1,0 +1,104 @@
+﻿namespace = positivism
+
+positivism_pulse.2 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	#dlc = dlc008
+
+	title = positivism_pulse.2.t
+	desc = positivism_pulse.2.d
+	flavor = positivism_pulse.2.f
+
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	cooldown = { months = long_modifier_time }
+
+	trigger = {
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+	}
+	
+	immediate = {
+		ig:ig_armed_forces = {
+			save_scope_as = armed_forces_ig
+			leader = {
+				save_scope_as = armed_forces_leader
+			}
+		}
+	}
+	
+	option = {
+		name = positivism_pulse.2.a 
+		default_option = yes
+		custom_tooltip = {
+			text = positivists_advance_5
+			change_variable = { name = positivism_progress_var add = 5 }
+		}
+		add_modifier = {
+			name = modifier_positivism_mil_reformism
+			months = normal_modifier_time
+		}
+	}
+
+	option = {
+		name = positivism_pulse.2.b
+		custom_tooltip = {
+			text = military_academy_positivist_tt
+			set_variable = military_academy_positivists
+		}
+		add_modifier = {
+			name = modifier_positivism_mil_influence
+			months = normal_modifier_time
+		}
+		custom_tooltip = {
+			text = positivists_advance_10
+			change_variable = { name = positivism_progress_var add = 10 }
+		}
+	}
+	
+	option = {
+		name = positivism_pulse.2.c
+		trigger = {
+			scope:armed_forces_leader = {
+				NOR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist				
+					has_ideology = ideology:ideology_left_communism
+					has_ideology = ideology:ideology_technocratic_socialism						
+					has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_ethno_nationalist
+					has_ideology = ideology:ideology_traditionalist
+					has_ideology = ideology:ideology_theocrat
+					has_ideology = ideology:ideology_royalist
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_luddite
+				}
+			}
+		}
+		scope:armed_forces_leader = {
+			set_ideology = ideology:ideology_positivist
+		}
+		add_modifier = {
+			name = modifier_positivism_mil_influence
+			months = normal_modifier_time
+		}
+		custom_tooltip = {
+			text = military_academy_positivist_tt
+			set_variable = military_academy_positivists
+		}
+		custom_tooltip = {
+			text = positivists_advance_20
+			change_variable = { name = positivism_progress_var add = 20 }
+		}
+	}
+}

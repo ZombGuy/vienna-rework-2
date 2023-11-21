@@ -1,0 +1,5 @@
+colors = {	
+	COMMIE_red	=	rgb { 1 0 0 }
+	red_china	=	rgb { 1 0.105 0.070 }
+	communist_china_red	=	rgb { 1 0.06 0.19 }
+} 
