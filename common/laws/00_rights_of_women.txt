@@ -288,7 +288,9 @@ law_womens_suffrage = {
 		law_wealth_voting
 		law_universal_suffrage
 		law_single_party_state
-		law_anarchy
+		law_technocracy
+		law_mass_democracy
+		law_anarchy		
 	}
 	
 	on_enact = {
@@ -327,7 +329,7 @@ law_womens_suffrage = {
 				value = 0.1
 			}
 		}
-	}
+	}	
 
 	on_impose = { 
 			
