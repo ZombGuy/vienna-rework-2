@@ -22,9 +22,11 @@
 		law_anarchy = strongly_disapprove
 		law_single_party_state = disapprove
 		law_technocracy = strongly_disapprove
+		law_mass_democracy = strongly_disapprove			
 	}
 
 	lawgroup_economic_system = {	
+		law_communal_principle = strongly_disapprove
 		law_laissez_faire = strongly_approve
 		law_interventionism = neutral
 		law_agrarianism = disapprove
@@ -192,6 +194,7 @@ ideology_legitimist = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_mass_democracy = strongly_disapprove			
 	}
 
 	lawgroup_church_and_state = {
@@ -327,6 +330,7 @@ ideology_bonapartist = {
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
 		law_ecclesiarchy = strongly_disapprove
+		law_mass_democracy = strongly_disapprove			
 	}
 
 	lawgroup_army_model = {
@@ -344,6 +348,7 @@ ideology_bonapartist = {
 		law_traditionalism = disapprove	
 		law_cooperative_ownership = strongly_disapprove	
 		law_command_economy = strongly_disapprove
+		law_communal_principle = strongly_disapprove		
 	}
 
 

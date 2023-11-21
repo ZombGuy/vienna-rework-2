@@ -53,6 +53,7 @@ ideology_modernizer = {
 
 	lawgroup_economic_system = {
 		law_cooperative_ownership = disapprove
+		law_communal_principle = neutral	
 		law_command_economy = neutral
 		law_interventionism = approve
 		law_agrarianism = disapprove
