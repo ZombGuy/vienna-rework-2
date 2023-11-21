@@ -207,7 +207,7 @@ STATES = {
 	s:STATE_POMERANIA = {
 		create_state = {
 			country = c:PRU
-			owned_provinces = { xA9BD82 x8C6982 x19AE19 x3C26DD x6A53CF xA04121 xE1A03A x567452 x86E6F2 xCDEAE4 xA0C020 xD4C37D x8D1E12 xEF5730 x8001A0 x89A2A9 }
+			owned_provinces = { xA9BD82 x8C6982 x19AE19 x3C26DD x6A53CF x86E6F2 xCDEAE4 xA0C020 xD4C37D x8D1E12 xEF5730 x8001A0 x89A2A9 xB90BFF x28CEC2 xF77289 x514C51 x0180A0 x3E3572 }
 		}
 		
 		add_homeland = cu:north_german
@@ -6978,7 +6978,7 @@ STATES = {
 	s:STATE_WEST_PRUSSIA = {
 		create_state = {
 			country = c:PRU
-			owned_provinces = { xBAF66D x178C99 x611F2F x945000 x3E3572 x0180A0 x7CB839 x80A0A0 x7A6061 x6E8875 x41A021 x374AC3 x55FD02 }
+			owned_provinces = { xBAF66D x178C99 x611F2F x945000 x7CB839 x80A0A0 x7A6061 x6E8875 x41A021 x374AC3 x55FD02 }
 		}
 		
 		add_homeland = cu:north_german
@@ -7034,7 +7034,7 @@ STATES = {
 	s:STATE_BRANDENBURG = {
 		create_state = {
 			country = c:PRU
-			owned_provinces = { xA65DA6 x83B1A8 x9B9076 xA040A0 x069CFB xF8D457 x61C0A0 x82F9A8 x9E7304 x76EF4E xDF4020 x28CEC2 xB90BFF x514C51 xF77289 x60BF20 }
+			owned_provinces = { xA65DA6 x83B1A8 x9B9076 xA040A0 x069CFB xF8D457 x61C0A0 x82F9A8 x9E7304 x76EF4E xDF4020 x60BF20 }
 		}
 		
 		add_homeland = cu:north_german
@@ -7266,6 +7266,10 @@ STATES = {
 			country = c:MST
 			owned_provinces = { xE041A0 xD9A469 }
 		}		
+		create_state = { 
+			country = c:PRU
+			owned_provinces = { xA04121 xE1A03A x567452 }
+		}	
 		
 		add_homeland = cu:north_german
 	}
