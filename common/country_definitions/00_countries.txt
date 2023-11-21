@@ -213,7 +213,7 @@ KUK = {
 	
 	country_type = recognized
 
-	tier = empire
+	tier = hegemony
 	
 	capital = STATE_CENTRAL_HUNGARY
 	cultures = { hungarian romanian croat czech slovak slovene }
