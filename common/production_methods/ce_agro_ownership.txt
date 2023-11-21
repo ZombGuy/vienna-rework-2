@@ -4,6 +4,7 @@
 	unlocking_laws = {
 		law_serfdom
 		law_tenant_farmers
+		law_titled_estates
 	}
 
 	disallowing_laws = {
@@ -29,16 +30,12 @@ pm_publicly_traded = {
 	
 	unlocking_laws = {
 		law_commercialized_agriculture
-	}	
+	}
 	
 	disallowing_laws = {
 		law_command_economy
         law_communal_principle
 		law_cooperative_ownership
-	}
-
-	unlocking_technologies = {
-		mutual_funds
 	}
 
 	building_modifiers = {
@@ -54,13 +51,14 @@ pm_publicly_traded = {
 		}
 	}
 }
+
 pm_homesteading = {
 	texture = "gfx/interface/icons/production_method_icons/homesteading.dds" 
 
 	unlocking_laws = {
 		law_homesteading
 	}
-	
+
 	building_modifiers = {
 		level_scaled = {
 			building_employment_aristocrats_add = 50
@@ -68,8 +66,8 @@ pm_homesteading = {
 		}
 		unscaled = {
 			building_aristocrats_shares_add = 10
+			building_farmers_shares_add = 3
 			building_clergymen_shares_add = 1
-			building_farmers_shares_add = 2
 		}
 	}
 }
@@ -78,18 +76,19 @@ pm_government_run = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	
 	unlocking_laws = {
+		law_command_economy
 		law_collectivized_agriculture
 	}
 	
 	disallowing_laws = {
-        law_communal_principle
 		law_cooperative_ownership
-	}	
+		law_agrarianism
+		law_interventionism
+  }
 	
 	building_modifiers = {
 		level_scaled = {
 			building_employment_bureaucrats_add = 150
-			building_employment_clergymen_add = -300
 		}
 		unscaled = {
 			building_government_shares_add = 1
@@ -101,18 +100,16 @@ pm_worker_cooperative_farm = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 
 	unlocking_laws = {
+		law_cooperative_ownership
 		law_collectivized_agriculture
 	}
 	
 	disallowing_laws = {
 		law_command_economy
-        law_communal_principle
-	}	
+		law_communal_principle
+  }
 
 	building_modifiers = {
-		level_scaled = {
-			building_employment_clergymen_add = -300
-		}	
 		unscaled = {
 			building_workforce_shares_add = 1 
 		}
@@ -123,18 +120,10 @@ pm_communal_management_farm = {
 	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
 
 	unlocking_laws = {
-		law_collectivized_agriculture
+        law_communal_principle
 	}
-	
-	disallowing_laws = {
-		law_command_economy
-		law_cooperative_ownership		
-	}	
 
 	building_modifiers = {
-		level_scaled = {
-			building_employment_clergymen_add = -300
-		}		
 		unscaled = {
 			building_workforce_shares_add = 9 
 			building_government_shares_add = 1			

@@ -14,10 +14,9 @@ pm_government_run_plantation = {
 	building_modifiers = {
 		level_scaled = {
 			building_employment_bureaucrats_add = 150
-			building_employment_clergymen_add = -100			
 		}
 		unscaled = {
-			building_government_shares_add = 1	
+			building_bureaucrats_shares_add = 5
 		}
 	}
 }
@@ -57,9 +56,6 @@ pm_communal_management_plantation = {
 	}	
 
 	building_modifiers = {
-		level_scaled = {
-			building_employment_clergymen_add = -100			
-		}	
 		unscaled = {
 			building_workforce_shares_add = 9 
 			building_government_shares_add = 1				

@@ -1,8 +1,9 @@
 ﻿pm_merchant_guilds_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
 
-	unlocking_production_methods = {
-		pm_simple_forestry
+	unlocking_laws = {
+		law_sprawl
+		law_guild_system
 	}
 
 	disallowing_laws = {
@@ -24,6 +25,11 @@
 
 pm_privately_owned_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+
+	unlocking_laws = {
+		law_sprawl
+		law_bourgeoisie_ownership
+	}
 
 	unlocking_production_methods = {
 		pm_saw_mills
@@ -50,6 +56,10 @@ pm_privately_owned_building_logging_camp = {
 pm_publicly_traded_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
 
+	unlocking_laws = {
+		law_bourgeoisie_ownership
+	}
+
 	unlocking_production_methods = {
 		pm_saw_mills
 		pm_electric_saw_mills
@@ -59,7 +69,6 @@ pm_publicly_traded_building_logging_camp = {
 		law_command_economy
         law_communal_principle
 		law_cooperative_ownership
-
 	}
 
 	unlocking_technologies = {
@@ -78,8 +87,10 @@ pm_publicly_traded_building_logging_camp = {
 
 pm_government_run_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+	
 	unlocking_laws = {
 		law_command_economy
+		law_planned_economics
 	}
 	
 	building_modifiers = {
@@ -95,16 +106,16 @@ pm_government_run_building_logging_camp = {
 pm_worker_cooperative_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 
-	unlocking_production_methods = {
-		pm_saw_mills
-		pm_electric_saw_mills
-	}
-
 	unlocking_laws = {
 		law_cooperative_ownership
+		law_market_socialism
 	}
 
 	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 100
+			building_employment_machinists_add = 100
+		}
 		unscaled = {
 			building_workforce_shares_add = 1
 
@@ -115,16 +126,15 @@ pm_worker_cooperative_building_logging_camp = {
 pm_communal_management_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
 
-	unlocking_production_methods = {
-		pm_saw_mills
-		pm_electric_saw_mills
-	}
-
 	unlocking_laws = {
         law_communal_principle
 	}
 
-	building_modifiers = {	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 50
+			building_employment_machinists_add = 50
+		}	
 		unscaled = {
 			building_workforce_shares_add = 9 
 			building_government_shares_add = 1			
@@ -135,9 +145,9 @@ pm_communal_management_building_logging_camp = {
 pm_merchant_guilds_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
 
-	unlocking_production_methods = {
-		pm_simple_fishing
-		pm_fishing_trawlers
+	unlocking_laws = {
+		law_sprawl
+		law_guild_system
 	}
 
 	disallowing_laws = {
@@ -160,9 +170,13 @@ pm_merchant_guilds_building_fishing_wharf = {
 pm_privately_owned_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 
+	unlocking_laws = {
+		law_sprawl
+		law_bourgeoisie_ownership
+	}
+
 	unlocking_production_methods = {				
 		pm_fishing_trawlers
-		pm_steam_trawlers
 	}
 
 	disallowing_laws = {
@@ -184,6 +198,10 @@ pm_privately_owned_building_fishing_wharf = {
 
 pm_publicly_traded_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+
+	unlocking_laws = {
+		law_bourgeoisie_ownership
+	}
 
 	disallowing_laws = {
 		law_command_economy
@@ -209,9 +227,9 @@ pm_publicly_traded_building_fishing_wharf = {
 pm_government_run_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 
-	
 	unlocking_laws = {
 		law_command_economy
+		law_planned_economics
 	}
 	
 	building_modifiers = {
@@ -227,15 +245,16 @@ pm_government_run_building_fishing_wharf = {
 pm_worker_cooperative_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 
-	unlocking_production_methods = {
-		pm_steam_trawlers
-	}
-
 	unlocking_laws = {
 		law_cooperative_ownership
+		law_market_socialism
 	}
 
 	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 100
+			building_employment_machinists_add = 100
+		}
 		unscaled = {
 			building_workforce_shares_add = 1
 
@@ -246,15 +265,15 @@ pm_worker_cooperative_building_fishing_wharf = {
 pm_communal_management_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
 
-	unlocking_production_methods = {
-		pm_steam_trawlers
-	}
-
 	unlocking_laws = {
         law_communal_principle
 	}
 
-	building_modifiers = {	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 50
+			building_employment_machinists_add = 50
+		}	
 		unscaled = {
 			building_workforce_shares_add = 9 
 			building_government_shares_add = 1			
@@ -265,8 +284,9 @@ pm_communal_management_building_fishing_wharf = {
 pm_merchant_guilds_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
 
-	unlocking_production_methods = {
-		pm_wooden_whaling_ships
+	unlocking_laws = {
+		law_sprawl
+		law_guild_system
 	}
 
 	disallowing_laws = {
@@ -288,6 +308,11 @@ pm_merchant_guilds_building_whaling_station = {
 
 pm_privately_owned_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	
+	unlocking_laws = {
+		law_sprawl
+		law_bourgeoisie_ownership
+	}
 	
 	unlocking_production_methods = {
 		pm_wooden_whaling_ships
@@ -312,7 +337,12 @@ pm_privately_owned_building_whaling_station = {
 }
 
 pm_publicly_traded_building_whaling_station = {
-	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"				
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"		
+
+	unlocking_laws = {
+		law_bourgeoisie_ownership
+	}
+	
 	unlocking_production_methods = {
 		pm_wooden_whaling_ships
 		pm_steam_whaling_ships
@@ -342,9 +372,9 @@ pm_publicly_traded_building_whaling_station = {
 pm_government_run_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 
-
 	unlocking_laws = {
 		law_command_economy
+		law_planned_economics
 	}
 	
 	building_modifiers = {
@@ -360,15 +390,16 @@ pm_government_run_building_whaling_station = {
 pm_worker_cooperative_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 
-	unlocking_production_methods = {
-		pm_steam_whaling_ships
-	}
-
 	unlocking_laws = {
 		law_cooperative_ownership
+		law_market_socialism
 	}
 
 	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 100
+			building_employment_machinists_add = 100
+		}
 		unscaled = {
 			building_workforce_shares_add = 1
 
@@ -379,15 +410,15 @@ pm_worker_cooperative_building_whaling_station = {
 pm_communal_management_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/communal_management.dds"
 
-	unlocking_production_methods = {
-		pm_steam_whaling_ships
-	}
-
 	unlocking_laws = {
         law_communal_principle
 	}
 
 	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 50
+			building_employment_machinists_add = 50
+		}	
 		unscaled = {
 			building_workforce_shares_add = 9 
 			building_government_shares_add = 1			
@@ -398,10 +429,16 @@ pm_communal_management_building_whaling_station = {
 pm_publicly_traded_building_oil_rig = {
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
 	
+	unlocking_laws = {
+		law_bourgeoisie_ownership
+	}
+	
 	disallowing_laws = {
 		law_command_economy
         law_communal_principle
 		law_cooperative_ownership
+		law_market_socialism
+		law_planned_economics
 
 	}
 

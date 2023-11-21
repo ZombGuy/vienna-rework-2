@@ -12,6 +12,7 @@
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -62,6 +63,14 @@ ideology_traditionalist = {
 		law_state_atheism = strongly_disapprove		
 	}
 	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = approve
+		law_elitist_system = neutral
+		law_local_law = neutral
+		law_liberal_system = disapprove
+		law_authoritarian_system = disapprove
+	}
+	
 	possible = {
 		# Agitatos should have an ideology at odds with current laws
 		NAND = {
@@ -88,6 +97,7 @@ ideology_traditionalist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_ethno_nationalism
 			}
@@ -126,18 +136,6 @@ ideology_traditionalist = {
 			}
 			add = 50
 		}
-		# More likely under Alexander III
-		if = {
-			limit = {
-				owner = {
-					any_scope_character = {
-						has_template = RUS_alexander_iii
-						is_ruler = yes
-					}
-				}
-			}
-			add = 75
-		}
 	}
 }
 
@@ -159,6 +157,16 @@ ideology_atheist = {
 		law_freedom_of_conscience = disapprove
 		law_total_separation = approve
 		law_state_atheism = strongly_approve	
+	}
+	
+	lawgroup_urbanization = {	
+		law_market_socialism = neutral
+		law_planned_economics = neutral
+		law_dirigisme = neutral
+		law_guild_system = neutral	
+		law_bourgeoisie_ownership = neutral	
+		law_aristocratic_holdings = neutral
+		law_religious_integralism = strongly_disapprove	
 	}
 	
 	possible = {
@@ -199,6 +207,7 @@ ideology_atheist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -265,11 +274,27 @@ ideology_republican_leader = {
 		law_theocracy = disapprove
 	}
 	
+	lawgroup_centralization = {		
+		law_unitary = neutral
+		law_federalism = neutral
+		law_confederation = neutral
+		law_military_cantons = neutral
+		law_feudalism = strongly_disapprove
+	}
+	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
 		law_communal_adminstration = neutral
+	}
+	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = disapprove
+		law_elitist_system = disapprove
+		law_local_law = approve
+		law_liberal_system = strongly_approve
+		law_authoritarian_system = strongly_disapprove
 	}
 	
 	possible = {
@@ -305,6 +330,7 @@ ideology_republican_leader = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -348,15 +374,6 @@ ideology_republican_leader = {
 			}
 			add = 50
 		}
-		# Pedro JE victory
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = -50
-		}
 	}
 }
 
@@ -365,6 +382,14 @@ ideology_radical = {
 	
 	character_ideology = yes
 	
+	lawgroup_centralization = {		
+		law_confederation = strongly_approve
+		law_federalism = strongly_approve
+		law_unitary = disapprove
+		law_feudalism = strongly_disapprove
+		law_military_cantons = strongly_disapprove
+	}
+	
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
 		law_theocracy = strongly_disapprove
@@ -372,6 +397,7 @@ ideology_radical = {
 		law_presidential_republic = approve
 		law_parliamentary_republic = approve
 	}
+	
 	lawgroup_distribution_of_power = {
 		law_mass_democracy = approve	
 		law_universal_suffrage = strongly_approve
@@ -404,6 +430,20 @@ ideology_radical = {
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
 		law_communal_adminstration = neutral
+	}
+	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = disapprove
+		law_elitist_system = strongly_disapprove
+		law_local_law = disapprove
+		law_liberal_system = strongly_approve
+		law_authoritarian_system = strongly_disapprove
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = strongly_disapprove
+		law_HOS_army = strongly_disapprove
 	}
 	
 	possible = {
@@ -456,6 +496,7 @@ ideology_radical = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -572,15 +613,6 @@ ideology_radical = {
 				}
 				add = 50
 			}
-			# Pedro JE victory
-			if = {
-				limit = {
-					owner = {
-						has_variable = brz_enduring_empire
-					}
-				}
-				add = -25
-			}
 		}
 	}
 }
@@ -591,7 +623,7 @@ ideology_reformer = {
 	character_ideology = yes
 	
 	lawgroup_citizenship = {
-		law_multicultural = disapprove	
+		law_multicultural = neutral	
 		law_ethnostate = disapprove
 		law_national_supremacy = disapprove
 		law_racial_segregation = neutral
@@ -612,6 +644,14 @@ ideology_reformer = {
 		law_compulsory_primary_school = approve
 	}
 	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = neutral
+		law_elitist_system = disapprove
+		law_local_law = approve
+		law_liberal_system = approve
+		law_authoritarian_system = strongly_disapprove
+	}
+	
 	possible = {
 		owner = {
 			has_technology_researched = egalitarianism
@@ -629,6 +669,7 @@ ideology_reformer = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -693,15 +734,6 @@ ideology_reformer = {
 			}
 			add = 50
 		}
-		# Pedro JE victory
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = 50
-		}
 	}
 }
 
@@ -742,6 +774,7 @@ ideology_feminist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -813,15 +846,6 @@ ideology_feminist = {
 				}
 				add = 50
 			}
-			# Pedro JE victory
-			if = {
-				limit = {
-					owner = {
-						has_variable = brz_enduring_empire
-					}
-				}
-				add = 50
-			}
 		}
 	}
 }
@@ -840,6 +864,7 @@ ideology_abolitionist = {
 
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
+		law_titled_estates = neutral
 		law_tenant_farmers = neutral
 		law_homesteading = neutral
 		law_collectivized_agriculture = neutral
@@ -867,6 +892,7 @@ ideology_abolitionist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -917,6 +943,16 @@ ideology_slaver = {
 		law_slavery_banned = strongly_disapprove
 	}
 	
+	lawgroup_land_reform = {
+		law_slave_economy = strongly_approve
+		law_serfdom = approve
+		law_colonial_extraction = approve
+		law_titled_estates = neutral
+		law_tenant_farmers = disapprove
+		law_homesteading = strongly_disapprove
+		law_collectivized_agriculture = strongly_disapprove
+	}
+	
 	possible = {
 		owner = { 
 			NOT = {
@@ -933,6 +969,7 @@ ideology_slaver = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -1008,6 +1045,14 @@ ideology_pacifist = {
 	
 	character_ideology = yes
 
+	lawgroup_centralization = {		
+		law_confederation = neutral
+		law_federalism = neutral
+		law_unitary = neutral
+		law_feudalism = neutral
+		law_military_cantons = strongly_disapprove
+	}
+
 	lawgroup_army_model = {
 		law_national_militia = approve
 		law_professional_army = disapprove
@@ -1019,7 +1064,6 @@ ideology_pacifist = {
 		law_no_colonial_affairs = approve
 		law_colonial_resettlement = strongly_disapprove
 		law_colonial_exploitation = strongly_disapprove
-		law_frontier_colonization = strongly_disapprove
 	}
 	
 	possible = {
@@ -1040,6 +1084,7 @@ ideology_pacifist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -1120,6 +1165,14 @@ ideology_jingoist_leader = {
 	
 	character_ideology = yes
 	
+	lawgroup_centralization = {		
+		law_military_cantons = strongly_approve
+		law_unitary = neutral
+		law_federalism = neutral
+		law_confederation = neutral
+		law_feudalism = neutral
+	}
+	
 	lawgroup_army_model = {
 		law_mass_conscription = strongly_approve
 		law_professional_army = approve
@@ -1130,8 +1183,13 @@ ideology_jingoist_leader = {
 	lawgroup_colonization = {		
 		law_no_colonial_affairs = neutral
 		law_colonial_resettlement = approve
-		law_frontier_colonization = approve
 		law_colonial_exploitation = strongly_approve
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = neutral
+		law_HOS_army = approve
 	}
 	
 	possible = {
@@ -1152,6 +1210,7 @@ ideology_jingoist_leader = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -1233,18 +1292,6 @@ ideology_jingoist_leader = {
 			}
 			add = 50
 		}
-		# More likely under Alexei II
-		if = {
-			limit = {
-				owner = {
-					any_scope_character = {
-						has_template = RUS_alexei_ii
-						is_ruler = yes
-					}
-				}
-			}
-			add = 75
-		}
 	}
 }
 
@@ -1259,6 +1306,28 @@ ideology_royalist = {
 		law_parliamentary_republic = disapprove
 		law_theocracy = disapprove
 		law_council_republic = strongly_disapprove
+	}
+	
+	lawgroup_centralization = {		
+		law_feudalism = strongly_approve
+		law_military_cantons = approve
+		law_unitary = approve
+		law_confederation = strongly_disapprove
+		law_federalism = strongly_disapprove
+	}
+	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = neutral
+		law_elitist_system = approve
+		law_local_law = neutral
+		law_liberal_system = disapprove
+		law_authoritarian_system = neutral
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = approve
+		law_HOS_army = neutral
 	}
 	
 	possible = {
@@ -1277,13 +1346,8 @@ ideology_royalist = {
 					exists = c:FRA
 					c:FRA = this
 				}
-				AND = {
-					any_interest_group = {
-						has_ideology = ideology:ideology_republican_paternalistic
-					}
-					NOT = {
-						has_variable = brz_enduring_empire
-					}
+				any_interest_group = {
+					has_ideology = ideology:ideology_republican_paternalistic
 				}
 				has_variable = monarchy_stamped_out_var
 			}
@@ -1299,6 +1363,7 @@ ideology_royalist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -1341,14 +1406,6 @@ ideology_royalist = {
 			}
 			add = 50
 		}
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = 50
-		}
 		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
 			limit = {
@@ -1371,7 +1428,6 @@ ideology_social_democrat = {
 		law_regulatory_bodies = approve
 		law_no_workers_rights = neutral
 	}
-
 
 	lawgroup_distribution_of_power = {
 		law_mass_democracy = disapprove	
@@ -1400,6 +1456,20 @@ ideology_social_democrat = {
 		law_wage_subsidies = approve
 		law_old_age_pension = strongly_approve
 	}
+	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = disapprove
+		law_elitist_system = strongly_disapprove
+		law_local_law = neutral
+		law_liberal_system = strongly_approve
+		law_authoritarian_system = strongly_disapprove
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = disapprove
+		law_HOS_army = disapprove
+	}
 
 	possible = {
 		owner = { has_technology_researched = socialism }
@@ -1425,6 +1495,7 @@ ideology_social_democrat = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -1504,25 +1575,6 @@ ideology_social_democrat = {
 			}
 			add = 50
 		}
-		# Pedro JE victory
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = 50
-		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
-				}
-			}
-			multiply = 1.20
-		}
 	}
 }
 
@@ -1536,7 +1588,6 @@ ideology_communist = {
 		law_regulatory_bodies = approve
 		law_no_workers_rights = neutral
 	}
-
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
@@ -1559,6 +1610,14 @@ ideology_communist = {
 		law_technocracy = disapprove		
 	}
 	
+	lawgroup_centralization = {		
+		law_unitary = approve
+		law_federalism = approve
+		law_military_cantons = neutral
+		law_confederation = disapprove
+		law_feudalism = strongly_disapprove
+	}
+	
 	lawgroup_economic_system = {	
 		law_communal_principle = strongly_approve
 		law_command_economy = approve		
@@ -1570,6 +1629,25 @@ ideology_communist = {
 		law_industry_banned = strongly_disapprove
 	}
 
+	lawgroup_urbanization = {	
+		law_planned_economics = approve
+		law_market_socialism = approve
+		law_dirigisme = neutral
+		law_guild_system = disapprove
+		law_religious_integralism = strongly_disapprove
+		law_bourgeoisie_ownership = strongly_disapprove
+		law_aristocratic_holdings = strongly_disapprove
+	}
+
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_titled_estates = strongly_disapprove
+		law_commercialized_agriculture = disapprove
+		law_tenant_farmers = disapprove
+		law_homesteading = neutral
+		law_collectivized_agriculture = approve
+	}
+
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_disapprove
 		law_freedom_of_conscience = disapprove
@@ -1578,14 +1656,19 @@ ideology_communist = {
 	
 	}
 	
-	lawgroup_land_reform = {
-		law_serfdom = strongly_disapprove
-		law_commercialized_agriculture = disapprove
-		law_tenant_farmers = disapprove
-		law_homesteading = neutral
-		law_collectivized_agriculture = approve
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = disapprove
+		law_elitist_system = strongly_disapprove
+		law_local_law = approve
+		law_liberal_system = neutral
+		law_authoritarian_system = disapprove
 	}
-
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = neutral
+		law_HOS_army = disapprove
+	}
 	
 	possible = {
 		# Agitator ideologies should disapprove of a current law
@@ -1609,7 +1692,6 @@ ideology_communist = {
 			}
 		}
 		owner = { has_technology_researched = socialism }
-		NOT = { owner = { has_technology_researched = political_agitation } }
 		scope:interest_group = {
 			OR = {
 				is_interest_group_type = ig_rural_folk
@@ -1620,6 +1702,8 @@ ideology_communist = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_anarchism
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -1680,21 +1764,11 @@ ideology_communist = {
 				multiply = 2
 			}
 		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
-				}
-			}
-			multiply = 1.25
-		}
 	}
 }
 
 ideology_vanguardist = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_vanguardist.dds"
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_vangardist_new.dds"
 	
 	character_ideology = yes
 
@@ -1711,11 +1785,11 @@ ideology_vanguardist = {
 		law_women_own_property = neutral
 		law_women_in_the_workplace = approve
 		law_womens_suffrage = strongly_approve
-	}	
+	}
 
 	lawgroup_distribution_of_power = {
-		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove	
+		law_oligarchy = disapprove
 		law_anarchy = disapprove
 		law_universal_suffrage = disapprove		
 		law_census_voting = strongly_disapprove
@@ -1724,6 +1798,21 @@ ideology_vanguardist = {
 		law_mass_democracy = approve
 		law_technocracy = neutral		
 		law_single_party_state = strongly_approve
+	}
+	
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_disapprove
+		law_freedom_of_conscience = disapprove
+		law_total_separation = neutral
+		law_state_atheism = strongly_approve
+	}
+	
+	lawgroup_centralization = {		
+		law_military_cantons = approve
+		law_unitary = neutral
+		law_federalism = neutral
+		law_confederation = strongly_disapprove
+		law_feudalism = strongly_disapprove
 	}
 	
 	lawgroup_economic_system = {	
@@ -1737,27 +1826,61 @@ ideology_vanguardist = {
 		law_industry_banned = strongly_disapprove
 	}
 	
-	lawgroup_army_model = {
-		law_national_militia = neutral
-		law_professional_army = approve
-		law_peasant_levies = strongly_disapprove
-		law_mass_conscription = strongly_approve
+	lawgroup_labor_rights = {		
+		law_worker_protections = strongly_approve
+		law_regulatory_bodies = approve
+		law_no_workers_rights = neutral
 	}
-
+	
+	lawgroup_bureaucracy = {
+		law_appointed_bureaucrats = approve
+		law_elected_bureaucrats = neutral
+		law_communal_adminstration = neutral
+		law_hereditary_bureaucrats = strongly_disapprove
+    }
+	
+	lawgroup_urbanization = {	
+		law_planned_economics = strongly_approve
+		law_market_socialism = neutral
+		law_dirigisme = neutral
+		law_guild_system = disapprove
+		law_religious_integralism = strongly_disapprove	
+		law_bourgeoisie_ownership = strongly_disapprove
+		law_aristocratic_holdings = strongly_disapprove
+	}
+	
 	lawgroup_land_reform = {
 		law_commercialized_agriculture = strongly_disapprove
 		law_serfdom = strongly_disapprove
+		law_titled_estates = strongly_disapprove
 		law_tenant_farmers = disapprove
 		law_homesteading = neutral
 		law_collectivized_agriculture = approve
 	}
 	
-						
+	lawgroup_trade_policy = {		
+		law_protectionism = approve
+		law_mercantilism = disapprove		
+		law_isolationism = approve
+		law_free_trade = strongly_disapprove
+	}
+	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = strongly_disapprove
+		law_elitist_system = strongly_disapprove
+		law_local_law = disapprove
+		law_liberal_system = strongly_disapprove
+		law_authoritarian_system = strongly_approve
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = approve
+		law_HOS_army = neutral
+	}
+							
 	possible = {
-		owner = { 
-		has_technology_researched = socialism 
-        has_technology_researched = political_agitation 
-		} 
+		owner = { has_technology_researched = socialism }
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
 			has_role = agitator
@@ -1789,6 +1912,8 @@ ideology_vanguardist = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_anarchism
+				has_variable = chose_communism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -1904,15 +2029,6 @@ ideology_vanguardist = {
 			}
 			multiply = 2
 		}
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
-				}
-			}
-			multiply = 1.25
-		}		
 	}
 }
 
@@ -1928,19 +2044,33 @@ ideology_left_communism = {
 		law_theocracy = strongly_disapprove
 		law_council_republic = strongly_approve
 	}
-	
+
 	lawgroup_rights_of_women = {
 		law_no_womens_rights = disapprove
 		law_women_own_property = neutral
 		law_women_in_the_workplace = approve
 		law_womens_suffrage = strongly_approve
-	}		
+	}
+
+	lawgroup_labor_rights = {		
+		law_worker_protections = strongly_approve
+		law_regulatory_bodies = approve
+		law_no_workers_rights = neutral
+	}
+
+	lawgroup_centralization = {		
+		law_confederation = approve
+		law_federalism = approve
+		law_military_cantons = strongly_disapprove
+		law_unitary = strongly_disapprove
+		law_feudalism = strongly_disapprove
+	}
 
 	lawgroup_distribution_of_power = {
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove	
-		law_anarchy = neutral
-		law_universal_suffrage = approve		
+		law_anarchy = approve
+		law_universal_suffrage = neutral		
 		law_census_voting = strongly_disapprove
 		law_wealth_voting = strongly_disapprove
 		law_landed_voting = strongly_disapprove
@@ -1960,6 +2090,16 @@ ideology_left_communism = {
 		law_industry_banned = strongly_disapprove
 	}
 	
+	lawgroup_urbanization = {	
+		law_market_socialism = strongly_approve
+		law_guild_system = disapprove
+		law_religious_integralism = disapprove
+		law_dirigisme = disapprove
+		law_planned_economics = strongly_disapprove		
+		law_bourgeoisie_ownership = strongly_disapprove
+		law_aristocratic_holdings = strongly_disapprove
+	}
+	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = strongly_disapprove
@@ -1969,6 +2109,7 @@ ideology_left_communism = {
 
 	lawgroup_land_reform = {
 		law_commercialized_agriculture = strongly_disapprove
+		law_titled_estates = strongly_disapprove
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = strongly_disapprove
 		law_homesteading = disapprove
@@ -1976,10 +2117,7 @@ ideology_left_communism = {
 	}
 	
 	possible = {
-		owner = { 
-		has_technology_researched = socialism 
-        has_technology_researched = political_agitation 
-		} 
+		owner = { has_technology_researched = socialism }
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
 			has_role = agitator
@@ -2011,6 +2149,8 @@ ideology_left_communism = {
 
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
+				has_variable = chose_anarchism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -2107,6 +2247,16 @@ ideology_technocratic_socialism = {
 		law_industry_banned = strongly_disapprove
 	}
 	
+	lawgroup_urbanization = {	
+		law_planned_economics = strongly_approve
+		law_market_socialism = neutral
+		law_dirigisme = neutral
+		law_guild_system = disapprove
+		law_religious_integralism = strongly_disapprove	
+		law_bourgeoisie_ownership = strongly_disapprove
+		law_aristocratic_holdings = strongly_disapprove
+	}
+	
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_disapprove
 		law_freedom_of_conscience = disapprove
@@ -2123,18 +2273,24 @@ ideology_technocratic_socialism = {
 
 	lawgroup_land_reform = {
 		law_commercialized_agriculture = strongly_disapprove
+		law_titled_estates = strongly_disapprove
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = disapprove
 		law_homesteading = neutral
 		law_collectivized_agriculture = strongly_approve
 	}
 	
+	lawgroup_bureaucracy = {
+		law_appointed_bureaucrats = approve
+		law_elected_bureaucrats = neutral
+		law_communal_adminstration = neutral
+		law_hereditary_bureaucrats = strongly_disapprove
+    }
 						
 	possible = {
 		owner = {
 			has_technology_researched = empiricism
 			has_technology_researched = socialism
-            has_technology_researched = political_agitation  
 		}
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
@@ -2166,6 +2322,8 @@ ideology_technocratic_socialism = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_anarchism
+				has_variable = chose_communism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -2313,6 +2471,16 @@ ideology_syndicalism = {
 		law_industry_banned = disapprove
 	}
 	
+	lawgroup_urbanization = {	
+		law_market_socialism = strongly_approve
+		law_planned_economics = approve
+		law_dirigisme = neutral
+		law_guild_system = disapprove
+		law_religious_integralism = strongly_disapprove	
+		law_bourgeoisie_ownership = strongly_disapprove
+		law_aristocratic_holdings = strongly_disapprove
+	}
+	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = strongly_disapprove
@@ -2368,6 +2536,8 @@ ideology_syndicalism = {
 
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
+				has_variable = chose_communism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -2433,6 +2603,14 @@ ideology_fascist = {
 	
 	character_ideology = yes
 
+	lawgroup_centralization = {
+		law_military_cantons = strongly_approve
+		law_unitary = strongly_approve
+		law_federalism = neutral
+		law_feudalism = neutral
+		law_confederation = strongly_disapprove
+	}
+
 	lawgroup_distribution_of_power = {
 		law_single_party_state = strongly_approve
 		law_autocracy = approve	
@@ -2445,6 +2623,16 @@ ideology_fascist = {
 		law_landed_voting = strongly_disapprove
 		law_mass_democracy = strongly_disapprove
 		
+	}
+
+	lawgroup_urbanization = {	
+		law_dirigisme = strongly_approve
+		law_religious_integralism = strongly_approve
+		law_planned_economics = strongly_approve
+		law_bourgeoisie_ownership = approve
+		law_aristocratic_holdings = approve
+		law_guild_system = neutral
+		law_market_socialism = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -2476,6 +2664,20 @@ ideology_fascist = {
 		law_no_police = disapprove
 	}
 	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = neutral
+		law_elitist_system = approve
+		law_local_law = strongly_disapprove
+		law_liberal_system = strongly_disapprove
+		law_authoritarian_system = strongly_approve
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = approve
+		law_HOS_army = strongly_approve
+	}
+	
 	possible = {
 		owner = { has_technology_researched = mass_propaganda }
 		# Agitator ideologies should disapprove of a current law
@@ -2492,6 +2694,7 @@ ideology_fascist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_ethno_nationalism
 			}
 		}
@@ -2618,23 +2821,6 @@ ideology_fascist = {
 			}
 			add = 50
 		}
-		# red scare can make you more fascist
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = fascist_uptick
-				}
-			}
-			add = 25
-		}
-		if = { #Brazil has Integralists instead
-			limit = {
-				owner = {
-					c:BRZ ?= this
-				}
-			}
-			multiply = 0
-		}
 	}
 }
 
@@ -2643,19 +2829,20 @@ ideology_anarchist = {
 	
 	character_ideology = yes
 	
+	lawgroup_centralization = {		
+		law_confederation = strongly_approve
+		law_federalism = neutral
+		law_military_cantons = disapprove
+		law_unitary = strongly_disapprove
+		law_feudalism = strongly_disapprove
+	}
+	
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
 		law_national_supremacy = strongly_disapprove
 		law_racial_segregation = disapprove
 		law_cultural_exclusion = approve
 		law_multicultural = strongly_approve	
-	}	
-	
-	lawgroup_rights_of_women = {
-		law_no_womens_rights = disapprove
-		law_women_own_property = neutral
-		law_women_in_the_workplace = approve
-		law_womens_suffrage = strongly_approve
 	}	
 
 	lawgroup_distribution_of_power = {
@@ -2670,6 +2857,37 @@ ideology_anarchist = {
 		law_autocracy = strongly_disapprove		
 		law_single_party_state = disapprove
 	}
+	lawgroup_economic_system = {
+		law_communal_principle = approve		
+		law_cooperative_ownership = strongly_approve
+		law_command_economy = disapprove
+		law_interventionism = strongly_disapprove
+		law_agrarianism = neutral
+		law_traditionalism = strongly_disapprove	
+		law_laissez_faire = strongly_disapprove
+		law_industry_banned = disapprove
+	}
+	
+	lawgroup_urbanization = {	
+		law_market_socialism = strongly_approve
+		law_guild_system = disapprove
+		law_religious_integralism = disapprove
+		law_dirigisme = disapprove
+		law_planned_economics = strongly_disapprove		
+		law_bourgeoisie_ownership = strongly_disapprove
+		law_aristocratic_holdings = strongly_disapprove
+	}
+	
+	lawgroup_land_reform = {		
+		law_collectivized_agriculture = strongly_approve
+		law_homesteading = neutral
+		law_titled_estates = strongly_disapprove
+		law_slave_economy = strongly_disapprove
+		law_colonial_extraction = strongly_disapprove
+		law_tenant_farmers = strongly_disapprove
+		law_titled_estates = strongly_disapprove
+		law_serfdom = strongly_disapprove
+	}
 	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
@@ -2678,10 +2896,20 @@ ideology_anarchist = {
 		law_communal_adminstration = strongly_approve	
     }
 
+
+	lawgroup_army_model = {
+		law_national_militia = strongly_approve
+		law_professional_army = neutral
+		law_mass_conscription = disapprove
+		law_peasant_levies = strongly_disapprove
+	}
+
+
 	lawgroup_free_speech = {
 		law_protected_speech = strongly_approve
 		law_right_of_assembly = approve
 		law_censorship = disapprove
+
 		law_outlawed_dissent = strongly_disapprove
 	}
 
@@ -2692,6 +2920,7 @@ ideology_anarchist = {
 		law_militarized_police = strongly_disapprove
 	}
 
+
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_disapprove
 		law_presidential_republic = disapprove
@@ -2700,13 +2929,28 @@ ideology_anarchist = {
 		law_council_republic = strongly_approve
 	}
 
+	
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_disapprove
 		law_freedom_of_conscience = strongly_disapprove
 		law_total_separation = neutral
 		law_state_atheism = strongly_approve
 	}
-		
+	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = strongly_disapprove
+		law_elitist_system = strongly_disapprove
+		law_local_law = strongly_approve
+		law_liberal_system = neutral
+		law_authoritarian_system = strongly_disapprove
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = strongly_disapprove
+		law_HOS_army = strongly_disapprove
+	}
+	
 	possible = {
 		owner = { has_technology_researched = anarchism }
 		# Agitator ideologies should disapprove of a current law
@@ -2740,6 +2984,8 @@ ideology_anarchist = {
 
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
+				has_variable = chose_communism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -2796,16 +3042,6 @@ ideology_anarchist = {
 			}
 			multiply = 2
 		}
-		# National Liberation Alliance
-		if = {
-			limit = {
-				owner = {
-					has_variable = national_liberation_alliance_variable
-					has_journal_entry = je_new_republic
-				}
-			}
-			multiply = 1.10
-		}
 	}
 }
 
@@ -2830,7 +3066,7 @@ ideology_ethno_nationalist = {
 
 	possible = {
 		owner = {
-			has_technology_researched = pan-nationalism
+			has_technology_researched = political_agitation
 		}
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
@@ -2842,6 +3078,7 @@ ideology_ethno_nationalist = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 			}
@@ -2947,6 +3184,16 @@ ideology_theocrat = {
 	
 	character_ideology = yes
 
+	lawgroup_urbanization = {	
+		law_religious_integralism = strongly_approve
+		law_market_socialism = neutral
+		law_planned_economics = neutral
+		law_dirigisme = neutral
+		law_guild_system = neutral	
+		law_bourgeoisie_ownership = neutral	
+		law_aristocratic_holdings = neutral
+	}
+
 	lawgroup_church_and_state = {
 		law_state_religion = approve
 		law_freedom_of_conscience = disapprove
@@ -2991,6 +3238,7 @@ ideology_theocrat = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
@@ -3075,6 +3323,16 @@ ideology_market_liberal = {
 		law_cooperative_ownership = strongly_disapprove		
 	}
 	
+	lawgroup_urbanization = {	
+		law_bourgeoisie_ownership = strongly_approve
+		law_dirigisme = disapprove
+		law_market_socialism = disapprove
+		law_religious_integralism = disapprove
+		law_guild_system = disapprove		
+		law_aristocratic_holdings = disapprove
+		law_planned_economics = strongly_disapprove
+	}
+	
 	lawgroup_childrens_rights = {
 		law_child_labor_allowed = approve
 		law_restricted_child_labor = disapprove
@@ -3093,15 +3351,20 @@ ideology_market_liberal = {
 		law_worker_protections = strongly_disapprove
 	}
 
-			
-
 	lawgroup_land_reform = {
 		law_collectivized_agriculture = strongly_disapprove
+		law_titled_estates = disapprove
 		law_serfdom = disapprove
 		law_tenant_farmers = neutral
 		law_homesteading = neutral
 		law_commercialized_agriculture = approve
-	}	possible = {
+		
+	lawgroup_crime_and_punishment = {
+		law_elitist_system = approve
+	}
+	
+	}
+	possible = {
 		owner = {
 			has_technology_researched = stock_exchange
 			# capitalism must be relevant
@@ -3130,6 +3393,7 @@ ideology_market_liberal = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
@@ -3231,7 +3495,7 @@ ideology_market_liberal = {
 		if = {
 			limit = {
 				owner = {
-					country_rank >= rank_value:great_power
+					country_rank = rank_value:great_power
 				}
 			}
 			add = 25
@@ -3272,18 +3536,6 @@ ideology_market_liberal = {
 				}
 			}
 			add = 50
-		}
-		# More likely under Alexander II
-		if = {
-			limit = {
-				owner = {
-					any_scope_character = {
-						has_template = RUS_alexander_ii
-						is_ruler = yes
-					}
-				}
-			}
-			add = 75
 		}
 	}
 }
@@ -3335,6 +3587,7 @@ ideology_luddite = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
@@ -3405,6 +3658,27 @@ ideology_authoritarian = {
 		law_national_guard = approve
 		law_secret_police = strongly_approve
 	}
+	
+	lawgroup_bureaucracy = {
+		law_appointed_bureaucrats = approve
+		law_hereditary_bureaucrats = neutral
+		law_elected_bureaucrats = disapprove
+		law_communal_adminstration = disapprove
+    }
+	
+	lawgroup_crime_and_punishment = {
+		law_traditional_law = neutral
+		law_elitist_system = neutral
+		law_local_law = disapprove
+		law_liberal_system = disapprove
+		law_authoritarian_system = approve
+	}
+	
+	lawgroup_discreet_powers = {
+		law_no_reserve_powers = neutral
+		law_decree_powers = approve
+		law_HOS_army = neutral
+	}
 
 	possible = {
 		# Agitator ideologies should disapprove of a current law
@@ -3431,6 +3705,7 @@ ideology_authoritarian = {
 				owner = { has_technology_researched = mass_propaganda }
 			}
 			NOR = {
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
@@ -3575,6 +3850,7 @@ ideology_protectionist = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
@@ -3657,7 +3933,7 @@ ideology_protectionist = {
 		if = {
 			limit = {
 				owner = {
-					country_rank >= rank_value:great_power
+					country_rank = rank_value:great_power
 				}
 			}
 			add = -75
@@ -3745,6 +4021,7 @@ ideology_humanitarian = {
 		}
 		scope:interest_group = {
 			NOR = {
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
@@ -3874,15 +4151,6 @@ ideology_humanitarian = {
 			}
 			add = -50
 		}
-		# Pedro JE victory
-		if = {
-			limit = {
-				owner = {
-					has_variable = brz_enduring_empire
-				}
-			}
-			add = 25
-		}
 		# liberal and/or radical leaders have a higher spawn chance if the Dreyfusards won.
 		if = {
 			limit = {
@@ -3959,6 +4227,7 @@ ideology_jacksonian_democrat = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -4032,7 +4301,6 @@ ideology_positivist = {
 				is_heir = yes
 			}
 		}
-		has_global_variable = positivism_invented
 		owner = {
 			has_technology_researched = empiricism
 		}
@@ -4041,12 +4309,12 @@ ideology_positivist = {
 				is_interest_group_type = ig_armed_forces
 				is_interest_group_type = ig_industrialists
 				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_petty_bourgeoisie
 			}
 		}
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -4080,61 +4348,8 @@ ideology_positivist = {
 			}
 			add = 100
 		}
-		if = {
-			limit = {
-				owner = {
-					has_variable = positivist_leaders_less_je_var
-				}
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				owner = {
-					has_variable = positivist_leaders_je_var
-				}
-			}
-			add = 100
-		}
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = positivist_leaders_increase_var
-				}
-			}
-			add = 75
-		}
-		if = {
-			limit = {
-				scope:interest_group = {
-					has_variable = positivist_leaders_large_increase_var
-				}
-			}
-			add = 150
-		}
-		if = {
-			limit = {
-				owner = {
-					has_variable = positivist_leaders_reward_var
-				}
-			}
-			add = 250
-		}
 	}
 }
-
-ideology_land_reformer = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_land_reformer.dds"
-	
-	character_ideology = yes
-	
-	lawgroup_taxation = {
-		law_land_based_taxation = strongly_disapprove
-		law_consumption_based_taxation = neutral
-		law_per_capita_based_taxation = neutral
-		law_proportional_taxation = neutral
-		law_graduated_taxation = neutral
-	}
 
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
@@ -4279,6 +4494,16 @@ ideology_integralist = {
 		law_total_separation = strongly_disapprove
 		law_state_atheism = strongly_disapprove
 	}
+	
+	lawgroup_urbanization = {	
+		law_religious_integralism = strongly_approve
+		law_dirigisme = approve
+		law_guild_system = neutral
+		law_bourgeoisie_ownership = disapprove
+		law_aristocratic_holdings = strongly_disapprove
+		law_market_socialism = strongly_disapprove
+		law_planned_economics = strongly_disapprove
+	}
 
 	lawgroup_citizenship = {
 		law_cultural_exclusion = approve
@@ -4298,7 +4523,6 @@ ideology_integralist = {
 		law_census_voting = strongly_disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
-		law_mass_democracy = strongly_disapprove
 	}
 
 	possible = {
@@ -4334,7 +4558,7 @@ ideology_integralist = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
-
+				has_variable = chose_vanguardism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
 			}
@@ -4463,15 +4687,13 @@ ideology_liberal_leader = {
 		law_oligarchy = disapprove
 		law_autocracy = strongly_disapprove
 		law_anarchy = strongly_disapprove
-		law_mass_democracy = strongly_disapprove	
-		
 	}
 	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
-		law_communal_adminstration = neutral		
+		law_communal_adminstration = disapprove
 	}
 	
 	possible = {
@@ -4491,7 +4713,7 @@ ideology_liberal_leader = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
-
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_conservatism
 				has_variable = chose_ethno_nationalism
@@ -4579,6 +4801,16 @@ ideology_corporatist_leader = {
 		law_council_republic = strongly_disapprove
 	}
 	
+	lawgroup_urbanization = {
+		law_religious_integralism = approve
+		law_dirigisme = approve
+		law_guild_system = neutral
+		law_bourgeoisie_ownership = neutral
+		law_aristocratic_holdings = strongly_disapprove
+		law_market_socialism = strongly_disapprove
+		law_planned_economics = strongly_disapprove
+	}
+	
 	lawgroup_education_system = {
 		law_religious_schools = approve
 		law_public_schools = neutral
@@ -4616,6 +4848,7 @@ ideology_corporatist_leader = {
 		scope:interest_group = {
 			NOR = {
 				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
 				has_variable = chose_fascism
 				has_variable = chose_ethno_nationalism
 			}
@@ -4758,7 +4991,7 @@ ideology_humanitarian_royalist = {
 		}
 		scope:interest_group = {
 			NOR = {
-
+				has_variable = chose_vanguardism
 				has_variable = communist_ig_var
 				has_variable = chose_fascism
 				has_variable = chose_conservatism

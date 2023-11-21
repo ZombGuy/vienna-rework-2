@@ -1,0 +1,39 @@
+﻿institution_military_cantons = {
+	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
+    background_texture = "gfx/interface/illustrations/institutions/home_affairs.dds"
+	modifier = {
+		
+	}
+}
+
+institution_unitary = {
+	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
+    background_texture = "gfx/interface/illustrations/institutions/home_affairs.dds"
+	modifier = {
+		
+	}
+}
+
+institution_federation = {
+	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
+    background_texture = "gfx/interface/illustrations/institutions/home_affairs.dds"
+	modifier = {
+		
+	}
+}
+
+institution_confederation = {
+	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
+    background_texture = "gfx/interface/illustrations/institutions/home_affairs.dds"
+	modifier = {
+		
+	}
+}
+
+institution_discreet_powers = {
+	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
+	background_texture = "gfx/interface/illustrations/institutions/home_affairs.dds"
+	modifier = {
+		
+	}
+}
