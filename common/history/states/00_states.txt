@@ -6978,7 +6978,7 @@ STATES = {
 	s:STATE_WEST_PRUSSIA = {
 		create_state = {
 			country = c:PRU
-			owned_provinces = { xBAF66D x178C99 x611F2F x945000 x7CB839 x80A0A0 x7A6061 x6E8875 x41A021 x374AC3 x55FD02 }
+			owned_provinces = { xBAF66D x178C99 x611F2F x945000 x7CB839 x80A0A0 x41A021 x374AC3 x55FD02 }
 		}
 		
 		add_homeland = cu:north_german
@@ -6987,7 +6987,7 @@ STATES = {
 	s:STATE_EAST_PRUSSIA = {
 		create_state = {
 			country = c:PRU
-			owned_provinces = { x975566 x4121A0 x2399A2 x1E73B9 xC020A0 x981EBE x72FDF3 x40A0A0 xBF9F20 x9FD037 x47C900 xC04521 x7D6DC3 xEEF586 xAEA6D6 x5428E6 xABC4AE }
+			owned_provinces = { x975566 x4121A0 x2399A2 x1E73B9 xC020A0 x981EBE x72FDF3 x40A0A0 xBF9F20 x9FD037 x47C900 xC04521 x7D6DC3 xEEF586 xAEA6D6 x5428E6 xABC4AE x6E8875 x7A6061 }
 		}
 		
 		add_homeland = cu:north_german
