@@ -92,10 +92,10 @@ ideology_laissez_faire = {
 	
 	lawgroup_land_reform = {	
 		law_commercialized_agriculture = strongly_approve
-		law_tenant_farmers = approve
-		law_slave_economy = neutral	
-		law_titled_estates = neutral
-		law_homesteading = disapprove
+		law_tenant_farmers = neutral
+		law_slave_economy = disapprove
+		law_titled_estates = dissaprove
+		law_homesteading = neutral
 		law_serfdom = disapprove
 		law_collectivized_agriculture = strongly_disapprove
 	}
