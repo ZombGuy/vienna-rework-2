@@ -1135,7 +1135,16 @@ ideology_corporatist = {
 		law_market_socialism = strongly_disapprove
 		law_planned_economics = strongly_disapprove
 	}
-	
+
+	lawgroup_governance_principles = {
+		law_corporatocracy = strongly_approve		
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_monarchy = disapprove
+		law_theocracy = disapprove
+		law_council_republic = strongly_disapprove
+	}
+
 	lawgroup_health_system = {
 		law_charitable_health_system = approve
 		law_public_health_insurance = neutral
