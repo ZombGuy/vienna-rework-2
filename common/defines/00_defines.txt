@@ -1263,9 +1263,9 @@ NEconomy = {
 	CUSTOMS_UNION_CONTROLLER_MINIMUM_TARIFFS_SPLIT = 0.25	# Minimum amount of tariffs that the senior partner of a customs union gets. The rest will be split among the junior partners, according to their GDP contribution (between 0 and 1)
 	
 	REINVESTMENT_EFFICIENCY_MAX = 3.0					# Maximum conversion of reinvestment to investment pool
-	REINVESTMENT_EFFICIENCY_MIN = 1.0					# Minimum conversion of reinvestment to investment pool
-	REINVESTMENT_FALLOFF_START = 999999999999				# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
-	REINVESTMENT_FALLOFF_END = 9999999999999				# Above REINVESTMENT_FALLOFF_START but below this, apply minimum reinvestment multiplier on a linear scale down to REINVESTMENT_EFFICIENCY_MIN, above this always use REINVESTMENT_EFFICIENCY_MIN
+	REINVESTMENT_EFFICIENCY_MIN = 0.95					# Minimum conversion of reinvestment to investment pool
+	REINVESTMENT_FALLOFF_START = 999999				# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
+	REINVESTMENT_FALLOFF_END = 999999999999				# Above REINVESTMENT_FALLOFF_START but below this, apply minimum reinvestment multiplier on a linear scale down to REINVESTMENT_EFFICIENCY_MIN, above this always use REINVESTMENT_EFFICIENCY_MIN
 	
 	GOVERNMENT_DIVIDENDS_EFFICIENCY_MIN = 1.1			# Minimum dividend fraction from buildings with government shares that will reach the treasury - the rest will be wasted
 	GOVERNMENT_DIVIDENDS_FALLOFF_START = 999999999999		# Below this amount of GDP, no government dividends will be wasted
