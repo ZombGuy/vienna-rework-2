@@ -4,7 +4,7 @@
 	
 	tier = hegemony
 	
-	cultures = { dutch flemish wallonian french north_german alemannic }
+	cultures = { dutch flemish wallonian french north_german }
 	capital = STATE_WALLONIA
 }
 #EUR = {
@@ -245,17 +245,6 @@ PAG = {
 	
 	cultures = { caribeno central_american mexican north_andean south_andean platinean }
 	capital = STATE_PANAMA
-}
-
-
-GRL = {
-	color = { 40  101  199 }
-	country_type = recognized
-	
-	tier = hegemony
-	
-	cultures = { french occitan north_italian north_german south_german czech }
-	capital = STATE_BURGUNDY
 }
 
 BAN = {
@@ -569,7 +558,7 @@ GRL = {
 	
 	tier = hegemony
 	
-	cultures = { french }
+	cultures = { french dutch occitan north_german }
 	
 	capital = STATE_BURGUNDY
 }

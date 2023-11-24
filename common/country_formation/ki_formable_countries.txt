@@ -10,9 +10,10 @@
 		STATE_ALSACE_LORRAINE
 		STATE_LORRAINE
 		STATE_RUHR
+		STATE_FRENCH_LOW_COUNTRIES
 	}
 
-	required_states_fraction = 0.70
+	required_states_fraction = 0.55
 	
 	ai_will_do = { always = yes }
 
@@ -21,6 +22,7 @@
 			NOT = { has_game_rule = plausible_formable_nations }
 	}
 }
+
 #EUR = { #Europe
 #	states = {
 #		STATE_RHINELAND 
@@ -212,6 +214,7 @@ BNL = { #Benelux
 			has_technology_researched = pan-nationalism
 	}
 }
+
 CEL = { #Celtica
 	use_culture_states = yes
 
@@ -480,6 +483,10 @@ RMA = {
 		STATE_MAINE_ANJOU
 		STATE_GUYENNE
 		STATE_AUVERGNE_LIMOUSIN
+		STATE_INNER_MOROCCO
+		STATE_ORAN
+		STATE_LIBYAN_DESERT
+		STATE_EGYPTIAN_DESERT
 	}
 	is_major_formation = no
 
@@ -591,16 +598,10 @@ GRL = { #Grandelumiere
 		STATE_ORLEANS
 		STATE_WEST_SWITZERLAND
 		STATE_EAST_SWITZERLAND
-		STATE_TUSCANY
 		STATE_EMILIA
 		STATE_PIEDMONT
 		STATE_SAVOY
-		STATE_SOUTH_TYROL
-		STATE_VENETIA
-		STATE_TYROL
 		STATE_CORSICA
-		STATE_HOLLAND
-		STATE_FRIESLAND
 		STATE_GELRE
 		STATE_FLANDERS
 		STATE_WALLONIA
@@ -608,20 +609,19 @@ GRL = { #Grandelumiere
 		STATE_RHINELAND
 		STATE_BADEN
 		STATE_WURTTEMBERG
-		STATE_HESSE
-		STATE_WESTPHALIA
-		STATE_BAVARIA
-		STATE_FRANCONIA
 		STATE_LOMBARDY
 		STATE_RUHR
 		STATE_FRENCH_LOW_COUNTRIES
+		STATE_HOLLAND
+		STATE_FRIESLAND
 		STATE_LORRAINE
 		STATE_MAINE_ANJOU
 		STATE_GUYENNE
 		STATE_AUVERGNE_LIMOUSIN
+
 	}
 
-	required_states_fraction = 0.75
+	required_states_fraction = 0.78
 	
 	ai_will_do = { always = yes }
 
@@ -686,7 +686,7 @@ AGV = {
 	
 	is_major_formation = no
 	
-	required_states_fraction = 0.7
+	required_states_fraction = 0.8
 	
 	possible = {
 			NOT = { has_game_rule = plausible_formable_nations }

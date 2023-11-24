@@ -36,9 +36,9 @@ FBR = {
 	color = { 73 209 193 }
 	country_type = colonial
 
-	tier = hegemony
+	tier = empire
 
-	cultures = { french british }
+	cultures = { thai karen lao khmer vietnamese }
 
-	capital = STATE_ILE_DE_FRANCE
+	capital = STATE_NAKHON_RATCHASIMA
 }
