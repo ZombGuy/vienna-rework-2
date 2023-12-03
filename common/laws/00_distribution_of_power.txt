@@ -170,12 +170,11 @@ law_technocracy = {
 	
 	institution = institution_party_organization
 	institution_modifier = {
-        country_weekly_innovation_max_add = 10
-		country_academics_pol_str_mult = 0.1
-		country_engineers_pol_str_mult = 0.1
-		state_engineers_investment_pool_efficiency_mult = 0.20
-		state_academics_investment_pool_efficiency_mult = 0.20
-		state_officers_investment_pool_efficiency_mult = 0.20
+		country_academics_voting_power_add = 10
+		country_engineers_voting_power_add = 10
+		country_officers_voting_power_add = 10
+		building_group_bg_government_employee_mult = -0.1
+		building_group_bg_public_infrastructure_employee_mult = -0.1
 	}	
 	
 	modifier = {
@@ -183,19 +182,18 @@ law_technocracy = {
 		country_legitimacy_headofstate_add = 10
 		country_legitimacy_govt_total_clout_add = 70
 		country_legitimacy_govt_total_votes_add = 50		
-		country_legitimacy_govt_size_add = 2
-		country_legitimacy_ideological_incoherence_mult = -0.1
+		country_legitimacy_govt_size_add = 1
+		country_legitimacy_ideological_incoherence_mult = -0.2
 		country_academics_pol_str_mult = 0.5
 		country_engineers_pol_str_mult = 0.33
 		country_officers_pol_str_mult = 0.33
 		country_academics_voting_power_add = 10
 		country_engineers_voting_power_add = 10
 		country_officers_voting_power_add = 10
-		country_bureaucrats_voting_power_add = 10	
-		country_authority_add = 150
-		building_group_bg_government_employee_mult = -0.3
-		building_group_bg_public_infrastructure_employee_mult = -0.3
-		building_group_bg_government_throughput_add = 0.2
+		country_bureaucrats_voting_power_add = 10
+		country_authority_add = 150		
+		
+		building_group_bg_government_throughput_add = 0.1
 
 		state_engineers_investment_pool_contribution_add = 0.20
 		state_academics_investment_pool_contribution_add = 0.20
@@ -204,6 +202,10 @@ law_technocracy = {
 
 	unlocking_technologies = {
 		political_agitation 	 
+	}
+
+	build_from_investment_pool = {
+		bg_government
 	}
 	
 	possible_political_movements = {
