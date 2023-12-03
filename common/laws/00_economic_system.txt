@@ -89,8 +89,6 @@ law_interventionism = {
 		law_serfdom
 		law_anarchy
 		law_corporatocracy
-		law_mass_democracy
-		law_sprawl
 	}
 	
 	on_activate = {
@@ -205,7 +203,6 @@ law_agrarianism = {
 	disallowing_laws = {
 		law_anarchy
 		law_corporatocracy
-		law_mass_democracy
 		law_sprawl
 	}
 	unlocking_technologies = {
@@ -217,7 +214,8 @@ law_agrarianism = {
 	
 	institution = institution_economic_management
 	institution_modifier = {
-		interest_group_ig_rural_folk_pol_str_mult = 0.1
+		state_aristocrats_investment_pool_efficiency_mult = 0.05
+		state_farmers_investment_pool_efficiency_mult = 0.1
 		tax_dividends_add = 0.03
 	}
 	
@@ -464,7 +462,6 @@ law_laissez_faire = {
 		law_serfdom
 		law_isolationism
 		law_anarchy
-		law_mass_democracy
 	}
 	
 	unlocking_technologies = {
@@ -704,9 +701,8 @@ law_command_economy = {
 		state_tax_capacity_mult = 0.05
 		state_construction_mult = 0.10	
 		building_group_bg_manufacturing_throughput_mult = 0.05
-        building_input_mult = -0.04
 		country_bureaucrats_pol_str_mult = 0.10
-		state_infrastructure_mult = 0.01
+		state_infrastructure_mult = 0.05
 	}
 				
 	modifier = {
@@ -813,6 +809,8 @@ law_communal_principle = {
 	
 	unlocking_laws = {
 		law_council_republic
+		law_collectivized_agriculture
+		law_worker_protections
 	}
 	
 	unlocking_technologies = {
