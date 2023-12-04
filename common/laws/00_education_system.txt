@@ -62,8 +62,6 @@ law_religious_schools = {
 		state_conversion_mult = 0.2
 		state_education_access_add = 0.1
 		interest_group_ig_devout_pol_str_mult = 0.1
-		interest_group_ig_devout_pop_attraction_mult = 0.1 #was none. This is intended to offset literacy rate on devout decline. Religious education gives followers of said religion.
-		interest_group_ig_intelligentsia_pol_str_mult = 0.05 #was none
 	}
 	
 	possible_political_movements = {
@@ -145,11 +143,7 @@ law_private_schools = {
 		state_assimilation_mult = 0.075 #was none
         state_education_access_add = 0.02 #was none
 		state_education_access_wealth_add = 0.005
-        interest_group_ig_devout_pol_str_mult = 0.05 #was none
-		interest_group_ig_intelligentsia_pol_str_mult = 0.1
-		interest_group_ig_landowners_pol_str_mult = 0.05 #was none
-		interest_group_ig_industrialists_pol_str_mult = 0.03 #was none
-		interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.05 #was none
+		state_political_strength_from_wealth_mult = 0.1
 	}
 	
 	possible_political_movements = {
@@ -215,9 +209,7 @@ law_public_schools = {
 		state_education_access_wealth_add = 0.001 # + base 0.02  = 0.02 + 0.005 = 0.025 => 50% education (missing) at 20 SoL. Best by design
 		state_education_access_add = 0.15
 		interest_group_in_government_attraction_mult = 0.03 # easier to propagandize, no? One use of state power
-		country_bureaucracy_investment_cost_factor_mult = 0.01 #was none
-
-
+		state_political_strength_from_wealth_mult = -0.1
 	}
 	
 	possible_political_movements = {
