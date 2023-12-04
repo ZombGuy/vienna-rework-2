@@ -1,6 +1,13 @@
+##############################VANILLA##############################
+
+# None
+
+##############################MODDED##############################
+
 # Liberian National Port Authority
 company_LNPA = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -49,7 +56,8 @@ company_LNPA = {
 
 # John Holt & Co. 
 company_JohnHolt = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # San Miguel
 company_san_miguel = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/manila_la_fabrica_de_cerveza_san_miguel.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/manila_la_fabrica_de_cerveza_san_miguel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	flavored_company = yes
 	
@@ -41,9 +44,12 @@ company_san_miguel = {
 	}
 }
 
+##############################MODDED##############################
+
 # Manila Electric Railroad and Light Company (Meralco)
 company_Meralco = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

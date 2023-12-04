@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Aktiebolaget L. M. Ericsson & Co
 company_ericsson = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/ericsson.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ericsson.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -45,7 +48,8 @@ company_ericsson = {
 
 # LKAB
 company_lkab = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/lkab.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/lkab.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -89,7 +93,8 @@ company_lkab = {
 
 # Götaverken
 company_gotaverken = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/götaverken.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/götaverken.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -136,8 +141,11 @@ company_gotaverken = {
 	}
 }
 
+##############################MODDED##############################
+
 company_Hastens = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -179,7 +187,8 @@ company_Hastens = {
 }
 
 company_Gevalia = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
@@ -223,7 +232,8 @@ company_Gevalia = {
 }
 
 company_VolvoPenta = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -267,7 +277,8 @@ company_VolvoPenta = {
 }
 
 company_ABAtlas = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -314,7 +325,8 @@ company_ABAtlas = {
 
 # Skanska
 company_Skanska = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -358,7 +370,8 @@ company_Skanska = {
 
 # Boliden
 company_Boliden = {
-	texture = "gfx/interface/icons/company_icons/basic_gold_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_gold_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -402,7 +415,8 @@ company_Boliden = {
 
 # AB Skellefteå spisbrödsfabrik (Wasabröd)
 company_ABSkell = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -445,7 +459,8 @@ company_ABSkell = {
 
 # Nydqvist och Holm AB
 company_Nydq = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

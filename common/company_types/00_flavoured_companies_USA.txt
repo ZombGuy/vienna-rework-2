@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Standard Oil
 company_standard_oil = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/american_standard_oil.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_standard_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
 	flavored_company = yes
 	
@@ -44,7 +47,8 @@ company_standard_oil = {
 
 # United Fruit Company
 company_united_fruit = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/american_united_fruit_co.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_united_fruit_co.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
@@ -57,17 +61,6 @@ company_united_fruit = {
 		OR = {
 			country_has_primary_culture = cu:yankee
 			country_has_primary_culture = cu:dixie
-		}
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				OR = {
-					state_is_in_south_america = yes
-					state_is_in_central_america = yes
-				}
-			}
 		}
 	}
 	
@@ -110,7 +103,8 @@ company_united_fruit = {
 
 # Carnegie Steel Co.
 company_us_steel = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/american_carnegie_steel.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_carnegie_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -156,7 +150,8 @@ company_us_steel = {
 
 # General Electric
 company_general_electric = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/american_general_electric.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_general_electric.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -207,7 +202,8 @@ company_general_electric = {
 
 # William Cramp & Sons
 company_william_cramp = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/american_william_and_sons.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_william_and_sons.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -261,9 +257,59 @@ company_william_cramp = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Ford Motor Company
+company_ford_motor = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_ford.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_war_machine_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_the_midwest
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MICHIGAN
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MICHIGAN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_motor_industry
+				level >= 10
+			}
+		}
+		has_technology_researched = combustion_engine
+	}
+	
+	prosperity_modifier = {
+		building_motor_industry_throughput_add = 0.15
+		building_war_machine_industry_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+##############################MODDED##############################
+
 # Coca Cola Company
 company_CocaCola = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 	
 	flavored_company = yes
 	
@@ -313,9 +359,10 @@ company_CocaCola = {
 
 # John Deere 
 company_JohnDeere = {
-	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 	
-	replaces_company = company_basic_agriculture
+	flavored_company = yes
 	
 	building_types = {  
 		building_tooling_workshops
@@ -357,54 +404,11 @@ company_JohnDeere = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
-# Ford Motor Company
-company_ford_motor = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/american_ford.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_motor_industry
-		building_war_machine_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_the_midwest
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_MICHIGAN
-			}
-		}
-	}	
-	
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_MICHIGAN
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_motor_industry
-				level >= 10
-			}
-		}
-		has_technology_researched = combustion_engine
-	}
-	
-	prosperity_modifier = {
-		building_motor_industry_throughput_add = 0.15
-		building_war_machine_industry_throughput_add = 0.05
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
 
 # Jack Daniels
 company_JackDaniels = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 	
 	flavored_company = yes
 	
@@ -448,7 +452,8 @@ company_JackDaniels = {
 
 # Remington
 company_Remington = {
-	texture = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	icon = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -496,7 +501,8 @@ company_Remington = {
 
 # DuPont
 company_DuPont = {
-	texture = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	icon = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -543,7 +549,8 @@ company_DuPont = {
 
 # International Paper Company 
 company_IPC = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -587,7 +594,8 @@ company_IPC = {
 
 # Levi Strauss
 company_Levi = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -632,7 +640,8 @@ company_Levi = {
 
 # American Smelting and Mining Company
 company_ASARCO = {
-	texture = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -678,7 +687,8 @@ company_ASARCO = {
 
 # Clear Mountain Spring Water Company
 company_ClearMountain = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 	
 	flavored_company = yes
 	
@@ -722,7 +732,8 @@ company_ClearMountain = {
 
 # Ball Corporation
 company_Ball = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -766,7 +777,8 @@ company_Ball = {
 
 # Coors Brewing Company
 company_Coors = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 	
 	flavored_company = yes
 	
@@ -810,7 +822,8 @@ company_Coors = {
 
 # VF Corporation / Reading Glove and Mitten Manufacturing Company
 company_VFC = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -854,7 +867,8 @@ company_VFC = {
 
 # McIlhenny Company 
 company_McIlhenny = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 	
 	flavored_company = yes
 	
@@ -897,7 +911,8 @@ company_McIlhenny = {
 
 # 3M
 company_3M = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -941,7 +956,8 @@ company_3M = {
 
 # Leggett & Platt
 company_Leggett = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -983,3 +999,95 @@ company_Leggett = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Disney
+company_Disney = {
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arts_academy
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 10
+			}
+		}
+		has_technology_researched = film
+	}
+	
+	prosperity_modifier = {
+		country_influence_mult = 0.25
+		state_loyalists_from_sol_change_mult = 0.1
+		state_migration_pull_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Hasbro
+company_Hasbro = {
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_furniture_manufacturies
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_new_england
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RHODE_ISLAND
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_RHODE_ISLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_furniture_manufacturies
+				level >= 6
+			}
+		}
+		has_technology_researched = plastics
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.1
+		country_prestige_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+

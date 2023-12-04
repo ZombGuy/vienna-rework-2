@@ -1,229 +1,9 @@
-company_Gancia = {
-	texture = "gfx/interface/icons/company_icons/basic_wine_and_fruit.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_vineyard_plantation
-		building_food_industry
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_italy
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_SAVOY			
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_SAVOY
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_vineyard_plantation
-				}
-				level >= 10
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		country_prestige_mult = 0.1
-		state_radicals_from_sol_change_mult = -0.15
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_Majello = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_glassworks
-		building_furniture_manufacturies
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_italy
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_LAZIO			
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_LAZIO
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_glassworks
-					is_building_type = building_furniture_manufacturies
-				}
-				level >= 7
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		country_prestige_mult = 0.15
-		interest_group_ig_landowners_approval_add = 3
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_Beretta = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_arms_industry
-		building_munition_plants
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_italy
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_LOMBARDY		
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_LOMBARDY
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_arms_industry
-					is_building_type = building_munition_plants
-				}
-				level >= 5
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		unit_army_offense_mult = 0.07
-		unit_army_defense_mult = 0.07
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_Fedrigoni = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_paper_mills
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_italy
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_LOMBARDY			
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_LOMBARDY
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_paper_mills
-				level >= 7
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		interest_group_ig_intelligentsia_approval_add = 2
-		interest_group_ig_intelligentsia_pop_attraction_mult = 0.15
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_Montecatini = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_chemical_plants
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_italy
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_TUSCANY		
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_TUSCANY
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_chemical_plants
-				level >= 7
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		building_wheat_farm_throughput_add = 0.15
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
+##############################VANILLA##############################
 
 # Ilva
 company_ilva = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/ilva.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ilva.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -268,7 +48,8 @@ company_ilva = {
 
 # Ansaldo
 company_ansaldo = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/ansaldo.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ansaldo.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -318,7 +99,8 @@ company_ansaldo = {
 
 # Casa Ricordi
 company_ricordi = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/ricordi.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ricordi.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -361,7 +143,8 @@ company_ricordi = {
 
 # FIAT
 company_fiat = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/fiat.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/fiat.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -398,7 +181,7 @@ company_fiat = {
 	}
 	
 	prosperity_modifier = {
-		military_formation_travel_speed_mult = 0.1
+		military_formation_movement_speed_mult = 0.1
 		unit_army_offense_mult = 0.05
 	}
 	
@@ -409,7 +192,8 @@ company_fiat = {
 
 # Stabilimento Tecnico Triestino
 company_stt = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/stt.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/stt.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -455,9 +239,240 @@ company_stt = {
 	}
 }
 
+##############################MODDED##############################
+
+company_Gancia = {
+	icon = "gfx/interface/icons/company_icons/basic_wine_and_fruit.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_vineyard_plantation
+		building_food_industry
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAVOY			
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_SAVOY
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_vineyard_plantation
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+		state_radicals_from_sol_change_mult = -0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_Majello = {
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_glassworks
+		building_furniture_manufacturies
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LAZIO			
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_LAZIO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_glassworks
+					is_building_type = building_furniture_manufacturies
+				}
+				level >= 7
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.15
+		interest_group_ig_landowners_approval_add = 3
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_Beretta = {
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_munition_plants
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOMBARDY		
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_LOMBARDY
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_arms_industry
+					is_building_type = building_munition_plants
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_army_offense_mult = 0.07
+		unit_army_defense_mult = 0.07
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_Fedrigoni = {
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_paper_mills
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOMBARDY			
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_LOMBARDY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 7
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_intelligentsia_approval_add = 2
+		interest_group_ig_intelligentsia_pop_attraction_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_Montecatini = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_chemical_plants
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TUSCANY		
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_TUSCANY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plants
+				level >= 7
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_wheat_farm_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
 # Pirelli & C. S.p.A
 company_Pirelli = {
-	texture = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	icon = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -500,7 +515,8 @@ company_Pirelli = {
 
 # Olivetti S.p.A.
 company_Olivetti = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -545,7 +561,8 @@ company_Olivetti = {
 
 # Edison S.p.A.
 company_EdisonSpA = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -588,7 +605,8 @@ company_EdisonSpA = {
 
 # Barilla G. e R. Fratelli S.p.A
 company_Barilla = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -631,7 +649,8 @@ company_Barilla = {
 }
 # Cantiere navale di Palermo
 company_Cantiere = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -662,6 +681,7 @@ company_Cantiere = {
 			}
 		}
 		has_technology_researched = gantry_cranes
+	}
 	
 	prosperity_modifier = {
 		unit_navy_offense_mult = 0.7
@@ -675,7 +695,8 @@ company_Cantiere = {
 
 # Luigi Lavazza S.p.A.
 company_Lavazza = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations_2.dds"
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations_2.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
@@ -711,6 +732,50 @@ company_Lavazza = {
 		state_loyalists_from_sol_change_mult = 0.15
 		state_colony_growth_speed_mult = 0.05
 	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Menarini
+company_Menarini = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_chemical_plants
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CAMPANIA
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CAMPANIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plants
+				level >= 6
+			}
+		}
+		has_technology_researched = pharmaceuticals
+	}
+	
+	prosperity_modifier = {
+		state_mortality_wealth_mult = -0.002 
+	}	
 	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies

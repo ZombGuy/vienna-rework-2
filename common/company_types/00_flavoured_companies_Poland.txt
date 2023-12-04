@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Ursus
 company_ursus = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/polish_ursus.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/polish_ursus.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -43,7 +46,8 @@ company_ursus = {
 
 # Lilpop, Rau i Loewenstein
 company_lilpop = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/polish_lilpop.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/polish_lilpop.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -92,9 +96,12 @@ company_lilpop = {
 	}
 }
 
+##############################MODDED##############################
+
 # Pudliszki
 company_Pudliszki = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -137,7 +144,8 @@ company_Pudliszki = {
 
 # K. Rudzki i S-ka
 company_KRudzki = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -167,7 +175,7 @@ company_KRudzki = {
 				  level >= 10
 			}
 		}
-		has_technology_researched = steel-frame_building
+		has_technology_researched = steel_frame_buildings
 	}
 	
 	prosperity_modifier = {
@@ -182,7 +190,8 @@ company_KRudzki = {
 
 # Cegielski – Poznań S.A.
 company_Cegielski = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -223,9 +232,10 @@ company_Cegielski = {
 	}
 }
 
-# ArcelorMittal Poland S.A. Oddział w Świętochłowicach
+# ArcelorMittal Poland S.A. Oddział w Świętochłowicach / Huta Florian 
 company_Arcelor = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -268,7 +278,8 @@ company_Arcelor = {
 
 # Okręgowa Spółdzielnia Mleczarska
 company_OSM = {
-	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	

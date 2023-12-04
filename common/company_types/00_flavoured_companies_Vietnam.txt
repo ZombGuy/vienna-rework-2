@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Nam Định Textile Factory
 company_nam_dinh = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -41,9 +44,12 @@ company_nam_dinh = {
 	}
 }
 
+##############################MODDED##############################
+
 # Vietnam Railways
 company_VRailways = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -86,7 +92,8 @@ company_VRailways = {
 
 # Habeco
 company_Habeco = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	flavored_company = yes
 	
@@ -128,7 +135,8 @@ company_Habeco = {
 
 # Saigon Ironworks
 company_saigon_iron = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	

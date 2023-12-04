@@ -1,189 +1,9 @@
-
-company_CompagnieFraissinet = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_port
-		building_shipyards
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_france
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_PROVENCE
-			}
-		}
-	}	
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_PROVENCE
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_port
-					is_building_type = building_shipyards
-				}
-				level >= 10
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		state_migration_pull_mult = 0.15
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_HermesFreres = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_furniture_manufacturies
-		building_textile_mills
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_france
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_ILE_DE_FRANCE
-			}
-		}
-	}	
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_ILE_DE_FRANCE
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_furniture_manufacturies
-					is_building_type = building_textile_mills
-				}
-				level >= 15
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		country_prestige_mult = 0.2
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_SocieteJF = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_sugar_plantation
-		building_railway
-		building_steel_mills
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_france
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_ILE_DE_FRANCE
-			}
-		}
-	}	
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_ILE_DE_FRANCE
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_railway
-					is_building_type = building_steel_mills
-				}
-				level >= 10
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_LouisVuitton = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_textile_mills
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_france
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_ILE_DE_FRANCE
-			}
-		}
-	}	
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_ILE_DE_FRANCE
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_textile_mills
-				level >= 20
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		state_migration_pull_mult = 0.05
-		country_prestige_mult = 0.15
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
+##############################VANILLA##############################
 
 # Société Mokta El Hadid
 company_societe_mokta_el_hadid = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_société_mokta_el_hadid.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_société_mokta_el_hadid.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -226,7 +46,8 @@ company_societe_mokta_el_hadid = {
 
 # Schneider et Cie
 company_schneider_creusot = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_schneider_et_cie.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_schneider_et_cie.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -271,7 +92,8 @@ company_schneider_creusot = {
 }
 # Dollfus-Mieg et Compagnie
 company_dmc = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_dmc.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_dmc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -315,7 +137,8 @@ company_dmc = {
 
 # Confédération générale des vignerons
 company_cgv = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_cgv.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_cgv.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
@@ -355,7 +178,8 @@ company_cgv = {
 
 # Manufacture d'armes de Saint-Étienne
 company_saint_etienne = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_saint_etienne.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_saint_etienne.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -401,7 +225,8 @@ company_saint_etienne = {
 
 # Société Nouvelle des Forges et Chantiers de la Méditerranée
 company_fcm = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_forges_et_chantiers_de_la_méditerranée.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_forges_et_chantiers_de_la_méditerranée.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -450,7 +275,8 @@ company_fcm = {
 }
 # Compagnie des mines d'Anzin
 company_mines_anzin = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/france_compagnie_des_mines_danzin.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_compagnie_des_mines_danzin.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -491,9 +317,198 @@ company_mines_anzin = {
 	}
 }
 
+##############################MODDED##############################
+
+company_CompagnieFraissinet = {
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_port
+		building_shipyards
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PROVENCE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_PROVENCE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_port
+					is_building_type = building_shipyards
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_HermesFreres = {
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_furniture_manufacturies
+		building_textile_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_furniture_manufacturies
+					is_building_type = building_textile_mills
+				}
+				level >= 15
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_SocieteJF = {
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_sugar_plantation
+		building_railway
+		building_steel_mills
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_railway
+					is_building_type = building_steel_mills
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 20
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_LouisVuitton = {
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_france
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ILE_DE_FRANCE
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_ILE_DE_FRANCE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level >= 20
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.05
+		country_prestige_mult = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
 # Peugeot
 company_Peugeot = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -538,7 +553,8 @@ company_Peugeot = {
 
 # Bonduelle
 company_Bonduelle = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -582,7 +598,8 @@ company_Bonduelle = {
 
 # Établissements Jules Bel
 company_EJB = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -625,7 +642,8 @@ company_EJB = {
 
 # Thomson-CSF
 company_ThomsonCSF = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -671,7 +689,8 @@ company_ThomsonCSF = {
 }
 # Montagut
 company_Montagut = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -715,7 +734,8 @@ company_Montagut = {
 
 # Naval Group
 company_NavalGroup = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -759,7 +779,8 @@ company_NavalGroup = {
 
 # Saint-Gobain
 company_SaintGobain = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -802,7 +823,8 @@ company_SaintGobain = {
 
 # Baccarat
 company_Baccarat = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -845,7 +867,8 @@ company_Baccarat = {
 
 # Société Générale d’Entreprises S.A.
 company_Vinci = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -874,7 +897,7 @@ company_Vinci = {
 				level >= 20
 			}
 		}
-		has_technology_researched = steel-frame_building
+		has_technology_researched = steel_frame_buildings
 	}
 	
 	prosperity_modifier = {

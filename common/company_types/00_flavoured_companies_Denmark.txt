@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Chr. Hansens teknisk-kemiske Laboratorium A/S
 company_chr_hansens = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/denmark_chr_hansens_teknisk_kemiske_laboratorium.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/denmark_chr_hansens_teknisk_kemiske_laboratorium.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -47,7 +50,8 @@ company_chr_hansens = {
 
 # A.P. Møller (later Mærsk)
 company_ap_moller = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/ap_moller.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ap_moller.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -88,8 +92,12 @@ company_ap_moller = {
 	}
 }
 
+##############################MODDED##############################
+
+# Simonsen Weel
 company_SimonsenWeel = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -132,7 +140,8 @@ company_SimonsenWeel = {
 
 # Royal Porcelain Factory of Denmark
 company_RPFD = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -176,7 +185,8 @@ company_RPFD = {
 
 # Stevns Foderstofforening
 company_Stevns = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -221,7 +231,8 @@ company_Stevns = {
 
 # Carlsberg
 company_Carlsberg = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -264,7 +275,8 @@ company_Carlsberg = {
 
 # DISA
 company_DISA = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -308,7 +320,8 @@ company_DISA = {
 
 # De Danske Sukkerfabrikker
 company_DDS = {
-	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -352,7 +365,8 @@ company_DDS = {
 
 # De Danske Bomuldsspinderier
 company_DDB = {
-	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -384,7 +398,7 @@ company_DDB = {
 	}
 	
 	prosperity_modifier = {
-		building_cotton_plantation_throughput_add = 0.3
+		building_cotton_plantation_throughput_add = 0.25
 	}	
 	
 	ai_weight = {

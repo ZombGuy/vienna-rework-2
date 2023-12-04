@@ -1,6 +1,13 @@
+##############################VANILLA#############################
+
+# None
+
+##############################MODDED##############################
+
 # Maggi
 company_Maggi = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -16,20 +23,14 @@ company_Maggi = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				OR = {
-					state_region = s:STATE_WEST_SWITZERLAND
-					state_region = s:STATE_EAST_SWITZERLAND
-				}
+				state_region = s:STATE_EAST_SWITZERLAND
 			}
 		}
 	}
 	
 	possible = {
 		any_scope_state = {
-		    OR = {
-				state_region = s:STATE_WEST_SWITZERLAND
-				state_region = s:STATE_EAST_SWITZERLAND
-			}
+			state_region = s:STATE_EAST_SWITZERLAND
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_food_industry
@@ -49,7 +50,8 @@ company_Maggi = {
 
 # J. R. Geigy
 company_Geigy = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -67,20 +69,14 @@ company_Geigy = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				OR = {
-					state_region = s:STATE_WEST_SWITZERLAND
-					state_region = s:STATE_EAST_SWITZERLAND
-				}
+				state_region = s:STATE_WEST_SWITZERLAND
 			}
 		}
 	}
 	
 	possible = {
 		any_scope_state = {
-		    OR = {
 				state_region = s:STATE_WEST_SWITZERLAND
-				state_region = s:STATE_EAST_SWITZERLAND
-			}
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_chemical_plants
@@ -100,7 +96,8 @@ company_Geigy = {
 
 # Brown, Boveri & Cie.
 company_BrownB = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -118,14 +115,14 @@ company_BrownB = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_WEST_SWITZERLAND
+				state_region = s:STATE_EAST_SWITZERLAND
 			}
 		}
 	}
 	
 	possible = {
 		any_scope_state = {
-			state_region = s:STATE_WEST_SWITZERLAND
+			state_region = s:STATE_EAST_SWITZERLAND
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_power_plant
@@ -145,7 +142,8 @@ company_BrownB = {
 
 # Lonza Group AG
 company_LonzaGroup = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -190,7 +188,8 @@ company_LonzaGroup = {
 
 # ZVSM
 company_ZVSM = {
-	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -207,10 +206,7 @@ company_ZVSM = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				OR = {
-					state_region = s:STATE_WEST_SWITZERLAND
-					state_region = s:STATE_EAST_SWITZERLAND
-				}
+				state_region = s:STATE_WEST_SWITZERLAND
 			}
 		}
 	}
@@ -242,7 +238,8 @@ company_ZVSM = {
 
 # Nestlé
 company_Nestle = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -281,7 +278,7 @@ company_Nestle = {
 	}
 	
 	prosperity_modifier = {
-		state_loyalists_from_sol_change_mult = 0.1
+		state_loyalists_from_sol_change_mult = 0.05
 		state_birth_rate_mult = 0.7
 	}
 
@@ -292,7 +289,8 @@ company_Nestle = {
 
 # Rieter
 company_Rieter = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -309,20 +307,14 @@ company_Rieter = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				OR = {
-					state_region = s:STATE_WEST_SWITZERLAND
-					state_region = s:STATE_EAST_SWITZERLAND
-				}
+				state_region = s:STATE_EAST_SWITZERLAND
 			}
 		}
 	}
 	
 	possible = {
 		any_scope_state = {
-		    OR = {
-				state_region = s:STATE_WEST_SWITZERLAND
-				state_region = s:STATE_EAST_SWITZERLAND
-			}
+			state_region = s:STATE_EAST_SWITZERLAND
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
@@ -342,7 +334,8 @@ company_Rieter = {
 
 # Von Roll
 company_VonRoll = {
-	texture = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -358,20 +351,14 @@ company_VonRoll = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				OR = {
-					state_region = s:STATE_WEST_SWITZERLAND
-					state_region = s:STATE_EAST_SWITZERLAND
-				}
+				state_region = s:STATE_WEST_SWITZERLAND
 			}
 		}
 	}
 	
 	possible = {
 		any_scope_state = {
-		    OR = {
-				state_region = s:STATE_WEST_SWITZERLAND
-				state_region = s:STATE_EAST_SWITZERLAND
-			}
+			state_region = s:STATE_WEST_SWITZERLAND
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_iron_mine
@@ -391,7 +378,8 @@ company_VonRoll = {
 
 # Sulzer Brothers Ltd.
 company_Sulzer = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -408,20 +396,14 @@ company_Sulzer = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				OR = {
-					state_region = s:STATE_WEST_SWITZERLAND
-					state_region = s:STATE_EAST_SWITZERLAND
-				}
+				state_region = s:STATE_WEST_SWITZERLAND
 			}
 		}
 	}
 	
 	possible = {
 		any_scope_state = {
-		    OR = {
-				state_region = s:STATE_WEST_SWITZERLAND
-				state_region = s:STATE_EAST_SWITZERLAND
-			}
+			state_region = s:STATE_WEST_SWITZERLAND
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tooling_workshops
@@ -432,6 +414,51 @@ company_Sulzer = {
 	
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Chocoladefabriken Lindt & Sprüngli AG
+company_Lindt = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EAST_SWITZERLAND
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EAST_SWITZERLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.1
+		unit_morale_recovery_mult = 0.05
 	}
 
 	ai_weight = {

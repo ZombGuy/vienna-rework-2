@@ -1,5 +1,57 @@
+##############################VANILLA##############################
+
+# Sunhwaguk
+company_sunhwaguk = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/korea_sunhwaguk.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tobacco_plantation
+		building_rice_farm
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:korean
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level >= 10
+			}
+		}
+		has_technology_researched = central_planning
+	}
+	
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+##############################MODDED##############################
+
 company_Doosan = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
     flavored_company = yes
 	
@@ -48,55 +100,10 @@ company_Doosan = {
 	}
 }
 
-# Sunhwaguk
-company_sunhwaguk = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/korea_sunhwaguk.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_tobacco_plantation
-		building_rice_farm
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_manchuria
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = { is_homeland = cu:korean }
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-			state_region = {
-				is_homeland = cu:korean
-			}
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_tobacco_plantation
-				level >= 10
-			}
-		}
-		has_technology_researched = central_planning
-	}
-	
-	prosperity_modifier = {
-		country_tech_spread_mult = 0.1
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
 # Korea Tungsten Company
 company_KTC = {
-	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -143,7 +150,8 @@ company_KTC = {
 
 # Dong-a Ilbo
 company_DongIlbo = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -189,7 +197,8 @@ company_DongIlbo = {
 
 # Hanseong Jeongi Hoesa
 company_Hangseong = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -223,7 +232,7 @@ company_Hangseong = {
 	}
 	
 	prosperity_modifier = {
-		state_radicals_from_sol_change_mult = 0.1
+		state_radicals_from_sol_change_mult = -0.1
 		building_power_plant_throughput_add = 0.1
 	}	
 	
@@ -234,7 +243,8 @@ company_Hangseong = {
 
 # Hanguk Cheoldo (Choseon government Railway, was also merged with the Manchuria Railway company)
 company_Hanguk = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -255,7 +265,7 @@ company_Hanguk = {
 	}
 	
 	possible = { 
-		country_or_subject_owns_entire_state_region = STATE_GYEONGGI
+		country_or_subject_owns_entire_state_region = STATE_SEOUL
 		any_scope_state = {
 			state_region = {
 				is_homeland = cu:korean
@@ -269,6 +279,51 @@ company_Hanguk = {
 	
 	prosperity_modifier = {
 		unit_mobilization_speed_from_railways_mult = 0.3
+		military_formation_movement_speed_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Yuhan Corporation
+company_Yuhan = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_chemical_plants
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plants
+				level >= 8
+			}
+		}
+		has_technology_researched = malaria_prevention
+	}
+	
+	prosperity_modifier = {
+		state_mortality_wealth_mult = -0.0025
 	}	
 	
 	ai_weight = {

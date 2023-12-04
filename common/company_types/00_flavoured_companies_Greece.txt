@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Basileiades
 company_basileiades = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/basileiades.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/basileiades.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -48,7 +51,8 @@ company_basileiades = {
 
 # Achilleas Kouppas Machine Manufacturing A.E.
 company_kouppas = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/kouppas.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/kouppas.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -94,9 +98,12 @@ company_kouppas = {
 	}
 }
 
+##############################MODDED##############################
+
 # Neorion
 company_Neorion = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -144,7 +151,8 @@ company_Neorion = {
 
 # Karelia Tobacco Company
 company_KareliaTobacco = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	

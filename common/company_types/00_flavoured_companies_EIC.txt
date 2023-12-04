@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Great Indian Peninsula Railway
 company_great_indian_railway = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -51,7 +54,8 @@ company_great_indian_railway = {
 
 # Tata
 company_tata = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/india_tata.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_tata.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -96,9 +100,12 @@ company_tata = {
 	}
 }
 
+##############################MODDED##############################
+
 # Calcutta and Burma Steamship Navigation Company
 company_CaBSNC = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -138,7 +145,7 @@ company_CaBSNC = {
 					is_building_type = building_shipyards
 					is_building_type = building_port
 				}
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -155,7 +162,8 @@ company_CaBSNC = {
 
 # British India Corporation 
 company_BIC = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -192,7 +200,7 @@ company_BIC = {
 					is_building_type = building_textile_mills
 					is_building_type = building_cotton_plantation
 				}
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -206,8 +214,10 @@ company_BIC = {
 	}
 }
 
+# Greaves-Cotton
 company_GreavesCotton = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -241,7 +251,7 @@ company_GreavesCotton = {
 					is_building_type = building_motor_industry
 					is_building_type = building_tooling_workshops
 				}
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -257,7 +267,8 @@ company_GreavesCotton = {
 
 # JTC Tea Industries Pvt. Ltd.
 company_JTC = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
@@ -286,7 +297,7 @@ company_JTC = {
 			is_incorporated = yes
 			any_scope_building = {
 					is_building_type = building_tea_plantation
-				level > 10
+				level >= 10
 			}
 		}
 	}
@@ -294,6 +305,490 @@ company_JTC = {
 	prosperity_modifier = {
 		country_convoys_capacity_mult = 0.15
 		building_tea_plantation_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Tata Hydroelectric Power Supply Company
+company_tata_power = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_tata.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_power_plant
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_india
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BOMBAY
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BOMBAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 8
+			}
+		}
+		has_technology_researched = electrical_generation
+	}
+	
+	prosperity_modifier = {
+		building_power_plant_throughput_add = 0.15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Calcutta Tramways Company
+company_CTC = {
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_power_plant
+		building_railway
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTH_BENGAL
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_railway
+				level >= 8
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_assimilation_mult = 0.1
+		state_infrastructure_from_population_max_add = 15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Dabur
+company_Dabur = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_chemical_plants
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTH_BENGAL
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_chemical_plants
+				level >= 10
+			}
+		}
+		has_technology_researched = quinine
+	}
+	
+	prosperity_modifier = {
+		state_mortality_wealth_mult = -0.002
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Parvathy Mills Limited 
+company_Parvathy = {
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+		building_cotton_plantation
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TRAVANCORE
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TRAVANCORE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mills
+					is_building_type = building_cotton_plantation
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.08
+		state_assimilation_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Delhi Cloth & General Mills 
+company_DelhiCloth = {
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+		building_cotton_plantation
+		building_sugar_plantation
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_DELHI
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_DELHI
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mills
+					is_building_type = building_cotton_plantation
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.05
+		unit_morale_recovery_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Bengal Chemicals and Pharmaceuticals
+company_BengalChemicals = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_chemical_plants
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTH_BENGAL
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_chemical_plants
+				level >= 10
+			}
+		}
+		has_technology_researched = quinine
+	}
+	
+	prosperity_modifier = {
+		state_mortality_wealth_mult = -0.001
+		state_loyalists_from_sol_change_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Aurora Film Corporation
+company_Aurora = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arts_academy
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTH_BENGAL
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_arts_academy
+				level >= 8
+			}
+		}
+		has_technology_researched = film
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.1
+		country_society_tech_spread_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Gita Press
+company_GitaPress = {
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_paper_mills
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_AWADH
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_AWADH
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_paper_mills
+				level >= 8
+			}
+		}
+		has_technology_researched = political_agitation
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_devout_pop_attraction_mult = 0.15
+		interest_group_ig_devout_approval_add = 2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# MTR Foods
+company_MTR = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MYSORE
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MYSORE
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+		has_technology_researched = conveyors
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.08
+		country_prestige_mult = 0.05
+		interest_group_ig_devout_pop_attraction_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Bombay Dyeing
+company_Bombay_Dyeing = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+		building_dye_plantation
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_south_india
+			has_interest_marker_in_region = region_north_india
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BOMBAY
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BOMBAY
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_textile_mills
+				level >= 10
+			}
+		}
+		has_technology_researched = mechanized_workshops
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_sol_change_mult = 0.05
+		state_radicals_from_sol_change_mult = -0.05
 	}	
 	
 	ai_weight = {

@@ -1,51 +1,9 @@
-company_Wartsila = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_logging_camp
-		building_shipyards
-		building_iron_mine
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_baltic
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_WEST_KARELIA
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_WEST_KARELIA
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_logging_camp
-				level >= 8
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		building_fishing_wharf_throughput_add = 0.2
-		building_motor_industry_throughput_add 0.1
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-
-}
+##############################VANILLA##############################
 
 # Nokia AB
 company_nokia = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/finland_nokia.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/finland_nokia.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -89,8 +47,58 @@ company_nokia = {
 	}
 }
 
+##############################MODDED##############################
+# Wartsila
+company_Wartsila = {
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_logging_camp
+		building_shipyards
+		building_iron_mine
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_KARELIA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WEST_KARELIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_logging_camp
+				level >= 8
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_fishing_wharf_throughput_add = 0.2
+		building_motor_industry_throughput_add 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+
+}
+
+# Metsa
 company_Metsa = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -131,8 +139,10 @@ company_Metsa = {
 
 }
 
+# Paulig
 company_Paulig = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -174,8 +184,10 @@ company_Paulig = {
 
 }
 
+# Iittala
 company_Iittala = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -218,8 +230,10 @@ company_Iittala = {
 	}
 }
 
+# Fazer
 company_Fazer = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -261,8 +275,10 @@ company_Fazer = {
 	}
 }
 
+# Fiskars
 company_Fiskars = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -305,7 +321,8 @@ company_Fiskars = {
 }
 # Oy Tampella Ab
 company_Tampella = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

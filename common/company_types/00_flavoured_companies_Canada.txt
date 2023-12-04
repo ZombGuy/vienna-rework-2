@@ -1,6 +1,54 @@
+##############################VANILLA##############################
+
+# Hudson Bay Company
+company_hbc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/hbc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_food_industry # loose fit
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_canada
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MANITOBA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MANITOBA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_creation_mult = 0.1
+		building_textile_mills_throughput_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+##############################MODDED##############################
+
 # Bell Telephone Company of Canada
 company_BTCC = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -43,7 +91,8 @@ company_BTCC = {
 
 # Labatt Brewing Company
 company_Labatt = {
-	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -88,7 +137,8 @@ company_Labatt = {
 
 # Grand Trunk Railway
 company_GTR = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -129,8 +179,10 @@ company_GTR = {
 	}	
 }
 
+# Gray-Dort Motors
 company_GrayDort = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -173,7 +225,8 @@ company_GrayDort = {
 
 # Farr Alpaca Company
 company_Farr = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -216,8 +269,10 @@ company_Farr = {
 	}	
 }
 
+# McLaughlin
 company_McLaughlin = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -255,46 +310,4 @@ company_McLaughlin = {
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}	
-}
-
-# Hudson Bay Company
-company_hbc = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/hbc.dds"
-	
-	flavored_company = yes
-	
-	building_types = {
-		building_food_industry # loose fit
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_canada
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_MANITOBA
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_MANITOBA
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_food_industry
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		state_colony_growth_creation_mult = 0.1
-		building_textile_mills_throughput_add = 0.05
-	}
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
 }

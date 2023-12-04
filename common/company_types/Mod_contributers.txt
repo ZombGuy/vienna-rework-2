@@ -1,9 +1,14 @@
 # Main Developers
 # W4RPER 
-# Fladarmar
+# Flardarmar
 
 # Translation
 # 牛奶大魔王 - Simpliefied Chinese 
 
 # Company Suggestions
 # Vitatious
+
+# Coding help
+# Paradox: Lino "H4n1baL" Claudius
+# CaesarVincens
+# Laaxus

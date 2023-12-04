@@ -1,90 +1,9 @@
-# National Federation of Coffee Growers of Colombia
-company_NFCGC = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_coffee_plantation
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_gran_colombia
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_MIRANDA
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-				state_region = s:STATE_MIRANDA
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_coffee_plantation
-				level >= 7
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		interest_group_ig_trade_unions_approval_add = 4
-		building_coffee_plantation_throughput_add = 0.2
-	}
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-company_HouseOfAngo = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
-	
-	flavored_company = yes
-	
-	
-	building_types = {  
-		building_food_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_gran_colombia
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_MIRANDA
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-				state_region = s:STATE_MIRANDA
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_food_industry
-				level >= 5
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		state_migration_pull_mult = 0.1
-		country_convoys_capacity_mult = 0.1
-	}
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+##############################VANILLA##############################
 
 # Caribbean Petroleum Company
 company_caribbean_petroleum = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_caribbean_petroleum_company.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_caribbean_petroleum_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
 	flavored_company = yes
 	
@@ -132,55 +51,12 @@ company_caribbean_petroleum = {
 	}
 }
 
-# Fábrica de Armas de la Nación
-company_famae = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/chile_fabrica_de_armas_de_la_nacion.dds"
-	
-	flavored_company = yes
-	
-	building_types = {
-		building_arms_industry
-		building_artillery_foundries
-		building_munition_plants
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_la_plata
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_SANTIAGO
-			}
-		}
-	}			
-	
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_SANTIAGO
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_arms_industry
-				level >= 3
-			}
-		}
-		has_technology_researched = gunsmithing
-	}
-	
-	prosperity_modifier = {
-		unit_offense_mult = 0.05
-		building_steel_mills_throughput_add = 0.05
-	}
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+##############################DLC-COTS##############################
 
 # C.A. La Electricidad de Caracas
 company_electricidad_de_caracas = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_c_a_la_electricidad_de_caracas.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_c_a_la_electricidad_de_caracas.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	building_types = {  
 		building_power_plant
@@ -219,3 +95,94 @@ company_electricidad_de_caracas = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+##############################MODDED##############################
+
+# National Federation of Coffee Growers of Colombia
+company_NFCGC = {
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_coffee_plantation
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coffee_plantation
+				level >= 7
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_trade_unions_approval_add = 4
+		building_coffee_plantation_throughput_add = 0.2
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# House of Ango
+company_HouseOfAngo = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	
+	flavored_company = yes
+	
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.1
+		country_convoys_capacity_mult = 0.1
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+

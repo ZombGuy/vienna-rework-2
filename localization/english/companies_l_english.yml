@@ -1,5 +1,6 @@
 ﻿l_english:
 
+ COMPANY_ESTABLISHED: "Established on [Company.GetEstablishmentDate.GetString|v]"
  COMPANIES: "[Concept('concept_company','$concept_companies$')]"
  COMPANIES_HEADER: "[SelectLocalization(GetVariableSystem.Exists('hide_current_companies'), 'SELECT_COMPANY', 'COMPANIES')]"
  SELECT_COMPANY: "Select [concept_company]"
@@ -12,7 +13,10 @@
  COMPANIES_AMOUNT_HEADER: "[GetPlayer.GetNumCompanies|v]/#tooltippable #tooltip:[GetPlayer.GetTooltipTag],TOOLTIP_MAX_COMPANIES [GetPlayer.GetMaxNumCompanies|v]#!#!"
  TOOLTIP_MAX_COMPANIES: "[Country.GetMaxNumCompaniesDesc]"
  CAN_ESTABLISH_ADDITIONAL_COMPANY: "We can establish additional $COMPANIES$"
+ CANNOT_ESTABLISH_ADDITIONAL_COMPANY: "We cannot establish additional $COMPANIES$"
  COMPANY_NEEDS_BUILDING_POTENTIAL: "Has the resource potential for at least of the [Concept('concept_building', '$concept_buildings$')] that this [concept_company] specializes in"
+ COMPANY_CANNOT_ESTABLISH_ON_COOLDOWN: "This [concept_company] was disbanded recently, we cannot reestablish it until [Date.GetString|v]"
+ COMPANY_CANNOT_DISBAND_ON_COOLDOWN: "This [concept_company] was established recently, we cannot disband it until [Date.GetString|v]"
  MAX_COMPANIES_DESC: "#header Maximum number of $COMPANIES$ allowed: $MAX|v$#!\n$TOOLTIP_DELIMITER$\n$DETAILS$"
  MAX_COMPANIES_EMPTY: "We currently cannot support any $COMPANIES$"
  COMPANY_CONSTRUCTION_BONUS_BREAKDOWN: "#header [concept_company] Construction Bonus: [Country.GetModifier.GetFormattedValueFor('country_company_construction_efficiency_bonus_add')]#!\n$TOOLTIP_DELIMITER$\n[Country.GetModifier.GetDescFor('country_company_construction_efficiency_bonus_add')]"
@@ -25,10 +29,10 @@
  COMPANY_THROUGHPUT_BONUS_WITH_COMPETITION: "#tooltippable #tooltip:[COUNTRY.GetTooltipTag],COMPANY_THROUGHPUT_BONUS_BREAKDOWN $VALUE|=+1%$#!#! from [concept_company] Throughput Bonus ($BASE_VALUE|%1v$ x $COMPETITION_FACTOR|2v$ from $NUM_COMPANIES|v$ competing $COMPANIES$)"
  ALREADY_ESTABLISHED_COMPANY: "Has not already established the [COMPANY_TYPE.GetName|v] [concept_company]"
  HAS_NOT_ESTABLISHED_COMPANY: "We have not established the [COMPANY_TYPE.GetName|v] [concept_company]"
- CREATE_COMPANY_DESC: "#header Establish [COMPANY_TYPE.GetName|v]#!\n$TOOLTIP_DELIMITER$\nEstablish the [COMPANY_TYPE.GetName|v] [concept_company][ConcatIfNeitherEmpty('\n\n','$ERRORS$')]"
- REMOVE_COMPANY_DESC: "#header Disband [COMPANY_TYPE.GetName|v]#!\n$TOOLTIP_DELIMITER$\nDisband the [COMPANY_TYPE.GetName|v] [concept_company][ConcatIfNeitherEmpty('\n\n','$ERRORS$')]"
- CREATE_COMPANY_ERRORS: "#n Cannot be established due to:#!\n$DETAILS$"
- REMOVED_COMPANY_ERRORS: "#n Cannot be disbanded due to:#!\n$DETAILS$"
+ CREATE_COMPANY_DESC: "#header Establish [CompanyType.GetName|v]#!\n$TOOLTIP_DELIMITER$\nEstablish the [CompanyType.GetName|v] [concept_company][ConcatIfNeitherEmpty('\n\n', AddLocalizationIf(Not(IsValid(GetPlayer.CreateCompany(CompanyType.Self))), 'CREATE_COMPANY_ERRORS'))]"
+ REMOVE_COMPANY_DESC: "#header Disband [CompanyType.GetName|v]#!\n$TOOLTIP_DELIMITER$\nDisband the [CompanyType.GetName|v] [concept_company][ConcatIfNeitherEmpty('\n\n', AddLocalizationIf(Not(IsValid(GetPlayer.RemoveCompany(CompanyType.Self))), 'REMOVE_COMPANY_ERRORS'))]"
+ CREATE_COMPANY_ERRORS: "#n Cannot be established due to:#!\n[GetDesc(GetPlayer.CreateCompany(CompanyType.Self))]"
+ REMOVE_COMPANY_ERRORS: "#n Cannot be disbanded due to:#!\n[GetDesc(GetPlayer.RemoveCompany(CompanyType.Self))]"
  COMPANY_PRODUCTIVITY: "@money![Company.GetFormattedProductivity] [concept_productivity]"
  COMPANY_PROSPERITY_CHANGE: " ([Company.CalcProsperityChange|=+0])"
  COMPANY_PROSPERITY: "[concept_prosperity]: [Company.GetProsperity|v0][SelectLocalization(NotEqualTo_CFixedPoint(Company.CalcProsperityChange,'(CFixedPoint)0'),'COMPANY_PROSPERITY_CHANGE','')]"
@@ -196,6 +200,8 @@
  company_HarzerBergbau: "Harzer Bergbau AG"
  company_GermanNobel: "Alfred Nobel & Co"
  company_Seeberger: "Seeberger"
+ company_Niederegger: "J. G. Niederegger GmbH & Co. KG"
+ company_KPG: "Königliche Preußische Gewehrfabrique"
 
 # Austria-Hungary
  company_GanzWorks: "Ganz Works"
@@ -224,6 +230,7 @@
  company_Rieter: "Rieter"
  company_VonRoll: "Gesellschaft der Ludwig von Roll'schen Eisenwerke"
  company_Sulzer: "Sulzer Brothers Ltd."
+ company_Lindt: "Chocoladefabriken Lindt & Sprüngli AG"
 
 # Russia
  company_vodka_monopoly: "Vodka Monopoly"
@@ -273,6 +280,16 @@
  company_PandO: "The Peninsular and Oriental Steam Navigation Company"
  company_Carr: "Carr's"
  company_Courta: "Courtaulds"
+ company_Carron_Company: "Carron Company"
+ 
+ # Ireland
+ company_Guiness: "Guiness Brewery"
+ company_Jacob: "Jacob's"
+ company_Waterford: "Waterford Glass works"
+ company_Ewart: "William Ewart & Son Ltd"
+ company_Powers_Whiskey: "Powers Irish Whiskey"
+ company_IAOC: "Irish Agricultural Organisation Society"
+ company_Irish_Press: "The Irish Press"
 
 # Japan
  company_mitsui: "Mitsui"
@@ -316,6 +333,8 @@
  company_McIlhenny: "McIlhenny Company"
  company_3M: "Minnesota Mining and Manufacturing Company"
  company_Leggett: "Leggett & Platt"
+ company_Disney: "The Walt Disney Company"
+ company_Hasbro: "Hasbro"
 
 # China / Great Qing
  company_kaiping_mining: "Kaiping Mining Company"
@@ -378,6 +397,7 @@
  company_VinaO: "Ochagavia Wines"
  company_peruvian_amazon: "Peruvian Amazon Company"
  company_eea: "Empresas Eléctricas Asociadas"
+ company_estanifera_llallagua: "Compañía Estañífera de Llallagua"
  
  # North Andean
  company_caribbean_petroleum: "Caribbean Petroleum Company"
@@ -438,7 +458,7 @@
  # Norway
  company_HOFF: "HOFF Norske Potetindustrier"
  company_AlbertC: "Firma Albert Collett"
- company_Nobel: "Dyno Nobel
+ company_Nobel: "Dyno Nobel"
  company_Nydalens: "Nydalens Compagnie"
  company_aker_mek: "Agers Mechaniske Værksted"
  company_Kosmos: "A/S Kosmos"
@@ -509,6 +529,7 @@
  company_romanian_star: "Steaua Română"
  company_AV: "Atelierul Vlad"
  company_RLaWF: "The Romanian Locomotive and Wagon Factory"
+ company_FabricaTimi: "Fabrica de bere Timișoreana"
 
  # Italy 
  company_ilva: "Ilva"
@@ -527,6 +548,7 @@
  company_Barilla: "Barilla G. e R. Fratelli S.p.A"
  company_Cantiere: "Cantiere navale di Palermo"
  company_Lavazza: "Luigi Lavazza S.p.A."
+ company_Menarini: "Menarini"
 
 # Ottoman Empire / Turkey
  company_imperial_arsenal: "Tersâne-i Âmire"
@@ -548,6 +570,16 @@
  company_BIC: "British India Corporation"
  company_GreavesCotton: "Greaves Cotton Ltd."
  company_JTC: "JTC Tea Company Pvt. Ltd."
+ company_tata_power: "Tata Hydroelectric Power Supply Company"
+ company_CTC: "Calcutta Tramways Company"
+ company_Dabur: "Dabur"
+ company_Parvathy: "Parvathy Mills Limited"
+ company_DelhiCloth: "Delhi Cloth & General Mills"
+ company_BengalChemicals: "Bengal Chemicals and Pharmaceuticals"
+ company_Aurora: "Aurora Film Corporation"
+ company_GitaPress: "Gita Press"
+ company_MTR: "MTR Foods"
+ company_Bombay_Dyeing: "Bombay Dyeing"
  
  # Korea / Joseon 
  company_sunhwaguk: "Sunhwaguk"
@@ -557,6 +589,7 @@
  company_DongIlbo: "Dong-a Ilbo"
  company_Hangseong: "Hangseong Jeongi Hoesa"
  company_Hanguk: "Chōsen Government Railway"
+ company_Yuhan: "Yuhan Corporation"
 
  # Vietnam / Dai Nam 
  company_nam_dinh: "Nam Định Textile Factory"
@@ -585,6 +618,18 @@
  company_Gunns: "Gunns Limited"
  company_NeradaTea: "Nerada Tea"
  company_BHP: "Broken Hill Propretary Company"
+ company_Col_Sug_Ref: "Colonial Sugar Refining Company"
+ company_Howard_Smith: "Howard Smith Limited"
+ company_Tooheys_Brewery: "Tooheys Brewery"
+ company_Bendigo_Pottery: "Bendigo Pottery"
+ company_Consolidated_Zinc: "Consolidated Zinc"
+ 
+ # New Zealand 
+ company_UnionSSC: "Union Steam Ship Company"
+ company_FletcherC: "Fletcher Construction"
+ company_NZH: "The New Zealand Herald"
+ company_Kauri: "Kauri Timber"
+
 
  # Thailand / Siam
  company_b_grimm: "B.Grimm"

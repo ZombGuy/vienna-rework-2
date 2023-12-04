@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # B.Grimm
 company_b_grimm = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/thailand_b_grimm.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/thailand_b_grimm.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	flavored_company = yes
 	
@@ -41,9 +44,12 @@ company_b_grimm = {
 	}
 }
 
+##############################MODDED##############################
+
 # Siam Cement Company
 company_SiamCement = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -89,7 +95,8 @@ company_SiamCement = {
 
 # Charoen Pokphand
 company_Charoen = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture_2.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	flavored_company = yes
 	
@@ -119,7 +126,7 @@ company_Charoen = {
 				level >= 10
 			}
 		}
-		has_technology_researched = pan_nationalism
+		has_technology_researched = pan-nationalism
 	}
 	
 	prosperity_modifier = {
@@ -133,7 +140,8 @@ company_Charoen = {
 
 # Bangkok Dock Company
 company_bangkok_dock = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -177,7 +185,8 @@ company_bangkok_dock = {
 
 # Siam Electricity Company
 company_siam_elec = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -218,7 +227,8 @@ company_siam_elec = {
 
 # Min Sae Co. Ltd,
 company_min_sae = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	

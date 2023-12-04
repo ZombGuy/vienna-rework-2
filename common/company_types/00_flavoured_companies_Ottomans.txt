@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Imperial Arsenal
 company_imperial_arsenal = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/imperial_arsenal.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_arsenal.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -41,9 +44,147 @@ company_imperial_arsenal = {
 	}
 }
 
+# Ottoman Tobacco Company, later Tekel
+company_ottoman_tobacco_regie = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ottoman_tobacco_regie.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tobacco_plantation
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:turkish
+	}
+		
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level >= 5
+			}
+			count >= 4
+		}
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+	}
+	
+	prosperity_modifier = {
+		country_production_tech_spread_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Allatini Mills
+company_allatini_mills = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/allatini_mills.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_wheat_farm
+		building_rye_farm
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MACEDONIA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MACEDONIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wheat_farm
+					is_building_type = building_rye_farm
+				}
+				level >= 10
+			}
+		}
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+	}
+	
+	prosperity_modifier = {
+		building_food_industry_throughput_add = 0.1
+		state_radicals_from_discrimination_mult = -0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Chemins de fer Orientaux
+company_orient_express = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_anatolia
+			has_interest_marker_in_region = region_balkans
+		}
+	}
+	
+	attainable = {
+		owns_entire_state_region = STATE_EASTERN_THRACE
+	}			
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_balkans
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 4
+		}
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+##############################MODDED##############################
+
 # Zeytinburnu Industrial Complex
 company_zeytinburnu = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -96,7 +237,8 @@ company_zeytinburnu = {
 
 # Bakırköy Industrial Complex
 company_bakiroy = {
-	texture = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	icon = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -146,140 +288,9 @@ company_bakiroy = {
 	}
 }
 
-# Chemins de fer Orientaux
-company_orient_express = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_railway
-	}
-	
-	potential = {
-		OR = {
-			has_interest_marker_in_region = region_anatolia
-			has_interest_marker_in_region = region_balkans
-		}
-	}
-	
-	attainable = {
-		owns_entire_state_region = STATE_EASTERN_THRACE
-	}			
-	
-	possible = {
-		any_scope_state = {
-			region = sr:region_balkans
-			is_incorporated = yes
-			has_building = building_railway
-			count >= 4
-		}
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-	}
-	
-	prosperity_modifier = {
-		country_prestige_mult = 0.1
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-# Allatini Mills
-company_allatini_mills = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/allatini_mills.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_wheat_farm
-		building_rye_farm
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_balkans
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_MACEDONIA
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_MACEDONIA
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_wheat_farm
-					is_building_type = building_rye_farm
-				}
-				level >= 10
-			}
-		}
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-	}
-	
-	prosperity_modifier = {
-		building_food_industry_throughput_add = 0.1
-		state_radicals_from_discrimination_mult = -0.1
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-# Ottoman Tobacco Company, later Tekel
-company_ottoman_tobacco_regie = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/ottoman_tobacco_regie.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_tobacco_plantation
-	}
-	
-	potential = {
-		country_has_primary_culture = cu:turkish
-	}
-		
-	possible = {
-		any_scope_state = {
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_tobacco_plantation
-				level >= 5
-				count >= 4
-			}
-		}
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-	}
-	
-	prosperity_modifier = {
-		country_production_tech_spread_mult = 0.1
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
 company_Kuzguncuk = {
-	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -306,11 +317,8 @@ company_Kuzguncuk = {
 			state_region = s:STATE_EASTERN_THRACE
 			is_incorporated = yes
 			any_scope_building = {
-				OR = {
-					is_building_type = building_coal_mine
-					is_building_type = building_power_plant
-				}
-				level >= 7
+				is_building_type = building_power_plant
+				level >= 4
 			}
 		}
 		NOR = {
@@ -332,7 +340,8 @@ company_Kuzguncuk = {
 }
 
 company_SarsilmazArms = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -386,7 +395,8 @@ company_SarsilmazArms = {
 
 # Basak Traktor
 company_BasakTraktor = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -429,7 +439,8 @@ company_BasakTraktor = {
 
 # Istanbul Electric Tramway and Lighting Company
 company_IETT = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -481,7 +492,8 @@ company_IETT = {
 
 # Osmanlı İmparatorluk Havacılık Şirketi
 company_OIHS = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

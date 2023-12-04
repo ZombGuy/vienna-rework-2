@@ -1,6 +1,9 @@
+##############################VANILLA##############################
+
 # Căile Ferate Române
 company_cfr = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/romania_cfr.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_cfr.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -43,7 +46,8 @@ company_cfr = {
 
 # Steaua Română
 company_romanian_star = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/romania_steaua_romana.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_steaua_romana.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
 	flavored_company = yes
 	
@@ -83,9 +87,13 @@ company_romanian_star = {
 	}
 }
 
+
+##############################MODDED##############################
+
 # Atelierul Vlad / Napolact
 company_AV = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -128,7 +136,8 @@ company_AV = {
 
 # Roman
 company_RLaWF = {
-	texture = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -162,6 +171,51 @@ company_RLaWF = {
 	
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Fabrica de bere Timișoreana
+company_FabricaTimi = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_danubia
+		country_has_primary_culture = cu:romanian
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				is_homeland = cu:romanian
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			has_building = building_food_industry
+			count >= 6
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.1
+		interest_group_ig_landowners_approval_add = 1
 	}	
 	
 	ai_weight = {

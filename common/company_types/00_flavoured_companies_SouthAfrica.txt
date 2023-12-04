@@ -1,6 +1,13 @@
+##############################VANILLA##############################
+
+# None
+
+##############################MODDED##############################
+
 # Netherlands-South African Railway Company
 company_NRC = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -43,7 +50,8 @@ company_NRC = {
 
 # Anglovaal Engineering
 company_Anglovaal = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -87,7 +95,8 @@ company_Anglovaal = {
 
 # Oude Molen
 company_OudeMolen = {
-	texture = "gfx/interface/icons/company_icons/basic_wine_and_fruit.dds"
+	icon = "gfx/interface/icons/company_icons/basic_wine_and_fruit.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -129,7 +138,8 @@ company_OudeMolen = {
 }
 
 company_ImperialCC = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -173,7 +183,8 @@ company_ImperialCC = {
 
 # Johannesburg Gas Works
 company_Johannesburg = {
-	texture = "gfx/interface/icons/company_icons/basic_oil.dds"
+	icon = "gfx/interface/icons/company_icons/basic_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
 	flavored_company = yes
 	
@@ -218,7 +229,8 @@ company_Johannesburg = {
 
 # Witwatersrand Gold Mining Company
 company_WGMC = {
-	texture = "gfx/interface/icons/company_icons/basic_gold_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_gold_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	

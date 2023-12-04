@@ -1,12 +1,19 @@
+##############################VANILLA#############################
+
+# None
+
+##############################MODDED##############################
+
 # Kumpulan Guthrie Berhad
 company_Kumpulan_Guthrie = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
 	building_types = {  
-		is_building_type = building_tea_plantation
-		is_building_type = building_coffee_plantation
+		building_tea_plantation
+		building_coffee_plantation
 	}
 	
 	potential = {
@@ -51,7 +58,8 @@ company_Kumpulan_Guthrie = {
 
 # Boustead & Co.
 company_boustead = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	

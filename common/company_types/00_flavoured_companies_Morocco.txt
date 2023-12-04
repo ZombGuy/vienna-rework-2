@@ -1,6 +1,13 @@
+##############################VANILLA#############################
+
+# None
+
+##############################MODDED##############################
+
 # Office Chérifien des Phosphates
 company_OfficeCh = {
-	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -43,7 +50,8 @@ company_OfficeCh = {
 
 # Compagnie de Transports au Maroc
 company_Maroc = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

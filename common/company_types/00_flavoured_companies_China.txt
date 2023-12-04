@@ -1,138 +1,9 @@
-company_Bianyifang = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_food_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_south_china
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_BEIJING
-			}
-		}
-	}	
-	
-	possible = { 
-		any_scope_state = {
-				state_region = s:STATE_BEIJING
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_food_industry
-				level >= 10
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		state_birth_rate_mult = 0.05
-		state_loyalists_from_sol_change_mult = 0.05
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-company_Changan = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_motor_industry
-		building_war_machine_industry
-		building_munition_plants
-		building_arms_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_south_china
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_BEIJING
-			}
-		}
-	}	
-	
-	possible = { 
-		any_scope_state = {
-				state_region = s:STATE_BEIJING
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_motor_industry
-				level >= 10
-			}
-		}
-		has_technology_researched = combustion_engine
-	}
-	
-	prosperity_modifier = {
-		unit_army_offense_mult = 0.05
-		interest_group_ig_armed_forces_approval_add = 3
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-company_Arnhold = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_steel_mills
-		building_logging_camp
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_south_china
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_BEIJING
-			}
-		}
-	}	
-	
-	possible = { 
-		any_scope_state = {
-				state_region = s:STATE_BEIJING
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_steel_mills
-				level >= 10
-			}
-		}
-		has_technology_researched = modern_sewerage
-	}
-	
-	prosperity_modifier = {
-		country_private_construction_allocation_mult = 0.1
-		country_max_weekly_construction_progress_add = 10
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+##############################VANILLA##############################
 
 # Kaiping Mining Company
 company_kaiping_mining = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/chinese_kaiping_mining_company.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_kaiping_mining_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -183,7 +54,8 @@ company_kaiping_mining = {
 
 # Hanyang Arsenal
 company_hanyang_arsenal = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/chinese_hanyang_arsenal.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_hanyang_arsenal.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -229,7 +101,8 @@ company_hanyang_arsenal = {
 
 # Foochow Arsenal
 company_foochow_arsenal = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/chinese_foochow_arsenal.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_foochow_arsenal.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -275,7 +148,8 @@ company_foochow_arsenal = {
 
 # Jingdezhen Porcelain
 company_jingdezhen = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/chinese_jingdezhen_kilns.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_jingdezhen_kilns.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -317,8 +191,148 @@ company_jingdezhen = {
 	}
 }
 
+##############################MODDED##############################
+
+# Bianyifang
+company_Bianyifang = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+				state_region = s:STATE_BEIJING
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_birth_rate_mult = 0.05
+		state_loyalists_from_sol_change_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Chang'an
+company_Changan = {
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_war_machine_industry
+		building_munition_plants
+		building_arms_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+				state_region = s:STATE_BEIJING
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_motor_industry
+				level >= 10
+			}
+		}
+		has_technology_researched = combustion_engine
+	}
+	
+	prosperity_modifier = {
+		unit_army_offense_mult = 0.05
+		interest_group_ig_armed_forces_approval_add = 3
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_Arnhold = {
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_steel_mills
+		building_logging_camp
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+				state_region = s:STATE_BEIJING
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills
+				level >= 10
+			}
+		}
+		has_technology_researched = modern_sewerage
+	}
+	
+	prosperity_modifier = {
+		country_private_construction_allocation_mult = 0.1
+		country_max_weekly_construction_progress_add = 10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 company_Chongqing = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -361,7 +375,8 @@ company_Chongqing = {
 }
 
 company_Dalian = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -405,7 +420,8 @@ company_Dalian = {
 }
 
 company_DuoYunXuan = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -450,7 +466,8 @@ company_DuoYunXuan = {
 
 # Li & Fung Limited
 company_Li = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -498,13 +515,14 @@ company_Li = {
 
 # Xie Zhi Business Enterprise
 company_Xie_Zhi = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
     flavored_company = yes
 	
 	building_types = {  
 		building_logging_camp
-		building_steel_industry
+		building_steel_mills
 	}
 	
 	potential = {
@@ -527,7 +545,7 @@ company_Xie_Zhi = {
 			}
 			is_incorporated = yes
 			any_scope_building = {
-			    is_building_type = building_steel_industry
+			    is_building_type = building_steel_mills
 				level >= 6
 			}
 		}
@@ -544,7 +562,8 @@ company_Xie_Zhi = {
 
 # Jian Hsin Corporation Limited
 company_Jian_Hsin = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	flavored_company = yes
 	
@@ -591,7 +610,8 @@ company_Jian_Hsin = {
 
 # Imperial Telegraph Administration
 company_ITA = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -643,7 +663,8 @@ company_ITA = {
 
 # Jiangnan Arsenal
 company_Jiangnan_Arsenal = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -660,7 +681,7 @@ company_Jiangnan_Arsenal = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_STATE_SUZHOU
+				state_region = s:STATE_SUZHOU
 			}
 		}
 	}	
@@ -688,7 +709,8 @@ company_Jiangnan_Arsenal = {
 
 # Chinese Engineering and Mining Company
 company_CEaMC = {
-	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -729,7 +751,7 @@ company_CEaMC = {
 	}
 	
 	prosperity_modifier = {
-		building_coal_mine_troughput_add = 0.15
+		building_coal_mine_throughput_add = 0.15
 		building_railway_throughput_add = 0.1
 	}	
 	
@@ -740,7 +762,8 @@ company_CEaMC = {
 
 # China Merchants Steam Navigation Company
 company_CMSNC = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -784,7 +807,8 @@ company_CMSNC = {
 
 # Cohong
 company_Cohong = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -800,14 +824,14 @@ company_Cohong = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_STATE_GUANGDONG
+				state_region = s:STATE_GUANGDONG
 			}
 		}
 	}	
 	
 	possible = { 
 		any_scope_state = {
-			state_region = s:STATE_STATE_GUANGDONG
+			state_region = s:STATE_GUANGDONG
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_port
@@ -829,7 +853,8 @@ company_Cohong = {
 
 # Hongkong Electric Company
 company_Honkong_Electric = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

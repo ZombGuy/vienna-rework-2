@@ -1,50 +1,14 @@
-# San Miguel
-company_san_miguel = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_food_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_indonesia
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				region = sr:region_indonesia
-			}
-		}
-	}			
-	
-	possible = {
-		any_scope_state = {
-			region = sr:region_indonesia
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_food_industry
-				level >= 5
-			}
-		}
-		has_technology_researched = corporatism
-	}
-	
-	prosperity_modifier = {
-		state_radicals_from_sol_change_mult = -0.1
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+##############################VANILLA##############################
+
+# None
+
+##############################MODDED##############################
+
 
 # Pindad
 company_Pindad = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
-	
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	flavored_company = yes
 	
 	building_types = {  
@@ -75,11 +39,11 @@ company_Pindad = {
 				level >= 5
 			}
 		}
-		has_technology_researched = percussian_cap
+		has_technology_researched = percussion_cap
 	}
 	
 	prosperity_modifier = {
-		unit_army_offense_mult = 0.1
+		unit_army_offense_mult = 0.08
 		unit_army_defense_mult = 0.05
 	}	
 	
@@ -90,7 +54,8 @@ company_Pindad = {
 
 # Sampoerna
 company_Sampoerna = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	

@@ -1,5 +1,55 @@
+##############################VANILLA##############################
+
+# Aker Mek
+company_aker_mek = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/aker_mek.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_NORWAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 5
+			}
+		}
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+		building_fishing_wharf_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+##############################MODDED##############################
 company_Nydalens = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -42,7 +92,8 @@ company_Nydalens = {
 }
 
 company_Nobel = {
-	texture = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	icon = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -84,7 +135,8 @@ company_Nobel = {
 }
 
 company_AlbertC = {
-	texture = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	icon = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -133,7 +185,8 @@ company_AlbertC = {
 }
 
 company_HOFF = {
-	texture = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	icon = "gfx/interface/icons/company_icons/basic_agriculture.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -181,54 +234,10 @@ company_HOFF = {
 	}	
 }
 
-# Aker Mek
-company_aker_mek = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/aker_mek.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_shipyards
-		building_motor_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_baltic
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_EASTERN_NORWAY
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_EASTERN_NORWAY
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_shipyards
-				level >= 5
-			}
-		}
-		has_technology_researched = gantry_cranes
-	}
-	
-	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.15
-		building_fishing_wharf_throughput_add = 0.05
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
 # A/S Kosmos
 company_Kosmos = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -274,7 +283,8 @@ company_Kosmos = {
 
 # Norsk Hydro ASA
 company_NorskHydro = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -324,7 +334,8 @@ company_NorskHydro = {
 
 # Sulitjelma Mines
 company_Sulit = {
-	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -369,7 +380,8 @@ company_Sulit = {
 
 # Kongsberg Våpenfabrikk
 company_Kongsberg = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

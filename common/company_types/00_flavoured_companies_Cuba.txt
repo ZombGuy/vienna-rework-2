@@ -1,5 +1,13 @@
+##############################VANILLA#############################
+
+# None
+
+##############################MODDED##############################
+
+# Bacardi
 company_Bacardi = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	replaces_company = company_basic_food
 	
@@ -40,8 +48,10 @@ company_Bacardi = {
 	}	
 }
 
+# Manati
 company_Manati = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	replaces_company = company_basic_food
 	

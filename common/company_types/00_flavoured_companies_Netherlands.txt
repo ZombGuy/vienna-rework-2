@@ -1,103 +1,9 @@
-company_KNSM = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_shipyards
-		building_port
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_rhine
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				OR = {
-					state_region = s:STATE_HOLLAND
-					state_region = s:STATE_GELRE
-				}
-			}
-		}
-	}
-	
-	possible = {
-		any_scope_state = {
-			OR = {
-				state_region = s:STATE_HOLLAND
-				state_region = s:STATE_GELRE
-			}
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_shipyards
-				level >= 5
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.25
-		interest_group_ig_industrialists_approval_add = 2
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-company_Heineken = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_food_industry
-		building_rye_farm
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_rhine
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				OR = {
-					state_region = s:STATE_HOLLAND
-					state_region = s:STATE_GELRE
-				}
-			}
-		}
-	}
-	
-	possible = {
-		any_scope_state = {
-			OR = {
-				state_region = s:STATE_HOLLAND
-				state_region = s:STATE_GELRE
-			}
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_food_industry
-				level >= 5
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		building_chemical_plants_throughput_add = 0.2
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+##############################VANILLA##############################
 
 # Koninklijke Nederlandse Petroleum Maatschappij
 company_nederlandse_petroleum = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/maatschappij.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/maatschappij.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
 	flavored_company = yes
 	
@@ -140,7 +46,8 @@ company_nederlandse_petroleum = {
 
 # Koninklijke Philips N.V.
 company_philips = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/philips.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/philips.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -188,8 +95,113 @@ company_philips = {
 	}
 }
 
+##############################MODDED##############################
+
+# KNSM
+company_KNSM = {
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.25
+		interest_group_ig_industrialists_approval_add = 2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Heineken
+company_Heineken = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+		building_rye_farm
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_chemical_plants_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Ahold
 company_Ahold = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -238,7 +250,8 @@ company_Ahold = {
 
 # KLM Royal Dutch Airlines
 company_KLMR = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -283,7 +296,8 @@ company_KLMR = {
 
 # KNHS
 company_KNHS = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -326,7 +340,8 @@ company_KNHS = {
 
 # Koninklijke Nederlandse Papierfabriek
 company_KNP = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -369,7 +384,8 @@ company_KNP = {
 
 # Nederlandse Spoorwegen
 company_NeSp = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

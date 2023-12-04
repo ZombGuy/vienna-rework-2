@@ -1,6 +1,13 @@
+##############################VANILLA#############################
+
+# None
+
+##############################MODDED##############################
+
 # Compagnie des phosphates de Gafsa
 company_phosphat_Gafsa = {
-	texture = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	

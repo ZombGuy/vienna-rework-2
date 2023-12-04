@@ -1,146 +1,9 @@
-company_Kajima = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
-	
-	building_types = {  
-		building_railway
-		building_power_plant
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_japan
-		country_has_primary_culture = cu:japanese
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_KANTO		
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_KANTO
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_contruction_sector
-					is_building_type = building_railway
-					is_building_type = building_power_plant
-				}
-				level > 10
-			}
-		}
-		has_technology_researched = railways
-	}
-	
-	prosperity_modifier = {
-		country_private_construction_allocation_mult = 0.1
-		country_max_weekly_construction_progress_add = 10
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_Marukome = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_food_industry
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_japan
-		country_has_primary_culture = cu:japanese
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_CHUBU		
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_CHUBU
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_food_industry
-				level > 10
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		state_radicals_from_sol_change_mult = -0.2
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
-
-company_UragaDockCompany = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_shipyards
-		building_military_shipyards
-
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_japan
-		country_has_primary_culture = cu:japanese
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_TOHOKU		
-			}		
-		}
-	}		
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_TOHOKU
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
-				}
-				level > 10
-			}
-		}
-
-	}
-	
-	prosperity_modifier = {
-		unit_navy_offense_mult = 0.1
-		building_shipyards_throughput_add = 0.1
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}	
-}
+##############################VANILLA##############################
 
 # Mitsui
 company_mitsui = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsui.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsui.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -190,7 +53,8 @@ company_mitsui = {
 
 # South Manchuria Railway
 company_mantetsu = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mantetsu.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mantetsu.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -233,7 +97,8 @@ company_mantetsu = {
 
 # Mitsubishi
 company_mitsubishi = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsubishi.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsubishi.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -285,8 +150,153 @@ company_mitsubishi = {
 	}
 }
 
+##############################MODDED##############################
+company_Kajima = {
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	building_types = {  
+		building_railway
+		building_power_plant
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_japan
+		country_has_primary_culture = cu:japanese
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KANTO		
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_KANTO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_construction_sector
+					is_building_type = building_railway
+					is_building_type = building_power_plant
+				}
+				level > 10
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		country_private_construction_allocation_mult = 0.1
+		country_max_weekly_construction_progress_add = 10
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_Marukome = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_japan
+		country_has_primary_culture = cu:japanese
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CHUBU		
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_CHUBU
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level > 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_radicals_from_sol_change_mult = -0.2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+company_UragaDockCompany = {
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_japan
+		country_has_primary_culture = cu:japanese
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TOHOKU		
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_TOHOKU
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level > 10
+			}
+		}
+
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.1
+		building_shipyards_throughput_add = 0.1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
 company_Tomioka = {
-	texture = "gfx/interface/icons/company_icons/basic_silk_and_dye.dds"
+	icon = "gfx/interface/icons/company_icons/basic_silk_and_dye.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
@@ -328,7 +338,8 @@ company_Tomioka = {
 }
 
 company_Oji = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -375,7 +386,8 @@ company_Oji = {
 
 # Sumitomo
 company_Sumitomo = {
-	texture = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	icon = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -422,7 +434,8 @@ company_Sumitomo = {
 
 # Furukawa
 company_Furukawa = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -470,7 +483,8 @@ company_Furukawa = {
 
 # Kawasaki Jūkōgyō Kabushiki-gaisha
 company_Kawasaki = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -520,7 +534,8 @@ company_Kawasaki = {
 
 # Kabushiki-gaisha Kubota
 company_Kabushiki = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -570,7 +585,8 @@ company_Kabushiki = {
 
 # Oriental Brewery 
 company_OrientalB = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	flavored_company = yes
 	
@@ -610,7 +626,8 @@ company_OrientalB = {
 
 # Japan Brewery Company
 company_Kirin = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	flavored_company = yes
 	
@@ -659,7 +676,8 @@ company_Kirin = {
 
 # Osaka Shosen Kaisha (OSK)
 company_Osaka_Shosen = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -705,7 +723,8 @@ company_Osaka_Shosen = {
 
 # Soma Co. Ltd.
 company_SomaCo = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 	
 	building_types = {  
 		building_rice_farm

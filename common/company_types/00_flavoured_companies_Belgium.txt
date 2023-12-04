@@ -1,54 +1,9 @@
-company_BellTelephone = {
-	texture = "gfx/interface/icons/company_icons/basic_munitions.dds"
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_electrics_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_rhine
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				OR = {
-					state_region = s:STATE_WALLONIA
-					state_region = s:STATE_FLANDERS
-				}
-			}
-		}
-	}	
-	
-	possible = {
-		any_scope_state = {
-			OR = {
-				state_region = s:STATE_WALLONIA
-				state_region = s:STATE_FLANDERS
-			}
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_electrics_industry
-				level >= 7
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		building_electrics_industry_throughput_add = 0.1
-		unit_supply_consumption_mult = -0.1
-	}
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+##############################VANILLA##############################
 
 # Compagnie du Congo pour le Commerce et l'Industrie
 company_ccci = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/ccci.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ccci.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -95,7 +50,8 @@ company_ccci = {
 
 # Société Franco-Belge
 company_franco_belge = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/franco_belge.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/franco_belge.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -145,7 +101,8 @@ company_franco_belge = {
 
 # Société anonyme John Cockerill
 company_john_cockerill = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/john_cockerill.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/john_cockerill.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -193,9 +150,62 @@ company_john_cockerill = {
 	}
 }
 
+##############################MODDED##############################
+
+# Bell Telephone Company
+company_BellTelephone = {
+	icon = "gfx/interface/icons/company_icons/basic_munitions.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_electrics_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WALLONIA
+					state_region = s:STATE_FLANDERS
+				}
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_WALLONIA
+				state_region = s:STATE_FLANDERS
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry
+				level >= 7
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_electrics_industry_throughput_add = 0.1
+		unit_supply_consumption_mult = -0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Société générale de Belgique
 company_SgdB = {
-    texture = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+    icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -240,7 +250,8 @@ company_SgdB = {
 
 # Solvay S.A.
 company_Solvay = {
-    texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+    icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -283,7 +294,8 @@ company_Solvay = {
 
 # Ateliers de Constructions Electriques de Charleroi
 company_AdCE = {
-    texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+    icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	

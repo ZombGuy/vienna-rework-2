@@ -1,7 +1,12 @@
+##############################VANILLA#############################
 
+# None
+
+##############################MODDED##############################
 # Arbed S.A.
 company_Arbed = {
-    texture = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+    icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	

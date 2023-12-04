@@ -1,6 +1,9 @@
-﻿# Friedrich Krupp AG
+﻿##############################VANILLA##############################
+
+# Friedrich Krupp AG
 company_krupp = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/german_krupp.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_krupp.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -49,7 +52,8 @@ company_krupp = {
 }
 # Rheinische Metallwaaren- und Maschinenfabrik Aktiengesellschaft
 company_rheinmetall = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/german_rheinmetall.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_rheinmetall.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -90,7 +94,7 @@ company_rheinmetall = {
 				level >= 10
 			}
 		}
-		has_technology_researched = automatic_machine_guns
+		has_technology_researched = breech_loading_artillery
 	}
 	
 	prosperity_modifier = {
@@ -106,7 +110,8 @@ company_rheinmetall = {
 
 # F. Schichau, Maschinen- und Lokomotivfabrik, Schiffswerft und Eisengießerei GmbH
 company_schichau = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/german_schichau.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_schichau.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -152,7 +157,8 @@ company_schichau = {
 
 # Siemens & Halske AG
 company_siemens_and_halske = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/german_siemens_halske.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_siemens_halske.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -195,7 +201,8 @@ company_siemens_and_halske = {
 
 # Preußische Staatseisenbahnen
 company_prussian_state_railways = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/german_kpev.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_kpev.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -224,6 +231,7 @@ company_prussian_state_railways = {
 	
 	prosperity_modifier = {
 		unit_mobilization_speed_from_railways_mult = 0.3
+		military_formation_movement_speed_mult = 0.1
 	}	
 	
 	ai_weight = {
@@ -234,7 +242,8 @@ company_prussian_state_railways = {
 
 # BASF
 company_basf = {
-	texture = "gfx/interface/icons/company_icons/historical_company_icons/german_basf.dds"
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_basf.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -276,8 +285,11 @@ company_basf = {
 	}
 }
 
+##############################MODDED##############################
+
 company_Weihenstephan = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -321,7 +333,8 @@ company_Weihenstephan = {
 
 # Steamship company of the Rhine
 company_SteamshipCompany = {
-	texture = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	icon = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -365,7 +378,8 @@ company_SteamshipCompany = {
 }
 # Hannover Waggonfabrik
 company_HannoverWaggonfabrik = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -412,7 +426,8 @@ company_HannoverWaggonfabrik = {
 
 # Royal Porcelain Factory of Berlin
 company_RoyalPorcelainFactory = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -461,7 +476,8 @@ company_RoyalPorcelainFactory = {
 
 # Haberbusch i Schiele
 company_Haberbusch = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -504,7 +520,8 @@ company_Haberbusch = {
 
 # Felix Schöller 
 company_FelixS = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -547,7 +564,8 @@ company_FelixS = {
 
 # Howaldtswerke Deutsche Werft
 company_HDW = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -578,7 +596,7 @@ company_HDW = {
 				level >= 5
 			}
 		}
-		has_technology_researched = water_tube_boiler
+		has_technology_researched = watertube_boiler
 	}
 	
 	prosperity_modifier = {
@@ -594,7 +612,8 @@ company_HDW = {
 
 # Knorr
 company_Knorr = {
-	texture = "gfx/interface/icons/company_icons/basic_food.dds"
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 	
 	flavored_company = yes
 	
@@ -638,7 +657,8 @@ company_Knorr = {
 
 # Fissler
 company_Fissler = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -681,7 +701,8 @@ company_Fissler = {
 
 # A. Lange und Söhne
 company_ALange = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -724,7 +745,8 @@ company_ALange = {
 }
 
 company_Meindl = {
-	texture = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -757,7 +779,7 @@ company_Meindl = {
 	}
 	
 	prosperity_modifier = {
-		military_formation_travel_speed_mult = 0.1
+		military_formation_movement_speed_mult = 0.1
         front_advancement_speed_mult = 0.05
 	}
 
@@ -766,9 +788,10 @@ company_Meindl = {
 	}	
 }
 
-# Veieinigte Maschinenfabrik Augsburg und Maschinenbaugesellschaft Nürnberg A.G.
+# Vereinigte Maschinenfabrik Augsburg und Maschinenbaugesellschaft Nürnberg A.G.
 company_MAN = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -814,7 +837,8 @@ company_MAN = {
 
 # Faber-Castell
 company_Faber = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -857,7 +881,8 @@ company_Faber = {
 
 # Meyer Werft
 company_MeyerWerft = {
-	texture = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -901,7 +926,8 @@ company_MeyerWerft = {
 
 # Heraeus
 company_Heraeus = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -943,7 +969,8 @@ company_Heraeus = {
 
 # Bayer
 company_Bayer = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -988,7 +1015,8 @@ company_Bayer = {
 
 # Opel
 company_Opel = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -1031,7 +1059,8 @@ company_Opel = {
 
 # Deutsche Tiefbohr-Aktiengesellschaft
 company_DTA = {
-	texture = "gfx/interface/icons/company_icons/basic_oil.dds"
+	icon = "gfx/interface/icons/company_icons/basic_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
 	flavored_company = yes
 	
@@ -1076,7 +1105,8 @@ company_DTA = {
 
 # Daimler-Motoren-Gesellschaft
 company_DaimlerMG = {
-	texture = "gfx/interface/icons/company_icons/basic_motors.dds"
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1119,7 +1149,8 @@ company_DaimlerMG = {
 
 # Deutsche Edison-Gesellschaft für Angewandte Elektrizität
 company_DeEdison = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1162,7 +1193,8 @@ company_DeEdison = {
 
 # Carl Zeiss AG
 company_CarlZeiss = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1206,7 +1238,8 @@ company_CarlZeiss = {
 
 # Mannesmann AG
 company_Mannesmann = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1238,7 +1271,8 @@ company_Mannesmann = {
 	}
 	
 	prosperity_modifier = {
-		building_steel_mills_throughput_add = 0.2
+		building_steel_mills_throughput_add = 0.15
+		country_production_tech_spread_mult = 0.05
 	}	
 	
 	ai_weight = {
@@ -1248,7 +1282,8 @@ company_Mannesmann = {
 
 # Meissener Porzellan
 company_Meissener = {
-	texture = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -1291,7 +1326,8 @@ company_Meissener = {
 
 # Aktien-Gesellschaft für Anilin-Fabrikation
 company_AGFA = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1335,7 +1371,8 @@ company_AGFA = {
 
 # Henkel & Cie
 company_Henkel = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1378,7 +1415,8 @@ company_Henkel = {
 
 # Blohm & Voss
 company_Blohm = {
-	texture = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	icon = "gfx/interface/icons/company_icons/basic_fishing.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = yes
 	
@@ -1423,7 +1461,8 @@ company_Blohm = {
 
 # Hugo Stinnes GmbH
 company_HugoS = {
-	texture = "gfx/interface/icons/company_icons/basic_steel.dds"
+	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -1469,7 +1508,8 @@ company_HugoS = {
 
 # Kraus-Maffei
 company_Kraus_Maffei = {
-	texture = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1514,7 +1554,8 @@ company_Kraus_Maffei = {
 
 # Papierfabrik August Köhler
 company_AugustK = {
-	texture = "gfx/interface/icons/company_icons/basic_paper.dds"
+	icon = "gfx/interface/icons/company_icons/basic_paper.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	
 	flavored_company = yes
 	
@@ -1558,7 +1599,8 @@ company_AugustK = {
 
 # Harzer Bergbau AG
 company_HarzerBergbau = {
-	texture = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	icon = "gfx/interface/icons/company_icons/basic_metal_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 	
 	flavored_company = yes
 	
@@ -1604,7 +1646,8 @@ company_HarzerBergbau = {
 
 # Alfred Nobel and Co
 company_GermanNobel = {
-	texture = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	
 	flavored_company = yes
 	
@@ -1637,7 +1680,8 @@ company_GermanNobel = {
 	}
 	
 	prosperity_modifier = {
-		building_explosives_factory_throughput_add = 0.15
+		unit_offense_mult = 0.05
+		building_munition_plants_throughput_add = 0.15
 	}
 
 	ai_weight = {
@@ -1647,7 +1691,8 @@ company_GermanNobel = {
 
 # Seeberger
 company_Seeberger = {
-	texture = "gfx/interface/icons/company_icons/basic_colonial_plantations_2.dds"
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations_2.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 	
 	flavored_company = yes
 	
@@ -1660,6 +1705,7 @@ company_Seeberger = {
 	
 	potential = {
 		has_interest_marker_in_region = region_south_germany
+	}
 	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
@@ -1688,4 +1734,147 @@ company_Seeberger = {
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}	
+}
+
+# Niederegger
+company_Niederegger = {
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_food_industry
+		building_sugar_plantation
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_north_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SCHLESWIG_HOLSTEIN
+				is_incorporated = yes
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SCHLESWIG_HOLSTEIN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 4
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.03
+		state_loyalists_from_sol_change_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+#Robert Bosch GmbH
+company_Bosch = {
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_electrics_industry
+		building_tooling_workshops
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WURTTEMBERG
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WURTTEMBERG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_motor_industry
+				level >= 10
+			}
+		}
+		has_technology_researched = combustion_engine
+	}
+	
+	prosperity_modifier = {
+		country_production_tech_spread_mult = 0.05
+		building_motor_industry_throughput_add = 0.2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Königliche Preußische Gewehrfabrique
+company_KPG = {
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_munition_plants
+		building_artillery_foundries
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_north_germany
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BRANDENBURG
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_BRANDENBURG
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_arms_industry
+					is_building_type = building_munition_plants
+					is_building_type = building_artillery_foundries
+				}
+				level >= 4
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_offense_mult = 0.5
+        unit_defense_mult = 0.3
+		interest_group_ig_landowners_approval_add = 2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
 }
