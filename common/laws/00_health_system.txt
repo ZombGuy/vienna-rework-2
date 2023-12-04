@@ -120,7 +120,7 @@ law_private_health_insurance = {
 	institution_modifier = {
 		state_mortality_wealth_mult = -0.005
 		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
-		interest_group_ig_industrialists_pol_str_mult = 0.03 #was none
+		state_political_strength_from_wealth_mult = 0.1
 		state_middle_standard_of_living_add = 0.75
 		state_rich_standard_of_living_add = 1.5
 	}
